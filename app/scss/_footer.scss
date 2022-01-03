@@ -1,0 +1,187 @@
+.contentfoot{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 40px;
+    background-color: $darkgray;
+
+        @include breakpoint-down(medium){
+            padding: 20px 0;
+        }
+
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+        @include breakpoint-down(small){
+            padding: 10px 20px;
+            justify-content: space-around;
+        }
+}
+
+.socials{
+    width: 60px;
+    height: 60px;
+    @include breakpoint-down(small){
+            width: 50px;
+            height: 50px;
+        }
+        @include breakpoint-down(xsmall){
+            width: 45px;
+            height: 45px;
+        }
+}
+
+.socials:first-child{
+    border-radius: 13px;
+    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;    
+    transition: -webkit-box-shadow 150ms ease-in-out;    
+    -o-transition: all 150ms ease-in-out;   
+    transition: all 150ms ease-in-out;     
+    transition: all 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out; 
+}
+
+.socials:last-child{
+    border-radius: 70px;
+    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;    
+    transition: -webkit-box-shadow 150ms ease-in-out;    
+    -o-transition: all 150ms ease-in-out;   
+    transition: all 150ms ease-in-out;     
+    transition: all 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out; 
+}
+
+.smalliconsquare{
+    fill:url(#Solid-light);
+    width: 100%;
+    height: 100%;
+}
+
+.emptyspace{
+    height: 20px;
+        @include breakpoint-down(medium){
+            height: 10px;
+        }
+        @include breakpoint-down(xsmall){
+            display: none;
+        }
+}
+
+.smalliconcircle{
+    fill:url(#Solid-light);
+    width: 100%;
+    height: 100%;
+
+}
+.socials:first-child:hover{
+    -o-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    -moz-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+        .smalliconsquare{
+            fill:url(#RadialGradient2);  
+        }
+}
+.socials:last-child:hover{
+    -o-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    -moz-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+    box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
+        .smalliconcircle{
+            fill:url(#RadialGradient2);  
+        }
+}
+
+
+.footarrowcontainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    -webkit-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);    
+    -ms-transform: rotate(-135deg);    
+    transform: rotate(-135deg);
+        @include breakpoint-up(medium){
+            padding: 30px 30px;
+            margin: 40px 0px;
+        }
+        @include breakpoint-down(medium){
+            padding: 20px 20px;
+            margin: 50px 0px;
+        }
+        @include breakpoint-down(small){
+            padding: 0px 20px;
+            margin: 40px 0px;
+        }
+}
+
+.arrow, .arrow:before{
+    position: absolute;
+    left: 50%;
+}
+
+.arrow{
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    margin: -20px 0 0 -20px;
+    border-top: none;
+    border-right: 2px $white solid;
+    border-bottom: 2px $white solid;
+    border-left: none;
+    @include breakpoint-down(mdsmall){
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;    
+    }
+}
+  
+.arrow:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    margin: -10px 0 0 -10px;
+    border-left: none;
+    border-top: none;
+    border-right: 1px $white solid;
+    border-bottom: 1px $white solid;
+    -webkit-animation: arrow 1s infinite;    
+    animation: arrow 1s infinite;
+    @include breakpoint-down(mdsmall){
+        width: 15px;
+        height: 15px;
+        margin: -7.5px 0 0 -7.5px;    
+    }
+}
+
+
+.footerdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 0px 40px;
+    font-size: 1rem;
+    color: $whitish;
+    @include breakpoint-down(small){
+        padding: 0px;
+    }
+}
+
+.foot-text{
+    line-height: 2;
+    text-align: center;
+        @include breakpoint-down(small){
+            margin-left: 20px;
+            font-size: $font-xsm;
+            margin-right: 20px;
+        }
+        @include breakpoint-down(xsmall){
+            font-size: $font-xxsm;
+        }
+}

@@ -1,0 +1,425 @@
+.home{
+    height: 110vh;
+    width: 100%;
+}
+
+@supports (transform-style: preserve-3d){
+    .parallax-wrapper{
+        background: url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
+        background-size: cover;  
+        max-width: 100vw;
+        height: 110vh;
+            @include breakpoint-down (large){
+                background: linear-gradient(to bottom, transparent 85%, $lightgray ), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
+                background-size: cover;  
+                max-width: 100vw;
+                height: 110vh;
+                position: static;
+                background-attachment:scroll
+            }   
+            @include breakpoint-up (large){
+                transform-style: preserve-3d;
+                transform: translateZ(-1px) scale(2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 6;
+            }
+    }
+}
+
+.main-text{
+    font-size: $font-xlg;
+    color: $darkgray;
+    font-weight: 400;
+    padding: 40rem 15px 0 60px;
+    margin: 0;
+        @include breakpoint-down (large){
+            margin-top: -68rem;
+            padding: 28rem 25px 0 60px;
+        }
+        @include breakpoint-down(small){
+            font-size: $font-lrgmed;
+            padding-left: 40px;
+        }
+        @include breakpoint-down(xsmall){
+            font-size: $font-lrg;
+            padding-left: 30px;
+        }
+
+        -webkit-animation: bounce 0.6s, bounce 1.2s cubic-bezier(0.01, 0.85, 0.44, 1) 2 alternate, fade 6s forwards;
+        animation: bounce 0.6s, bounce 1.2s cubic-bezier(0.01, 0.85, 0.44, 1) 2 alternate, fade 6s forwards;
+        @include breakpoint-down(medium){
+            -webkit-animation: none;
+            animation: none;
+        }
+}
+
+.colored{
+    color: $darkcyan;
+}
+
+
+
+.sub-text{
+    font-size: $font-lrgmed;
+    color: $darkgray;
+    margin: 0px;
+    font-weight: 300;
+    padding: 0 10px 0 60px;
+    height: inherit;
+        @include breakpoint-down (large){
+            padding: 0 10px 0 60px;
+        }
+        @include breakpoint-down(small){
+            font-size: $font-lrg;
+            padding-left: 40px;
+        }
+        @include breakpoint-down(xsmall){
+            font-size: $font-med;
+            padding-left: 30px;
+        }
+}
+
+.coolshape{
+    padding-top: 10rem;
+    margin-top: -6rem;
+    padding-bottom: 7rem;
+        @include breakpoint-up(large){
+            position: relative;
+            z-index: -1;
+        }
+        @include breakpoint-down(large){
+            padding-top: 11rem;
+            margin-top: -18rem;
+        }
+        @include breakpoint-down(small){
+            margin-top: -25rem;
+
+        }
+        @include breakpoint-down (xsmall){
+            padding-top: 20rem;
+        }
+}
+.reallign{
+    height: 70vh;
+}
+
+// Message ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.message{
+    padding-top: 2rem;
+    margin-top: -32rem;
+}
+
+.contentbg{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contentdiv{
+    background-color: $white;
+    margin: 0px 80px;
+    padding: 20px 40px;
+    width: 100vw;
+    &.firstdiv{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    &.lastdiv{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+        @include breakpoint-down(small){
+            margin: 0px 20px;
+            padding: 10px 20px;
+        }
+        @include breakpoint-up(small){
+            margin: 0px 40px;
+            padding: 20px 40px;
+        }
+        @include breakpoint-down(xsmall){
+            margin: 0px 10px;
+            padding: 10px 10px;
+        }
+    
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+    padding-right: 3rem;
+        @include breakpoint-up(small){
+            margin-bottom: 3rem;
+        }
+        @include breakpoint-down(small){
+            padding-right: 0;
+        }
+}
+
+.pr{
+    padding-right: 3rem;
+        @include breakpoint-down(small){
+            padding-right: 0;
+        }
+}
+
+.pl{
+    padding-left: 3rem;
+        @include breakpoint-down(small){
+            padding-right: 0;
+        }
+}
+
+.main-content{
+    font-size: $font-lrgmed;
+    font-weight: 300;
+    @include breakpoint-down(small){
+        font-size: $font-lrg;
+        text-align: center;
+    }
+    &.mb{
+        margin-bottom: 48px;
+        @include breakpoint-down(small){
+            margin-bottom: 36px;
+            font-size: $font-med;
+        }    
+        
+    }
+}
+
+.sub-content{
+    font-size: $font-lrg;
+    text-indent: 4rem;
+    @include breakpoint-down(small){
+        font-size: $font-med;
+        padding: 10px;
+    }
+}
+
+.resume{
+    padding-top: 40px;
+    margin-top: -40px;
+}
+
+.buttonsigndiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0px;
+}
+.header-text{
+    display: flex;
+    justify-content: center;
+    font-size: $font-xlg;
+    font-weight: 400;
+    color: $black;
+    text-transform: uppercase;
+        @include breakpoint-down(small){
+            font-size: $font-lrgmed;
+        }
+
+}
+
+
+
+.signature{
+    font-family: 'Corinthia', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1rem 0;
+    @include breakpoint-down(small){
+        font-size: $font-lrg;
+    }
+}
+
+.imgcontainer{
+    display: inline;
+    @include breakpoint-down(small){
+        display: flex;
+        justify-content: center;
+    }
+    &.resumecontainer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.img{
+    border-radius: 1.11111111rem;
+    max-width: 100%;
+    width: auto;
+    max-height: 27.5rem;
+    height: auto;
+    margin-top: 2.25rem;
+    margin-bottom: 1.25rem;
+    &.right{
+        margin-left: 1.25rem;
+        float: right;
+            @include breakpoint-down(small){
+                float: none;
+                margin-left: 0;
+        }
+    }
+    &.left{
+        margin-right: 2.5rem;
+        float: left;
+            @include breakpoint-down(small){
+                float: none;
+                margin-right: 0;
+        }
+    }
+
+    &.resumebox{
+        width: auto;
+        min-width: 20%;
+        max-height: 55rem;
+        height: auto;
+        min-height: 20%;
+        margin-top: 0;
+    }
+}
+// Portfolio ///////////////////////////////////////////////////////////////////////////////////////////////////
+.portfolio{
+    padding-top: 40px;
+    margin-top: -40px;
+}
+
+@supports (display: grid){
+    .grid{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 40px 40px;
+        overflow: hidden;
+            @include breakpoint-down (small){
+                grid-template-rows: none;
+                grid-template-columns: 1fr;
+            }
+
+        &.expand{
+            @include breakpoint-up(medium){
+            grid-template-rows: repeat((2, 1fr));
+            }
+        }
+            
+    }
+    .gridcell{
+        overflow: hidden;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+
+    .project{
+        max-width: 52.5rem;
+        width: 100%;
+        height: auto;
+
+        &.zoom{
+            -webkit-transition: -webkit-transform 0.5s ease-in-out;
+            transition: -webkit-transform 0.5s ease-in-out;
+            -o-transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+            -webkit-transform: scale(1.09);
+            -ms-transform: scale(1.09);
+            transform: scale(1.09);
+        }
+    }
+    .learnmore{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);        
+        -ms-transform: translate(-50%, -50%);        
+        transform: translate(-50%, -50%);
+        color: $white;
+
+        @include breakpoint-down (small){
+            .learnmore:hover{
+                text-shadow: none;
+                box-shadow: none;
+            }
+            font-size: $font-med;
+        }
+        
+        &.show{
+            display: block;
+        }
+        &.hide{
+            display: none;
+        }
+
+    }
+
+    #project1x{
+        height: auto;
+    }
+    #project2x{
+        height: auto;
+    }
+
+    .dorito{
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        &.n1{
+            @include breakpoint-up (medium){
+                transform: rotate(-90deg);
+            }
+        }
+        &.n2{
+            &.left{
+                @include breakpoint-up (medium){
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+    }
+
+
+    
+    .heading{
+        display: block;
+        font-size: $font-lrgmed;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .projecttext{
+        font-size: $font-med;
+        margin: 0px;
+        margin-bottom: auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px $darkgray;
+        height: 100%;
+
+
+
+        &.p1{
+            display: none;
+            &.showMore{
+                display: block;
+
+            }
+            @include breakpoint-up (medium){
+                grid-column: 2;
+            }
+        }
+        &.p2{
+            display: none;
+            &.showMore{
+                display: block;
+            }
+            @include breakpoint-up (medium){
+                grid-column: 2;
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,178 @@
+// Overlay animation //////////////////////////////////////////////////////////////////////////////////////////////////
+@-webkit-keyframes overlayfadein {
+    0%{
+        visibility: hidden;
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%);  
+    }
+    1% {
+        visibility: visible;
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%);        
+    }
+    100% {
+        visibility: visible;
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);    
+    }
+}
+
+@keyframes overlayfadein {
+    0%{
+        visibility: hidden;
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%);  
+    }
+    1% {
+        visibility: visible;
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%);        
+    }
+    100% {
+        visibility: visible;
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);    
+    }
+}
+
+@-webkit-keyframes overlayfadeout {
+    0% {
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);   
+        visibility: visible;     
+    }
+    99%{
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%); 
+        visibility: visible;  
+    }
+    100% {
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%); 
+        visibility: hidden;   
+    }
+}
+
+@keyframes overlayfadeout {
+    0% {
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);   
+        visibility: visible;     
+    }
+    99%{
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%); 
+        visibility: visible;  
+    }
+    100% {
+        -webkit-transform: translateY(-130%);        
+        -ms-transform: translateY(-130%);        
+        transform: translateY(-130%); 
+        visibility: hidden;   
+    }
+}
+
+
+// Textbox animation //////////////////////////////////////////////////////////////////////////////////////////////////
+@-webkit-keyframes inputHighlighter{
+    from{ 
+        background: $cyan;
+        width: 100%; 
+    }
+    to{
+        width: 0;
+        background: transparent;
+    }
+}
+  @keyframes inputHighlighter{
+      from{
+        background: $cyan;
+        width: 100%;
+        }
+    to{
+        width: 0;
+        background: transparent;
+    }
+}
+
+// To top arrow animation //////////////////////////////////////////////////////////////////////////////////////////////////
+@-webkit-keyframes arrow{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: translate(-10px, -10px);        
+        -ms-transform: translate(-10px, -10px);        
+        transform: translate(-10px, -10px);
+        }
+}
+
+@keyframes arrow{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        -webkit-transform: translate(-10px, -10px);        
+        -ms-transform: translate(-10px, -10px);        
+        transform: translate(-10px, -10px);    
+    }
+}
+
+// Header bounce ////////////////////////////////////////////////////////////////////////////////////////////////////
+@-webkit-keyframes bounce {
+    from {
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);
+    }
+    to {
+        -webkit-transform: translateY(-26rem);        
+        -ms-transform: translateY(-26rem);     
+        transform: translateY(-26rem);     
+        }
+}
+
+@keyframes bounce {
+    from {
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);
+    }
+    to {
+        -webkit-transform: translateY(-26rem);        
+        -ms-transform: translateY(-26rem);     
+        transform: translateY(-26rem);     
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
