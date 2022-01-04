@@ -1,3 +1,32 @@
+// BG animation ////////////////////////////////////////////////////////////////////////////////////////////////////
+@-webkit-keyframes bgfadein {
+    from{
+        -webkit-transform: translateY(130%);        
+        -ms-transform: translateY(130%);        
+        transform: translateY(130%);  
+    }
+    to{
+        visibility: visible;
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);    
+    }
+}
+
+@keyframes bgfadein {
+    from{
+        -webkit-transform: translateY(130%);        
+        -ms-transform: translateY(130%);        
+        transform: translateY(130%);  
+    }
+    to{
+        visibility: visible;
+        -webkit-transform: translateY(0);        
+        -ms-transform: translateY(0);        
+        transform: translateY(0);    
+    }
+}
+
 // Overlay animation //////////////////////////////////////////////////////////////////////////////////////////////////
 @-webkit-keyframes overlayfadein {
     0%{

@@ -5,11 +5,13 @@ html{
     font-size: 100%;
     box-sizing: border-box;
     background-color: $lightgray;
-        @include breakpoint-up (large){
+        // @include breakpoint-up (large){
         width: 100vw;
         overflow-x: hidden;
         overflow-y: scroll;
-        }
+        // position: relative;
+        height: 100%;
+        // }
 }
 
 @supports (scroll-behavior: smooth){
@@ -31,16 +33,22 @@ body{
     font-weight: 300;
     font-size: 16px;
     padding-top: 80px;
-
+    letter-spacing: 1px;
 }
 
 //Parallax
-@supports (transform-style: preserve-3d){
+@supports (-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d){
     .body{
-        @include breakpoint-up (large){
-            perspective: 1px;
+        // @include breakpoint-up (large){
+            -webkit-transform: perspective(1px);
+            transform: perspective(1px);
+            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
-        }
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            
+        // }
 
     }
 }
