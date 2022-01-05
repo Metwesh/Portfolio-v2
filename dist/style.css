@@ -185,11 +185,11 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #EAEBED;
-  width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 @supports (scroll-behavior: smooth) {
@@ -663,18 +663,10 @@ button {
   }
 }
 
-.home {
-  height: 110vh;
-  width: 100%;
-  position: relative;
-}
-
 @supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
   .home {
     height: 110vh;
     width: 100vw;
-    -webkit-perspective: inherit;
-    perspective: inherit;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     overflow-x: hidden;

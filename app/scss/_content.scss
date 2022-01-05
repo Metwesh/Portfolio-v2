@@ -1,15 +1,7 @@
-.home{
-    height: 110vh;
-    width: 100%;
-    position: relative;
-}
-
 @supports (-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d){
     .home{
         height: 110vh;
         width: 100vw;
-        -webkit-perspective: inherit;
-        perspective: inherit;
         -webkit-transform-style: preserve-3d;
         transform-style: preserve-3d;
         overflow-x: hidden;
@@ -34,7 +26,7 @@
             }   
             @include breakpoint-up (large){
                 -webkit-transform: translateZ(-1px) scale(2);
-                        transform: translateZ(-1px) scale(2);
+                transform: translateZ(-1px) scale(2);
                 position: absolute;
                 top: 0;
                 left: 0;

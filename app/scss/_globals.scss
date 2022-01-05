@@ -5,12 +5,11 @@ html{
     font-size: 100%;
     box-sizing: border-box;
     background-color: $lightgray;
-    width: 100vw;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
     height: 100%;
-        
+    width: 100%;  
 }
 
 @supports (scroll-behavior: smooth){
