@@ -40,7 +40,7 @@ body{
 ::-webkit-scrollbar{
     width: 0.5rem;
         @include breakpoint-down(medium){
-            width: 0.25rem;
+            width: 0;
         }
 }
 
