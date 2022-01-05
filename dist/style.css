@@ -694,18 +694,35 @@ button {
 }
 
 .parallax-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 60;
   background: url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
   height: 110vh;
   width: 100vw;
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2);
+}
+
+@media (max-width: 67.0625em) {
+  .parallax-wrapper {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(85%, transparent), to(#EAEBED)), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
+    background: linear-gradient(to bottom, transparent 85%, #EAEBED), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
+    background-size: cover;
+    max-width: 100vw;
+    height: 110vh;
+    position: static;
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 67.125em) {
+  .parallax-wrapper {
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 60;
+  }
 }
 
 .heading-text {
@@ -719,6 +736,13 @@ button {
   font-weight: 400;
   padding: 40rem 15px 0 60px;
   margin: 0;
+}
+
+@media (max-width: 67.0625em) {
+  .main-text {
+    margin-top: -68rem;
+    padding: 28rem 25px 0 60px;
+  }
 }
 
 @media (max-width: 41.8125em) {
@@ -748,6 +772,12 @@ button {
   height: inherit;
 }
 
+@media (max-width: 67.0625em) {
+  .sub-text {
+    padding: 0 10px 0 60px;
+  }
+}
+
 @media (max-width: 41.8125em) {
   .sub-text {
     font-size: 1.5rem;
@@ -767,7 +797,14 @@ button {
   margin-top: -6rem;
   padding-bottom: 7rem;
   position: relative;
-  z-index: -1;
+  z-index: 4;
+}
+
+@media (max-width: 67.0625em) {
+  .coolshape {
+    padding-top: 11rem;
+    margin-top: -18rem;
+  }
 }
 
 .reallign {
