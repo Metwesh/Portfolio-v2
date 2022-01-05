@@ -188,6 +188,7 @@ html {
   width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll;
+  position: relative;
   height: 100%;
 }
 
@@ -211,18 +212,6 @@ body {
   font-size: 16px;
   padding-top: 80px;
   letter-spacing: 1px;
-}
-
-@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
-  .body {
-    -webkit-transform: perspective(1px);
-    transform: perspective(1px);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -708,7 +697,6 @@ button {
     background-size: cover;
     max-width: 100vw;
     height: 110vh;
-    position: static;
     background-attachment: scroll;
   }
 }
@@ -723,11 +711,6 @@ button {
     right: 0;
     z-index: 60;
   }
-}
-
-.heading-text {
-  -webkit-transform: translateZ(2px) scale(4);
-  transform: translateZ(2px) scale(4);
 }
 
 .main-text {
