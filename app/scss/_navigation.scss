@@ -1,383 +1,356 @@
-.main-nav{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-color: $white;
-    width: 100vw;
-    height: 80px;
-    top: 0;
-    z-index: 1000000;
-    transition: box-shadow 300ms ease-in-out;
-    box-shadow: 0 0 15px 1px $darkgray;
+.main-nav {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: $white;
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  z-index: 1000000;
+  transition: box-shadow 300ms ease-in-out;
+  box-shadow: 0 0 15px 1px $darkgray;
 }
 
-
-ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    margin: 0px;
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
 }
-
 
 // Main links /////////////////////////////////////////////////////////////////////////////////////////////
-.navlinks{
-    position: relative;
-    display: flex;
-    justify-content: left;
-    padding: 20px 20px;
-    margin-left: 60px;
-    list-style: none;
-        @include breakpoint-down(large){
-            margin-left: 30px;
-        }
-}
-    
-
-a{
-    text-decoration: none;
-    color: $darkgray;
+.navlinks {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  padding: 20px 20px;
+  margin-left: 60px;
+  list-style: none;
+  @include breakpoint-down(large) {
+    margin-left: 30px;
+  }
 }
 
-.mainlinks{
-    font-size: $font-lrg;
-    padding: 10px 25px;
-    margin: -10px -25px;
+a {
+  text-decoration: none;
+  color: $darkgray;
 }
 
-
-.navlinks::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 80%;
-    height: 4px;
-    border-radius: 8px;
-    background-image: $gradient-to-right;
-
-    width: 0;
-    -webkit-transform: scaleX(0);  
-    -ms-transform: scaleX(0);  
-    transform: scaleX(0);  
-    
-    -webkit-transition: width .3s ease-in-out;    
-    -o-transition: width .3s ease-in-out;    
-
-    -webkit-transition: -webkit-transform .3s ease-in-out;
-    transition: -webkit-transform .3s ease-in-out;    
-    -o-transition: transform .3s ease-in-out;    
-    transition: transform .3s ease-in-out;    
-    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out, width .3s ease-in-out;
+.mainlinks {
+  font-size: $font-lrg;
+  padding: 10px 25px;
+  margin: -10px -25px;
 }
 
+.navlinks::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 80%;
+  height: 4px;
+  border-radius: 8px;
+  background-image: $gradient-to-right;
 
+  width: 0;
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
 
+  -webkit-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
 
-
-.navlinks.extended:first-child::after{
-    -webkit-transform: scaleX(0.4);  
-    -ms-transform: scaleX(0.4);  
-    transform: scaleX(0.4);  
-    width: 100%;
-}
-.navlinks.shortened:first-child::after{
-    -webkit-transform: scaleX(0);    
-    -ms-transform: scaleX(0);    
-    transform: scaleX(0);  
-    width: 100%;
-}
-
-
-
-.navlinks.shortened:nth-child(2)::after{
-    -webkit-transform: scaleX(0);    
-    -ms-transform: scaleX(0);    
-    transform: scaleX(0);  
-    width: 100%;
-}
-.navlinks.extended:nth-child(2)::after{
-    -webkit-transform: scaleX(0.4);    
-    -ms-transform: scaleX(0.4);    
-    transform: scaleX(0.4);  
-    width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out,
+    width 0.3s ease-in-out;
 }
 
-
-
-.navlinks.shortened:nth-child(3)::after{
-    -webkit-transform: scaleX(0);    
-    -ms-transform: scaleX(0);    
-    transform: scaleX(0);  
-    width: 100%;
+.navlinks.extended:first-child::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transform: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
 }
-.navlinks.extended:nth-child(3)::after{
-    -webkit-transform: scaleX(0.4);    
-    -ms-transfosrm: scaleX(0.4);    
-    transform: scaleX(0.4);  
-    width: 100%;
+.navlinks.shortened:first-child::after {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
 }
 
-
-.navlinks.shortened:last-child::after{
-    -webkit-transform: scaleX(0);    
-    -ms-transform: scaleX(0);    
-    transform: scaleX(0);  
-    width: 100%;
+.navlinks.shortened:nth-child(2)::after {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
 }
-.navlinks.extended:last-child::after{
-    -webkit-transform: scaleX(0.4);    
-    -ms-transfosrm: scaleX(0.4);    
-    transform: scaleX(0.4);  
-    width: 100%;
-}
-
-
-.navlinks.extended:hover::after, .navlinks.shortened:hover::after{
-    -webkit-transform: none;    
-    -ms-transform: none;    
-    transform: none;    
-    width: 100%;
+.navlinks.extended:nth-child(2)::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transform: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
 }
 
-.mail-link{
-    margin-right: 80px;
-    margin-left: auto;
-    padding: 0 20px;
-    @include breakpoint-down(large){
-        margin-right: 40px;
-    }
+.navlinks.shortened:nth-child(3)::after {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
+}
+.navlinks.extended:nth-child(3)::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transfosrm: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
 }
 
-.mail-link:focus{
-    outline: none;
+.navlinks.shortened:last-child::after {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
+}
+.navlinks.extended:last-child::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transfosrm: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
 }
 
-.mail{
-    margin-top: 10px;
-    fill: url(#Solid);
-    width: 45px;
-    height: 45px;
+.navlinks.extended:hover::after,
+.navlinks.shortened:hover::after {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 100%;
 }
 
-#Mailclose{
-    visibility: hidden;
-    &.show{
+.mail-link {
+  margin-right: 80px;
+  margin-left: auto;
+  padding: 0 20px;
+  @include breakpoint-down(large) {
+    margin-right: 40px;
+  }
+}
+
+.mail {
+  margin-top: 10px;
+  fill: url(#Solid);
+  width: 45px;
+  height: 45px;
+}
+
+#Mailclose {
+  visibility: hidden;
+  &.show {
     visibility: visible;
-    }
+  }
 }
-#Mailopen{
-    margin-top: 0;
-    visibility: hidden;
-    &.show{
-        visibility: visible;
-    }
-}
-
-.mail:hover{
-    fill: url(#RadialGradient);
+#Mailopen {
+  margin-top: 10px;
+  visibility: hidden;
+  &.show {
+    visibility: visible;
+  }
 }
 
-button{
-    cursor: pointer;
+.mail:hover {
+  fill: url(#RadialGradient);
 }
 
+button {
+  cursor: pointer;
+}
 
-.button{
-    position: relative;
-    padding: 10px 30px;
-    font-size: $font-lrg;
-    font-family: 'Spline Sans', sans-serif;
-    font-weight: 400;
-    text-decoration: none;
-    color: $white;
-    text-shadow: -1px 1px 2px $darkgray;
-    border-radius: 40px;
-    margin-right: 80px;
-    margin-left: auto;
-    background-image: $gradient-to-top;
-    -webkit-transition: text-shadow .3s ease-in-out;    
-    -o-transition: text-shadow .3s ease-in-out;    
-    -webkit-transition: all .3s ease-in-out;    
-    -o-transition: all .3s ease-in-out;    
-    transition: all .3s ease-in-out, text-shadow .3s ease-in-out;
-        @include breakpoint-down(large){
-            margin-right: 40px;
-        }
-    &.dark{
+.button {
+  position: relative;
+  padding: 10px 30px;
+  font-size: $font-lrg;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: $white;
+  text-shadow: -1px 1px 2px $darkgray;
+  border-radius: 40px;
+  margin-right: 80px;
+  margin-left: auto;
+  background-image: $gradient-to-top;
+  -webkit-transition: text-shadow 0.3s ease-in-out;
+  -o-transition: text-shadow 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  @include breakpoint-down(large) {
+    margin-right: 40px;
+  }
+  &.alt {
+    margin: 0;
+    padding: 10px 20px;
+
+    &.form {
+      visibility: inherit;
+      margin: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      @include breakpoint-down(mdsmall) {
         margin: 0;
-        padding: 10px 20px;
-
-        &.form{
-            visibility: inherit;
-            margin: 20px;
-            padding-left: 40px;
-            padding-right: 40px;
-            @include breakpoint-down(mdsmall){
-                margin: 0;
-                padding-left: 20px;
-                padding-right: 20px;  
-            }
-        }
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     }
+  }
 }
 
-.button:hover{
-    -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
-    box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan, 0 0 20px $lightcyan;
-    text-shadow: 0px 0px 2px $darkgray, 0px 0px 4px $cyan;
+.button:hover {
+  -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
+    0 0 20px $lightcyan;
+  box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
+    0 0 20px $lightcyan;
+  text-shadow: 0px 0px 2px $darkgray, 0px 0px 4px $cyan;
 }
-
-
 
 // Mobile nav bar ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.mobilecontainer{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100vw;
-    height: 80px;
-    top: 0;
-    z-index: 2;
-        @include breakpoint-up(medium){
-        display: none;
-    }
+.mobilecontainer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  z-index: 2;
 }
 
-.logocontainer{
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-    margin-left: 80px;
-    padding-bottom: 4px;
-    @include breakpoint-down(small){
-        margin-left: 20px;
-    }
-    @include breakpoint-up(small){
-        margin-left: 60px;
-    }
-
-
+.logocontainer {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 80px;
+  padding-bottom: 4px;
+  @include breakpoint-down(small) {
+    margin-left: 20px;
+  }
+  @include breakpoint-up(small) {
+    margin-left: 60px;
+  }
 }
 
-.homelogo{
-    fill: $darkgray;
-    margin-right: auto;
-    width: 30px;
-    height: 30px;
-    @include breakpoint-up(small){
-        width: 45px;
-        height: 45px;
-    }
+.homelogo {
+  fill: $darkgray;
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+  @include breakpoint-up(small) {
+    width: 45px;
+    height: 45px;
+  }
 }
 
-
-
-.hamburger:focus{
-    outline: none;
+.hamburger:focus {
+  outline: none;
 }
 
-.hamburger{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-right: 80px;
-        @include breakpoint-down(small){
-            margin-right: 20px;
-        }
-        @include breakpoint-up(small){
-            margin-right: 60px;
-        }
-    >span{
-        display: block;
-        width: 42px;
-        height: 4px;
-        background-color: $darkgray;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        &:not(:last-child){
-            margin-bottom: 5px;
-        }
-            @include breakpoint-up(small){
-                width: 62px;
-                height: 6px;
-                &:not(:last-child){
-                    margin-bottom: 10px;
-                    }
-            }
-    }
-    
-}
-
-.open{
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 80px;
+  @include breakpoint-down(small) {
+    margin-right: 20px;
+  }
+  @include breakpoint-up(small) {
+    margin-right: 60px;
+  }
+  > span {
+    display: block;
+    width: 42px;
+    height: 4px;
+    background-color: $darkgray;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    -webkit-transition-delay: 0.6s;
-    -o-transition-delay: 0.6s;
-    transition-delay: 0.6s;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-
-    :nth-child(2){
-        width: 0%;
-        opacity: 0;
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
-
-    :first-child, :last-child{
-            -webkit-transition-delay: 0.3s;
-            -o-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-          
-    }
-
-    :first-child{
-        -webkit-transform: translateY(16px);
-        -ms-transform: translateY(16px);
-        -o-transform: translateY(16px);
-        transform: translateY(16px);
-
-            @include breakpoint-down(small){
-                -webkit-transform: translateY(9px);
-                -ms-transform: translateY(9px);
-                -o-transform: translateY(9px);
-                transform: translateY(9px);
-            }
-    }
-
-
-    :last-child{
-        -webkit-transform: translateY(-16px) rotate(90deg);
-        -ms-transform: translateY(-16px) rotate(90deg);
-        -o-transform: translateY(-16px) rotate(90deg);
-        transform: translateY(-16px) rotate(90deg);
-
-            @include breakpoint-down(small){
-                -webkit-transform: translateY(-9px) rotate(90deg);
-                -ms-transform: translateY(-9px) rotate(90deg);
-                -o-transform: translateY(-9px) rotate(90deg);
-                transform: translateY(-9px) rotate(90deg);
-            }
+    @include breakpoint-up(small) {
+      width: 62px;
+      height: 6px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
       }
-
+    }
+  }
 }
 
-.hide-for-desktop{
-    @include breakpoint-up(medium){
-        display: none;
+.open {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  :nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  :first-child,
+  :last-child {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+
+  :first-child {
+    -webkit-transform: translateY(16px);
+    -ms-transform: translateY(16px);
+    -o-transform: translateY(16px);
+    transform: translateY(16px);
+
+    @include breakpoint-down(small) {
+      -webkit-transform: translateY(9px);
+      -ms-transform: translateY(9px);
+      -o-transform: translateY(9px);
+      transform: translateY(9px);
     }
+  }
+
+  :last-child {
+    -webkit-transform: translateY(-16px) rotate(90deg);
+    -ms-transform: translateY(-16px) rotate(90deg);
+    -o-transform: translateY(-16px) rotate(90deg);
+    transform: translateY(-16px) rotate(90deg);
+
+    @include breakpoint-down(small) {
+      -webkit-transform: translateY(-9px) rotate(90deg);
+      -ms-transform: translateY(-9px) rotate(90deg);
+      -o-transform: translateY(-9px) rotate(90deg);
+      transform: translateY(-9px) rotate(90deg);
+    }
+  }
 }
 
-.hide-for-mobile{
-    @include breakpoint-down(medium){
-        display: none;
-    }
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
 }
