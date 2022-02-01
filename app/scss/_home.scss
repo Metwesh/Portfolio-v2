@@ -1,0 +1,68 @@
+.home {
+  height: 140vh;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(80%, transparent),
+      to($lightgray)
+    ),
+    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
+      center center fixed;
+  background: -o-linear-gradient(top, transparent 80%, $lightgray),
+    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
+      center center fixed;
+  background: linear-gradient(to bottom, transparent 80%, $lightgray),
+    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
+      center center fixed;
+  background-size: cover;
+
+  background-attachment: scroll;
+}
+
+.main-text {
+  font-size: $font-xlg;
+  color: $darkgray;
+  font-weight: 400;
+  padding: 20rem 1rem 0 3.75rem;
+  margin: 0;
+  @include breakpoint-down(small) {
+    padding: 16rem 1rem 0 3.75rem;
+    font-size: $font-lrgmed;
+    padding-left: 40px;
+  }
+  @include breakpoint-down(xsmall) {
+    font-size: $font-lrg;
+    padding-left: 30px;
+  }
+}
+.sub-text {
+  font-size: $font-lrgmed;
+  color: $darkgray;
+  margin: 0px;
+  font-weight: 300;
+  padding: 0 10px 0 60px;
+  @include breakpoint-down(large) {
+    padding: 0 10px 0 60px;
+  }
+  @include breakpoint-down(small) {
+    font-size: $font-lrg;
+    padding-left: 40px;
+  }
+  @include breakpoint-down(xsmall) {
+    font-size: $font-med;
+    padding-left: 30px;
+  }
+}
+.colored {
+  color: $darkcyan;
+}
+.svgcontainer {
+  overflow: hidden;
+  padding-top: 14rem;
+  margin-top: -14rem;
+}
+.coolshape {
+  margin-top: -11rem;
+  transform: translateX(-40rem);
+}

@@ -169,7 +169,6 @@ button {
 }
 
 .button {
-  position: relative;
   padding: 10px 30px;
   font-size: $font-lrg;
   font-family: "Spline Sans", sans-serif;
@@ -192,16 +191,71 @@ button {
   &.alt {
     margin: 0;
     padding: 10px 20px;
-
-    &.form {
-      visibility: inherit;
-      margin: 20px;
-      padding-left: 40px;
-      padding-right: 40px;
-      @include breakpoint-down(mdsmall) {
-        margin: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+  }
+  &.form {
+    visibility: inherit;
+    margin: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include breakpoint-down(mdsmall) {
+      margin: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &.gridbutton {
+    @include breakpoint-down(small) {
+      font-size: $font-smmed;
+    }
+  }
+  &.dark {
+    background: $dark-gradient;
+    &.darkswitch {
+      background: $dark-gradient-invert;
+    }
+    &:disabled {
+      color: gray;
+      position: relative;
+      &:hover {
+        cursor: initial;
+        box-shadow: none;
+        text-shadow: none;
+        &::after {
+          content: attr(data-tooltip);
+          width: 200%;
+          font-size: $font-med;
+          background: $darkgray;
+          padding: 1rem;
+          border-radius: 5px;
+          display: inline-block;
+          position: absolute;
+          transform: translate(-50%, -100%);
+          margin: 0 auto;
+          color: $white;
+          min-width: 100px;
+          min-width: 150px;
+          top: -5px;
+          left: 50%;
+          text-align: center;
+          @include breakpoint-down(small) {
+            width: 150%;
+          }
+        }
+        &::before {
+          content: " ";
+          top: -5px;
+          left: 50%;
+          border: solid transparent;
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(0, 0, 0, 0);
+          border-top-color: $darkgray;
+          border-width: 5px;
+          margin-left: -5px;
+          transform: translate(0, 0);
+        }
       }
     }
   }

@@ -1,0 +1,90 @@
+.portfolio {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+
+@supports (display: flex) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@supports (display: grid) {
+  .grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
+    gap: 40px 40px;
+    margin-bottom: 1.6rem;
+    overflow: hidden;
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .gridcell {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+}
+
+.project {
+  max-width: 55.5rem;
+  transform: scale(1.08);
+  width: 100%;
+  height: auto;
+}
+
+.dorito {
+  @include breakpoint-up(large) {
+    transform: rotate(-90deg);
+  }
+}
+
+.heading {
+  display: block;
+  font-size: $font-lrgmed;
+  font-weight: 600;
+  @include breakpoint-down(large) {
+    margin-bottom: 1rem;
+  }
+}
+
+.projecttext {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 55.5rem;
+  font-size: $font-med;
+  margin: 0px;
+  margin-bottom: auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px $darkgray;
+  @include breakpoint-up(large) {
+    height: 100%;
+  }
+}
+.buttoncontainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  @include breakpoint-up(small) {
+    margin: 2rem 4rem 0 4rem;
+  }
+  @include breakpoint-up(medium) {
+    margin: 2rem 2rem 0 2rem;
+  }
+  @include breakpoint-down(small) {
+    margin: 1rem 1.3rem 0 1.3rem;
+  }
+  @include breakpoint-down(xsmall) {
+    margin: 0.5rem 0.75rem 0 0.75rem;
+  }
+}
+@supports (justify-content: space-evenly) {
+  .buttoncontainer {
+    justify-content: space-evenly;
+  }
+}

@@ -90,7 +90,7 @@ portfoliolink.addEventListener("click", portfolioLinkOn);
 
 //Intersection Observer
 const home = document.querySelector("#home");
-const message = document.querySelector("#message");
+const about = document.querySelector("#about");
 const resume = document.querySelector("#resume");
 const portfolio = document.querySelector("#portfolio");
 
@@ -106,13 +106,13 @@ const homeObserver = new IntersectionObserver((entries, homeObserver) => {
 }, homeOptions);
 homeObserver.observe(home);
 
-const messageObserver = new IntersectionObserver((entries, messageObserver) => {
+const aboutObserver = new IntersectionObserver((entries, aboutObserver) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) aboutLinkOn();
     else return;
   });
 }, Options);
-messageObserver.observe(message);
+aboutObserver.observe(about);
 
 const resumeObserver = new IntersectionObserver((entries, resumeObserver) => {
   entries.forEach((entry) => {
@@ -243,21 +243,34 @@ let lastKnownScrollPosition = 0;
 let ticking = false;
 const coolshape = document.querySelector(".coolshape");
 
-function scrollMove(scrollPos) {
-  // if (screen.width > 1073) {
-    coolshape.style.transform = `translateX(${-scrollPos - 100}px)`;
-  // }
-}
-
-document.addEventListener("scroll", function (e) {
+function scrollListener() {
   lastKnownScrollPosition = window.scrollY;
-
   if (!ticking) {
     window.requestAnimationFrame(function () {
       scrollMove(lastKnownScrollPosition);
       ticking = false;
     });
-
     ticking = true;
   }
+}
+
+function scrollMove(scrollPos) {
+  if (screen.width > 1073) {
+    coolshape.style.transform = `translateX(${-scrollPos - 100}px)`;
+  } else if (screen.width > 600) {
+    coolshape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
+  } else coolshape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
+}
+
+document.addEventListener("scroll", scrollListener);
+
+//Button switch
+const darkButton = document.querySelectorAll(".dark");
+darkButton.forEach((button) => {
+  button.onmousedown = () => {
+    button.classList.toggle("darkswitch");
+  };
+  button.onmouseup = () => {
+    button.classList.toggle("darkswitch");
+  };
 });

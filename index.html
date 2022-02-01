@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" as="image" href="./images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png">
+    <meta name="description" content="Designer & developer: Mohamed H. Aly">
+    <link rel="preload" as="image" href="./images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp">
     <!-- Favicon -->
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.webp">
+    <link rel="manifest" href="./images/site.webmanifest">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./dist/style.min.css">
 
     <script defer src="./app/js/script.js"></script>
 
@@ -21,7 +25,7 @@
     <!-- Overlay -->
     <div id="overlay" class="overlay">
         <ul class="overlayul" id="overlayUl">
-            <li class="overlayLi"><a href="#message" class="overlaylinks">About</a></li>
+            <li class="overlayLi"><a href="#about" class="overlaylinks">About</a></li>
             <li class="overlayLi"><a href="#resume" class="overlaylinks">Resume</a></li>
             <li class="overlayLi"><a href="#portfolio" class="overlaylinks">Portfolio</a></li>
             <li class="overlayLi"><a href="javascript: void(0)" class="overlaylinks">Contact me</a></li>
@@ -61,7 +65,7 @@
     <nav class="main-nav">
         <ul class="hide-for-mobile">
             <li class="navlinks shortened" id="homelink"><a href="#" class="mainlinks">Home</a></li>
-            <li class="navlinks shortened" id="aboutlink"><a href="#message" class="mainlinks">About</a></li>
+            <li class="navlinks shortened" id="aboutlink"><a href="#about" class="mainlinks">About</a></li>
             <li class="navlinks shortened" id="resumelink"><a href="#resume" class="mainlinks">Resume</a></li>
             <li class="navlinks shortened" id="portfoliolink"><a href="#portfolio" class="mainlinks">Portfolio</a></li>
         </ul>
@@ -141,12 +145,12 @@
     </div>
 
 
-    <section class="message" id="message">
+    <section class="about" id="about">
         <div class="contentbg">
             <div class="contentdiv br">
                 <h1 class="header-text">Hello world!</h1>
                 <div class="imgcontainer">
-                    <img class="img right" src="./images/IMG_1693.jpg" alt="Personal image">
+                    <img class="img right" src="./images/IMG_1693.webp" alt="Personal image" />
                 </div>
                 <p class="main-content">Welcome to my website</p>
                 <p class="sub-content">This website was created by me to showcase my web development capabilities, to
@@ -162,11 +166,10 @@
                 <h1 class="header-text">Certificates</h1>
                 <p class="main-content">College</p>
                 <div class="imgcontainer">
-                    <img class="img left" src="./images/English certificate.jpg" alt="Certificate">
+                    <img class="img left" src="./images/English certificate.webp" alt="Certificate" />
                 </div>
                 <p class="sub-content pl">I graduated with a bachelor's degree in Management Information Systems on July
-                    2021, with a GPA of
-                    3.1 "Very Good".</p>
+                    2021, with a GPA of 3.1 "Very Good".</p>
                 <p class="sub-content pl">As part of my graduation project, I created a fully functioning book rental
                     website. I designed the frontend with HTML & CSS and added functionality with JavaScript; I also
                     created the backend with PHPMyAdmin & PHP. We also designed multiple schemas for a very intricate
@@ -180,7 +183,7 @@
                 <p class="main-content">Courses</p>
                 <div class="wideimgcontainer">
                     <img class="img right"
-                        src="./images/certificate-of-completion-for-complete-web-developer-in-2020-zero-to-mastery (1).jpg"
+                        src="./images/certificate-of-completion-for-complete-web-developer-in-2020-zero-to-mastery (1).webp"
                         alt="Certificate">
                 </div>
                 <p class="sub-content pr">I participated & finished a fullstack web developer course from ZeroToMastery
@@ -206,7 +209,7 @@
             <div class="contentdiv br">
                 <h1 class="header-text">Resume</h1>
                 <div class="imgcontainer resumecontainer">
-                    <img class="img resumebox" src="./images/Mohamed Hani Aly.jpg" alt="Certificate">
+                    <img class="img resumebox" src="./images/Mohamed Hani Aly.webp" alt="Resume" />
                 </div>
                 <div class="buttonsigndiv">
                     <form action="./Mohamed Hani Aly.pdf" target="_blank">
@@ -226,7 +229,7 @@
 
                 <div class="grid" id="grid">
                     <div class="gridcell">
-                        <img src="./images/Graduation Website.jpg" alt="Project 1" class="project" id="project1img">
+                        <img src="./images/Graduation Website.webp" alt="Project 1" class="project" id="project1img" />
                     </div>
                     <p class="projecttext">
                         <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
@@ -235,13 +238,20 @@
                         </svg>
                         <span class="heading">Online Bookstore</span>
                         My first ever website was created as part of my graduation project. It was a functional online
-                        bookstore with a complete frontend/backend/database. I have all the intricate details listed out
-                        in my resume above. Unfortunately the project files were lost & all I could find is this
-                        picture.
+                        bookstore with a complete frontend/backend/database. I built the frontend with no dependancies,
+                        I built the backend with PHP & built the database using PHPMyAdmin.
+                        <span class="buttoncontainer">
+                            <button type="button" disabled class="button alt gridbutton dark"
+                                data-tooltip="Due to hard-drive failure this project & its files are unavailable">Demo
+                                site</button>
+                            <button type="button" disabled class="button alt gridbutton dark"
+                                data-tooltip="Due to hard-drive failure this project & its files are unavailable">Visit
+                                repo</button>
+                        </span>
                     </p>
 
                     <div class="gridcell">
-                        <img src="./images/Clinic website 1.png" alt="Project 2" class="project" id="project2img">
+                        <img src="./images/Clinic website 1.webp" alt="Project 2" class="project" id="project2img" />
                     </div>
                     <p class="projecttext">
                         <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -253,10 +263,20 @@
                         focused as I wanted to create a catchy design with a fluid & responsive UI. It was for a
                         challenge I did on frontendMentor.com but I modified it to be a clinic instead of a bank
                         website.
+                        <span class="buttoncontainer">
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://metwesh.github.io/health-clinics/">
+                                <button type="button" class="button alt gridbutton dark">Demo site</button>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/Metwesh/health-clinics">
+                                <button type="button" class="button alt gridbutton dark">Visit repo</button>
+                            </a>
+                        </span>
                     </p>
 
                     <div class="gridcell">
-                        <img src="./images/Budget app.png" alt="Project 3" class="project" id="project3img">
+                        <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
                     </div>
 
                     <p class="projecttext">
@@ -265,11 +285,21 @@
                                 d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                         </svg>
                         <span class="heading">Budget app</span>
-                        <!-- Insert text for budget app -->
+                        Created a compact CRUD budget tracking app using React. I used react-bootstrap for the styling.
+                        Implemented the use of localstorage to not lose state data if user leaves the site. This app is
+                        fully capable of adding, viewing & deleting budgets and/or expenses.
+                        <span class="buttoncontainer">
+                            <a target="_blank" rel="noopener noreferrer" href="https://metwesh.github.io/budget-app/">
+                                <button type="button" class="button alt gridbutton dark">Demo site</button>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Metwesh/budget-app/">
+                                <button type="button" class="button alt gridbutton dark">Visit repo</button>
+                            </a>
+                        </span>
                     </p>
 
                     <div class="gridcell">
-                        <img src="./images/Face-detect.png" alt="Project 4" class="project" id="project4img">
+                        <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
                     </div>
 
                     <p class="projecttext">
@@ -278,7 +308,19 @@
                                 d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                         </svg>
                         <span class="heading">Face detection app</span>
-                        <!-- Insert text for face detection app -->
+                        Created a face detection app with its respective backend & database. I used react to handle
+                        states & react-bootstrap to handle styling. I built the backend with NodeJS & Express &
+                        implemented one-way password hashing through bcrypt. I used postgreSQL to handle the database &
+                        KnexJS to interact with it on the server. The app is powered with the Clarifai API.
+                        <span class="buttoncontainer">
+                            <a target="_blank" rel="noopener noreferrer" href="https://face-detect-m.herokuapp.com/">
+                                <button type="button" class="button alt gridbutton dark">Demo site</button>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/Metwesh/face-recognition">
+                                <button type="button" class="button alt gridbutton dark">Visit repo</button>
+                            </a>
+                        </span>
                     </p>
 
                 </div>

@@ -1,42 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
-@-webkit-keyframes bgfadein {
-  from {
-    -webkit-transform: translateY(130%);
-    transform: translateY(130%);
-  }
-  to {
-    visibility: visible;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes bgfadein {
-  from {
-    -webkit-transform: translateY(130%);
-    transform: translateY(130%);
-  }
-  to {
-    visibility: visible;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
 @-webkit-keyframes overlayfadein {
   0% {
     visibility: hidden;
+    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
+    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
+    opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -45,16 +24,25 @@
 @keyframes overlayfadein {
   0% {
     visibility: hidden;
+    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
+    opacity: 0;
+    -webkit-transform: translateY(-130%);
+    transform: translateY(-130%);
+  }
+  2% {
+    visibility: visible;
+    opacity: 1;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
+    opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -98,8 +86,8 @@
 
 @-webkit-keyframes inputHighlighter {
   from {
-    background: #0ec7ff;
     width: 100%;
+    background: #0ec7ff;
   }
   to {
     width: 0;
@@ -109,8 +97,8 @@
 
 @keyframes inputHighlighter {
   from {
-    background: #0ec7ff;
     width: 100%;
+    background: #0ec7ff;
   }
   to {
     width: 0;
@@ -121,6 +109,8 @@
 @-webkit-keyframes arrow {
   0% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
     opacity: 0;
@@ -132,6 +122,8 @@
 @keyframes arrow {
   0% {
     opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   100% {
     opacity: 0;
@@ -140,51 +132,11 @@
   }
 }
 
-@-webkit-keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-26rem);
-    transform: translateY(-26rem);
-  }
-}
-
-@keyframes bounce {
-  from {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(-26rem);
-    transform: translateY(-26rem);
-  }
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #EAEBED;
+  background-color: #eaebed;
 }
 
 @supports (scroll-behavior: smooth) {
@@ -432,7 +384,6 @@ button {
 }
 
 .button {
-  position: relative;
   padding: 10px 30px;
   font-size: 1.5rem;
   font-family: "Spline Sans", sans-serif;
@@ -462,7 +413,7 @@ button {
   padding: 10px 20px;
 }
 
-.button.alt.form {
+.button.form {
   visibility: inherit;
   margin: 20px;
   padding-left: 40px;
@@ -470,11 +421,80 @@ button {
 }
 
 @media (max-width: 30.3125em) {
-  .button.alt.form {
+  .button.form {
     margin: 0;
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+@media (max-width: 41.8125em) {
+  .button.gridbutton {
+    font-size: 1rem;
+  }
+}
+
+.button.dark {
+  background: linear-gradient(160deg, #424242 0%, black 100%);
+}
+
+.button.dark.darkswitch {
+  background: linear-gradient(320deg, #424242 0%, black 100%);
+}
+
+.button.dark:disabled {
+  color: gray;
+  position: relative;
+}
+
+.button.dark:disabled:hover {
+  cursor: initial;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+}
+
+.button.dark:disabled:hover::after {
+  content: attr(data-tooltip);
+  width: 200%;
+  font-size: 1.125rem;
+  background: #383d46;
+  padding: 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  margin: 0 auto;
+  color: #ffff;
+  min-width: 100px;
+  min-width: 150px;
+  top: -5px;
+  left: 50%;
+  text-align: center;
+}
+
+@media (max-width: 41.8125em) {
+  .button.dark:disabled:hover::after {
+    width: 150%;
+  }
+}
+
+.button.dark:disabled:hover::before {
+  content: " ";
+  top: -5px;
+  left: 50%;
+  border: solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-top-color: #383d46;
+  border-width: 5px;
+  margin-left: -5px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .button:hover {
@@ -654,8 +674,8 @@ button {
 
 .home {
   height: 140vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(#EAEBED)), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
-  background: linear-gradient(to bottom, transparent 80%, #EAEBED), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.png) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(#eaebed)), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat center center fixed;
+  background: linear-gradient(to bottom, transparent 80%, #eaebed), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -727,7 +747,7 @@ button {
           transform: translateX(-40rem);
 }
 
-.message {
+.about {
   padding-top: 2rem;
 }
 
@@ -762,13 +782,6 @@ button {
   border-bottom-right-radius: 10px;
 }
 
-@media (max-width: 41.8125em) {
-  .contentdiv {
-    margin: 0px 20px;
-    padding: 3rem 20px;
-  }
-}
-
 @media (min-width: 41.875em) {
   .contentdiv {
     margin: 0px 40px;
@@ -776,9 +789,14 @@ button {
   }
 }
 
+@media (max-width: 41.8125em) {
+  .contentdiv {
+    padding: 3rem 20px;
+  }
+}
+
 @media (max-width: 22.5em) {
   .contentdiv {
-    margin: 0px 10px;
     padding: 10px 10px;
   }
 }
@@ -968,15 +986,40 @@ button {
 .img.resumebox {
   width: auto;
   min-width: 20%;
-  max-height: 55rem;
+  max-height: 40rem;
   height: auto;
   min-height: 20%;
   margin-top: 0;
+  border: 1px solid #000;
+  -webkit-box-shadow: 0 0 15px #383d46;
+          box-shadow: 0 0 15px #383d46;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.img.resumebox:hover {
+  -webkit-transform: scale(1.9);
+          transform: scale(1.9);
 }
 
 .portfolio {
   padding-top: 40px;
   margin-top: -40px;
+}
+
+@supports (display: flex) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @supports (display: grid) {
@@ -1001,50 +1044,102 @@ button {
     overflow: hidden;
     border-radius: 5px;
   }
-  .project {
-    max-width: 55.5rem;
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
-    width: 100%;
-    height: auto;
+}
+
+.project {
+  max-width: 55.5rem;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 67.125em) {
+  .dorito {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
   }
-  .project:hover {
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
-    transition: -webkit-transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out;
-    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-    -webkit-transform: scale(1.09);
-    transform: scale(1.09);
-  }
-  @media (min-width: 67.125em) {
-    .dorito {
-      -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg);
-    }
-  }
+}
+
+.heading {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+@media (max-width: 67.0625em) {
   .heading {
-    display: block;
-    font-size: 2.25rem;
-    font-weight: 600;
+    margin-bottom: 1rem;
   }
-  @media (max-width: 67.0625em) {
-    .heading {
-      margin-bottom: 1rem;
-    }
-  }
+}
+
+.projecttext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 55.5rem;
+  font-size: 1.125rem;
+  margin: 0px;
+  margin-bottom: auto;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 10px #383d46;
+          box-shadow: inset 0 0 10px #383d46;
+}
+
+@media (min-width: 67.125em) {
   .projecttext {
-    font-size: 1.125rem;
-    margin: 0px;
-    margin-bottom: auto;
-    padding: 20px;
-    border-radius: 5px;
-    -webkit-box-shadow: inset 0 0 10px #383d46;
-            box-shadow: inset 0 0 10px #383d46;
+    height: 100%;
   }
-  @media (min-width: 67.125em) {
-    .projecttext {
-      height: 100%;
-    }
+}
+
+.buttoncontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 41.875em) {
+  .buttoncontainer {
+    margin: 2rem 4rem 0 4rem;
+  }
+}
+
+@media (min-width: 55.375em) {
+  .buttoncontainer {
+    margin: 2rem 2rem 0 2rem;
+  }
+}
+
+@media (max-width: 41.8125em) {
+  .buttoncontainer {
+    margin: 1rem 1.3rem 0 1.3rem;
+  }
+}
+
+@media (max-width: 22.5em) {
+  .buttoncontainer {
+    margin: 0.5rem 0.75rem 0 0.75rem;
+  }
+}
+
+@supports (justify-content: space-evenly) {
+  .buttoncontainer {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
