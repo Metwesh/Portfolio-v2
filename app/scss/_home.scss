@@ -7,14 +7,11 @@
       color-stop(80%, transparent),
       to($lightgray)
     ),
-    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
-      center center fixed;
+    url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background: -o-linear-gradient(top, transparent 80%, $lightgray),
-    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
-      center center fixed;
+    url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background: linear-gradient(to bottom, transparent 80%, $lightgray),
-    url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat
-      center center fixed;
+    url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
 
   background-attachment: scroll;
@@ -65,4 +62,5 @@
 .coolshape {
   margin-top: -11rem;
   transform: translateX(-40rem);
+  margin-bottom: -4rem;
 }

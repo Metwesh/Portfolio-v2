@@ -20,8 +20,14 @@
   &.firstdiv {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    padding-bottom: 1rem;
+  }
+  &.middlediv {
+    padding-top: 0rem;
+    padding-bottom: 1rem;
   }
   &.lastdiv {
+    padding-top: 0rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
@@ -137,13 +143,14 @@
   width: auto;
   max-height: 28.5rem;
   height: auto;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-bottom: 1.25rem;
+
   &.right {
     margin-left: 1.25rem;
     margin-bottom: 2rem;
     float: right;
-    @include breakpoint-down(small) {
+    @include breakpoint-down(medium) {
       float: none;
       margin-left: 0;
     }
@@ -151,13 +158,19 @@
   &.left {
     margin-right: 2.5rem;
     float: left;
-    @include breakpoint-down(small) {
+    @include breakpoint-down(medium) {
       float: none;
       margin-right: 0;
     }
   }
+  &.wide {
+    max-width: 35rem;
+    @include breakpoint-down(large) {
+      margin: 0;
+    }
+  }
 
-  &.resumebox {
+  &.resume {
     width: auto;
     min-width: 20%;
     max-height: 40rem;
@@ -165,10 +178,12 @@
     min-height: 20%;
     margin-top: 0;
     border: 1px solid $black;
-    box-shadow: 0 0 15px $darkgray;
     transition: all 300ms ease-in-out;
-    &:hover {
-      transform: scale(1.9);
+    @include breakpoint-up(medium) {
+      &:hover {
+        box-shadow: 0 0 15px $darkgray;
+        transform: scale(1.9);
+      }
     }
   }
 }

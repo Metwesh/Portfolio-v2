@@ -214,7 +214,7 @@ button {
       background: $dark-gradient-invert;
     }
     &:disabled {
-      color: gray;
+      color: $darkergray;
       position: relative;
       &:hover {
         cursor: initial;

@@ -2,21 +2,18 @@
 @-webkit-keyframes overlayfadein {
   0% {
     visibility: hidden;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     -ms-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     -ms-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -26,28 +23,18 @@
 @keyframes overlayfadein {
   0% {
     visibility: hidden;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     -ms-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
-    opacity: 0;
-    -webkit-transform: translateY(-130%);
-    -ms-transform: translateY(-130%);
-    transform: translateY(-130%);
-  }
-  2% {
-    visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(-130%);
     -ms-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);

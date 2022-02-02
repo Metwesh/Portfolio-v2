@@ -3,19 +3,16 @@
 @-webkit-keyframes overlayfadein {
   0% {
     visibility: hidden;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -24,25 +21,16 @@
 @keyframes overlayfadein {
   0% {
     visibility: hidden;
-    opacity: 0;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   1% {
     visibility: visible;
-    opacity: 0;
-    -webkit-transform: translateY(-130%);
-    transform: translateY(-130%);
-  }
-  2% {
-    visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(-130%);
     transform: translateY(-130%);
   }
   100% {
     visibility: visible;
-    opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
@@ -435,15 +423,15 @@ button {
 }
 
 .button.dark {
-  background: linear-gradient(160deg, #424242 0%, black 100%);
+  background: linear-gradient(160deg, #626875 10%, #1e2125 100%);
 }
 
 .button.dark.darkswitch {
-  background: linear-gradient(320deg, #424242 0%, black 100%);
+  background: linear-gradient(320deg, #626875 0%, #1e2125 100%);
 }
 
 .button.dark:disabled {
-  color: gray;
+  color: #1e2125;
   position: relative;
 }
 
@@ -674,8 +662,8 @@ button {
 
 .home {
   height: 140vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(#eaebed)), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat center center fixed;
-  background: linear-gradient(to bottom, transparent 80%, #eaebed), url(../images/tim-schmidbauer-JVaGLAhfbW8-unsplash-removebg.webp) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(#eaebed)), url("../images/Architecture background.webp") no-repeat center center fixed;
+  background: linear-gradient(to bottom, transparent 80%, #eaebed), url("../images/Architecture background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -745,6 +733,7 @@ button {
   margin-top: -11rem;
   -webkit-transform: translateX(-40rem);
           transform: translateX(-40rem);
+  margin-bottom: -4rem;
 }
 
 .about {
@@ -775,9 +764,16 @@ button {
 .contentdiv.firstdiv {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  padding-bottom: 1rem;
+}
+
+.contentdiv.middlediv {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
 }
 
 .contentdiv.lastdiv {
+  padding-top: 0rem;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -954,7 +950,7 @@ button {
   width: auto;
   max-height: 28.5rem;
   height: auto;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-bottom: 1.25rem;
 }
 
@@ -964,7 +960,7 @@ button {
   float: right;
 }
 
-@media (max-width: 41.8125em) {
+@media (max-width: 55.3125em) {
   .img.right {
     float: none;
     margin-left: 0;
@@ -976,14 +972,24 @@ button {
   float: left;
 }
 
-@media (max-width: 41.8125em) {
+@media (max-width: 55.3125em) {
   .img.left {
     float: none;
     margin-right: 0;
   }
 }
 
-.img.resumebox {
+.img.wide {
+  max-width: 35rem;
+}
+
+@media (max-width: 67.0625em) {
+  .img.wide {
+    margin: 0;
+  }
+}
+
+.img.resume {
   width: auto;
   min-width: 20%;
   max-height: 40rem;
@@ -991,15 +997,17 @@ button {
   min-height: 20%;
   margin-top: 0;
   border: 1px solid #000;
-  -webkit-box-shadow: 0 0 15px #383d46;
-          box-shadow: 0 0 15px #383d46;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
-.img.resumebox:hover {
-  -webkit-transform: scale(1.9);
-          transform: scale(1.9);
+@media (min-width: 55.375em) {
+  .img.resume:hover {
+    -webkit-box-shadow: 0 0 15px #383d46;
+            box-shadow: 0 0 15px #383d46;
+    -webkit-transform: scale(1.9);
+            transform: scale(1.9);
+  }
 }
 
 .portfolio {
