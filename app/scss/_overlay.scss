@@ -1,3 +1,8 @@
+@supports (will-change: transform) {
+  .overlay .overlayform {
+    will-change: transform;
+  }
+}
 .overlay {
   visibility: hidden;
   position: fixed;
@@ -34,7 +39,6 @@
   box-shadow: 0 0 30px $gray;
   visibility: inherit;
 
-
   :first-child {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -44,7 +48,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
-
 }
 
 .overlayLi {
@@ -130,6 +133,9 @@
   border-radius: 20px;
   box-shadow: 0 0 30px $gray;
   background-color: $white;
+  @include breakpoint-up(large) {
+    margin: 30px 15vw;
+  }
   @include breakpoint-down(mdsmall) {
     padding: 30px;
   }
@@ -146,6 +152,14 @@
     margin-bottom: 30px;
   }
 }
+
+.formheader {
+  text-align: center;
+  @include breakpoint-down(medium) {
+    font-size: $font-lrg;
+  }
+}
+
 .input {
   visibility: inherit;
   font-size: $font-med;

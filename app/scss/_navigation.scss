@@ -343,7 +343,11 @@ button {
     }
   }
 }
-
+@supports (will-change: transform) {
+  .open{
+    will-change: transform;
+  }
+}
 .open {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
