@@ -164,15 +164,17 @@
     }
   }
   &.wide {
-    max-width: 35rem;
+    max-width: 100%;
+    max-height: 25rem;
+    height: auto;
+    width: auto;
     @include breakpoint-down(large) {
       margin: 0;
     }
   }
 
-  &.resume {
+  &.resumeimg {
     width: auto;
-    min-width: 20%;
     max-height: 40rem;
     height: auto;
     min-height: 20%;
@@ -180,6 +182,7 @@
     border: 1px solid $black;
     transition: all 300ms ease-in-out;
     @include breakpoint-up(medium) {
+      cursor: zoom-in;
       &:hover {
         box-shadow: 0 0 15px $darkgray;
         transform: scale(1.9);

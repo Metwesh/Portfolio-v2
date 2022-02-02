@@ -267,10 +267,6 @@ document.addEventListener("scroll", scrollListener);
 //Button switch
 const darkButton = document.querySelectorAll(".dark");
 darkButton.forEach((button) => {
-  button.onmousedown = () => {
-    button.classList.toggle("darkswitch");
-  };
-  button.onmouseup = () => {
-    button.classList.toggle("darkswitch");
-  };
+  button.onmousedown = () => button.classList.toggle("darkswitch");
+  button.onmouseup = () => button.classList.toggle("darkswitch");
 });
