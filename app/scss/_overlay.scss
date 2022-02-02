@@ -27,7 +27,6 @@
 }
 
 .overlayul {
-  z-index: 200;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +37,9 @@
   background-color: $white;
   box-shadow: 0 0 30px $gray;
   visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
 
   :first-child {
     border-top-left-radius: 20px;
@@ -52,6 +54,9 @@
 
 .overlayLi {
   visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
   padding: 60px 0px;
   width: 100%;
   border: 1px solid $gray;
@@ -65,6 +70,9 @@
 
 .overlaylinks {
   visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,26 +111,19 @@
 
 .exit {
   visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
   padding: 10px;
   margin: -10px;
   margin-left: auto;
 }
 
-.white {
-  margin-top: 4px;
-  fill: $white;
-  @include breakpoint-down(small) {
-    height: 17px;
-    width: 17px;
-  }
-  @include breakpoint-down(mdsmall) {
-    height: 12px;
-    width: 12px;
-  }
-}
-
 .overlayformbox {
   visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -146,7 +147,9 @@
 
 .group {
   visibility: inherit;
-  position: relative;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
   margin-bottom: 45px;
   @include breakpoint-down(xsmall) {
     margin-bottom: 30px;

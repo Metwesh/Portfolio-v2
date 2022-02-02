@@ -1193,7 +1193,6 @@ button {
 }
 
 .overlayul {
-  z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1214,6 +1213,8 @@ button {
   -webkit-box-shadow: 0 0 30px #626875;
           box-shadow: 0 0 30px #626875;
   visibility: inherit;
+  -webkit-transform: inherit;
+  transform: inherit;
 }
 
 .overlayul :first-child {
@@ -1228,6 +1229,8 @@ button {
 
 .overlayLi {
   visibility: inherit;
+  -webkit-transform: inherit;
+  transform: inherit;
   padding: 60px 0px;
   width: 100%;
   border: 1px solid #626875;
@@ -1247,6 +1250,8 @@ button {
 
 .overlaylinks {
   visibility: inherit;
+  -webkit-transform: inherit;
+  transform: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1293,32 +1298,17 @@ button {
 
 .exit {
   visibility: inherit;
+  -webkit-transform: inherit;
+  transform: inherit;
   padding: 10px;
   margin: -10px;
   margin-left: auto;
 }
 
-.white {
-  margin-top: 4px;
-  fill: #ffff;
-}
-
-@media (max-width: 41.8125em) {
-  .white {
-    height: 17px;
-    width: 17px;
-  }
-}
-
-@media (max-width: 30.3125em) {
-  .white {
-    height: 12px;
-    width: 12px;
-  }
-}
-
 .overlayformbox {
   visibility: inherit;
+  -webkit-transform: inherit;
+  transform: inherit;
   z-index: 200;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1361,7 +1351,8 @@ button {
 
 .group {
   visibility: inherit;
-  position: relative;
+  -webkit-transform: inherit;
+  transform: inherit;
   margin-bottom: 45px;
 }
 
