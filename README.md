@@ -5,4 +5,4 @@ This is V2 of my portfolio.
 Feel free to browse the source code.
 
 
-### [Demo](https://metwesh.github.io/portfolio-v2/)
+### [Demo](metwesh.github.io/portfolio-v2/)
