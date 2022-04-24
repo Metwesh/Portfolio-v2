@@ -862,6 +862,11 @@ button {
   }
 }
 
+hr {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .pr {
   padding-right: 3rem;
 }
