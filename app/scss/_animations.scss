@@ -83,6 +83,98 @@
   }
 }
 
+// Header animation ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+@-webkit-keyframes headerfadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes headerfadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes subheaderfadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subheaderfadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes subheaderfadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // Textbox animation //////////////////////////////////////////////////////////////////////////////////////////////////
 @-webkit-keyframes inputHighlighter {
   from {

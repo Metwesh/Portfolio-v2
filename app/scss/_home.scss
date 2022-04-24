@@ -23,6 +23,12 @@
   font-weight: 400;
   padding: 20rem 1rem 0 3.75rem;
   margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation: headerfadein 1000ms forwards;
+  animation: headerfadein 1000ms forwards;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
   @include breakpoint-down(small) {
     padding: 16rem 1rem 0 3.75rem;
     font-size: $font-lrgmed;
@@ -33,12 +39,21 @@
     padding-left: 30px;
   }
 }
+.colored {
+  color: $darkcyan;
+}
 .sub-text {
   font-size: $font-lrgmed;
   color: $darkgray;
   margin: 0px;
   font-weight: 300;
   padding: 0 10px 0 60px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-animation: subheaderfadein 1000ms forwards;
+  animation: subheaderfadein 1000ms forwards;
+  -webkit-animation-delay: 1500ms;
+  animation-delay: 1500ms;
   @include breakpoint-down(large) {
     padding: 0 10px 0 60px;
   }
@@ -50,9 +65,6 @@
     font-size: $font-med;
     padding-left: 30px;
   }
-}
-.colored {
-  color: $darkcyan;
 }
 .svgcontainer {
   overflow: hidden;
