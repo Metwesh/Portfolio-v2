@@ -114,7 +114,7 @@
         <!-- Home section -->
         <section class="home" id="home">
             <div class="heading-text">
-                <h1 class="main-text">Hi, I'm <span class="colored">Mohamed H. Aly</span></h1>
+                <h1 class="main-text colored">Mohamed H. Aly</h1>
                 <h1 class="sub-text">Full stack web developer</h1>
             </div>
         </section>
@@ -227,7 +227,11 @@
                 <div class="contentdiv lastdiv">
                     <p class="main-content">Professional certification</p>
                     <div class="wideimgcontainer">
-                        <img class="img right wide" src="./images/JS-Certification.webp" alt="Certificate">
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
+                            aria-label="Javascript certificate">
+                            <img class="img right wide" src="./images/JS-Certification.webp" alt="Certificate">
+                        </a>
                     </div>
                     <p class="sub-content pl">I was introduced to CodinGame as part of a screening process for a company
                         & found out that they can provide me with their certification if I passed a timed test.
@@ -243,161 +247,151 @@
 
         <!-- Resume section -->
         <section class="resume" id="resume">
-            <div class="contentbg space">
-                <div class="contentdiv br">
-                    <h1 class="header-text">Resume</h1>
-                    <div class="imgcontainer resumecontainer">
-                        <img class="img resumeimg" src="./images/Mohamed Hani Aly.webp" alt="Resume" />
-                    </div>
-                    <div class="buttonsigndiv">
-                        <form action="./Mohamed Hani Aly.pdf" target="_blank">
-                            <button type="submit" class="button alt" value="view resume">View resume</button>
-                        </form>
-                        <p class="pl signature">Mohamed H. Aly</p>
+            <form target="_blank">
+                <div class="contentbg space">
+                    <div class="contentdiv br">
+                        <h1 class="header-text">Resume</h1>
+                        <div class="imgcontainer resumecontainer">
+                            <img class="img resumeimg" src="./images/Mohamed Hani Aly.webp" alt="Resume" />
+                        </div>
+                        <div class="buttonsigndiv">
+                            <button type="submit" formaction="./Mohamed Hani Aly.pdf" class="button alt"
+                                value="view resume">View resume</button>
+                            <p class="pl signature">Mohamed H. Aly</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
 
         <!-- Portfolio section -->
         <section class="portfolio" id="portfolio">
-            <div class="contentbg space">
-                <div class="contentdiv br">
-                    <h1 class="header-text">Portfolio</h1>
+            <form target="_blank">
+                <div class="contentbg space">
+                    <div class="contentdiv br">
+                        <h1 class="header-text">Portfolio</h1>
 
-                    <div class="grid" id="grid">
+                        <div class="grid" id="grid">
 
-                        <div class="gridcell">
-                            <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
-                                id="project1img" />
+                            <div class="gridcell">
+                                <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
+                                    id="project1img" />
+                            </div>
+
+                            <p class="projecttext">
+                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Online Bookstore</span>
+                                My first ever website was created as part of my graduation project. It was a functional
+                                online bookstore with a complete frontend/backend/database. I built the frontend with no
+                                dependancies, I built the backend with PHP & built the database using PHPMyAdmin.
+                                <span class="buttoncontainer">
+                                    <button type="button" class="button alt gridbutton dark"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        disabled>Demo site</button>
+                                    <button type="button" class="button alt gridbutton dark"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        disabled>Visit repo</button>
+                                </span>
+                            </p>
+
+                            <div class="gridcell">
+                                <img src="./images/Clinic website.webp" alt="Project 2" class="project"
+                                    id="project2img" />
+                            </div>
+
+                            <p class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Clinic website</span>
+                                My second website was created to be an online portal for a clinic. It was purely
+                                frontend focused as I wanted to create a catchy design with a fluid & responsive UI. It
+                                was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
+                                of a bank website.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://metwesh.github.io/health-clinics/"
+                                        class="button alt gridbutton dark">Demo site</button>
+
+                                    <button type="submit" formaction="https://github.com/Metwesh/health-clinics"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </p>
+
+                            <div class="gridcell">
+                                <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
+                            </div>
+
+                            <p class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Budget app</span>
+                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
+                                styling. Implemented the use of localstorage to not lose state data if user leaves the
+                                site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://metwesh.github.io/budget-app/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/budget-app/"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </p>
+
+                            <div class="gridcell">
+                                <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
+                            </div>
+
+                            <p class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Face detection app</span>
+                                Created a face detection app with its respective backend & database. I used react to
+                                handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
+                                Express & implemented one-way password hashing through bcrypt. I used postgreSQL to
+                                handle the database & KnexJS to interact with it on the server. The app is powered with
+                                the Clarifai API.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://face-detect-m.herokuapp.com/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/face-recognition"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </p>
+
+                            <div class="gridcell">
+                                <img src="./images/Task-handler.webp" alt="Project 5" class="project"
+                                    id="project5img" />
+                            </div>
+
+                            <p class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Task Handler</span>
+                                I created this CRUD project where a user can organize their tasks. This project was
+                                built with React, Typescript & Mongodb. I enforced user authentication with bcrypt
+                                password hashing & authorization with JSON web tokens. On the backend I integrated
+                                Helmet for securing headers & CORS for improved security.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://task-handler-v2.herokuapp.com/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/task-handler"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </p>
+
                         </div>
-
-                        <p class="projecttext">
-                            <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                            </svg>
-                            <span class="heading">Online Bookstore</span>
-                            My first ever website was created as part of my graduation project. It was a functional
-                            online bookstore with a complete frontend/backend/database. I built the frontend with no
-                            dependancies, I built the backend with PHP & built the database using PHPMyAdmin.
-                            <span class="buttoncontainer">
-                                <button type="button" disabled class="button alt gridbutton dark"
-                                    data-tooltip="Due to hard-drive corruption this project & its files are unavailable">Demo
-                                    site</button>
-                                <button type="button" disabled class="button alt gridbutton dark"
-                                    data-tooltip="Due to hard-drive corruption this project & its files are unavailable">Visit
-                                    repo</button>
-                            </span>
-                        </p>
-
-                        <div class="gridcell">
-                            <img src="./images/Clinic website.webp" alt="Project 2" class="project" id="project2img" />
-                        </div>
-
-                        <p class="projecttext">
-                            <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                            </svg>
-                            <span class="heading">Clinic website</span>
-                            My second website was created to be an online portal for a clinic. It was purely frontend
-                            focused as I wanted to create a catchy design with a fluid & responsive UI. It was for a
-                            challenge I did on frontendMentor.com but I modified it to be a clinic instead of a bank
-                            website.
-                            <span class="buttoncontainer">
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://metwesh.github.io/health-clinics/">
-                                    <button type="button" class="button alt gridbutton dark">Demo site</button>
-                                </a>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/Metwesh/health-clinics">
-                                    <button type="button" class="button alt gridbutton dark">Visit repo</button>
-                                </a>
-                            </span>
-                        </p>
-
-                        <div class="gridcell">
-                            <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
-                        </div>
-
-                        <p class="projecttext">
-                            <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                            </svg>
-                            <span class="heading">Budget app</span>
-                            Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
-                            styling. Implemented the use of localstorage to not lose state data if user leaves the site.
-                            This app is fully capable of adding, viewing & deleting budgets and/or expenses.
-                            <span class="buttoncontainer">
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://metwesh.github.io/budget-app/">
-                                    <button type="button" class="button alt gridbutton dark">Demo site</button>
-                                </a>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/Metwesh/budget-app/">
-                                    <button type="button" class="button alt gridbutton dark">Visit repo</button>
-                                </a>
-                            </span>
-                        </p>
-
-                        <div class="gridcell">
-                            <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
-                        </div>
-
-                        <p class="projecttext">
-                            <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                            </svg>
-                            <span class="heading">Face detection app</span>
-                            Created a face detection app with its respective backend & database. I used react to handle
-                            states & react-bootstrap to handle styling. I built the backend with NodeJS & Express &
-                            implemented one-way password hashing through bcrypt. I used postgreSQL to handle the
-                            database & KnexJS to interact with it on the server. The app is powered with the Clarifai
-                            API.
-                            <span class="buttoncontainer">
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://face-detect-m.herokuapp.com/">
-                                    <button type="button" class="button alt gridbutton dark">Demo site</button>
-                                </a>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/Metwesh/face-recognition">
-                                    <button type="button" class="button alt gridbutton dark">Visit repo</button>
-                                </a>
-                            </span>
-                        </p>
-
-                        <div class="gridcell">
-                            <img src="./images/Task-handler.webp" alt="Project 5" class="project" id="project5img" />
-                        </div>
-
-                        <p class="projecttext">
-                            <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
-                                <path
-                                    d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                            </svg>
-                            <span class="heading">Task Handler</span>
-                            I created this CRUD project where a user can organize their tasks. This project was built
-                            with React, Typescript & Mongodb. I enforced user authentication with bcrypt password
-                            hashing & authorization with JSON web tokens. On the backend I integrated Helmet for
-                            securing headers & CORS for improved security.
-                            <span class="buttoncontainer">
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://task-handler-v2.herokuapp.com/">
-                                    <button type="button" class="button alt gridbutton dark">Demo site</button>
-                                </a>
-                                <a target="_blank" rel="noopener noreferrer"
-                                    href="https://github.com/Metwesh/task-handler">
-                                    <button type="button" class="button alt gridbutton dark">Visit repo</button>
-                                </a>
-                            </span>
-                        </p>
-
                     </div>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
     <!-- Footer -->

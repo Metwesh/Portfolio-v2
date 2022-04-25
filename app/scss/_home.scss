@@ -50,8 +50,10 @@
   padding: 0 10px 0 60px;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: subheaderfadein 1000ms forwards;
-  animation: subheaderfadein 1000ms forwards;
+  position: relative;
+  z-index: -1;
+  -webkit-animation: subheaderfadein 2000ms forwards;
+  animation: subheaderfadein 2000ms forwards;
   -webkit-animation-delay: 1500ms;
   animation-delay: 1500ms;
   @include breakpoint-down(large) {

@@ -26,6 +26,13 @@
   }
 }
 
+@supports (backdrop-filter: initial) {
+  .overlay {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+}
+
 .overlayul {
   display: flex;
   flex-direction: column;
@@ -106,6 +113,13 @@
     height: 100vh;
     -webkit-animation: overlayfadein 1s forwards;
     animation: overlayfadein 1s forwards;
+  }
+}
+
+@supports (backdrop-filter: initial) {
+  .overlayform {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
   }
 }
 

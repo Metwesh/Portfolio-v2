@@ -4,13 +4,19 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: $white;
+  background-color: $semitransparent;
   width: 100vw;
   height: 80px;
   top: 0;
   z-index: 1000000;
   transition: box-shadow 300ms ease-in-out;
   box-shadow: 0 0 15px 1px $darkgray;
+}
+@supports (backdrop-filter: initial) {
+  .main-nav {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
 
 ul {
@@ -344,7 +350,7 @@ button {
   }
 }
 @supports (will-change: transform) {
-  .open{
+  .open {
     will-change: transform;
   }
 }

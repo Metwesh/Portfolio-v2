@@ -72,14 +72,14 @@
   0% {
     visibility: hidden;
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   1% {
     visibility: visible;
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   100% {
     visibility: visible;
@@ -92,14 +92,14 @@
   0% {
     visibility: hidden;
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   1% {
     visibility: visible;
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   100% {
     visibility: visible;
@@ -282,7 +282,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.88);
   width: 100vw;
   height: 80px;
   top: 0;
@@ -295,6 +295,12 @@ body {
           box-shadow: 0 0 15px 1px #383d46;
 }
 
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .main-nav {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,8 +778,10 @@ button {
   padding: 0 10px 0 60px;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: subheaderfadein 1000ms forwards;
-  animation: subheaderfadein 1000ms forwards;
+  position: relative;
+  z-index: -1;
+  -webkit-animation: subheaderfadein 2000ms forwards;
+  animation: subheaderfadein 2000ms forwards;
   -webkit-animation-delay: 1500ms;
   animation-delay: 1500ms;
 }
@@ -1223,6 +1231,12 @@ button {
   animation: overlayfadein 1s forwards;
 }
 
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .overlay {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+}
 .overlayul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1320,6 +1334,12 @@ button {
   animation: overlayfadein 1s forwards;
 }
 
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .overlayform {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+}
 .exit {
   visibility: inherit;
   -webkit-transform: inherit;
