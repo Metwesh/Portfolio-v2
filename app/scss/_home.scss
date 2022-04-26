@@ -4,16 +4,15 @@
       linear,
       left top,
       left bottom,
-      color-stop(80%, transparent),
+      color-stop(70%, transparent),
       to($lightgray)
     ),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
-  background: -o-linear-gradient(top, transparent 80%, $lightgray),
+  background: -o-linear-gradient(top, transparent 70%, $lightgray),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
-  background: linear-gradient(to bottom, transparent 80%, $lightgray),
+  background: linear-gradient(to bottom, transparent 70%, $lightgray),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
-
   background-attachment: scroll;
 }
 
@@ -21,12 +20,12 @@
   font-size: $font-xlg;
   color: $darkgray;
   font-weight: 400;
-  padding: 20rem 1rem 0 3.75rem;
+  padding: 17.5rem 1rem 0 3.75rem;
   margin: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: headerfadein 1000ms forwards;
-  animation: headerfadein 1000ms forwards;
+  -webkit-animation: headerfadein 1250ms forwards;
+  animation: headerfadein 1250ms forwards;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
   @include breakpoint-down(small) {
@@ -54,8 +53,8 @@
   z-index: -1;
   -webkit-animation: subheaderfadein 2000ms forwards;
   animation: subheaderfadein 2000ms forwards;
-  -webkit-animation-delay: 1500ms;
-  animation-delay: 1500ms;
+  -webkit-animation-delay: 1250ms;
+  animation-delay: 1250ms;
   @include breakpoint-down(large) {
     padding: 0 10px 0 60px;
   }

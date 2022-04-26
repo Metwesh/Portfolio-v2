@@ -10,7 +10,7 @@
   top: 0;
   z-index: 1000000;
   transition: box-shadow 300ms ease-in-out;
-  box-shadow: 0 0 15px 1px $darkgray;
+  box-shadow: 0 0 5px 1px $gray;
 }
 @supports (backdrop-filter: initial) {
   .main-nav {
@@ -49,9 +49,14 @@ a {
   font-size: $font-lrg;
   padding: 10px 25px;
   margin: -10px -25px;
+  transition: all 300ms ease-in-out;
 }
 
-.navlinks::after {
+.mainlinks:hover {
+  color: $cyan;
+}
+
+.mainlinks::after {
   content: "";
   position: absolute;
   left: 0;
@@ -76,60 +81,60 @@ a {
     width 0.3s ease-in-out;
 }
 
-.navlinks.extended:first-child::after {
+.mainlinks.extended:first-child::after {
   -webkit-transform: scaleX(0.4);
   -ms-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
-.navlinks.shortened:first-child::after {
+.mainlinks.shortened:first-child::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
 
-.navlinks.shortened:nth-child(2)::after {
+.mainlinks.shortened:nth-child(2)::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
-.navlinks.extended:nth-child(2)::after {
+.mainlinks.extended:nth-child(2)::after {
   -webkit-transform: scaleX(0.4);
   -ms-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.shortened:nth-child(3)::after {
+.mainlinks.shortened:nth-child(3)::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
-.navlinks.extended:nth-child(3)::after {
+.mainlinks.extended:nth-child(3)::after {
   -webkit-transform: scaleX(0.4);
   -ms-transfosrm: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.shortened:last-child::after {
+.mainlinks.shortened:last-child::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
-.navlinks.extended:last-child::after {
+.mainlinks.extended:last-child::after {
   -webkit-transform: scaleX(0.4);
   -ms-transfosrm: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.extended:hover::after,
-.navlinks.shortened:hover::after {
+.mainlinks.extended:hover::after,
+.mainlinks.shortened:hover::after {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -181,11 +186,11 @@ button {
   font-weight: 400;
   text-decoration: none;
   color: $white;
-  text-shadow: -1px 1px 2px $darkgray;
   border-radius: 40px;
   margin-right: 80px;
   margin-left: auto;
   background-image: $gradient-to-top;
+  text-shadow: -1px 1px 2px $darkgray;
   -webkit-transition: text-shadow 0.3s ease-in-out;
   -o-transition: text-shadow 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;

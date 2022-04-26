@@ -291,8 +291,8 @@ body {
   transition: -webkit-box-shadow 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out;
   transition: box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
-  -webkit-box-shadow: 0 0 15px 1px #383d46;
-          box-shadow: 0 0 15px 1px #383d46;
+  -webkit-box-shadow: 0 0 5px 1px #626875;
+          box-shadow: 0 0 5px 1px #626875;
 }
 
 @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
@@ -343,9 +343,15 @@ a {
   font-size: 1.5rem;
   padding: 10px 25px;
   margin: -10px -25px;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
-.navlinks::after {
+.mainlinks:hover {
+  color: #0ec7ff;
+}
+
+.mainlinks::after {
   content: "";
   position: absolute;
   left: 0;
@@ -365,58 +371,58 @@ a {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
-.navlinks.extended:first-child::after {
+.mainlinks.extended:first-child::after {
   -webkit-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.shortened:first-child::after {
+.mainlinks.shortened:first-child::after {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
 
-.navlinks.shortened:nth-child(2)::after {
+.mainlinks.shortened:nth-child(2)::after {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
 
-.navlinks.extended:nth-child(2)::after {
+.mainlinks.extended:nth-child(2)::after {
   -webkit-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.shortened:nth-child(3)::after {
+.mainlinks.shortened:nth-child(3)::after {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
 
-.navlinks.extended:nth-child(3)::after {
-  -webkit-transform: scaleX(0.4);
-  -ms-transfosrm: scaleX(0.4);
-  transform: scaleX(0.4);
-  width: 100%;
-}
-
-.navlinks.shortened:last-child::after {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  width: 100%;
-}
-
-.navlinks.extended:last-child::after {
+.mainlinks.extended:nth-child(3)::after {
   -webkit-transform: scaleX(0.4);
   -ms-transfosrm: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
 
-.navlinks.extended:hover::after,
-.navlinks.shortened:hover::after {
+.mainlinks.shortened:last-child::after {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.mainlinks.extended:last-child::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transfosrm: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
+}
+
+.mainlinks.extended:hover::after,
+.mainlinks.shortened:hover::after {
   -webkit-transform: none;
   transform: none;
   width: 100%;
@@ -470,12 +476,12 @@ button {
   font-weight: 400;
   text-decoration: none;
   color: white;
-  text-shadow: -1px 1px 2px #383d46;
   border-radius: 40px;
   margin-right: 80px;
   margin-left: auto;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#018bb5), to(#0ec7ff));
   background-image: linear-gradient(to top, #018bb5, #0ec7ff);
+  text-shadow: -1px 1px 2px #383d46;
   -webkit-transition: text-shadow 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
@@ -733,8 +739,8 @@ button {
 
 .home {
   height: 140vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), to(#eaebed)), url("../images/Architecture background.webp") no-repeat center center fixed;
-  background: linear-gradient(to bottom, transparent 80%, #eaebed), url("../images/Architecture background.webp") no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(#eaebed)), url("../images/Architecture background.webp") no-repeat center center fixed;
+  background: linear-gradient(to bottom, transparent 70%, #eaebed), url("../images/Architecture background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
 }
@@ -743,12 +749,12 @@ button {
   font-size: 3.25rem;
   color: #383d46;
   font-weight: 400;
-  padding: 20rem 1rem 0 3.75rem;
+  padding: 17.5rem 1rem 0 3.75rem;
   margin: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: headerfadein 1000ms forwards;
-  animation: headerfadein 1000ms forwards;
+  -webkit-animation: headerfadein 1250ms forwards;
+  animation: headerfadein 1250ms forwards;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
 }
@@ -782,8 +788,8 @@ button {
   z-index: -1;
   -webkit-animation: subheaderfadein 2000ms forwards;
   animation: subheaderfadein 2000ms forwards;
-  -webkit-animation-delay: 1500ms;
-  animation-delay: 1500ms;
+  -webkit-animation-delay: 1250ms;
+  animation-delay: 1250ms;
 }
 @media (max-width: 67.0625em) {
   .sub-text {
@@ -1158,8 +1164,8 @@ button {
   margin-bottom: auto;
   padding: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 10px #383d46;
-          box-shadow: inset 0 0 10px #383d46;
+  -webkit-box-shadow: inset 0 0 5px #626875;
+          box-shadow: inset 0 0 5px #626875;
 }
 @media (min-width: 67.125em) {
   .projecttext {
