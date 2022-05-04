@@ -49,7 +49,7 @@ a {
   font-size: $font-lrg;
   padding: 10px 25px;
   margin: -10px -25px;
-  transition: all 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .mainlinks:hover {
@@ -155,6 +155,7 @@ a {
   fill: url(#Solid);
   width: 45px;
   height: 45px;
+  transition: all 150ms ease-in-out;
 }
 
 #Mailclose {
@@ -164,14 +165,13 @@ a {
   }
 }
 #Mailopen {
-  margin-top: 10px;
   visibility: hidden;
   &.show {
     visibility: visible;
   }
 }
 
-.mail:hover {
+.mail-link:hover > .mail {
   fill: url(#RadialGradient);
 }
 
@@ -354,11 +354,7 @@ button {
     }
   }
 }
-@supports (will-change: transform) {
-  .open {
-    will-change: transform;
-  }
-}
+
 .open {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

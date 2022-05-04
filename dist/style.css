@@ -68,6 +68,62 @@
     visibility: hidden;
   }
 }
+@-webkit-keyframes simplefadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes simplefadein {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes simplefadeout {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes simplefadeout {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @-webkit-keyframes headerfadein {
   0% {
     visibility: hidden;
@@ -343,8 +399,8 @@ a {
   font-size: 1.5rem;
   padding: 10px 25px;
   margin: -10px -25px;
-  -webkit-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
 }
 
 .mainlinks:hover {
@@ -444,6 +500,8 @@ a {
   fill: url(#Solid);
   width: 45px;
   height: 45px;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 #Mailclose {
@@ -454,14 +512,13 @@ a {
 }
 
 #Mailopen {
-  margin-top: 10px;
   visibility: hidden;
 }
 #Mailopen.show {
   visibility: visible;
 }
 
-.mail:hover {
+.mail-link:hover > .mail {
   fill: url(#RadialGradient);
 }
 
@@ -682,11 +739,6 @@ button {
   }
 }
 
-@supports (will-change: transform) {
-  .open {
-    will-change: transform;
-  }
-}
 .open {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

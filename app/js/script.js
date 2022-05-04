@@ -178,6 +178,13 @@ function toggleOverlayForm() {
 function toggleMailButton() {
   mailOpen.classList.toggle("show");
   mailClose.classList.toggle("show");
+  if (mailOpen.classList.contains("show")) {
+    mailOpen.parentNode.style.marginTop = "-5px";
+    mailOpen.parentNode.style.height = "60px";
+  } else {
+    mailClose.parentNode.style.marginTop = "10px";
+    mailOpen.parentNode.style.height = "45px";
+  }
 }
 
 function toggleOverlayWithHomeButton() {
