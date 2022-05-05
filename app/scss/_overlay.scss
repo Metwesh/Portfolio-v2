@@ -1,28 +1,21 @@
-@supports (will-change: transform) {
-  .overlay .overlayform {
-    will-change: transform;
-  }
-}
 .overlay {
   visibility: hidden;
   position: fixed;
   z-index: 100;
   height: 100vh;
   width: 100vw;
-  -webkit-transform: translateY(-130%);
-  -ms-transform: translateY(-130%);
-  transform: translateY(-130%);
+  opacity: 0;
   background-image: linear-gradient(to bottom, $darkgray, transparent);
 
   &.fadeout {
-    -webkit-animation: overlayfadeout 0.5s forwards;
-    animation: overlayfadeout 0.5s forwards;
+    -webkit-animation: simplefadeout 0.5s forwards;
+    animation: simplefadeout 0.5s forwards;
   }
 
   &.fadein {
     height: 100vh;
-    -webkit-animation: overlayfadein 1s forwards;
-    animation: overlayfadein 1s forwards;
+    -webkit-animation: simplefadein 1s forwards;
+    animation: simplefadein 1s forwards;
   }
 }
 
@@ -44,9 +37,9 @@
   background-color: $white;
   box-shadow: 0 0 30px $gray;
   visibility: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
-  transform: inherit;
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
 
   :first-child {
     border-top-left-radius: 20px;
@@ -58,6 +51,15 @@
     border-bottom-right-radius: 20px;
   }
 }
+.overlay.fadeout > .overlayul {
+  -webkit-animation: slideout 0.5s forwards;
+  animation: slideout 0.5s forwards;
+}
+
+.overlay.fadein > .overlayul {
+  -webkit-animation: slidein 1s forwards;
+  animation: slidein 1s forwards;
+}
 
 .overlayLi {
   visibility: inherit;
@@ -66,12 +68,15 @@
   transform: inherit;
   padding: 60px 0px;
   width: 100%;
-  border: 1px solid $gray;
+
   @include breakpoint-down(small) {
     padding: 45px 0px;
   }
   @include breakpoint-down(xsmall) {
     padding: 30px 0px;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray;
   }
 }
 
@@ -87,6 +92,7 @@
   margin: -40px 0px;
   color: $darkgray;
   font-size: $font-lrgmed;
+  transition: all 50ms ease-in-out;
   @include breakpoint-down(small) {
     font-size: $font-lrg;
   }
@@ -99,20 +105,18 @@
   height: 100vh;
   width: 100vw;
   visibility: hidden;
-  -webkit-transform: translateY(-130%);
-  -ms-transform: translateY(-130%);
-  transform: translateY(-130%);
+  opacity: 0;
   background-image: linear-gradient(to bottom, $darkgray, transparent);
 
   &.fadeout {
-    -webkit-animation: overlayfadeout 0.5s forwards;
-    animation: overlayfadeout 0.5s forwards;
+    -webkit-animation: simplefadeout 0.5s forwards;
+    animation: simplefadeout 0.5s forwards;
   }
 
   &.fadein {
     height: 100vh;
-    -webkit-animation: overlayfadein 1s forwards;
-    animation: overlayfadein 1s forwards;
+    -webkit-animation: simplefadein 1s forwards;
+    animation: simplefadein 1s forwards;
   }
 }
 
@@ -123,21 +127,12 @@
   }
 }
 
-.exit {
-  visibility: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
-  transform: inherit;
-  padding: 10px;
-  margin: -10px;
-  margin-left: auto;
-}
-
 .overlayformbox {
   visibility: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
-  transform: inherit;
+  opacity: 1;
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -157,6 +152,29 @@
   @include breakpoint-down(small) {
     padding: 20px;
   }
+}
+
+.overlayform.fadeout > .overlayformbox {
+  -webkit-animation: slideout 0.5s forwards;
+  animation: slideout 0.5s forwards;
+}
+
+.overlayform.fadein > .overlayformbox {
+  -webkit-animation: slidein 1s forwards;
+  animation: slidein 1s forwards;
+}
+
+.exit {
+  visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  margin: -10px;
+  margin-left: auto;
 }
 
 .group {

@@ -181,7 +181,7 @@ function toggleMailButton() {
   if (mailOpen.classList.contains("show")) {
     mailOpen.parentNode.style.marginTop = "-5px";
     mailOpen.parentNode.style.height = "60px";
-  } else {
+  } else if (mailClose.classList.contains("show")) {
     mailClose.parentNode.style.marginTop = "10px";
     mailOpen.parentNode.style.height = "45px";
   }
