@@ -37,6 +37,15 @@
     font-size: $font-lrg;
     padding-left: 30px;
   }
+  @include height-breakpoint-down(small) {
+    padding-top: 10rem;
+  }
+  @include height-breakpoint-down(mdsmall) {
+    padding-top: 7.5rem;
+  }
+  @include height-breakpoint-down(xsmall) {
+    padding-top: 5rem;
+  }
 }
 .colored {
   color: $darkcyan;

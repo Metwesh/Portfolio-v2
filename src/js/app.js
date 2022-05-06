@@ -1,4 +1,6 @@
-// main nav links
+// uglifyjs ./app/js/script.js --output ./app/js/script.min.js
+
+// main nav links ////////////////////////////////////////////////////////////////////////////////
 const homelink = document.querySelector("#homelink");
 const aboutlink = document.querySelector("#aboutlink");
 const resumelink = document.querySelector("#resumelink");
@@ -88,7 +90,7 @@ resumelink.addEventListener("click", resumeLinkOn);
 
 portfoliolink.addEventListener("click", portfolioLinkOn);
 
-//Intersection Observer
+//Intersection Observer ////////////////////////////////////////////////////////////////////////////////
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const resume = document.querySelector("#resume");
@@ -133,20 +135,22 @@ const portfolioObserver = new IntersectionObserver(
 );
 portfolioObserver.observe(portfolio);
 
-// Hamburger & Overlay
+// Hamburger & Overlay ////////////////////////////////////////////////////////////////////////////////
 const homeButton = document.querySelector("#homebutton");
 const btnHamburger = document.querySelector("#btnHamburger");
 const overlay = document.querySelector("#overlay");
 const overlayUl = document.querySelector("#overlayUl");
 const overlaylinks = document.querySelectorAll(".overlaylinks");
-const overlayform = document.querySelector("#overlayform");
+const contactCard = document.querySelector("#contactCard");
 const contactMail = document.querySelector("#contactbutton");
 const mailOpen = document.querySelector("#Mailopen");
 const mailClose = document.querySelector("#Mailclose");
 
-function toggleOverlayWithMenu() {
+function toggleHamburger() {
   btnHamburger.classList.toggle("open");
+}
 
+function toggleOverlay() {
   if (overlay.classList.contains("fadeout")) {
     overlay.classList.add("fadein");
     overlay.classList.remove("fadeout");
@@ -156,22 +160,29 @@ function toggleOverlayWithMenu() {
   } else {
     overlay.classList.add("fadein");
   }
+}
 
-  if (overlayform.classList.contains("fadein")) {
-    overlayform.classList.add("fadeout");
-    overlayform.classList.remove("fadein");
+function toggleMenu() {
+  if (overlayUl.classList.contains("slideout")) {
+    overlayUl.classList.add("slidein");
+    overlayUl.classList.remove("slideout");
+  } else if (overlayUl.classList.contains("slidein")) {
+    overlayUl.classList.add("slideout");
+    overlayUl.classList.remove("slidein");
+  } else {
+    overlayUl.classList.add("slidein");
   }
 }
 
-function toggleOverlayForm() {
-  if (overlayform.classList.contains("fadeout")) {
-    overlayform.classList.add("fadein");
-    overlayform.classList.remove("fadeout");
-  } else if (overlayform.classList.contains("fadein")) {
-    overlayform.classList.add("fadeout");
-    overlayform.classList.remove("fadein");
+function toggleContactCard() {
+  if (contactCard.classList.contains("slideout")) {
+    contactCard.classList.add("slidein");
+    contactCard.classList.remove("slideout");
+  } else if (contactCard.classList.contains("slidein")) {
+    contactCard.classList.add("slideout");
+    contactCard.classList.remove("slidein");
   } else {
-    overlayform.classList.add("fadein");
+    contactCard.classList.add("slidein");
   }
 }
 
@@ -180,72 +191,80 @@ function toggleMailButton() {
   mailClose.classList.toggle("show");
   if (mailOpen.classList.contains("show")) {
     mailOpen.parentNode.style.marginTop = "-5px";
+    mailOpen.parentNode.style.transform = "translateY(5px)";
     mailOpen.parentNode.style.height = "60px";
   } else if (mailClose.classList.contains("show")) {
     mailClose.parentNode.style.marginTop = "10px";
-    mailOpen.parentNode.style.height = "45px";
+    mailClose.parentNode.style.transform = "translateY(0)";
+    mailClose.parentNode.style.height = "45px";
+  }
+}
+
+function ToggleAllMenus() {
+  if (
+    contactCard.classList.contains("slideout") &&
+    overlayUl.classList.contains("slidein")
+  ) {
+    toggleMenu();
+  } else if (
+    overlayUl.classList.contains("slideout") &&
+    contactCard.classList.contains("slidein")
+  ) {
+    toggleContactCard();
+  } else if (
+    (!overlayUl.classList.contains("slidein") &&
+      !overlayUl.classList.contains("slideout")) ||
+    (overlayUl.classList.contains("slideout") &&
+      contactCard.classList.contains("slideout"))
+  ) {
+    toggleMenu();
   }
 }
 
 function toggleOverlayWithHomeButton() {
-  if (btnHamburger.classList.contains("open")) toggleOverlayWithMenu();
-  if (overlayform.classList.contains("fadein")) toggleOverlayForm();
+  if (btnHamburger.classList.contains("open")) toggleHamburger();
+  if (overlay.classList.contains("fadein")) toggleOverlay();
+  if (overlayUl.classList.contains("slidein")) toggleMenu();
+  if (contactCard.classList.contains("slidein")) toggleContactCard();
 }
 
-btnHamburger.addEventListener("click", toggleOverlayWithMenu);
-
-overlaylinks.forEach((overlaylinks) => {
-  overlaylinks.addEventListener("click", toggleOverlayWithMenu);
+btnHamburger.addEventListener("click", () => {
+  ToggleAllMenus();
+  toggleOverlay();
+  toggleHamburger();
 });
 
-overlaylinks[3].addEventListener("click", toggleOverlayForm);
+overlaylinks.forEach((overlaylink, i) => {
+  if (i === overlaylinks.length - 1)
+    return overlaylink.addEventListener("click", () => {
+      toggleContactCard();
+      toggleMenu();
+    });
+  overlaylink.addEventListener("click", () => {
+    toggleOverlay();
+    toggleMenu();
+    toggleHamburger();
+  });
+});
+
+// overlay.addEventListener(
+//   "click",
+//   () => {
+//     toggleOverlay();
+//     toggleHamburger();
+//   },
+//   true
+// );
 
 contactMail.addEventListener("click", () => {
-  toggleOverlayForm();
+  toggleOverlay();
+  toggleContactCard();
   toggleMailButton();
 });
 
 homeButton.addEventListener("click", toggleOverlayWithHomeButton);
 
-// Form
-const nameInput = document.querySelector("#nameInput");
-const companyInput = document.querySelector("#companyInput");
-const mailTo = document.querySelector("#mailto");
-const submit = document.querySelector("#submit");
-const exit = document.querySelector("#exit");
-const notice = document.querySelector("#notice");
-
-function nameInputLength() {
-  return nameInput.value.length;
-}
-
-function companyInputLength() {
-  return companyInput.value.length;
-}
-
-function showLine() {
-  notice.classList.add("alert");
-}
-
-function addSubjectAfterClick() {
-  if (nameInputLength() > 0 && companyInputLength() > 0) {
-    mailTo.action = `mailto:Mohamedh.aly@hotmail.com?subject=Hi,%20I'm%20${nameInput.value}%20from%20${companyInput.value}`;
-    return true;
-  } else {
-    return false;
-  }
-}
-
-submit.addEventListener("click", () => {
-  if (addSubjectAfterClick()) showLine();
-});
-
-exit.addEventListener("click", () => {
-  toggleOverlayForm();
-  toggleMailButton();
-});
-
-// Triangle animation
+// Triangle animation ////////////////////////////////////////////////////////////////////////////////
 let lastKnownScrollPosition = 0;
 let ticking = false;
 const coolshape = document.querySelector(".coolshape");
@@ -271,7 +290,7 @@ function scrollMove(scrollPos) {
 
 document.addEventListener("scroll", scrollListener);
 
-//Button switch
+//Button switch ////////////////////////////////////////////////////////////////////////////////
 const darkButton = document.querySelectorAll(".dark");
 darkButton.forEach((button) => {
   button.onmousedown = () => button.classList.toggle("darkswitch");

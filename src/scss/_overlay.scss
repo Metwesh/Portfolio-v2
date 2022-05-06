@@ -1,0 +1,153 @@
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, $darkgray, transparent);
+
+  @supports (backdrop-filter: initial) {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+
+  &.fadeout {
+    -webkit-animation: simplefadeout 0.5s forwards;
+    animation: simplefadeout 0.5s forwards;
+  }
+
+  &.fadein {
+    height: 100vh;
+    -webkit-animation: simplefadein 1s forwards;
+    animation: simplefadein 1s forwards;
+  }
+}
+
+.overlayul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 82vh;
+  margin: 30px 30px;
+  list-style: none;
+  border-radius: 20px;
+  background-color: $moresemitransparent;
+  box-shadow: 0 0 30px $gray;
+  visibility: inherit;
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
+  @include height-breakpoint-down(medium) {
+    height: 75vh;
+  }
+  @include height-breakpoint-down(small) {
+    height: 60vh;
+  }
+  :first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  :last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    &.slideout {
+      -webkit-animation: slideout 0.5s forwards;
+      animation: slideout 0.5s forwards;
+    }
+
+    &.slidein {
+      -webkit-animation: slidein 1s forwards;
+      animation: slidein 1s forwards;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &.slideout {
+      -webkit-animation: simplefadeout 0.5s forwards;
+      animation: simplefadeout 0.5s forwards;
+    }
+    &.slidein {
+      -webkit-animation: simplefadein 1s forwards;
+      animation: simplefadein 1s forwards;
+    }
+  }
+}
+
+.overlayLi {
+  visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  height: 100%;
+  width: 100%;
+  &:not(:last-child) {
+    border-bottom: 1px solid $whitish;
+  }
+}
+
+.overlaylinks {
+  visibility: inherit;
+  -webkit-transform: inherit;
+  -ms-transform: inherit;
+  transform: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: $darkgray;
+  font-size: $font-lrgmed;
+  @include breakpoint-down(small) {
+    font-size: $font-lrg;
+  }
+}
+// Card ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.contactCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+  margin-top: -83.2vh;
+  height: 89.2vh;
+  width: 100vw;
+  visibility: hidden;
+  -webkit-transform: translateX(-130%);
+  -ms-transform: translateX(-130%);
+  transform: translateX(-130%);
+
+  @media (prefers-reduced-motion: no-preference) {
+    &.slideout {
+      -webkit-animation: slideout 0.5s forwards;
+      animation: slideout 0.5s forwards;
+    }
+
+    &.slidein {
+      -webkit-animation: slidein 1s forwards;
+      animation: slidein 1s forwards;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &.slideout {
+      -webkit-animation: simplefadeout 0.5s forwards;
+      animation: simplefadeout 0.5s forwards;
+    }
+    &.slidein {
+      -webkit-animation: simplefadein 1s forwards;
+      animation: simplefadein 1s forwards;
+    }
+  }
+}
+
+.contactCardBox {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: $semitransparent;
+  height: 75%;
+  width: 80%;
+  border-radius: 20px;
+}

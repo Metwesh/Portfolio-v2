@@ -10,6 +10,11 @@
 *.sass.map
 *.scss.map
 
+# parcel
+.parcel-cache
+dist
+.cache
+
 # testing
 /coverage
 

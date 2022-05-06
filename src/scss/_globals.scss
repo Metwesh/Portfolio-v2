@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  background-color: $lightgray;
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  padding-top: 80px;
+  letter-spacing: 1px;
+}
+
+@include breakpoint-up(medium) {
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: $gradient-to-top;
+    border-radius: 5px;
+  }
+}
+
+:focus {
+  outline: 2px solid $darkcyan;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}

@@ -11,9 +11,7 @@
   z-index: 1000000;
   transition: box-shadow 300ms ease-in-out;
   box-shadow: 0 0 5px 1px $gray;
-}
-@supports (backdrop-filter: initial) {
-  .main-nav {
+  @supports (backdrop-filter: initial) {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
@@ -206,12 +204,13 @@ button {
   &.form {
     visibility: inherit;
     margin: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
     @include breakpoint-down(mdsmall) {
       margin: 0;
       padding-left: 20px;
       padding-right: 20px;
+    }
+    @include height-breakpoint-down(small) {
+      font-size: $font-med;
     }
   }
   &.gridbutton {
@@ -225,10 +224,13 @@ button {
       background: $dark-gradient-invert;
     }
     &:disabled {
-      color: $darkergray;
       position: relative;
+      border-top: 2px solid rgb(118, 118, 118);
+      border-right: 2px solid rgb(33, 33, 33);
+      border-bottom: 2px solid rgb(33, 33, 33);
+      border-left: 2px solid rgb(118, 118, 118);
       &:hover {
-        cursor: initial;
+        cursor: no-drop;
         box-shadow: none;
         text-shadow: none;
         &::after {
@@ -297,7 +299,9 @@ button {
   align-items: center;
   margin-right: auto;
   margin-left: 80px;
-  padding-bottom: 4px;
+  padding: 1rem;
+  padding-bottom: 1.25rem;
+
   @include breakpoint-down(small) {
     margin-left: 20px;
   }

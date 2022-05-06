@@ -70,6 +70,9 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  @supports (justify-content: space-evenly) {
+    justify-content: space-evenly;
+  }
   @include breakpoint-up(small) {
     margin: 2rem 4rem 0 4rem;
   }
@@ -81,10 +84,5 @@
   }
   @include breakpoint-down(xsmall) {
     margin: 0.5rem 0.75rem 0 0.75rem;
-  }
-}
-@supports (justify-content: space-evenly) {
-  .buttoncontainer {
-    justify-content: space-evenly;
   }
 }
