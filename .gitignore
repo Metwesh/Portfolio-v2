@@ -12,7 +12,7 @@
 
 # parcel
 .parcel-cache
-dist
+/dist
 .cache
 
 # testing

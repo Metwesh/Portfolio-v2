@@ -2,8 +2,12 @@
   "name": "portfolio-v2",
   "version": "1.0.0",
   "description": "This is V2 of my portfolio.",
-  "main": "index.js",
+  "source": "public/index.html",
+  "browserslist": "> 0.5%, last 4 versions, not dead",
   "scripts": {
+    "dev": "parcel",
+    "predeploy": "rm -rf dist && parcel build",
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +23,9 @@
   "homepage": "https://github.com/Metwesh/Portfolio-v2#readme",
   "devDependencies": {
     "@parcel/compressor-brotli": "^2.5.0",
+    "@parcel/compressor-gzip": "^2.5.0",
     "@parcel/packager-raw-url": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
     "@parcel/transformer-webmanifest": "^2.5.0",
     "parcel": "^2.5.0"
   }

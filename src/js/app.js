@@ -1,5 +1,3 @@
-// uglifyjs ./app/js/script.js --output ./app/js/script.min.js
-
 // main nav links ////////////////////////////////////////////////////////////////////////////////
 const homelink = document.querySelector("#homelink");
 const aboutlink = document.querySelector("#aboutlink");
@@ -98,7 +96,7 @@ const portfolio = document.querySelector("#portfolio");
 
 const homeOptions = { rootMargin: "300px 0px -45px 0px", threshold: "0.5" };
 const portfolioOptions = { rootMargin: "-45px 0px 0px 0px", threshold: "0.17" };
-const Options = { rootMargin: "-45px 0px 0px 0px", threshold: "0.2" };
+const Options = { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" };
 
 const homeObserver = new IntersectionObserver((entries, homeObserver) => {
   entries.forEach((entry) => {
