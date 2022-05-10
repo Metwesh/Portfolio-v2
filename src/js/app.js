@@ -192,6 +192,7 @@ function toggleContactCard() {
 function toggleMailButton() {
   mailOpen.classList.toggle("show");
   mailClose.classList.toggle("show");
+<<<<<<< HEAD:src/js/app.js
   if (mailOpen.classList.contains("show")) {
     mailOpen.parentNode.style.marginTop = "-5px";
     mailOpen.parentNode.style.transform = "translateY(5px)";
@@ -222,6 +223,8 @@ function ToggleAllMenus() {
   ) {
     toggleMenu();
   }
+=======
+>>>>>>> parent of 46c1021 (Added fancy animation to MailBox):app/js/script.js
 }
 
 function toggleOverlayWithHomeButton() {

@@ -83,66 +83,6 @@
   }
 }
 
-@-webkit-keyframes simplefadein {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@keyframes simplefadein {
-  0% {
-    visibility: hidden;
-    opacity: 0;
-  }
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes simplefadeout {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  99% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes simplefadeout {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  99% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 // Header animation ///////////////////////////////////////////////////////////////////////////////////////////////////
 
 @-webkit-keyframes headerfadein {
