@@ -94,32 +94,37 @@ const about = document.querySelector("#about");
 const resume = document.querySelector("#resume");
 const portfolio = document.querySelector("#portfolio");
 
-const homeOptions = { rootMargin: "300px 0px -45px 0px", threshold: "0.5" };
-const portfolioOptions = { rootMargin: "-45px 0px 0px 0px", threshold: "0.17" };
-const Options = { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" };
-
-const homeObserver = new IntersectionObserver((entries, homeObserver) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) homeLinkOn();
-    else return;
-  });
-}, homeOptions);
+const homeObserver = new IntersectionObserver(
+  (entries, homeObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) homeLinkOn();
+      else return;
+    });
+  },
+  { rootMargin: "300px 0px -45px 0px", threshold: "0.5" }
+);
 homeObserver.observe(home);
 
-const aboutObserver = new IntersectionObserver((entries, aboutObserver) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) aboutLinkOn();
-    else return;
-  });
-}, Options);
+const aboutObserver = new IntersectionObserver(
+  (entries, aboutObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) aboutLinkOn();
+      else return;
+    });
+  },
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" }
+);
 aboutObserver.observe(about);
 
-const resumeObserver = new IntersectionObserver((entries, resumeObserver) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) resumeLinkOn();
-    else return;
-  });
-}, Options);
+const resumeObserver = new IntersectionObserver(
+  (entries, resumeObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) resumeLinkOn();
+      else return;
+    });
+  },
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" }
+);
 resumeObserver.observe(resume);
 
 const portfolioObserver = new IntersectionObserver(
@@ -129,7 +134,7 @@ const portfolioObserver = new IntersectionObserver(
       else return;
     });
   },
-  portfolioOptions
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.17" }
 );
 portfolioObserver.observe(portfolio);
 

@@ -41,10 +41,10 @@
     padding-top: 10rem;
   }
   @include height-breakpoint-down(mdsmall) {
-    padding-top: 7.5rem;
+    padding-top: 6.5rem;
   }
   @include height-breakpoint-down(xsmall) {
-    padding-top: 5rem;
+    padding-top: 4rem;
   }
 }
 .colored {

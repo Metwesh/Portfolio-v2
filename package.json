@@ -5,10 +5,9 @@
   "source": "public/index.html",
   "browserslist": "> 0.5%, last 4 versions, not dead",
   "scripts": {
-    "dev": "parcel --open",
+    "dev": "parcel",
     "predeploy": "rm -rf dist && parcel build",
-    "deploy": "gh-pages -d dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "@parcel/packager-raw-url": "^2.5.0",
     "@parcel/transformer-sass": "^2.5.0",
     "@parcel/transformer-webmanifest": "^2.5.0",
+    "gh-pages": "^3.2.3",
     "parcel": "^2.5.0"
   }
 }

@@ -40,10 +40,10 @@
   -ms-transform: translateX(-130%);
   transform: translateX(-130%);
   @include height-breakpoint-down(medium) {
-    height: 75vh;
+    height: 69vh;
   }
   @include height-breakpoint-down(small) {
-    height: 60vh;
+    height: 55vh;
   }
   :first-child {
     border-top-left-radius: 20px;
@@ -103,6 +103,9 @@
   @include breakpoint-down(small) {
     font-size: $font-lrg;
   }
+  @include height-breakpoint-down(xsmall) {
+    font-size: $font-medlrg;
+  }
 }
 // Card ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .contactCard {
@@ -111,13 +114,19 @@
   align-items: center;
   position: relative;
   z-index: 1000;
-  margin-top: -83.2vh;
+  margin-top: -78.2vh;
   height: 89.2vh;
   width: 100vw;
   visibility: hidden;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);
   transform: translateX(-130%);
+  @include height-breakpoint-down(small) {
+    margin-top: -64.2vh;
+  }
+  @include height-breakpoint-down(small) {
+    height: 77.2vh;
+  }
 
   @media (prefers-reduced-motion: no-preference) {
     &.slideout {
@@ -144,10 +153,34 @@
 
 .contactCardBox {
   display: flex;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: $semitransparent;
   height: 75%;
   width: 80%;
   border-radius: 20px;
+}
+
+.card {
+  height: 3rem;
+  width: 3rem;
+  fill: url(#Solid);
+  transition: fill 300ms ease-in-out;
+  &:hover {
+    fill: url(#RadialGradient2);
+  }
+  // &--linkedin {
+  // }
+  // &--github {
+  // }
+  &.mail {
+    margin-top: 0;
+    padding-top: 3px;
+  }
+}
+
+.horizontal-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
