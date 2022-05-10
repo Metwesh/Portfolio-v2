@@ -153,6 +153,7 @@
 
 .contactCardBox {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $semitransparent;
@@ -164,7 +165,7 @@
 .card {
   height: 3rem;
   width: 3rem;
-  fill: url(#Solid);
+  fill: url(#Solid2);
   transition: fill 300ms ease-in-out;
   &:hover {
     fill: url(#RadialGradient2);

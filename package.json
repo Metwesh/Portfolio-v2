@@ -4,11 +4,6 @@
   "description": "This is V2 of my portfolio.",
   "source": "public/index.html",
   "browserslist": "> 0.5%, last 4 versions, not dead",
-  "scripts": {
-    "dev": "parcel",
-    "predeploy": "rm -rf dist && parcel build",
-    "deploy": "gh-pages -d dist"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Metwesh/Portfolio-v2.git"
@@ -19,14 +14,5 @@
   "bugs": {
     "url": "https://github.com/Metwesh/Portfolio-v2/issues"
   },
-  "homepage": "https://github.com/Metwesh/Portfolio-v2#readme",
-  "devDependencies": {
-    "@parcel/compressor-brotli": "^2.5.0",
-    "@parcel/compressor-gzip": "^2.5.0",
-    "@parcel/packager-raw-url": "^2.5.0",
-    "@parcel/transformer-sass": "^2.5.0",
-    "@parcel/transformer-webmanifest": "^2.5.0",
-    "gh-pages": "^3.2.3",
-    "parcel": "^2.5.0"
-  }
+  "homepage": "https://github.com/Metwesh/Portfolio-v2#readme"
 }
