@@ -2,14 +2,16 @@
   "name": "portfolio-v2",
   "version": "1.0.0",
   "description": "This is V2 of my portfolio.",
-  "source": "public/index.html",
   "browserslist": "> 0.5%, last 4 versions, not dead",
+  "scripts": {
+    "pre": "minify ./app/js/script.js > ./dist/script.min.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Metwesh/Portfolio-v2.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mohamed H. Aly",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Metwesh/Portfolio-v2/issues"
