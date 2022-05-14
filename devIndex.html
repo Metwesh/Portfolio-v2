@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Designer & developer: Mohamed H. Aly">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0ec7ff">
+    <link rel="preload" as="image" href="./images/Architecture background.webp">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.webp">
+    <link rel="manifest" href="./site.webmanifest">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./dist/style.min.css">
+
+    <!-- <script defer src="./dist/script.min.js"></script> -->
+    <script defer src="./app/js/script.js"></script>
+
+    <title>My portfolio</title>
+</head>
+
+<body>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay">
+        <ul class="overlayul" id="overlayUl">
+            <li class="overlayLi"><a href="#about" class="overlaylinks">About</a></li>
+            <li class="overlayLi"><a href="#resume" class="overlaylinks">Resume</a></li>
+            <li class="overlayLi"><a href="#portfolio" class="overlaylinks">Portfolio</a></li>
+            <li class="overlayLi"><a href="javascript: void(0)" class="overlaylinks">Contact me</a></li>
+        </ul>
+        <div class="contactCard" id="contactCard">
+            <div class="contactCardBox">
+                <header class="contact-header">Contact me through any of the following</header>
+                <div class="horizontal-flex">
+                    <a href="https://www.linkedin.com/in/mohamed-aly-a3a781213/" rel="noopener noreferrer"
+                        target="_blank" aria-label="linkedin">
+                        <svg class="card linkedin" width="24" height="24" viewBox="0 0 24 24">
+                            <defs>
+                                <radialGradient id="Solid2">
+                                    <stop offset="100%" stop-color="#383d46" />
+                                </radialGradient>
+                            </defs>
+                            <path
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/Metwesh" rel="noopener noreferrer" target="_blank" aria-label="github">
+                        <svg class="card github" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:mohamedh.aly@hotmail.com" aria-label="Mail-link">
+                        <svg class="card mail-card" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 3V20H24V3H0ZM8 10.5556L1 18.1111V4.88889L8 10.5556ZM12 3.94444H23L12 12.9167L1 3.94444H12ZM8.5 11.0278L12 13.8611L15.5 11.0278L23 19.0556H1L8.5 11.0278ZM16 10.5556L23 4.88889V18.1111L16 10.5556Z" />
+                        </svg>
+                    </a>
+                    <a href="tel:+201065583557" aria-label="Phone-link">
+                        <svg class="card phone" width="24" height="24" fill-rule="evenodd" clip-rule="evenodd"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main nav -->
+    <nav class="main-nav">
+        <ul class="hide-for-mobile">
+            <li class="navlinks"><a href="#home" class="mainlinks shortened" id="homelink">Home</a></li>
+            <li class="navlinks"><a href="#about" class="mainlinks shortened" id="aboutlink">About</a></li>
+            <li class="navlinks"><a href="#resume" class="mainlinks shortened" id="resumelink">Resume</a></li>
+            <li class="navlinks"><a href="#portfolio" class="mainlinks shortened" id="portfoliolink">Portfolio</a></li>
+        </ul>
+        <a href="javascript: void(0)" class="mail-link" id="contactbutton" aria-label="Mail-link">
+            <svg class="hide-for-mobile mail" width="24" height="24" viewBox="0 0 24 24">
+                <path id="Mailclose" class="show"
+                    d="M0 3V20H24V3H0ZM8 10.5556L1 18.1111V4.88889L8 10.5556ZM12 3.94444H23L12 12.9167L1 3.94444H12ZM8.5 11.0278L12 13.8611L15.5 11.0278L23 19.0556H1L8.5 11.0278ZM16 10.5556L23 4.88889V18.1111L16 10.5556Z" />
+                <path id="Mailopen"
+                    d="M11.99 0L0 8.723V24H24V8.723L11.99 0ZM11.99 1L23 9L14 14.5L11.99 13L10 14.5L1 9L11.99 1ZM1 10L9.5 15L1 22V10ZM1 23L11.99 14L23 23H1ZM23 22L14.5 15L23 10V22Z" />
+                <defs>
+                    <radialGradient id="Solid">
+                        <stop offset="100%" stop-color="#383d46" />
+                    </radialGradient>
+                </defs>
+                <defs>
+                    <radialGradient id="RadialGradient" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        spreadMethod="reflect">
+                        <stop offset="30%" stop-color="#018bb5" />
+                        <stop offset="100%" stop-color="#0ec7ff" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </a>
+        <!-- Mobile nav -->
+        <div class="mobilecontainer hide-for-desktop">
+            <a class="logocontainer hide-for-desktop" href="#home" id="homebutton" aria-label="Home Logo">
+                <svg class="homelogo hide-for-desktop" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z" />
+                </svg>
+            </a>
+
+            <!-- Hamburger menu  -->
+            <a id="btnHamburger" class="hamburger hide-for-desktop" href="javascript: void(0)"
+                aria-label="Hamburger Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home section -->
+        <section class="home" id="home">
+            <div class="heading-text">
+                <header class="main-text colored">Mohamed H. Aly</header>
+                <header class="sub-text">Full stack web developer</header>
+            </div>
+        </section>
+        <div class="svgcontainer">
+            <svg class="coolshape" width="2261" height="577" viewBox="0 0 2261 577" fill="none">
+                <g clip-path="url(#clip0_7_12)">
+                    <path d="M57.4515 447.707L2003.83 87.8756L2181.28 446.917L57.4515 447.707Z"
+                        fill="url(#paint0_linear_7_12)" />
+                    <path d="M2109.46 401.758L567.811 399.948L1978.39 136.569L2109.46 401.758Z"
+                        fill="url(#paint1_linear_7_12)" stroke="#018BB5" stroke-width="24" />
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_7_12" x1="57.4515" y1="447.707" x2="2333.72" y2="-677.305"
+                        gradientUnits="userSpaceOnUse">
+                        <stop />
+                        <stop offset="0.453125" stop-color="#0EC7FF" />
+                        <stop offset="0.882553" stop-color="#BCBCBC" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_7_12" x1="447.453" y1="410.611" x2="2246.48" y2="-478.532"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.453125" stop-color="#0EC7FF" />
+                        <stop offset="1" stop-color="#018BB5" />
+                    </linearGradient>
+                    <clipPath id="clip0_7_12">
+                        <rect width="2261" height="577" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="contentbg">
+                <div class="contentdiv br">
+                    <h1 class="header-text">Hello world!</h1>
+                    <div class="imgcontainer">
+                        <img class="img right" src="./images/Me.webp" alt="Personal image" />
+                    </div>
+                    <p class="main-content">Welcome to my website</p>
+                    <p class="sub-content">This website was created by me to showcase my web development capabilities,
+                        to express my artistic vision, to act as my autobiography & professional portfolio.
+                    </p>
+                    <p class="pr sub-content">Feel free to browse the website as you please; I have a downloadable &
+                        printable copy of my resume below. I also left links for my Linkedin profile & my Github
+                        profile.
+                    </p>
+                </div>
+            </div>
+            <div class="contentbg space">
+                <div class="contentdiv firstdiv">
+                    <h1 class="header-text">Certificates</h1>
+                    <p class="main-content">College</p>
+                    <div class="imgcontainer">
+                        <img class="img left" src="./images/English certificate.webp" alt="Certificate" />
+                    </div>
+                    <p class="sub-content pl">I graduated with a bachelor's degree in Management Information Systems on
+                        July 2021, with a GPA of 3.1 "Very Good".</p>
+                    <p class="sub-content pl">As part of my graduation project, I created a fully functioning book
+                        rental website. I designed the frontend with HTML & CSS and added functionality with JavaScript;
+                        I also created the backend with PHPMyAdmin & PHP. We also designed multiple schemas for a very
+                        intricate supply chain of data using diagramming tools like Lucidchart & Microsoft Visio. We
+                        also set up a user & admin database using MySQL.
+                    </p>
+                </div>
+            </div>
+            <div class="contentbg">
+                <div class="contentdiv middlediv">
+                    <p class="main-content">Courses</p>
+                    <div class="wideimgcontainer">
+                        <img class="img right wide" src="./images/Complete web developer certification.webp"
+                            alt="Certificate">
+                    </div>
+                    <p class="sub-content pr">I participated & finished a fullstack web developer course from
+                        ZeroToMastery Academy.
+                    </p>
+                    <p class="sub-content pr">In the course I was taught how to use scripting languages such as HTML5 &
+                        CSS3; I also learned how to use SASS & CSS preprocessors. I practiced a lot of JavaScript & was
+                        introduced to all the ECMAScript new features, like arrow functions, Async await, promises &
+                        callbacks to name a few.
+                    </p>
+                    <p class="sub-content pr">I was taught how to use the bash-terminal, how to use version-control
+                        systems like Git & Github, how to build single-page-apps with react, how to build & interact
+                        with RESTful APIs. I also got to build a server with nodeJS & express, I learned how to use
+                        postgreSQL & finally how to deploy websites with heroku.
+                    </p>
+                    <hr class="line">
+                    <div class="wideimgcontainer">
+                        <img class="img left wide" src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
+                            alt="Certificate">
+                    </div>
+                    <p class="sub-content pl">I also participated & finished an advanced senior web developer course
+                        from Udemy.
+                    </p>
+                    <p class="sub-content pl">In the course I was taught how to use SSH to securely communicate with
+                        other machines on the web, I learned how to optimize website performance through the use of
+                        lazy-loading, minifying & reducing render-blocking resources. I was introduced to bundling &
+                        testing with many different suites like Parcel & Jest respectively. I also learned Typescript &
+                        the benefits of having strongly typed projects.
+                    </p>
+                    <p class="sub-content pl">I learned about security, securing headers, securing from Injections,
+                        securing from cross-site scripting & cross-site request forgery securing with authentication &
+                        authorization & using NPM's built in audit functionality to find and fix vulnerabilities.
+                    </p>
+                    <p class="sub-content pl">I learned about session management & JSON Web Tokens and the drawbacks
+                        that came with using session storage vs local storage. I also got to interact with Redis & AWS
+                        serverless functions. I also built my first Docker container, coupled with docker-compose to
+                        streamline development. Finally, I learned how to implement CI/CD into my workflow in order to
+                        increase team cohesiveness.
+                    </p>
+
+                </div>
+            </div>
+            <div class="contentbg">
+                <div class="contentdiv lastdiv">
+                    <p class="main-content">Professional certification</p>
+                    <div class="wideimgcontainer">
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
+                            aria-label="Javascript certificate">
+                            <img class="img right wide" src="./images/JS-Certification.webp" alt="Certificate">
+                        </a>
+                    </div>
+                    <p class="sub-content pl">I was introduced to CodinGame as part of a screening process for a company
+                        & found out that they can provide me with their certification if I passed a timed test.
+                    </p>
+                    <p class="sub-content pl">Their test comprised mainly in JavaScript mathematical problems, logic
+                        tests, syntax knowledge & turning thought processing into actual functional & testable code. I
+                        ranked highly among worldwide professionals, the top 91% to be exact.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Resume section -->
+        <section class="resume" id="resume">
+            <form target="_blank">
+                <div class="contentbg space">
+                    <div class="contentdiv br">
+                        <h1 class="header-text">Resume</h1>
+                        <div class="imgcontainer resumecontainer">
+                            <img class="img resumeimg" src="./images/Mohamed Hani Aly.webp" alt="Resume" />
+                        </div>
+                        <div class="buttonsigndiv">
+                            <button type="submit" formaction="./app/assets/Mohamed H. Aly.pdf" class="button alt"
+                                value="view resume">View resume</button>
+                            <p class="pl signature">Mohamed H. Aly</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Portfolio section -->
+        <section class="portfolio" id="portfolio">
+            <form target="_blank">
+                <div class="contentbg space">
+                    <div class="contentdiv br">
+                        <h1 class="header-text">Portfolio</h1>
+
+                        <div class="grid" id="grid">
+
+                            <div class="gridcell">
+                                <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
+                                    id="project1img" />
+                            </div>
+
+                            <div class="projecttext">
+                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Online Bookstore</span>
+                                My first ever website was created as part of my graduation project. It was a functional
+                                online bookstore with a complete frontend/backend/database. I built the frontend with no
+                                dependencies, I built the backend with PHP & built the database using PHPMyAdmin.
+                                <span class="buttoncontainer">
+                                    <button type="button" class="button alt gridbutton dark"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        disabled>Demo site</button>
+                                    <button type="button" class="button alt gridbutton dark"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        disabled>Visit repo</button>
+                                </span>
+                            </div>
+
+                            <div class="gridcell">
+                                <img src="./images/Clinic website.webp" alt="Project 2" class="project"
+                                    id="project2img" />
+                            </div>
+
+                            <div class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Clinic website</span>
+                                My second website was created to be an online portal for a clinic. It was purely
+                                frontend focused as I wanted to create a catchy design with a fluid & responsive UI. It
+                                was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
+                                of a bank website.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://metwesh.github.io/health-clinics/"
+                                        class="button alt gridbutton dark">Demo site</button>
+
+                                    <button type="submit" formaction="https://github.com/Metwesh/health-clinics"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </div>
+
+                            <div class="gridcell">
+                                <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
+                            </div>
+
+                            <div class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Budget app</span>
+                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
+                                styling. Implemented the use of localstorage to not lose state data if user leaves the
+                                site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://metwesh.github.io/budget-app/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/budget-app/"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </div>
+
+                            <div class="gridcell">
+                                <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
+                            </div>
+
+                            <div class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Face detection app</span>
+                                Created a face detection app with its respective backend & database. I used react to
+                                handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
+                                Express & implemented one-way password hashing through bcrypt. I used postgreSQL to
+                                handle the database & KnexJS to interact with it on the server. The app is powered with
+                                the Clarifai API.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://face-detect-m.herokuapp.com/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/face-recognition"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </div>
+
+                            <div class="gridcell">
+                                <img src="./images/Task-handler.webp" alt="Project 5" class="project"
+                                    id="project5img" />
+                            </div>
+
+                            <div class="projecttext">
+                                <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
+                                </svg>
+                                <span class="heading">Task Handler</span>
+                                I created this CRUD project where a user can organize their tasks. This project was
+                                built with React, Typescript & Mongodb. I enforced user authentication with bcrypt
+                                password hashing & authorization with JSON web tokens. On the backend I integrated
+                                Helmet for securing headers & CORS for improved security.
+                                <span class="buttoncontainer">
+                                    <button type="submit" formaction="https://task-handler-v2.herokuapp.com/"
+                                        class="button alt gridbutton dark">Demo site</button>
+                                    <button type="submit" formaction="https://github.com/Metwesh/task-handler"
+                                        class="button alt gridbutton dark">Visit repo</button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="contentfoot">
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/mohamed-aly-a3a781213/" class="socials" rel="noopener noreferrer"
+                target="_blank" aria-label="linkedin">
+                <svg class="smalliconsquare" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    <defs>
+                        <radialGradient id="Solid-light">
+                            <stop offset="100%" stop-color="#cacccc" />
+                        </radialGradient>
+                        <radialGradient id="RadialGradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                            spreadMethod="reflect">
+                            <stop offset="30%" stop-color="#018bb5" />
+                            <stop offset="100%" stop-color="#0ec7ff" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </a>
+            <div class="emptyspace"></div>
+            <a href="https://github.com/Metwesh" class="socials" rel="noopener noreferrer" target="_blank"
+                aria-label="github">
+                <svg class="smalliconcircle" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+        </div>
+
+        <a href="#home" aria-label="To top" class="footarrowcontainer">
+            <div class="arrow"></div>
+        </a>
+        <div class="footerdiv">
+            <p class="foot-text">
+                This website was built with a lot of passion & is fully responsive.
+                <br>
+                No dependencies or templates, just pure coding.
+                <br>
+                &copy; Property of Mohamed H. Aly 2021.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

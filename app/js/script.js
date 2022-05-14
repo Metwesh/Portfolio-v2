@@ -95,7 +95,7 @@ const resume = document.querySelector("#resume");
 const portfolio = document.querySelector("#portfolio");
 
 const homeObserver = new IntersectionObserver(
-  (entries, homeObserver) => {
+  (entries, _homeObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) homeLinkOn();
       else return;
@@ -106,7 +106,7 @@ const homeObserver = new IntersectionObserver(
 homeObserver.observe(home);
 
 const aboutObserver = new IntersectionObserver(
-  (entries, aboutObserver) => {
+  (entries, _aboutObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) aboutLinkOn();
       else return;
@@ -117,7 +117,7 @@ const aboutObserver = new IntersectionObserver(
 aboutObserver.observe(about);
 
 const resumeObserver = new IntersectionObserver(
-  (entries, resumeObserver) => {
+  (entries, _resumeObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) resumeLinkOn();
       else return;
@@ -128,7 +128,7 @@ const resumeObserver = new IntersectionObserver(
 resumeObserver.observe(resume);
 
 const portfolioObserver = new IntersectionObserver(
-  (entries, portfolioObserver) => {
+  (entries, _portfolioObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) portfolioLinkOn();
       else return;
@@ -224,7 +224,7 @@ function ToggleAllMenus() {
   }
 }
 
-function toggleOverlayWithHomeButton() {
+function closeAll() {
   if (btnHamburger.classList.contains("open")) toggleHamburger();
   if (overlay.classList.contains("fadein")) toggleOverlay();
   if (overlayUl.classList.contains("slidein")) toggleMenu();
@@ -239,25 +239,18 @@ btnHamburger.addEventListener("click", () => {
 
 overlaylinks.forEach((overlaylink, i) => {
   if (i === overlaylinks.length - 1)
-    return overlaylink.addEventListener("click", () => {
+    return overlaylink.addEventListener("click", (e) => {
+      e.stopPropagation();
       toggleContactCard();
       toggleMenu();
     });
-  overlaylink.addEventListener("click", () => {
+  overlaylink.addEventListener("click", (e) => {
+    e.stopPropagation();
     toggleOverlay();
     toggleMenu();
     toggleHamburger();
   });
 });
-
-// overlay.addEventListener(
-//   "click",
-//   () => {
-//     toggleOverlay();
-//     toggleHamburger();
-//   },
-//   true
-// );
 
 contactMail.addEventListener("click", () => {
   toggleOverlay();
@@ -265,7 +258,14 @@ contactMail.addEventListener("click", () => {
   toggleMailButton();
 });
 
-homeButton.addEventListener("click", toggleOverlayWithHomeButton);
+overlay.addEventListener("click", () => {
+  toggleOverlay();
+  toggleHamburger();
+  closeAll();
+  if (mailOpen.classList.contains("show")) toggleMailButton();
+});
+
+homeButton.addEventListener("click", closeAll);
 
 // Triangle animation ////////////////////////////////////////////////////////////////////////////////
 let lastKnownScrollPosition = 0;

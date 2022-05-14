@@ -4,7 +4,7 @@
   "description": "This is V2 of my portfolio.",
   "browserslist": "> 0.5%, last 4 versions, not dead",
   "scripts": {
-    "pre": "minify ./app/js/script.js > ./dist/script.min.js"
+    "pre": "minify ./app/js/script.js > ./dist/script.min.js && minify ./devIndex.html > ./index.html"
   },
   "repository": {
     "type": "git",
