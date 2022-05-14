@@ -1,7 +1,7 @@
 // main nav links ////////////////////////////////////////////////////////////////////////////////
 const homelink = document.querySelector("#homelink");
 const aboutlink = document.querySelector("#aboutlink");
-const resumelink = document.querySelector("#resumelink");
+const skillslink = document.querySelector("#skillslink");
 const portfoliolink = document.querySelector("#portfoliolink");
 
 function homeLinkOn() {
@@ -13,9 +13,9 @@ function homeLinkOn() {
     aboutlink.classList.add("shortened");
     aboutlink.classList.remove("extended");
   }
-  if (resumelink.classList.contains("extended")) {
-    resumelink.classList.add("shortened");
-    resumelink.classList.remove("extended");
+  if (skillslink.classList.contains("extended")) {
+    skillslink.classList.add("shortened");
+    skillslink.classList.remove("extended");
   }
   if (portfoliolink.classList.contains("extended")) {
     portfoliolink.classList.add("shortened");
@@ -32,9 +32,9 @@ function aboutLinkOn() {
     homelink.classList.add("shortened");
     homelink.classList.remove("extended");
   }
-  if (resumelink.classList.contains("extended")) {
-    resumelink.classList.add("shortened");
-    resumelink.classList.remove("extended");
+  if (skillslink.classList.contains("extended")) {
+    skillslink.classList.add("shortened");
+    skillslink.classList.remove("extended");
   }
   if (portfoliolink.classList.contains("extended")) {
     portfoliolink.classList.add("shortened");
@@ -42,10 +42,10 @@ function aboutLinkOn() {
   }
 }
 
-function resumeLinkOn() {
-  if (resumelink.classList.contains("shortened")) {
-    resumelink.classList.add("extended");
-    resumelink.classList.remove("shortened");
+function skillsLinkOn() {
+  if (skillslink.classList.contains("shortened")) {
+    skillslink.classList.add("extended");
+    skillslink.classList.remove("shortened");
   }
   if (homelink.classList.contains("extended")) {
     homelink.classList.add("shortened");
@@ -74,9 +74,9 @@ function portfolioLinkOn() {
     aboutlink.classList.add("shortened");
     aboutlink.classList.remove("extended");
   }
-  if (resumelink.classList.contains("extended")) {
-    resumelink.classList.add("shortened");
-    resumelink.classList.remove("extended");
+  if (skillslink.classList.contains("extended")) {
+    skillslink.classList.add("shortened");
+    skillslink.classList.remove("extended");
   }
 }
 
@@ -84,14 +84,14 @@ homelink.addEventListener("click", homeLinkOn);
 
 aboutlink.addEventListener("click", aboutLinkOn);
 
-resumelink.addEventListener("click", resumeLinkOn);
+skillslink.addEventListener("click", skillsLinkOn);
 
 portfoliolink.addEventListener("click", portfolioLinkOn);
 
 //Intersection Observer ////////////////////////////////////////////////////////////////////////////////
 const home = document.querySelector("#home");
 const about = document.querySelector("#about");
-const resume = document.querySelector("#resume");
+const skills = document.querySelector("#skills");
 const portfolio = document.querySelector("#portfolio");
 
 const homeObserver = new IntersectionObserver(
@@ -116,16 +116,16 @@ const aboutObserver = new IntersectionObserver(
 );
 aboutObserver.observe(about);
 
-const resumeObserver = new IntersectionObserver(
+const skillsObserver = new IntersectionObserver(
   (entries, _resumeObserver) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) resumeLinkOn();
+      if (entry.isIntersecting) skillsLinkOn();
       else return;
     });
   },
   { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" }
 );
-resumeObserver.observe(resume);
+skillsObserver.observe(skills);
 
 const portfolioObserver = new IntersectionObserver(
   (entries, _portfolioObserver) => {
@@ -205,21 +205,11 @@ function toggleMailButton() {
 
 function ToggleAllMenus() {
   if (
-    contactCard.classList.contains("slideout") &&
-    overlayUl.classList.contains("slidein")
-  ) {
-    toggleMenu();
-  } else if (
     overlayUl.classList.contains("slideout") &&
     contactCard.classList.contains("slidein")
   ) {
     toggleContactCard();
-  } else if (
-    (!overlayUl.classList.contains("slidein") &&
-      !overlayUl.classList.contains("slideout")) ||
-    (overlayUl.classList.contains("slideout") &&
-      contactCard.classList.contains("slideout"))
-  ) {
+  } else {
     toggleMenu();
   }
 }
