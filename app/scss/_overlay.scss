@@ -173,6 +173,9 @@
   @include breakpoint-down(medium) {
     font-size: $font-medlrg;
   }
+  @include breakpoint-down(small) {
+    font-size: $font-medlrg;
+  }
   @include height-breakpoint-down(mdsmall) {
     padding-bottom: 2rem;
   }

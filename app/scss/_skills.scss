@@ -1,0 +1,50 @@
+.skills {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+
+.skills-box {
+  min-height: 51.4rem;
+}
+
+.skills-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+}
+
+.skills-grid-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-text {
+  font-size: $font-med;
+  font-weight: 300;
+}
+
+.skills-icon {
+  border-radius: 5px;
+  height: 5rem;
+  width: auto;
+}
+
+.buttonsigndiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.signature {
+  font-family: "Corinthia", cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 1rem 0;
+  @include breakpoint-down(small) {
+    font-size: $font-lrg;
+  }
+}
