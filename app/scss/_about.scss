@@ -159,6 +159,10 @@
   margin-top: -40px;
 }
 
+.skills-box {
+  min-height: 51.4rem;
+}
+
 .skills-grid {
   display: grid;
   justify-content: center;
@@ -172,6 +176,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.skills-text {
+  font-size: $font-med;
+  font-weight: 300;
 }
 
 .skills-icon {
