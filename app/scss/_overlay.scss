@@ -34,7 +34,6 @@
   list-style: none;
   border-radius: 20px;
   background-color: $moresemitransparent;
-  box-shadow: 0 0 30px $gray;
   visibility: inherit;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);
@@ -44,6 +43,7 @@
   }
   @include height-breakpoint-down(small) {
     height: 55vh;
+    margin-top: 30px;
   }
   :first-child {
     border-top-left-radius: 20px;
@@ -85,7 +85,7 @@
   height: 100%;
   width: 100%;
   &:not(:last-child) {
-    border-bottom: 1px solid $whitish;
+    border-bottom: 1px solid $gray;
   }
 }
 
@@ -126,7 +126,7 @@
     height: 77.2vh;
   }
   @include height-breakpoint-down(xsmall) {
-    margin-top: -73.2vh;
+    margin-top: -78.2vh;
     height: 67.2vh;
   }
 
@@ -176,12 +176,18 @@
   @include breakpoint-down(small) {
     font-size: $font-medlrg;
   }
+}
+.contact-header {
   @include height-breakpoint-down(mdsmall) {
     padding-bottom: 2rem;
   }
   @include height-breakpoint-down(xsmall) {
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
   }
+}
+
+.signature-card {
+  padding: 0;
 }
 
 .horizontal-flex {
@@ -205,19 +211,15 @@
   &:hover {
     fill: url(#RadialGradient2);
   }
-  &.github {
-    padding-bottom: 0;
-  }
   &.mail {
-    margin-top: 0;
-    padding-top: 3px;
+    padding-top: 5px;
   }
   @include breakpoint-down(medium) {
     height: 3rem;
     width: 3rem;
   }
   @include height-breakpoint-down(mdsmall) {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }

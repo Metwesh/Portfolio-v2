@@ -20,6 +20,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include breakpoint-up(medium) {
+    transition: transform 150ms ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 }
 
 .skills-text {

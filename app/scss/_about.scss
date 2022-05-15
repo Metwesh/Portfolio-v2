@@ -6,6 +6,14 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 90rem;
+  @include breakpoint-down(small) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include breakpoint-down(xsmall) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 .space {
@@ -82,6 +90,10 @@
   }
 }
 
+.certification {
+  margin: 1em 0;
+}
+
 .sub-content {
   font-size: $font-lrg;
   text-indent: 4rem;
@@ -118,6 +130,7 @@
     justify-content: center;
   }
 }
+
 .img {
   border-radius: 1.11111111rem;
   max-width: 100%;
