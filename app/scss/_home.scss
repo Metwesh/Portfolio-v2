@@ -1,3 +1,11 @@
+@include breakpoint-up(xlarge) {
+  section:not(.home) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .home {
   height: 140vh;
   background: -webkit-gradient(
@@ -29,19 +37,21 @@
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
   @include breakpoint-down(small) {
-    padding: 16rem 1rem 0 3.75rem;
+    padding-top: 16rem;
+    padding-right: 1rem;
+    padding-bottom: 0;
+    padding-left: 2.5rem;
     font-size: $font-lrgmed;
-    padding-left: 40px;
   }
   @include breakpoint-down(xsmall) {
     font-size: $font-lrg;
     padding-left: 30px;
   }
-  @include height-breakpoint-down(small) {
-    padding-top: 10rem;
-  }
   @include height-breakpoint-down(mdsmall) {
     padding-top: 6.5rem;
+  }
+  @include height-breakpoint-down(small) {
+    padding-top: 10rem;
   }
   @include height-breakpoint-down(xsmall) {
     padding-top: 4rem;

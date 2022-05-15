@@ -27,6 +27,10 @@ body {
   letter-spacing: 1px;
 }
 
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
 @include breakpoint-up(medium) {
   ::-webkit-scrollbar {
     width: 0.5rem;
