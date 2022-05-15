@@ -59,10 +59,7 @@
 .buttoncontainer {
   display: flex;
   align-items: flex-end;
-  justify-content: space-around;
-  @supports (justify-content: space-evenly) {
-    justify-content: space-evenly;
-  }
+  justify-content: space-evenly;
   @include breakpoint-up(small) {
     margin: 2rem 4rem 0 4rem;
   }
@@ -73,6 +70,6 @@
     margin: 1rem 1.3rem 0 1.3rem;
   }
   @include breakpoint-down(xsmall) {
-    margin: 0.5rem 0.75rem 0 0.75rem;
+    margin: 0.5rem 0.15rem 0 0.15rem;
   }
 }

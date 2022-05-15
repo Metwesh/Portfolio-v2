@@ -126,7 +126,6 @@
     height: 77.2vh;
   }
   @include height-breakpoint-down(xsmall) {
-    margin-top: -78.2vh;
     height: 67.2vh;
   }
 
@@ -169,15 +168,15 @@
   font-size: $font-lrgmed;
   color: $darkgray;
   font-weight: 400;
+  padding-right: 1rem;
   padding-bottom: 4rem;
+  padding-left: 1rem;
   @include breakpoint-down(medium) {
     font-size: $font-medlrg;
   }
   @include breakpoint-down(small) {
     font-size: $font-medlrg;
   }
-}
-.contact-header {
   @include height-breakpoint-down(mdsmall) {
     padding-bottom: 2rem;
   }
@@ -195,6 +194,8 @@
   display: flex;
   justify-content: space-between;
   width: 20rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   @include breakpoint-down(medium) {
     width: 15rem;
   }

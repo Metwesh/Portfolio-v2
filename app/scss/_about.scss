@@ -4,15 +4,16 @@
 
 .contentbg {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 90rem;
   @include breakpoint-down(small) {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
   @include breakpoint-down(xsmall) {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
   }
 }
 
