@@ -11,6 +11,7 @@
   display: grid;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
   @include breakpoint-down(small) {
