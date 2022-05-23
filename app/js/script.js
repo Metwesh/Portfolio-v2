@@ -278,7 +278,11 @@ function scrollMove(scrollPos) {
     coolshape.style.transform = `translateX(${-scrollPos - 100}px)`;
   } else if (screen.width > 600) {
     coolshape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
-  } else coolshape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
+  } else if (screen.width >= 390) {
+    coolshape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
+  } else {
+    coolshape.style.transform = `translateX(${-scrollPos * 2 - 100}px)`;
+  }
 }
 
 document.addEventListener("scroll", scrollListener);

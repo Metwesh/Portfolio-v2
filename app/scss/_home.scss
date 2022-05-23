@@ -48,7 +48,7 @@ figure {
     font-size: $font-lrgmed;
   }
   @include breakpoint-down(xsmall) {
-    font-size: $font-lrg;
+    font-size: $font-lrgr;
     padding-left: 30px;
   }
   @include height-breakpoint-down(mdsmall) {
@@ -86,7 +86,7 @@ figure {
     padding-left: 40px;
   }
   @include breakpoint-down(xsmall) {
-    font-size: $font-med;
+    font-size: $font-medlrg;
     padding-left: 30px;
   }
 }
