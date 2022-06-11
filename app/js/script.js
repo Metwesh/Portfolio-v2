@@ -194,11 +194,10 @@ function toggleMailButton() {
   mailClose.classList.toggle("show");
   if (mailOpen.classList.contains("show")) {
     mailOpen.parentNode.style.marginTop = "-5px";
-    mailOpen.parentNode.style.transform = "translateY(5px)";
     mailOpen.parentNode.style.height = "60px";
   } else if (mailClose.classList.contains("show")) {
     mailClose.parentNode.style.marginTop = "10px";
-    mailClose.parentNode.style.transform = "translateY(0)";
+    mailClose.parentNode.style.transform = "translateY(-3px)";
     mailClose.parentNode.style.height = "45px";
   }
 }
