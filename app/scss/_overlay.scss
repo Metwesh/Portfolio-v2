@@ -190,14 +190,15 @@
 }
 
 .horizontal-flex {
-  height: 3rem;
   display: flex;
   justify-content: space-between;
-  width: 20rem;
+  width: 25rem;
   padding-right: 1rem;
   padding-left: 1rem;
   @include breakpoint-down(medium) {
     width: 15rem;
+    padding-right: 0;
+    padding-left: 0;
   }
   @include height-breakpoint-down(mdsmall) {
     width: 15rem;
@@ -207,6 +208,7 @@
 .card {
   height: 4rem;
   width: 4rem;
+  margin: 0.5rem;
   fill: url(#Solid2);
   transition: fill 300ms ease-in-out;
   &:hover {

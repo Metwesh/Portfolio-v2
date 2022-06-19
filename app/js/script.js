@@ -112,7 +112,7 @@ const aboutObserver = new IntersectionObserver(
       else return;
     });
   },
-  { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" }
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.15" }
 );
 aboutObserver.observe(about);
 
@@ -145,6 +145,7 @@ const overlay = document.querySelector("#overlay");
 const overlayUl = document.querySelector("#overlayUl");
 const overlaylinks = document.querySelectorAll(".overlaylinks");
 const contactCard = document.querySelector("#contactCard");
+const contactCardBox = document.querySelector(".contactCardBox");
 const contactMail = document.querySelector("#contactbutton");
 const mailOpen = document.querySelector("#Mailopen");
 const mailClose = document.querySelector("#Mailclose");
@@ -193,12 +194,9 @@ function toggleMailButton() {
   mailOpen.classList.toggle("show");
   mailClose.classList.toggle("show");
   if (mailOpen.classList.contains("show")) {
-    mailOpen.parentNode.style.marginTop = "-5px";
-    mailOpen.parentNode.style.height = "60px";
+    mailOpen.parentNode.style.transform = "translateY(-5px)";
   } else if (mailClose.classList.contains("show")) {
-    mailClose.parentNode.style.marginTop = "10px";
-    mailClose.parentNode.style.transform = "translateY(-3px)";
-    mailClose.parentNode.style.height = "45px";
+    mailClose.parentNode.style.transform = "translateY(0)";
   }
 }
 
@@ -253,6 +251,8 @@ overlay.addEventListener("click", () => {
   closeAll();
   if (mailOpen.classList.contains("show")) toggleMailButton();
 });
+
+contactCardBox.addEventListener("click", (e) => e.stopPropagation());
 
 homeButton.addEventListener("click", closeAll);
 
