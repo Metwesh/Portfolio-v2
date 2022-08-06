@@ -13,17 +13,18 @@ $semitransparent: rgba(255, 255, 255, 0.88);
 $moresemitransparent: rgba(255, 255, 255, 0.91);
 $darksemitransparent: rgba(56, 61, 70, 0.88);
 
-$font-xlg: 3.25rem; //52px
-$font-lrgmed: 2.25rem; //52px
-$font-lrgr: 1.875rem; //30px
-$font-lrg: 1.5rem; //20px
-$font-medlrg: 1.333rem; //21.328px
-$font-med: 1.125rem; //18px
-$font-smmed: 1rem; //16px
-$font-sm: 0.875rem; //14px
-$font-xsm: 0.75rem; //12px
-$font-xxsm: 0.625rem; //10px
-$font-xxxsm: 0.5rem; //8px
+$font-xxlg: 3.25rem; //52px
+$font-xlg: 2.25rem; //36px
+$font-lrgmed: 1.875rem; //30px
+$font-lrgr: 1.5rem; //24px
+$font-lrg: 1.333rem; //21.328px
+$font-medlrg: 1.125rem; //18px
+$font-med: 1rem; //16px
+$font-smmed: 0.875rem; //14px
+$font-sm: 0.75rem; //12px
+$font-xsm: 0.625rem; //10px
+$font-xxsm: 0.5rem; //8px
+$font-xxxsm: 0.45rem; //6.4px
 
 $gradient-to-top: linear-gradient(to top, $darkcyan, $cyan);
 $gradient-to-right: linear-gradient(to right, $darkcyan, $cyan);

@@ -30,7 +30,9 @@
 }
 
 .dorito {
+  display: block;
   @include breakpoint-up(large) {
+    display: inline;
     transform: rotate(-90deg);
   }
 }

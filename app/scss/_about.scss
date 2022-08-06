@@ -107,7 +107,7 @@
 .header-text {
   display: flex;
   justify-content: center;
-  font-size: $font-xlg;
+  font-size: $font-xxlg;
   font-weight: 400;
   color: $black;
   margin: 1rem;
@@ -137,9 +137,9 @@
   border-radius: 1.11111111rem;
   max-width: 100%;
   width: auto;
-  max-height: 28.5rem;
+  max-height: 25.5rem;
   height: auto;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1.25rem;
 
   &.right {
@@ -164,6 +164,7 @@
     max-height: 25rem;
     height: auto;
     width: auto;
+    margin-top: 0;
     @include breakpoint-down(large) {
       margin: 0;
     }
