@@ -1,9 +1,5 @@
 .main-nav {
   position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
   background-color: $semitransparent;
   width: 100vw;
   height: 80px;
@@ -14,6 +10,15 @@
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
+}
+
+.desktop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
 }
 
 ul {
@@ -37,15 +42,10 @@ ul {
   }
 }
 
-a {
-  text-decoration: none;
-  color: $darkgray;
-}
-
 .mainlinks {
   font-size: $font-lrg;
   padding: 10px 25px;
-  margin: -10px -25px;
+  margin: -7px -25px;
   transition: color 300ms ease-in-out;
   &:hover {
     color: $cyan;
@@ -77,55 +77,16 @@ a {
     width 0.3s ease-in-out;
 }
 
-.mainlinks.extended:first-child::after {
+.mainlinks.extended::after {
   -webkit-transform: scaleX(0.4);
   -ms-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
-.mainlinks.shortened:first-child::after {
+.mainlinks.shortened::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
-  width: 100%;
-}
-
-.mainlinks.shortened:nth-child(2)::after {
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
-  width: 100%;
-}
-.mainlinks.extended:nth-child(2)::after {
-  -webkit-transform: scaleX(0.4);
-  -ms-transform: scaleX(0.4);
-  transform: scaleX(0.4);
-  width: 100%;
-}
-
-.mainlinks.shortened:nth-child(3)::after {
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
-  width: 100%;
-}
-.mainlinks.extended:nth-child(3)::after {
-  -webkit-transform: scaleX(0.4);
-  -ms-transfosrm: scaleX(0.4);
-  transform: scaleX(0.4);
-  width: 100%;
-}
-
-.mainlinks.shortened:last-child::after {
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
-  width: 100%;
-}
-.mainlinks.extended:last-child::after {
-  -webkit-transform: scaleX(0.4);
-  -ms-transfosrm: scaleX(0.4);
-  transform: scaleX(0.4);
   width: 100%;
 }
 
@@ -140,17 +101,17 @@ a {
 .mail-link {
   margin-right: 80px;
   margin-left: auto;
-  padding: 0 20px;
+  justify-self: end;
+  padding-inline: 20px;
   @include breakpoint-down(large) {
     margin-right: 40px;
   }
 }
 
 .mail {
-  margin-top: 7px;
-  margin-bottom: 4px;
   fill: url(#Solid);
-  width: 45px;
+  padding-top: 5px;
+  width: 50px;
   height: 45px;
   transition: all 100ms ease-in-out;
 }
@@ -171,10 +132,6 @@ a {
 
 .mail:hover {
   fill: url(#RadialGradient);
-}
-
-button {
-  cursor: pointer;
 }
 
 .button {

@@ -80,3 +80,13 @@
     margin: 0.5rem 0.15rem 0 0.15rem;
   }
 }
+
+@include breakpoint-up(medium) {
+  .box-hover {
+    transition: all 300ms ease-in-out;
+    transform: none;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}

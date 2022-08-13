@@ -27,6 +27,15 @@ body {
   letter-spacing: 1px;
 }
 
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $darkgray;
+}
+
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0;

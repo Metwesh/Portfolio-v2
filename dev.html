@@ -1,6 +1,5 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-us" content="Portfolio">
 
 <head>
     <!-- Declare all page rendering and programmatic related tags -->
@@ -68,7 +67,7 @@
         <!-- Card -->
         <div class="contactCard" id="contactCard">
             <div class="contactCardBox">
-                <header class="contact-header">Contact me through any of the following</header>
+                <h1 class="contact-header">Contact me through any of the following</h1>
                 <p class="signature signature-card">Mohamed H. Aly</p>
                 <div class="horizontal-flex">
                     <a href="https://www.linkedin.com/in/mohamed-aly-a3a781213/" title="Linkedin"
@@ -109,41 +108,43 @@
     </div>
     <!-- Main nav -->
     <nav class="main-nav">
-        <ul class="hide-for-mobile">
-            <li class="navlinks">
-                <a href="#home" title="Home" class="mainlinks shortened" id="homelink">Home</a>
-            </li>
-            <li class="navlinks">
-                <a href="#about" title="About" class="mainlinks shortened" id="aboutlink">About</a>
-            </li>
-            <li class="navlinks">
-                <a href="#skills" title="Skills" class="mainlinks shortened" id="skillslink">Skills</a>
-            </li>
-            <li class="navlinks">
-                <a href="#portfolio" title="Portfolio" class="mainlinks shortened" id="portfoliolink">Portfolio</a>
-            </li>
-        </ul>
-        <a href="javascript: void(0)" title="Contact details" class="mail-link" id="contactbutton"
-            aria-label="Mail-link">
-            <svg class="hide-for-mobile mail" width="24" height="24" viewBox="0 0 24 24">
-                <path id="Mailclose" class="show"
-                    d="M0 3V20H24V3H0ZM8 10.5556L1 18.1111V4.88889L8 10.5556ZM12 3.94444H23L12 12.9167L1 3.94444H12ZM8.5 11.0278L12 13.8611L15.5 11.0278L23 19.0556H1L8.5 11.0278ZM16 10.5556L23 4.88889V18.1111L16 10.5556Z" />
-                <path id="Mailopen"
-                    d="M11.99 0L0 8.723V24H24V8.723L11.99 0ZM11.99 1L23 9L14 14.5L11.99 13L10 14.5L1 9L11.99 1ZM1 10L9.5 15L1 22V10ZM1 23L11.99 14L23 23H1ZM23 22L14.5 15L23 10V22Z" />
-                <defs>
-                    <radialGradient id="Solid">
-                        <stop offset="100%" stop-color="#383d46" />
-                    </radialGradient>
-                </defs>
-                <defs>
-                    <radialGradient id="RadialGradient" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-                        spreadMethod="reflect">
-                        <stop offset="30%" stop-color="#018bb5" />
-                        <stop offset="100%" stop-color="#0ec7ff" />
-                    </radialGradient>
-                </defs>
-            </svg>
-        </a>
+        <div class="desktop-wrapper">
+            <ul class="hide-for-mobile">
+                <li class="navlinks">
+                    <a href="#home" title="Home" class="mainlinks shortened" id="homelink">Home</a>
+                </li>
+                <li class="navlinks">
+                    <a href="#about" title="About" class="mainlinks shortened" id="aboutlink">About</a>
+                </li>
+                <li class="navlinks">
+                    <a href="#skills" title="Skills" class="mainlinks shortened" id="skillslink">Skills</a>
+                </li>
+                <li class="navlinks">
+                    <a href="#portfolio" title="Portfolio" class="mainlinks shortened" id="portfoliolink">Portfolio</a>
+                </li>
+            </ul>
+            <a href="javascript: void(0)" title="Contact details" class="mail-link" id="contactbutton"
+                aria-label="Mail-link">
+                <svg class="hide-for-mobile mail" width="24" height="24" viewBox="0 0 24 24">
+                    <path id="Mailclose" class="show"
+                        d="M0 3V20H24V3H0ZM8 10.5556L1 18.1111V4.88889L8 10.5556ZM12 3.94444H23L12 12.9167L1 3.94444H12ZM8.5 11.0278L12 13.8611L15.5 11.0278L23 19.0556H1L8.5 11.0278ZM16 10.5556L23 4.88889V18.1111L16 10.5556Z" />
+                    <path id="Mailopen"
+                        d="M11.99 0L0 8.723V24H24V8.723L11.99 0ZM11.99 1L23 9L14 14.5L11.99 13L10 14.5L1 9L11.99 1ZM1 10L9.5 15L1 22V10ZM1 23L11.99 14L23 23H1ZM23 22L14.5 15L23 10V22Z" />
+                    <defs>
+                        <radialGradient id="Solid">
+                            <stop offset="100%" stop-color="#383d46" />
+                        </radialGradient>
+                    </defs>
+                    <defs>
+                        <radialGradient id="RadialGradient" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                            spreadMethod="reflect">
+                            <stop offset="30%" stop-color="#018bb5" />
+                            <stop offset="100%" stop-color="#0ec7ff" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </a>
+        </div>
         <!-- Mobile nav -->
         <div class="mobilecontainer hide-for-desktop">
             <a class="logocontainer hide-for-desktop" title="Home" href="#home" id="homebutton" aria-label="Home Logo">
@@ -199,19 +200,21 @@
     </div>
 
     <!-- About section -->
-    <main class="about" id="about">
+    <section class="about" id="about">
         <div class="contentbg">
             <article class="contentdiv br">
                 <h1 class="header-text">Hello world!</h1>
                 <figure class="imgcontainer">
                     <img class="img right" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
                 </figure>
-                <header class="main-content">Welcome to my website</header>
+                <h3 class="main-content">Welcome to my website</h3>
                 <p class="sub-content">This website was created by me to showcase my web development capabilities,
                     to express my artistic vision, to act as my autobiography & professional portfolio.
                 </p>
-                <p class="pr sub-content">I was born and raised in Egypt and grew fond of software & its development so
-                    it is my dream to pursue a career in software and help contribute to open-source.
+                <p class="pr sub-content">I'm an Egyptian-born, self-taught, aspiring software & web developer. While I
+                    was studying Management Information Systems in university, I took a Computer Science course; that
+                    course changed my life, I found myself understanding code & writing it much faster than all my
+                    peers. Ever since I've devoted most of my free time to learn how to write clean & efficient code.
                 </p>
                 <p class="pr sub-content">Feel free to browse the website as you please; I have a downloadable &
                     printable copy of my resume below. I also left links for my Linkedin profile & my Github
@@ -222,7 +225,7 @@
         <div class="contentbg space">
             <article class="contentdiv firstdiv">
                 <h1 class="header-text">About</h1>
-                <header class="main-content">College</header>
+                <h3 class="main-content">College</h3>
                 <figure class="imgcontainer">
                     <img class="img left" title="Certificate" src="./images/English certificate.webp"
                         alt="College certificate" />
@@ -242,7 +245,7 @@
         <div class="contentbg">
             <article class="contentdiv middlediv">
                 <section>
-                    <header class="main-content">Courses</header>
+                    <h3 class="main-content">Courses</h3>
                     <figure class="wideimgcontainer">
                         <img class="img right wide" title="Certificate"
                             src="./images/Complete web developer certification.webp"
@@ -314,7 +317,7 @@
         </div>
         <div class="contentbg">
             <article class="contentdiv lastdiv">
-                <header class="main-content certification">Professional certification</header>
+                <h3 class="main-content certification">Professional certification</h3>
                 <figure class="wideimgcontainer">
                     <a target="_blank" rel="noopener noreferrer"
                         href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
@@ -335,7 +338,7 @@
                 </p>
             </article>
         </div>
-    </main>
+    </section>
 
     <!-- Skills section -->
     <section class="skills" id="skills">
@@ -481,12 +484,12 @@
 
                     <div class="grid" id="grid">
 
-                        <figure class="gridcell">
+                        <figure class="gridcell box-hover">
                             <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
                                 id="project1img" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="projecttext box-hover">
 
                             <span class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
@@ -507,13 +510,13 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell">
+                        <figure class="gridcell box-hover">
                             <img src="./images/Clinic website.webp" alt="Project 2" class="project" id="project2img" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="projecttext box-hover">
 
-                            <span class="heading">
+                            <span class="heading box-hover">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
@@ -534,11 +537,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell">
+                        <figure class="gridcell box-hover">
                             <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="projecttext box-hover">
 
                             <span class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -559,11 +562,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell">
+                        <figure class="gridcell box-hover">
                             <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="projecttext box-hover">
 
                             <span class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -586,11 +589,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell">
+                        <figure class="gridcell box-hover">
                             <img src="./images/Task-handler.webp" alt="Project 5" class="project" id="project5img" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="projecttext box-hover">
 
                             <span class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">

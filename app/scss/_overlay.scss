@@ -191,7 +191,7 @@
 
 .horizontal-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 25rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -206,8 +206,8 @@
 }
 
 .card {
-  height: 4rem;
-  width: 4rem;
+  height: 3.75rem;
+  width: 3.75rem;
   margin: 0.5rem;
   fill: url(#Solid2);
   transition: fill 300ms ease-in-out;
