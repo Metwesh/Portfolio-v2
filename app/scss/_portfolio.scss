@@ -31,6 +31,7 @@
 
 .dorito {
   display: block;
+  fill: url(#Solid3);
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -39,8 +40,12 @@
 
 .heading {
   display: block;
+}
+
+.heading-text {
   font-size: $font-lrgmed;
   font-weight: 600;
+  color: $darkergray;
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
   }
@@ -67,10 +72,7 @@
   align-items: flex-end;
   justify-content: space-evenly;
   @include breakpoint-up(small) {
-    margin: 2rem 4rem 0 4rem;
-  }
-  @include breakpoint-up(medium) {
-    margin: 2rem 2rem 0 2rem;
+    margin: 2rem 3rem 0 3rem;
   }
   @include breakpoint-down(small) {
     margin: 1rem 0.75rem 0 0.75rem;

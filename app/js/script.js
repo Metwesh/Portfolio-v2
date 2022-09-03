@@ -292,3 +292,24 @@ darkButton.forEach((button) => {
   button.onmousedown = () => button.classList.toggle("darkswitch");
   button.onmouseup = () => button.classList.toggle("darkswitch");
 });
+
+//Dark mode button /////////////////////////////////////////////////////////////////////////////
+const viewMode = document.querySelector(".view-mode");
+const darkMode = document.querySelector(".dark-mode");
+
+function rotateButton() {
+  if (darkMode.style.transform === "rotate(0deg)") {
+    darkMode.style.transform = "rotate(-180deg)";
+  } else {
+    darkMode.style.transform = "rotate(0deg)";
+  }
+}
+
+function toggleDarkMode() {
+  // DARK MODE!
+}
+
+viewMode.addEventListener("click", () => {
+  rotateButton();
+  // toggleDarkMode();
+});

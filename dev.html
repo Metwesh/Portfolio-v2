@@ -106,8 +106,9 @@
             </div>
         </div>
     </div>
-    <!-- Main nav -->
+    <!-- Nav -->
     <nav class="main-nav">
+        <!-- Desktop nav -->
         <div class="desktop-wrapper">
             <ul class="hide-for-mobile">
                 <li class="navlinks">
@@ -163,6 +164,15 @@
             </a>
         </div>
     </nav>
+
+    <div class="view-mode-wrapper">
+        <a href="javascript: void(0)" title="View-mode" class="view-mode">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="dark-mode">
+                <path
+                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 4c-4.418 0-8 3.582-8 8s3.582 8 8 8v-16z" />
+            </svg>
+        </a>
+    </div>
 
 
     <!-- Home section -->
@@ -491,15 +501,25 @@
 
                         <article class="projecttext box-hover">
 
-                            <span class="heading">
+                            <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
+                                    <defs>
+                                        <radialGradient id="Solid3">
+                                            <stop offset="100%" stop-color="#1e2125" />
+                                        </radialGradient>
+                                    </defs>
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
-                                Online Bookstore</span>
-                            My first ever website was created as part of my graduation project. It was a functional
-                            online bookstore with a complete frontend/backend/database. I built the frontend with no
-                            dependencies, I built the backend with PHP & built the database using PHPMyAdmin.
+                                <span class="heading-text">
+                                    Online Bookstore
+                                </span>
+                            </div>
+                            <span class="sub-content">
+                                My first ever website was created as part of my graduation project. It was a functional
+                                online bookstore with a complete frontend/backend/database. I built the frontend with no
+                                dependencies, I built the backend with PHP & built the database using PHPMyAdmin.
+                            </span>
                             <span class="buttoncontainer">
                                 <button type="button" class="button alt gridbutton dark" title="Disabled"
                                     data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
@@ -516,16 +536,21 @@
 
                         <article class="projecttext box-hover">
 
-                            <span class="heading box-hover">
+                            <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
-                                Clinic website</span>
-                            My second website was created to be an online portal for a clinic. It was purely
-                            frontend focused as I wanted to create a catchy design with a fluid & responsive UI. It
-                            was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
-                            of a bank website.
+                                <span class="heading-text">
+                                    Clinic website
+                                </span>
+                            </div>
+                            <span class="sub-content">
+                                My second website was created to be an online portal for a clinic. It was purely
+                                frontend focused as I wanted to create a catchy design with a fluid & responsive UI. It
+                                was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
+                                of a bank website.
+                            </span>
                             <span class="buttoncontainer">
                                 <button type="submit" title="Clinic website"
                                     formaction="https://metwesh.github.io/health-clinics/"
@@ -543,15 +568,20 @@
 
                         <article class="projecttext box-hover">
 
-                            <span class="heading">
+                            <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
-                                Budget app</span>
-                            Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
-                            styling. Implemented the use of localstorage to not lose state data if user leaves the
-                            site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
+                                <span class="heading-text">
+                                    Budget app
+                                </span>
+                            </div>
+                            <span class="sub-content">
+                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
+                                styling. Implemented the use of localstorage to not lose state data if user leaves the
+                                site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
+                            </span>
                             <span class="buttoncontainer">
                                 <button type="submit" title="Budget app"
                                     formaction="https://metwesh.github.io/budget-app/"
@@ -568,17 +598,22 @@
 
                         <article class="projecttext box-hover">
 
-                            <span class="heading">
+                            <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
-                                Face detection app</span>
-                            Created a face detection app with its respective backend & database. I used react to
-                            handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
-                            Express & implemented one-way password hashing through bcrypt. I used postgreSQL to
-                            handle the database & KnexJS to interact with it on the server. The app is powered with
-                            the Clarifai API.
+                                <span class="heading-text">
+                                    Face detection app
+                                </span>
+                            </div>
+                            <span class="sub-content">
+                                Created a face detection app with its respective backend & database. I used react to
+                                handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
+                                Express & implemented one-way password hashing through bcrypt. I used postgreSQL to
+                                handle the database & KnexJS to interact with it on the server. The app is powered with
+                                the Clarifai API.
+                            </span>
                             <span class="buttoncontainer">
                                 <button type="submit" title="Face detection app"
                                     formaction="https://face-detect-m.herokuapp.com/"
@@ -595,16 +630,20 @@
 
                         <article class="projecttext box-hover">
 
-                            <span class="heading">
+                            <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
-                                Task Handler</span>
-                            I created this CRUD project where a user can organize their tasks. This project was
-                            built with React, Typescript & Mongodb. I enforced user authentication with bcrypt
-                            password hashing & authorization with JSON web tokens. On the backend I integrated
-                            Helmet for securing headers & CORS for improved security.
+                                <span class="heading-text">
+                                    Task Handler</span>
+                            </div>
+                            <span class="sub-content">
+                                I created this CRUD project where a user can organize their tasks. This project was
+                                built with React, Typescript & Mongodb. I enforced user authentication with bcrypt
+                                password hashing & authorization with JSON web tokens. On the backend I integrated
+                                Helmet for securing headers & CORS for improved security.
+                            </span>
                             <span class="buttoncontainer">
                                 <button type="submit" title="Task handler"
                                     formaction="https://task-handler-v2.herokuapp.com/"
