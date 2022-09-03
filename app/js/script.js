@@ -296,13 +296,16 @@ darkButton.forEach((button) => {
 //Dark mode button /////////////////////////////////////////////////////////////////////////////
 const viewMode = document.querySelector(".view-mode");
 const darkMode = document.querySelector(".dark-mode");
+const sun = document.querySelector("#sun");
+const moon = document.querySelector("#moon");
+
+let rotation = 180;
 
 function rotateButton() {
-  if (darkMode.style.transform === "rotate(0deg)") {
-    darkMode.style.transform = "rotate(-180deg)";
-  } else {
-    darkMode.style.transform = "rotate(0deg)";
-  }
+  darkMode.style.transform = `rotate(${rotation}deg)`;
+  rotation += 180;
+  sun.classList.toggle("show");
+  moon.classList.toggle("show");
 }
 
 function toggleDarkMode() {

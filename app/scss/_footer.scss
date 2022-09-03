@@ -56,6 +56,7 @@
   fill: url(#Solid-light);
   width: 100%;
   height: 100%;
+  transition: fill 300ms ease-in-out;
 }
 
 .emptyspace {
@@ -72,6 +73,7 @@
   fill: url(#Solid-light);
   width: 100%;
   height: 100%;
+  transition: fill 150ms ease-in-out;
 }
 .socials:first-child:hover {
   -o-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
@@ -83,7 +85,7 @@
   box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
     0 0 20px $lightcyan;
   .smalliconsquare {
-    fill: url(#RadialGradient2);
+    fill: url(#RadialGradient4);
   }
 }
 .socials:last-child:hover {
@@ -96,7 +98,7 @@
   box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
     0 0 20px $lightcyan;
   .smalliconcircle {
-    fill: url(#RadialGradient2);
+    fill: url(#RadialGradient4);
   }
 }
 
@@ -121,6 +123,13 @@
     padding: 0px 20px;
     margin: 40px 0px;
   }
+  &:hover {
+    .arrow,
+    .arrow:before {
+      border-right: 1px $cyan solid;
+      border-bottom: 1px $cyan solid;
+    }
+  }
 }
 
 .arrow,
@@ -138,6 +147,7 @@
   border-right: 2px $white solid;
   border-bottom: 2px $white solid;
   border-left: none;
+  transition: all 150ms ease-in-out;
   @include breakpoint-down(mdsmall) {
     width: 30px;
     height: 30px;

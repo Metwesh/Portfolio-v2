@@ -31,7 +31,7 @@
 
 .dorito {
   display: block;
-  fill: url(#Solid3);
+  fill: url(#Solid4);
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -80,15 +80,5 @@
   }
   @include breakpoint-down(xsmall) {
     margin: 0.5rem 0.15rem 0 0.15rem;
-  }
-}
-
-@include breakpoint-up(medium) {
-  .box-hover {
-    transition: all 300ms ease-in-out;
-    transform: none;
-    &:hover {
-      transform: scale(1.02);
-    }
   }
 }

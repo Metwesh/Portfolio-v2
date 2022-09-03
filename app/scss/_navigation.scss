@@ -132,36 +132,6 @@ ul {
   }
 }
 
-.view-mode-wrapper {
-  position: fixed;
-  z-index: 10000;
-  padding: 1rem;
-  margin-top: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: $semitransparent;
-  box-shadow: 0 0 5px 1px $gray;
-}
-
-.dark-mode {
-  fill: url(#Solid);
-  display: flex;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    fill: url(#RadialGradient);
-  }
-}
-
 .button {
   padding: 10px 30px;
   font-size: $font-lrg;
@@ -303,6 +273,9 @@ ul {
     width: 45px;
     height: 45px;
   }
+  &:hover {
+    fill: url(#RadialGradient4);
+  }
 }
 
 .hamburger {
@@ -392,6 +365,62 @@ ul {
       -o-transform: translateY(-9px) rotate(90deg);
       transform: translateY(-9px) rotate(90deg);
     }
+  }
+}
+
+.view-mode-wrapper {
+  position: fixed;
+  z-index: 10000;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: $semitransparent;
+  box-shadow: 0 0 5px 1px $gray;
+  @include breakpoint-down(small) {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.view-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-mode-button {
+  fill: url(#Solid3);
+  width: 2.2rem;
+  height: 2.2rem;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  @include breakpoint-down(small) {
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    fill: url(#RadialGradient3);
+  }
+}
+
+#moon {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  &.show {
+    opacity: 1;
+  }
+}
+#sun {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  &.show {
+    opacity: 1;
   }
 }
 

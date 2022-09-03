@@ -32,8 +32,8 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/style.min.css">
 
-    <script defer src="./dist/script.min.js"></script>
-    <!-- <script defer src="./app/js/script.js"></script> -->
+    <!-- <script defer src="./dist/script.min.js"></script> -->
+    <script defer src="./app/js/script.js"></script>
 
 </head>
 
@@ -74,7 +74,7 @@
                         rel="noopener noreferrer" target="_blank" aria-label="linkedin">
                         <svg class="card linkedin" width="24" height="24" viewBox="0 0 24 24">
                             <defs>
-                                <radialGradient id="Solid2">
+                                <radialGradient id="Solid">
                                     <stop offset="100%" stop-color="#383d46" />
                                 </radialGradient>
                             </defs>
@@ -128,11 +128,11 @@
                 aria-label="Mail-link">
                 <svg class="hide-for-mobile mail" width="24" height="24" viewBox="0 0 24 24">
                     <path id="Mailclose" class="show"
-                        d="M0 3V20H24V3H0ZM8 10.5556L1 18.1111V4.88889L8 10.5556ZM12 3.94444H23L12 12.9167L1 3.94444H12ZM8.5 11.0278L12 13.8611L15.5 11.0278L23 19.0556H1L8.5 11.0278ZM16 10.5556L23 4.88889V18.1111L16 10.5556Z" />
+                        d="M0 4V21H24V4H0ZM8 11.5556L1 19.1111V5.88889L8 11.5556ZM12 4.94444H23L12 13.9167L1 4.94444H12ZM8.5 12.0278L12 14.8611L15.5 12.0278L23 20.0556H1L8.5 12.0278ZM16 11.5556L23 5.88889V19.1111L16 11.5556Z" />
                     <path id="Mailopen"
                         d="M11.99 0L0 8.723V24H24V8.723L11.99 0ZM11.99 1L23 9L14 14.5L11.99 13L10 14.5L1 9L11.99 1ZM1 10L9.5 15L1 22V10ZM1 23L11.99 14L23 23H1ZM23 22L14.5 15L23 10V22Z" />
                     <defs>
-                        <radialGradient id="Solid">
+                        <radialGradient id="Solid2">
                             <stop offset="100%" stop-color="#383d46" />
                         </radialGradient>
                     </defs>
@@ -150,6 +150,13 @@
         <div class="mobilecontainer hide-for-desktop">
             <a class="logocontainer hide-for-desktop" title="Home" href="#home" id="homebutton" aria-label="Home Logo">
                 <svg class="homelogo hide-for-desktop" width="24" height="24" viewBox="0 0 24 24">
+                    <defs>
+                        <radialGradient id="RadialGradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                            spreadMethod="reflect">
+                            <stop offset="30%" stop-color="#018bb5" />
+                            <stop offset="100%" stop-color="#0ec7ff" />
+                        </radialGradient>
+                    </defs>
                     <path
                         d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z" />
                 </svg>
@@ -167,10 +174,23 @@
 
     <div class="view-mode-wrapper">
         <a href="javascript: void(0)" title="View-mode" class="view-mode">
-            <svg width="24" height="24" viewBox="0 0 24 24" class="dark-mode">
-                <path
-                    d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 4c-4.418 0-8 3.582-8 8s3.582 8 8 8v-16z" />
+            <svg width="24" height="24" viewBox="0 0 24 24" class="view-mode-button dark-mode">
+                <defs>
+                    <radialGradient id="Solid3">
+                        <stop offset="100%" stop-color="#383d46" />
+                    </radialGradient>
+                    <radialGradient id="RadialGradient3" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        spreadMethod="reflect">
+                        <stop offset="30%" stop-color="#018bb5" />
+                        <stop offset="100%" stop-color="#0ec7ff" />
+                    </radialGradient>
+                </defs>
+                <path id="moon" class="show"
+                    d="M12 4.5C16.1355 4.5 19.5 7.8645 19.5 12C19.5 16.1355 16.1355 19.5 12 19.5C7.8645 19.5 4.5 16.1355 4.5 12C4.5 7.8645 7.8645 4.5 12 4.5ZM12 3C7.02975 3 3 7.02975 3 12C3 16.9703 7.02975 21 12 21C16.9703 21 21 16.9703 21 12C21 7.02975 16.9703 3 12 3ZM12 6C8.6865 6 6 8.6865 6 12C6 15.3135 8.6865 18 12 18V6Z" />
+                <path id="sun"
+                    d="M22.088 13.126L24 12L22.088 10.874C21.067 10.272 20.716 8.964 21.3 7.932L22.393 6L20.173 5.98C18.988 5.97 18.03 5.012 18.02 3.827L18 1.608L16.068 2.701C15.037 3.284 13.728 2.934 13.127 1.913L12 1.71655e-06L10.873 1.913C10.271 2.934 8.963 3.285 7.932 2.701L6 1.608L5.98 3.827C5.97 5.012 5.012 5.97 3.827 5.98L1.607 6L2.7 7.932C3.284 8.964 2.933 10.272 1.912 10.874L2.09815e-06 12L1.912 13.126C2.933 13.728 3.284 15.036 2.7 16.068L1.607 18L3.827 18.02C5.012 18.03 5.97 18.988 5.98 20.173L6 22.392L7.932 21.299C8.963 20.716 10.272 21.066 10.873 22.087L12 24L13.127 22.087C13.729 21.066 15.037 20.715 16.068 21.299L18 22.392L18.02 20.173C18.031 18.988 18.989 18.03 20.173 18.02L22.393 18L21.3 16.068C20.716 15.037 21.066 13.728 22.088 13.126ZM11.971 20C7.56 20 3.971 16.411 3.971 12C3.971 7.589 7.559 4 11.971 4C16.383 4 19.971 7.589 19.971 12C19.971 16.411 16.382 20 11.971 20ZM12 18C8.687 18 6 15.313 6 12C6 8.687 8.687 6 12 6L12 18Z" />
             </svg>
+
         </a>
     </div>
 
@@ -494,17 +514,17 @@
 
                     <div class="grid" id="grid">
 
-                        <figure class="gridcell box-hover">
+                        <figure class="gridcell">
                             <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
                                 id="project1img" />
                         </figure>
 
-                        <article class="projecttext box-hover">
+                        <article class="projecttext">
 
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <defs>
-                                        <radialGradient id="Solid3">
+                                        <radialGradient id="Solid4">
                                             <stop offset="100%" stop-color="#1e2125" />
                                         </radialGradient>
                                     </defs>
@@ -530,11 +550,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell box-hover">
+                        <figure class="gridcell">
                             <img src="./images/Clinic website.webp" alt="Project 2" class="project" id="project2img" />
                         </figure>
 
-                        <article class="projecttext box-hover">
+                        <article class="projecttext">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -562,11 +582,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell box-hover">
+                        <figure class="gridcell">
                             <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
                         </figure>
 
-                        <article class="projecttext box-hover">
+                        <article class="projecttext">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -592,11 +612,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell box-hover">
+                        <figure class="gridcell">
                             <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
                         </figure>
 
-                        <article class="projecttext box-hover">
+                        <article class="projecttext">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -624,11 +644,11 @@
                             </span>
                         </article>
 
-                        <figure class="gridcell box-hover">
+                        <figure class="gridcell">
                             <img src="./images/Task-handler.webp" alt="Project 5" class="project" id="project5img" />
                         </figure>
 
-                        <article class="projecttext box-hover">
+                        <article class="projecttext">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -672,7 +692,7 @@
                         <radialGradient id="Solid-light">
                             <stop offset="100%" stop-color="#cacccc" />
                         </radialGradient>
-                        <radialGradient id="RadialGradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        <radialGradient id="RadialGradient4" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
                             spreadMethod="reflect">
                             <stop offset="30%" stop-color="#018bb5" />
                             <stop offset="100%" stop-color="#0ec7ff" />
