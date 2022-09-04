@@ -23,8 +23,8 @@
 
 .content-wrapper {
   width: 100vw;
-  background-color: $white;
-  color: $darkergray;
+  background-color: var(--bg-color-box);
+  color: var(--font-color);
   &.border-radius {
     border-radius: 10px;
   }
@@ -56,7 +56,7 @@
 }
 
 .line {
-  border: 1px solid $lightgray;
+  border: 1px solid var(--bg-color-main);
   border-radius: 5px;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
@@ -97,7 +97,7 @@ padding-left {
 }
 
 .sub-content {
-  font-size: $font-lrg;
+  font-size: $font-medlrg;
   text-indent: 4rem;
   @include breakpoint-down(small) {
     font-size: $font-med;
@@ -109,7 +109,7 @@ padding-left {
   display: flex;
   justify-content: center;
   font-size: $font-xxlg;
-  color: $darkergray;
+  color: var(--font-color);
   font-weight: 400;
   margin: 1rem;
   text-transform: uppercase;

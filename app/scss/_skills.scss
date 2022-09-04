@@ -36,7 +36,7 @@
 .skills-text {
   font-size: $font-medlrg;
   font-weight: 300;
-  color: $darkergray;
+  color: var(--font-color);
 }
 
 .skills-icon {
@@ -58,7 +58,7 @@
 .signature {
   font-family: "Corinthia", cursive;
   font-size: $font-xlg;
-  color: $darkergray;
+  color: var(--font-color);
   font-weight: 700;
   margin: 0;
   padding: 1rem 0;
@@ -68,7 +68,7 @@
 }
 
 .skills-line {
-  border: 1px solid $lightgray;
+  border: 1px solid var(--bg-color-main);
   border-radius: 5px;
   margin-top: 3rem;
   margin-bottom: 1rem;

@@ -5,7 +5,11 @@
   height: 100vh;
   width: 100vw;
   opacity: 0;
-  background-image: linear-gradient(to bottom, $darkgray, transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-color-accent),
+    transparent
+  );
 
   @supports (backdrop-filter: initial) {
     -webkit-backdrop-filter: blur(2px);
@@ -33,7 +37,7 @@
   margin: 45px 45px;
   list-style: none;
   border-radius: 20px;
-  background-color: $moresemitransparent;
+  background-color: var(--more-transparent);
   visibility: inherit;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);
@@ -85,7 +89,7 @@
   height: 100%;
   width: 100%;
   &:not(:last-child) {
-    border-bottom: 1px solid $gray;
+    border-bottom: 1px solid var(--shadow-color);
   }
 }
 
@@ -98,7 +102,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  color: $darkgray;
+  color: var(--font-color);
   font-size: $font-lrgmed;
   @include breakpoint-down(small) {
     font-size: $font-lrg;
@@ -157,7 +161,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $semitransparent;
+  background-color: var(--semi-transparent);
   height: 75%;
   width: 80%;
   border-radius: 20px;
@@ -166,7 +170,7 @@
 .contact-header {
   text-align: center;
   font-size: $font-lrgmed;
-  color: $darkergray;
+  color: var(--font-color);
   font-weight: 400;
   padding-right: 1rem;
   padding-bottom: 4rem;
@@ -209,8 +213,8 @@
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.5rem;
-  fill: url(#solid);
-  transition: fill 300ms ease-in-out;
+  fill: var(--url-1);
+  transition: fill 150ms ease-in-out;
   &:hover {
     fill: url(#radial-gradient);
   }

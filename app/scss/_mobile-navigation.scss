@@ -1,0 +1,130 @@
+.mobile-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  z-index: 2;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: 80px;
+  padding: 1rem;
+  padding-bottom: 1.25rem;
+
+  @include breakpoint-down(small) {
+    margin-left: 20px;
+  }
+  @include breakpoint-up(small) {
+    margin-left: 60px;
+  }
+}
+
+.homelogo {
+  fill: var(--url-3);
+  margin-right: auto;
+  width: 30px;
+  height: 30px;
+  @include breakpoint-up(small) {
+    width: 45px;
+    height: 45px;
+  }
+  &:hover {
+    fill: url(#radial-gradient3);
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-right: 80px;
+  &:focus {
+    outline: none;
+  }
+  @include breakpoint-down(small) {
+    margin-right: 20px;
+  }
+  @include breakpoint-up(small) {
+    margin-right: 60px;
+  }
+  > span {
+    display: block;
+    width: 42px;
+    height: 4px;
+    background-color: var(--bg-color-accent);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    @include breakpoint-up(small) {
+      width: 62px;
+      height: 6px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.open {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition-delay: 0.6s;
+  -o-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  :nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  :first-child,
+  :last-child {
+    -webkit-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+  }
+
+  :first-child {
+    -webkit-transform: translateY(16px);
+    -ms-transform: translateY(16px);
+    -o-transform: translateY(16px);
+    transform: translateY(16px);
+
+    @include breakpoint-down(small) {
+      -webkit-transform: translateY(9px);
+      -ms-transform: translateY(9px);
+      -o-transform: translateY(9px);
+      transform: translateY(9px);
+    }
+  }
+
+  :last-child {
+    -webkit-transform: translateY(-16px) rotate(90deg);
+    -ms-transform: translateY(-16px) rotate(90deg);
+    -o-transform: translateY(-16px) rotate(90deg);
+    transform: translateY(-16px) rotate(90deg);
+
+    @include breakpoint-down(small) {
+      -webkit-transform: translateY(-9px) rotate(90deg);
+      -ms-transform: translateY(-9px) rotate(90deg);
+      -o-transform: translateY(-9px) rotate(90deg);
+      transform: translateY(-9px) rotate(90deg);
+    }
+  }
+}

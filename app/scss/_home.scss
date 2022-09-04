@@ -17,12 +17,12 @@ figure {
       left top,
       left bottom,
       color-stop(70%, transparent),
-      to($lightgray)
+      to(var(--bg-color-main))
     ),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
-  background: -o-linear-gradient(top, transparent 70%, $lightgray),
+  background: -o-linear-gradient(top, transparent 70%, var(--bg-color-main)),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
-  background: linear-gradient(to bottom, transparent 70%, $lightgray),
+  background: linear-gradient(to bottom, transparent 70%, var(--bg-color-main)),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
@@ -30,7 +30,7 @@ figure {
 
 .main-text {
   font-size: $font-xxlg;
-  color: $darkergray;
+  color: var(--font-color);
   font-weight: 400;
   padding: 17.5rem 1rem 0 3.75rem;
   margin: 0;
@@ -62,11 +62,11 @@ figure {
   }
 }
 .colored {
-  color: $darkcyan;
+  color: var(--cyan);
 }
 .sub-text {
   font-size: $font-lrgmed;
-  color: $darkgray;
+  color: var(--font-color);
   margin: 0px;
   font-weight: 300;
   padding: 0 10px 0 60px;

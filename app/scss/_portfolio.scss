@@ -26,12 +26,12 @@
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 0 5px $whitish;
+  box-shadow: 0 0 5px var(--bg-color-sub);
 }
 
 .dorito {
   display: block;
-  fill: url(#solid-dark);
+  fill: var(--url-5);
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -45,7 +45,7 @@
 .heading-text {
   font-size: $font-lrgmed;
   font-weight: 600;
-  color: $darkergray;
+  color: var(--font-color);
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
   }
@@ -61,7 +61,7 @@
   margin-bottom: auto;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 5px $whitish;
+  box-shadow: 0 0 5px var(--bg-color-sub);
   @include breakpoint-up(large) {
     height: 100%;
   }

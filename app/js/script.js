@@ -310,10 +310,10 @@ function rotateButton() {
 }
 
 function toggleDarkMode() {
-  // DARK MODE!
+  document.body.classList.toggle("dark-mode");
 }
 
 viewMode.addEventListener("click", () => {
   rotateButton();
-  // toggleDarkMode();
+  toggleDarkMode();
 });

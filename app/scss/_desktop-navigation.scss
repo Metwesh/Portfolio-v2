@@ -1,0 +1,133 @@
+.main-nav {
+  position: fixed;
+  background-color: var(--semi-transparent);
+  width: 100vw;
+  height: 80px;
+  top: 0;
+  z-index: 1000000;
+  box-shadow: 0 0 5px 1px var(--shadow-color);
+  @supports (backdrop-filter: initial) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.desktop-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+// Main links /////////////////////////////////////////////////////////////////////////////////////////////
+.nav-links {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  padding: 20px 20px;
+  margin-left: 60px;
+  list-style: none;
+  @include breakpoint-down(large) {
+    margin-left: 30px;
+  }
+}
+
+.main-links {
+  font-size: $font-lrg;
+  padding: 10px 25px;
+  margin: -7px -25px;
+  transition: color 150ms ease-in-out;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 80%;
+    height: 4px;
+    border-radius: 8px;
+    background-image: $gradient-to-right;
+
+    width: 0;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out,
+      width 0.3s ease-in-out;
+  }
+  &:hover {
+    color: $cyan;
+  }
+}
+
+.main-links.extended::after {
+  -webkit-transform: scaleX(0.4);
+  -ms-transform: scaleX(0.4);
+  transform: scaleX(0.4);
+  width: 100%;
+}
+.main-links.shortened::after {
+  -webkit-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  width: 100%;
+}
+
+.main-links.extended:hover::after,
+.main-links.shortened:hover::after {
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  width: 100%;
+}
+
+.mail-link {
+  margin-right: 80px;
+  margin-left: auto;
+  justify-self: end;
+  padding-inline: 20px;
+  @include breakpoint-down(large) {
+    margin-right: 40px;
+  }
+}
+
+.mail {
+  fill: var(--url-2);
+  padding-top: 5px;
+  width: 50px;
+  height: 45px;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    fill: url(#radial-gradient2);
+  }
+}
+
+#mailClose {
+  visibility: hidden;
+  &.show {
+    visibility: visible;
+  }
+}
+#mailOpen {
+  margin-top: 10px;
+  visibility: hidden;
+  &.show {
+    visibility: visible;
+  }
+}

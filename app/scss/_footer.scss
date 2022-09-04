@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 40px 40px;
   margin-top: 3rem;
-  background-color: $darkgray;
+  background-color: var(--bg-color-footer);
 
   @include breakpoint-down(medium) {
     padding: 20px 0;
@@ -53,10 +53,10 @@
 }
 
 .smalliconsquare {
-  fill: url(#solid-light);
+  fill: var(--url-6);
   width: 100%;
   height: 100%;
-  transition: fill 300ms ease-in-out;
+  transition: fill 150ms ease-in-out;
 }
 
 .empty-space {
@@ -70,35 +70,21 @@
 }
 
 .smalliconcircle {
-  fill: url(#solid-light);
+  fill: var(--url-7);
   width: 100%;
   height: 100%;
   transition: fill 150ms ease-in-out;
 }
-.socials:first-child:hover {
-  -o-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  -moz-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
+.socials:hover {
+  -o-box-shadow: $box-shadow;
+  -moz-box-shadow: $box-shadow;
+  -webkit-box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
   .smalliconsquare {
     fill: url(#radial-gradient4);
   }
-}
-.socials:last-child:hover {
-  -o-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  -moz-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  -webkit-box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
-  box-shadow: 0 0 5px $darkgray, 0 0 10px $darkcyan, 0 0 15px $cyan,
-    0 0 20px $lightcyan;
   .smalliconcircle {
-    fill: url(#radial-gradient4);
+    fill: url(#radial-gradient5);
   }
 }
 
@@ -144,8 +130,8 @@
   top: 50%;
   margin: -20px 0 0 -20px;
   border-top: none;
-  border-right: 2px $white solid;
-  border-bottom: 2px $white solid;
+  border-right: 4px var(--bg-color-box) solid;
+  border-bottom: 4px var(--bg-color-box) solid;
   border-left: none;
   transition: all 150ms ease-in-out;
   @include breakpoint-down(mdsmall) {
@@ -163,8 +149,8 @@
   margin: -10px 0 0 -10px;
   border-left: none;
   border-top: none;
-  border-right: 1px $white solid;
-  border-bottom: 1px $white solid;
+  border-right: 2px var(--bg-color-box) solid;
+  border-bottom: 2px var(--bg-color-box) solid;
   -webkit-animation: arrow 1s infinite;
   animation: arrow 1s infinite;
   @include breakpoint-down(mdsmall) {
@@ -181,7 +167,8 @@
   flex-wrap: nowrap;
   padding: 0px 40px;
   font-size: 1rem;
-  color: $whitish;
+  font-weight: 400;
+  color: var(--font-color-invert);
   @include breakpoint-down(small) {
     padding: 0px;
   }

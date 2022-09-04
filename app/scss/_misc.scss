@@ -1,0 +1,170 @@
+.view-mode-wrapper {
+  position: fixed;
+  z-index: 10000;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--semi-transparent);
+  box-shadow: 0 0 5px 1px var(--shadow-color);
+  @include breakpoint-down(small) {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.view-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-mode-button {
+  fill: var(--url-4);
+  width: 2.2rem;
+  height: 2.2rem;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  @include breakpoint-down(small) {
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    fill: url(#radial-gradient4);
+  }
+}
+
+#moon {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  &.show {
+    opacity: 1;
+  }
+}
+#sun {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  &.show {
+    opacity: 1;
+  }
+}
+
+.button {
+  padding: 10px 30px;
+  font-size: $font-lrg;
+  font-family: "Spline Sans", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  color: $white;
+  border-radius: 40px;
+  margin-right: 80px;
+  margin-left: auto;
+  background-image: $gradient-to-top;
+  text-shadow: -1px 1px 2px var(--shadow-color);
+  -webkit-transition: text-shadow 0.3s ease-in-out;
+  -o-transition: text-shadow 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  &:hover {
+    -webkit-box-shadow: $box-shadow;
+    box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
+      0 0 20px $light-cyan;
+    text-shadow: 0px 0px 2px $dark-gray, 0px 0px 4px $cyan;
+  }
+  @include breakpoint-down(large) {
+    margin-right: 40px;
+  }
+  &.alt {
+    margin: 0;
+    padding: 10px 20px;
+  }
+  &.form {
+    visibility: inherit;
+    margin: 20px;
+    @include breakpoint-down(mdsmall) {
+      margin: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include height-breakpoint-down(small) {
+      font-size: $font-med;
+    }
+  }
+  &.grid-button {
+    @include breakpoint-down(small) {
+      font-size: $font-smmed;
+    }
+  }
+  &.dark {
+    background: $dark-gradient;
+    &.darkswitch {
+      background: $dark-gradient-invert;
+    }
+    &:disabled {
+      position: relative;
+      border-top: 2px solid rgb(118, 118, 118);
+      border-right: 2px solid rgb(33, 33, 33);
+      border-bottom: 2px solid rgb(33, 33, 33);
+      border-left: 2px solid rgb(118, 118, 118);
+      &:hover {
+        cursor: no-drop;
+        box-shadow: none;
+        text-shadow: none;
+        &::after {
+          content: attr(data-tooltip);
+          width: 200%;
+          font-size: $font-med;
+          background: var(--bg-color-accent);
+          padding: 1rem;
+          border-radius: 5px;
+          display: inline-block;
+          position: absolute;
+          transform: translate(-50%, -100%);
+          margin: 0 auto;
+          color: $white;
+          min-width: 100px;
+          min-width: 150px;
+          top: -5px;
+          left: 50%;
+          text-align: center;
+          @include breakpoint-down(small) {
+            width: 150%;
+          }
+        }
+        &::before {
+          content: " ";
+          top: -5px;
+          left: 50%;
+          border: solid transparent;
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: rgba(0, 0, 0, 0);
+          border-top-color: var(--bg-color-accent);
+          border-width: 5px;
+          margin-left: -5px;
+          transform: translate(0, 0);
+        }
+      }
+    }
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}

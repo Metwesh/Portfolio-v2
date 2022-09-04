@@ -1,17 +1,20 @@
 $black: #000;
-$darkergray: #1e2125;
-$darkgray: #383d46;
-$gray: #626875;
-$darkcyan: #018bb5;
-$lightcyan: #3bb1e0;
+$darker-gray: #1e2125;
+$dark-gray: #383d46;
+$gray: #616875;
+$dark-cyan: #018bb5;
 $cyan: #0ec7ff;
-$lightercyan: #abd3d8;
+$light-cyan: #3bb1e0;
+$lighter-cyan: #abd3d8;
+$grayish: #959ba7;
 $whitish: #cacccc;
-$lightgray: #eaebed;
+$light-gray: #eaebed;
 $white: #ffff;
-$semitransparent: rgba(255, 255, 255, 0.88);
-$moresemitransparent: rgba(255, 255, 255, 0.91);
-$darksemitransparent: rgba(56, 61, 70, 0.88);
+$semi-transparent: rgba(255, 255, 255, 0.88);
+$more-transparent: rgba(255, 255, 255, 0.91);
+$dark-semi-transparent: rgba(56, 61, 70, 0.88);
+$dark-more-transparent: rgba(56, 61, 70, 0.91);
+$darker-semi-transparent: rgba(30, 33, 37, 0.88);
 
 $font-xxlg: 3.25rem; //52px
 $font-xlg: 2.25rem; //36px
@@ -26,7 +29,9 @@ $font-xsm: 0.625rem; //10px
 $font-xxsm: 0.5rem; //8px
 $font-xxxsm: 0.45rem; //6.4px
 
-$gradient-to-top: linear-gradient(to top, $darkcyan, $cyan);
-$gradient-to-right: linear-gradient(to right, $darkcyan, $cyan);
-$dark-gradient: linear-gradient(160deg, $gray 10%, $darkergray 100%);
-$dark-gradient-invert: linear-gradient(320deg, $gray 0%, $darkergray 100%);
+$gradient-to-top: linear-gradient(to top, $dark-cyan, $cyan);
+$gradient-to-right: linear-gradient(to right, $dark-cyan, $cyan);
+$dark-gradient: linear-gradient(160deg, $gray 10%, $darker-gray 100%);
+$dark-gradient-invert: linear-gradient(320deg, $gray 0%, $darker-gray 100%);
+$box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
+  0 0 20px $light-cyan;
