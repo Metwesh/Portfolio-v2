@@ -30,7 +30,7 @@ ul {
 }
 
 // Main links /////////////////////////////////////////////////////////////////////////////////////////////
-.navlinks {
+.nav-links {
   position: relative;
   display: flex;
   justify-content: left;
@@ -42,7 +42,7 @@ ul {
   }
 }
 
-.mainlinks {
+.main-links {
   font-size: $font-lrg;
   padding: 10px 25px;
   margin: -7px -25px;
@@ -76,21 +76,21 @@ ul {
   }
 }
 
-.mainlinks.extended::after {
+.main-links.extended::after {
   -webkit-transform: scaleX(0.4);
   -ms-transform: scaleX(0.4);
   transform: scaleX(0.4);
   width: 100%;
 }
-.mainlinks.shortened::after {
+.main-links.shortened::after {
   -webkit-transform: scaleX(0);
   -ms-transform: scaleX(0);
   transform: scaleX(0);
   width: 100%;
 }
 
-.mainlinks.extended:hover::after,
-.mainlinks.shortened:hover::after {
+.main-links.extended:hover::after,
+.main-links.shortened:hover::after {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -108,23 +108,23 @@ ul {
 }
 
 .mail {
-  fill: url(#Solid);
+  fill: url(#solid2);
   padding-top: 5px;
   width: 50px;
   height: 45px;
   transition: all 100ms ease-in-out;
   &:hover {
-    fill: url(#RadialGradient);
+    fill: url(#radial-gradient2);
   }
 }
 
-#Mailclose {
+#mailClose {
   visibility: hidden;
   &.show {
     visibility: visible;
   }
 }
-#Mailopen {
+#mailOpen {
   margin-top: 10px;
   visibility: hidden;
   &.show {
@@ -175,7 +175,7 @@ ul {
       font-size: $font-med;
     }
   }
-  &.gridbutton {
+  &.grid-button {
     @include breakpoint-down(small) {
       font-size: $font-smmed;
     }
@@ -237,7 +237,7 @@ ul {
 }
 
 // Mobile nav bar ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.mobilecontainer {
+.mobile-container {
   position: fixed;
   display: flex;
   align-items: center;
@@ -248,7 +248,7 @@ ul {
   z-index: 2;
 }
 
-.logocontainer {
+.logo-container {
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -265,7 +265,7 @@ ul {
 }
 
 .homelogo {
-  fill: $darkgray;
+  fill: url(#solid3);
   margin-right: auto;
   width: 30px;
   height: 30px;
@@ -274,7 +274,7 @@ ul {
     height: 45px;
   }
   &:hover {
-    fill: url(#RadialGradient4);
+    fill: url(#radial-gradient3);
   }
 }
 
@@ -390,7 +390,7 @@ ul {
 }
 
 .view-mode-button {
-  fill: url(#Solid3);
+  fill: url(#solid4);
   width: 2.2rem;
   height: 2.2rem;
   -webkit-transform: rotate(0deg);
@@ -405,7 +405,7 @@ ul {
     height: 30px;
   }
   &:hover {
-    fill: url(#RadialGradient3);
+    fill: url(#radial-gradient4);
   }
 }
 

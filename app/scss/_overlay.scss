@@ -24,7 +24,7 @@
   }
 }
 
-.overlayul {
+.overlay-ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,7 +77,7 @@
   }
 }
 
-.overlayLi {
+.overlay-li {
   visibility: inherit;
   -webkit-transform: inherit;
   -ms-transform: inherit;
@@ -89,7 +89,7 @@
   }
 }
 
-.overlaylinks {
+.overlay-links {
   visibility: inherit;
   -webkit-transform: inherit;
   -ms-transform: inherit;
@@ -108,7 +108,7 @@
   }
 }
 // Card ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-.contactCard {
+.contact-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,7 +152,7 @@
   }
 }
 
-.contactCardBox {
+.contact-card-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -209,10 +209,10 @@
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.5rem;
-  fill: url(#Solid2);
+  fill: url(#solid);
   transition: fill 300ms ease-in-out;
   &:hover {
-    fill: url(#RadialGradient2);
+    fill: url(#radial-gradient);
   }
   &.mail {
     padding-top: 5px;

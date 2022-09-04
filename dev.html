@@ -32,8 +32,8 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/style.min.css">
 
-    <!-- <script defer src="./dist/script.min.js"></script> -->
-    <script defer src="./app/js/script.js"></script>
+    <!-- <script defer src="./app/js/script.js"></script> -->
+    <script defer src="./dist/script.min.js"></script>
 
 </head>
 
@@ -42,31 +42,31 @@
     <!-- Overlay -->
     <div id="overlay" class="overlay">
         <!-- Overlay Menu -->
-        <ul class="overlayul" id="overlayUl">
-            <li class="overlayLi">
-                <a href="#about" title="About" class="overlaylinks">
+        <ul class="overlay-ul" id="overlayUl">
+            <li class="overlay-li">
+                <a href="#about" title="About" class="overlay-links">
                     About
                 </a>
             </li>
-            <li class="overlayLi">
-                <a href="#skills" title="Skills" class="overlaylinks">
+            <li class="overlay-li">
+                <a href="#skills" title="Skills" class="overlay-links">
                     Skills
                 </a>
             </li>
-            <li class="overlayLi">
-                <a href="#portfolio" title="Portfolio" class="overlaylinks">
+            <li class="overlay-li">
+                <a href="#portfolio" title="Portfolio" class="overlay-links">
                     Portfolio
                 </a>
             </li>
-            <li class="overlayLi">
-                <a href="javascript: void(0)" title="Contact details" class="overlaylinks">
+            <li class="overlay-li">
+                <a href="javascript: void(0)" title="Contact details" class="overlay-links">
                     Contact me
                 </a>
             </li>
         </ul>
         <!-- Card -->
-        <div class="contactCard" id="contactCard">
-            <div class="contactCardBox">
+        <div class="contact-card" id="contactCard">
+            <div class="contact-card-box" id="contactCardBox">
                 <h1 class="contact-header">Contact me through any of the following</h1>
                 <p class="signature signature-card">Mohamed H. Aly</p>
                 <div class="horizontal-flex">
@@ -74,8 +74,16 @@
                         rel="noopener noreferrer" target="_blank" aria-label="linkedin">
                         <svg class="card linkedin" width="24" height="24" viewBox="0 0 24 24">
                             <defs>
-                                <radialGradient id="Solid">
+                                <radialGradient id="solid">
                                     <stop offset="100%" stop-color="#383d46" />
+                                </radialGradient>
+                                <radialGradient id="solid-light">
+                                    <stop offset="100%" stop-color="#cacccc" />
+                                </radialGradient>
+                                <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                                    spreadMethod="reflect">
+                                    <stop offset="30%" stop-color="#018bb5" />
+                                    <stop offset="100%" stop-color="#0ec7ff" />
                                 </radialGradient>
                             </defs>
                             <path
@@ -111,33 +119,34 @@
         <!-- Desktop nav -->
         <div class="desktop-wrapper">
             <ul class="hide-for-mobile">
-                <li class="navlinks">
-                    <a href="#home" title="Home" class="mainlinks shortened" id="homelink">Home</a>
+                <li class="nav-links">
+                    <a href="#home" title="Home" class="main-links shortened" id="homeLink">Home</a>
                 </li>
-                <li class="navlinks">
-                    <a href="#about" title="About" class="mainlinks shortened" id="aboutlink">About</a>
+                <li class="nav-links">
+                    <a href="#about" title="About" class="main-links shortened" id="aboutLink">About</a>
                 </li>
-                <li class="navlinks">
-                    <a href="#skills" title="Skills" class="mainlinks shortened" id="skillslink">Skills</a>
+                <li class="nav-links">
+                    <a href="#skills" title="Skills" class="main-links shortened" id="skillsLink">Skills</a>
                 </li>
-                <li class="navlinks">
-                    <a href="#portfolio" title="Portfolio" class="mainlinks shortened" id="portfoliolink">Portfolio</a>
+                <li class="nav-links">
+                    <a href="#portfolio" title="Portfolio" class="main-links shortened" id="portfolioLink">Portfolio</a>
                 </li>
             </ul>
-            <a href="javascript: void(0)" title="Contact details" class="mail-link" id="contactbutton"
+            <a href="javascript: void(0)" title="Contact details" class="mail-link" id="contactButton"
                 aria-label="Mail-link">
-                <svg class="hide-for-mobile mail" width="24" height="24" viewBox="0 0 24 24">
-                    <path id="Mailclose" class="show"
+                <svg class="mail hide-for-mobile" width="24" height="24" viewBox="0 0 24 24">
+                    <path id="mailClose" class="show"
                         d="M0 4V21H24V4H0ZM8 11.5556L1 19.1111V5.88889L8 11.5556ZM12 4.94444H23L12 13.9167L1 4.94444H12ZM8.5 12.0278L12 14.8611L15.5 12.0278L23 20.0556H1L8.5 12.0278ZM16 11.5556L23 5.88889V19.1111L16 11.5556Z" />
-                    <path id="Mailopen"
+                    <path id="mailOpen"
                         d="M11.99 0L0 8.723V24H24V8.723L11.99 0ZM11.99 1L23 9L14 14.5L11.99 13L10 14.5L1 9L11.99 1ZM1 10L9.5 15L1 22V10ZM1 23L11.99 14L23 23H1ZM23 22L14.5 15L23 10V22Z" />
                     <defs>
-                        <radialGradient id="Solid2">
+                        <radialGradient id="solid2">
                             <stop offset="100%" stop-color="#383d46" />
                         </radialGradient>
-                    </defs>
-                    <defs>
-                        <radialGradient id="RadialGradient" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        <radialGradient id="solid-light2">
+                            <stop offset="100%" stop-color="#cacccc" />
+                        </radialGradient>
+                        <radialGradient id="radial-gradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
                             spreadMethod="reflect">
                             <stop offset="30%" stop-color="#018bb5" />
                             <stop offset="100%" stop-color="#0ec7ff" />
@@ -147,11 +156,17 @@
             </a>
         </div>
         <!-- Mobile nav -->
-        <div class="mobilecontainer hide-for-desktop">
-            <a class="logocontainer hide-for-desktop" title="Home" href="#home" id="homebutton" aria-label="Home Logo">
+        <div class="mobile-container hide-for-desktop">
+            <a class="logo-container hide-for-desktop" title="Home" href="#home" id="homeButton" aria-label="Home Logo">
                 <svg class="homelogo hide-for-desktop" width="24" height="24" viewBox="0 0 24 24">
                     <defs>
-                        <radialGradient id="RadialGradient2" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        <radialGradient id="solid3">
+                            <stop offset="100%" stop-color="#383d46" />
+                        </radialGradient>
+                        <radialGradient id="solid-light3">
+                            <stop offset="100%" stop-color="#cacccc" />
+                        </radialGradient>
+                        <radialGradient id="radial-gradient3" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
                             spreadMethod="reflect">
                             <stop offset="30%" stop-color="#018bb5" />
                             <stop offset="100%" stop-color="#0ec7ff" />
@@ -163,7 +178,7 @@
             </a>
 
             <!-- Hamburger menu  -->
-            <a id="btnHamburger" title="Menu" class="hamburger hide-for-desktop" href="javascript: void(0)"
+            <a id="hamburgerButton" title="Menu" class="hamburger hide-for-desktop" href="javascript: void(0)"
                 aria-label="Hamburger Menu">
                 <span></span>
                 <span></span>
@@ -176,10 +191,13 @@
         <a href="javascript: void(0)" title="View-mode" class="view-mode">
             <svg width="24" height="24" viewBox="0 0 24 24" class="view-mode-button dark-mode">
                 <defs>
-                    <radialGradient id="Solid3">
+                    <radialGradient id="solid4">
                         <stop offset="100%" stop-color="#383d46" />
                     </radialGradient>
-                    <radialGradient id="RadialGradient3" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                    <radialGradient id="solid-light4">
+                        <stop offset="100%" stop-color="#cacccc" />
+                    </radialGradient>
+                    <radialGradient id="radial-gradient4" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
                         spreadMethod="reflect">
                         <stop offset="30%" stop-color="#018bb5" />
                         <stop offset="100%" stop-color="#0ec7ff" />
@@ -202,8 +220,8 @@
             <h3 class="sub-text">Full stack web developer</h3>
         </div>
     </section>
-    <div class="svgcontainer">
-        <svg class="coolshape" width="2261" height="577" viewBox="0 0 2261 577" fill="none">
+    <div class="svg-container">
+        <svg class="cool-shape" id="coolShape" width="2261" height="577" viewBox="0 0 2261 577" fill="none">
             <g clip-path="url(#clip0_7_12)">
                 <path d="M57.4515 447.707L2003.83 87.8756L2181.28 446.917L57.4515 447.707Z"
                     fill="url(#paint0_linear_7_12)" />
@@ -231,65 +249,71 @@
 
     <!-- About section -->
     <section class="about" id="about">
-        <div class="contentbg">
-            <article class="contentdiv br">
+        <div class="content-background">
+            <article class="content-wrapper border-radius">
                 <h1 class="header-text">Hello world!</h1>
-                <figure class="imgcontainer">
+                <figure class="img-container">
                     <img class="img right" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
                 </figure>
                 <h3 class="main-content">Welcome to my website</h3>
                 <p class="sub-content">This website was created by me to showcase my web development capabilities,
                     to express my artistic vision, to act as my autobiography & professional portfolio.
                 </p>
-                <p class="pr sub-content">I'm an Egyptian-born, self-taught, aspiring software & web developer. While I
+                <p class="padding-right sub-content">I'm an Egyptian-born, self-taught, aspiring software & web
+                    developer. While I
                     was studying Management Information Systems in university, I took a Computer Science course; that
                     course changed my life, I found myself understanding code & writing it much faster than all my
                     peers. Ever since I've devoted most of my free time to learn how to write clean & efficient code.
                 </p>
-                <p class="pr sub-content">Feel free to browse the website as you please; I have a downloadable &
+                <p class="padding-right sub-content">Feel free to browse the website as you please; I have a
+                    downloadable &
                     printable copy of my resume below. I also left links for my Linkedin profile & my Github
                     profile.
                 </p>
             </article>
         </div>
-        <div class="contentbg space">
-            <article class="contentdiv firstdiv">
+        <div class="content-background space">
+            <article class="content-wrapper first-div">
                 <h1 class="header-text">About</h1>
                 <h3 class="main-content">College</h3>
-                <figure class="imgcontainer">
+                <figure class="img-container">
                     <img class="img left" title="Certificate" src="./images/English certificate.webp"
                         alt="College certificate" />
                 </figure>
-                <p class="sub-content pl">I graduated with a bachelor's degree in Management Information Systems on
+                <p class="sub-content padding-left">I graduated with a bachelor's degree in Management Information
+                    Systems on
                     July 2021, with a cumulative GPA of "3.1".</p>
-                <p class="sub-content pl">As part of my graduation project, I created a fully functioning book
+                <p class="sub-content padding-left">As part of my graduation project, I created a fully functioning book
                     rental website. I designed the frontend with HTML & CSS and added functionality with JavaScript;
                     I also created the database & backend with PHPMyAdmin & PHP, respectively.
                 </p>
-                <p class="sub-content pl">I also designed multiple database schemas for a very intricate supply chain of
+                <p class="sub-content padding-left">I also designed multiple database schemas for a very intricate
+                    supply chain of
                     data using diagramming tools like Lucidchart & Microsoft Visio. I also set up a user, admin &
                     suppliers database using PHPMyAdmin & MySQL.
                 </p>
             </article>
         </div>
-        <div class="contentbg">
-            <article class="contentdiv middlediv">
+        <div class="content-background">
+            <article class="content-wrapper middle-div">
                 <section>
                     <h3 class="main-content">Courses</h3>
-                    <figure class="wideimgcontainer">
+                    <figure class="wide-img-container">
                         <img class="img right wide" title="Certificate"
                             src="./images/Complete web developer certification.webp"
                             alt="Fullstack web developer course certificate">
                     </figure>
-                    <p class="sub-content pr">I participated & finished a fullstack web developer course from
+                    <p class="sub-content padding-right">I participated & finished a fullstack web developer course from
                         ZeroToMastery Academy.
                     </p>
-                    <p class="sub-content pr">In the course I was taught how to use scripting languages such as
+                    <p class="sub-content padding-right">In the course I was taught how to use scripting languages such
+                        as
                         HTML5 & CSS3; I also learned how to use SASS & CSS preprocessors. I practiced a lot of
                         JavaScript & was introduced to all the ECMAScript new features, like arrow functions, Async
                         await, promises & callbacks to name a few.
                     </p>
-                    <p class="sub-content pr">I was taught how to use the bash-terminal, how to use version-control
+                    <p class="sub-content padding-right">I was taught how to use the bash-terminal, how to use
+                        version-control
                         systems like Git & Github, how to build single-page-apps with react, how to build & interact
                         with RESTful APIs. I also got to build a server with nodeJS & express, I learned how to use
                         postgreSQL & finally how to deploy websites with heroku.
@@ -297,15 +321,17 @@
                 </section>
                 <hr class="line">
                 <section>
-                    <figure class="wideimgcontainer">
+                    <figure class="wide-img-container">
                         <img class="img left wide" title="Certificate"
                             src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
                             alt="Senior web developer course certificate">
                     </figure>
-                    <p class="sub-content pl">I also participated & finished an advanced senior web developer course
+                    <p class="sub-content padding-left">I also participated & finished an advanced senior web developer
+                        course
                         from Udemy.
                     </p>
-                    <p class="sub-content pl">In the course I was taught how to use SSH to securely communicate with
+                    <p class="sub-content padding-left">In the course I was taught how to use SSH to securely
+                        communicate with
                         other machines on the web, I learned how to optimize website performance through the use of
                         lazy-loading, minifying & reducing render-blocking resources. I was introduced to bundling &
                         testing with many different suites like Parcel & Jest respectively. I also learned
@@ -324,31 +350,33 @@
                 </section>
                 <hr class="line">
                 <section>
-                    <figure class="wideimgcontainer">
+                    <figure class="wide-img-container">
                         <img class="img right wide" title="Certificate"
                             src="./images/Udemy-certificate-C-programming.webp"
                             alt="Beginner C programming course certificate">
                     </figure>
-                    <p class="sub-content pr">I participated & finished a beginner C programming course from
+                    <p class="sub-content padding-right">I participated & finished a beginner C programming course from
                         Udemy.
                     </p>
-                    <p class="sub-content pr">In the course I was taught the basic concept of C like how arrays,
+                    <p class="sub-content padding-right">In the course I was taught the basic concept of C like how
+                        arrays,
                         multi-dimensional arrays, enums & structs, how to write functions, strings & how they are
                         treated like arrays. I also learned how to use the different header files offered by the C
                         standard libraries. I learned about enums & structs I learned about the different itterations of
                         C included in C89, C99, C11 & C17.
                     </p>
-                    <p class="sub-content pr">I was taught somewhat advanced concepts like how to utilize pointers,
+                    <p class="sub-content padding-right">I was taught somewhat advanced concepts like how to utilize
+                        pointers,
                         dynamic memory allocation, I/O streams, reading & writing to the file system, writing programs
                         to solve complex algorithms & many other useful tools.
                     </p>
                 </section>
             </article>
         </div>
-        <div class="contentbg">
-            <article class="contentdiv lastdiv">
+        <div class="content-background">
+            <article class="content-wrapper lastdiv">
                 <h3 class="main-content certification">Professional certification</h3>
-                <figure class="wideimgcontainer">
+                <figure class="wide-img-container">
                     <a target="_blank" rel="noopener noreferrer"
                         href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
                         aria-label="Javascript certificate">
@@ -356,14 +384,17 @@
                             src="./images/JS-Certification.webp" alt="Certificate">
                     </a>
                 </figure>
-                <p class="sub-content pr">I was introduced to CodinGame as part of a screening process for a company
+                <p class="sub-content padding-right">I was introduced to CodinGame as part of a screening process for a
+                    company
                     & found out that they can provide me with their certification if I passed a timed test.
                 </p>
-                <p class="sub-content pr">Their test comprised mainly in JavaScript mathematical problems, logic
+                <p class="sub-content padding-right">Their test comprised mainly in JavaScript mathematical problems,
+                    logic
                     tests, algorithms, data-structures, syntax knowledge & turning thought processing into actual
                     functional & testable code.
                 </p>
-                <p class="sub-content pr">I ranked highly among worldwide professionals, the top 91% to be exact. Click
+                <p class="sub-content padding-right">I ranked highly among worldwide professionals, the top 91% to be
+                    exact. Click
                     the certificate to check out the online copy.
                 </p>
             </article>
@@ -372,8 +403,8 @@
 
     <!-- Skills section -->
     <section class="skills" id="skills">
-        <div class="contentbg space skills-box">
-            <article class="contentdiv br">
+        <div class="content-background space skills-box">
+            <article class="content-wrapper border-radius">
                 <h1 class="header-text">Skills</h1>
                 <div class="skills-grid">
                     <figure class="skills-grid-cell">
@@ -495,10 +526,10 @@
                 </div>
                 <hr class="skills-line">
                 <form target="_blank">
-                    <div class="buttonsigndiv">
+                    <div class="button-signature-wrapper">
                         <button type="submit" title="Resume PDF" formaction="./app/assets/Mohamed H. Aly.pdf"
-                            class="button alt" value="view resume">View resume</button>
-                        <p class="pl signature">Mohamed H. Aly</p>
+                            class="button alt" value="View resume">View resume</button>
+                        <p class="padding-left signature">Mohamed H. Aly</p>
                     </div>
                 </form>
             </article>
@@ -508,23 +539,22 @@
     <!-- Portfolio section -->
     <section class="portfolio" id="portfolio">
         <form target="_blank">
-            <div class="contentbg space">
-                <div class="contentdiv br">
+            <div class="content-background space">
+                <div class="content-wrapper border-radius">
                     <h1 class="header-text">Portfolio</h1>
 
                     <div class="grid" id="grid">
 
-                        <figure class="gridcell">
-                            <img src="./images/Graduation Website.webp" alt="Project 1" class="project"
-                                id="project1img" />
+                        <figure class="grid-cell">
+                            <img src="./images/Graduation Website.webp" alt="Project 1" class="project" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="project-text">
 
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <defs>
-                                        <radialGradient id="Solid4">
+                                        <radialGradient id="solid-dark">
                                             <stop offset="100%" stop-color="#1e2125" />
                                         </radialGradient>
                                     </defs>
@@ -540,21 +570,21 @@
                                 online bookstore with a complete frontend/backend/database. I built the frontend with no
                                 dependencies, I built the backend with PHP & built the database using PHPMyAdmin.
                             </span>
-                            <span class="buttoncontainer">
-                                <button type="button" class="button alt gridbutton dark" title="Disabled"
+                            <span class="button-container">
+                                <button type="button" class="button alt grid-button dark" title="Disabled"
                                     data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
                                     disabled>Demo site</button>
-                                <button type="button" class="button alt gridbutton dark" title="Disabled"
+                                <button type="button" class="button alt grid-button dark" title="Disabled"
                                     data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
                                     disabled>Visit repo</button>
                             </span>
                         </article>
 
-                        <figure class="gridcell">
-                            <img src="./images/Clinic website.webp" alt="Project 2" class="project" id="project2img" />
+                        <figure class="grid-cell">
+                            <img src="./images/Clinic website.webp" alt="Project 2" class="project" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="project-text">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -571,22 +601,22 @@
                                 was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
                                 of a bank website.
                             </span>
-                            <span class="buttoncontainer">
+                            <span class="button-container">
                                 <button type="submit" title="Clinic website"
                                     formaction="https://metwesh.github.io/health-clinics/"
-                                    class="button alt gridbutton dark">Demo site</button>
+                                    class="button alt grid-button dark">Demo site</button>
 
                                 <button type="submit" title="Clinic website"
                                     formaction="https://github.com/Metwesh/health-clinics"
-                                    class="button alt gridbutton dark">Visit repo</button>
+                                    class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
 
-                        <figure class="gridcell">
-                            <img src="./images/Budget app.webp" alt="Project 3" class="project" id="project3img" />
+                        <figure class="grid-cell">
+                            <img src="./images/Budget app.webp" alt="Project 3" class="project" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="project-text">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -602,21 +632,21 @@
                                 styling. Implemented the use of localstorage to not lose state data if user leaves the
                                 site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
                             </span>
-                            <span class="buttoncontainer">
+                            <span class="button-container">
                                 <button type="submit" title="Budget app"
                                     formaction="https://metwesh.github.io/budget-app/"
-                                    class="button alt gridbutton dark">Demo site</button>
+                                    class="button alt grid-button dark">Demo site</button>
                                 <button type="submit" title="Budget app"
                                     formaction="https://github.com/Metwesh/budget-app/"
-                                    class="button alt gridbutton dark">Visit repo</button>
+                                    class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
 
-                        <figure class="gridcell">
-                            <img src="./images/Face-detect.webp" alt="Project 4" class="project" id="project4img" />
+                        <figure class="grid-cell">
+                            <img src="./images/Face-detect.webp" alt="Project 4" class="project" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="project-text">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -634,21 +664,21 @@
                                 handle the database & KnexJS to interact with it on the server. The app is powered with
                                 the Clarifai API.
                             </span>
-                            <span class="buttoncontainer">
+                            <span class="button-container">
                                 <button type="submit" title="Face detection app"
                                     formaction="https://face-detect-m.herokuapp.com/"
-                                    class="button alt gridbutton dark">Demo site</button>
+                                    class="button alt grid-button dark">Demo site</button>
                                 <button type="submit" title="Face detection app"
                                     formaction="https://github.com/Metwesh/face-recognition"
-                                    class="button alt gridbutton dark">Visit repo</button>
+                                    class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
 
-                        <figure class="gridcell">
-                            <img src="./images/Task-handler.webp" alt="Project 5" class="project" id="project5img" />
+                        <figure class="grid-cell">
+                            <img src="./images/Task-handler.webp" alt="Project 5" class="project" />
                         </figure>
 
-                        <article class="projecttext">
+                        <article class="project-text">
 
                             <div class="heading">
                                 <svg class="dorito n2" width="24" height="24" viewBox="0 0 24 24">
@@ -664,13 +694,13 @@
                                 password hashing & authorization with JSON web tokens. On the backend I integrated
                                 Helmet for securing headers & CORS for improved security.
                             </span>
-                            <span class="buttoncontainer">
+                            <span class="button-container">
                                 <button type="submit" title="Task handler"
                                     formaction="https://task-handler-v2.herokuapp.com/"
-                                    class="button alt gridbutton dark">Demo site</button>
+                                    class="button alt grid-button dark">Demo site</button>
                                 <button type="submit" title="Task handler"
                                     formaction="https://github.com/Metwesh/task-handler"
-                                    class="button alt gridbutton dark">Visit repo</button>
+                                    class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
 
@@ -681,7 +711,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="contentfoot">
+    <footer class="content-foot">
         <div class="icons">
             <a href="https://www.linkedin.com/in/mohamed-aly-a3a781213/" title="Linkedin" class="socials"
                 rel="noopener noreferrer" target="_blank" aria-label="linkedin">
@@ -689,10 +719,13 @@
                     <path
                         d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                     <defs>
-                        <radialGradient id="Solid-light">
+                        <radialGradient id="solid5">
+                            <stop offset="100%" stop-color="#383d46" />
+                        </radialGradient>
+                        <radialGradient id="solid-light5">
                             <stop offset="100%" stop-color="#cacccc" />
                         </radialGradient>
-                        <radialGradient id="RadialGradient4" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+                        <radialGradient id="radial-gradient5" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
                             spreadMethod="reflect">
                             <stop offset="30%" stop-color="#018bb5" />
                             <stop offset="100%" stop-color="#0ec7ff" />
@@ -700,7 +733,7 @@
                     </defs>
                 </svg>
             </a>
-            <div class="emptyspace"></div>
+            <div class="empty-space"></div>
             <a href="https://github.com/Metwesh" title="Github" class="socials" rel="noopener noreferrer"
                 target="_blank" aria-label="github">
                 <svg class="smalliconcircle" width="24" height="24" viewBox="0 0 24 24">
@@ -710,10 +743,10 @@
             </a>
         </div>
 
-        <a href="#home" title="To top" aria-label="To top" class="footarrowcontainer">
+        <a href="#home" title="To top" aria-label="To top" class="foot-arrow-container">
             <div class="arrow"></div>
         </a>
-        <div class="footerdiv">
+        <div class="footer-wrapper">
             <p class="foot-text">
                 This website was built with a lot of passion & is fully responsive.
                 <br>

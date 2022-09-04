@@ -1,92 +1,92 @@
 // main nav links ////////////////////////////////////////////////////////////////////////////////
-const homelink = document.querySelector("#homelink");
-const aboutlink = document.querySelector("#aboutlink");
-const skillslink = document.querySelector("#skillslink");
-const portfoliolink = document.querySelector("#portfoliolink");
+const homeLink = document.querySelector("#homeLink");
+const aboutLink = document.querySelector("#aboutLink");
+const skillsLink = document.querySelector("#skillsLink");
+const portfolioLink = document.querySelector("#portfolioLink");
 
 function homeLinkOn() {
-  if (homelink.classList.contains("shortened")) {
-    homelink.classList.add("extended");
-    homelink.classList.remove("shortened");
+  if (homeLink.classList.contains("shortened")) {
+    homeLink.classList.add("extended");
+    homeLink.classList.remove("shortened");
   }
-  if (aboutlink.classList.contains("extended")) {
-    aboutlink.classList.add("shortened");
-    aboutlink.classList.remove("extended");
+  if (aboutLink.classList.contains("extended")) {
+    aboutLink.classList.add("shortened");
+    aboutLink.classList.remove("extended");
   }
-  if (skillslink.classList.contains("extended")) {
-    skillslink.classList.add("shortened");
-    skillslink.classList.remove("extended");
+  if (skillsLink.classList.contains("extended")) {
+    skillsLink.classList.add("shortened");
+    skillsLink.classList.remove("extended");
   }
-  if (portfoliolink.classList.contains("extended")) {
-    portfoliolink.classList.add("shortened");
-    portfoliolink.classList.remove("extended");
+  if (portfolioLink.classList.contains("extended")) {
+    portfolioLink.classList.add("shortened");
+    portfolioLink.classList.remove("extended");
   }
 }
 
 function aboutLinkOn() {
-  if (aboutlink.classList.contains("shortened")) {
-    aboutlink.classList.add("extended");
-    aboutlink.classList.remove("shortened");
+  if (aboutLink.classList.contains("shortened")) {
+    aboutLink.classList.add("extended");
+    aboutLink.classList.remove("shortened");
   }
-  if (homelink.classList.contains("extended")) {
-    homelink.classList.add("shortened");
-    homelink.classList.remove("extended");
+  if (homeLink.classList.contains("extended")) {
+    homeLink.classList.add("shortened");
+    homeLink.classList.remove("extended");
   }
-  if (skillslink.classList.contains("extended")) {
-    skillslink.classList.add("shortened");
-    skillslink.classList.remove("extended");
+  if (skillsLink.classList.contains("extended")) {
+    skillsLink.classList.add("shortened");
+    skillsLink.classList.remove("extended");
   }
-  if (portfoliolink.classList.contains("extended")) {
-    portfoliolink.classList.add("shortened");
-    portfoliolink.classList.remove("extended");
+  if (portfolioLink.classList.contains("extended")) {
+    portfolioLink.classList.add("shortened");
+    portfolioLink.classList.remove("extended");
   }
 }
 
 function skillsLinkOn() {
-  if (skillslink.classList.contains("shortened")) {
-    skillslink.classList.add("extended");
-    skillslink.classList.remove("shortened");
+  if (skillsLink.classList.contains("shortened")) {
+    skillsLink.classList.add("extended");
+    skillsLink.classList.remove("shortened");
   }
-  if (homelink.classList.contains("extended")) {
-    homelink.classList.add("shortened");
-    homelink.classList.remove("extended");
+  if (homeLink.classList.contains("extended")) {
+    homeLink.classList.add("shortened");
+    homeLink.classList.remove("extended");
   }
-  if (aboutlink.classList.contains("extended")) {
-    aboutlink.classList.add("shortened");
-    aboutlink.classList.remove("extended");
+  if (aboutLink.classList.contains("extended")) {
+    aboutLink.classList.add("shortened");
+    aboutLink.classList.remove("extended");
   }
-  if (portfoliolink.classList.contains("extended")) {
-    portfoliolink.classList.add("shortened");
-    portfoliolink.classList.remove("extended");
+  if (portfolioLink.classList.contains("extended")) {
+    portfolioLink.classList.add("shortened");
+    portfolioLink.classList.remove("extended");
   }
 }
 
 function portfolioLinkOn() {
-  if (portfoliolink.classList.contains("shortened")) {
-    portfoliolink.classList.add("extended");
-    portfoliolink.classList.remove("shortened");
+  if (portfolioLink.classList.contains("shortened")) {
+    portfolioLink.classList.add("extended");
+    portfolioLink.classList.remove("shortened");
   }
-  if (homelink.classList.contains("extended")) {
-    homelink.classList.add("shortened");
-    homelink.classList.remove("extended");
+  if (homeLink.classList.contains("extended")) {
+    homeLink.classList.add("shortened");
+    homeLink.classList.remove("extended");
   }
-  if (aboutlink.classList.contains("extended")) {
-    aboutlink.classList.add("shortened");
-    aboutlink.classList.remove("extended");
+  if (aboutLink.classList.contains("extended")) {
+    aboutLink.classList.add("shortened");
+    aboutLink.classList.remove("extended");
   }
-  if (skillslink.classList.contains("extended")) {
-    skillslink.classList.add("shortened");
-    skillslink.classList.remove("extended");
+  if (skillsLink.classList.contains("extended")) {
+    skillsLink.classList.add("shortened");
+    skillsLink.classList.remove("extended");
   }
 }
 
-homelink.addEventListener("click", homeLinkOn);
+homeLink.addEventListener("click", homeLinkOn);
 
-aboutlink.addEventListener("click", aboutLinkOn);
+aboutLink.addEventListener("click", aboutLinkOn);
 
-skillslink.addEventListener("click", skillsLinkOn);
+skillsLink.addEventListener("click", skillsLinkOn);
 
-portfoliolink.addEventListener("click", portfolioLinkOn);
+portfolioLink.addEventListener("click", portfolioLinkOn);
 
 //Intersection Observer ////////////////////////////////////////////////////////////////////////////////
 const home = document.querySelector("#home");
@@ -130,28 +130,29 @@ skillsObserver.observe(skills);
 const portfolioObserver = new IntersectionObserver(
   (entries, _portfolioObserver) => {
     entries.forEach((entry) => {
+      console.log(entry);
       if (entry.isIntersecting) portfolioLinkOn();
       else return;
     });
   },
-  { rootMargin: "-45px 0px 0px 0px", threshold: "0.17" }
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.1" }
 );
 portfolioObserver.observe(portfolio);
 
 // Hamburger & Overlay ////////////////////////////////////////////////////////////////////////////////
-const homeButton = document.querySelector("#homebutton");
-const btnHamburger = document.querySelector("#btnHamburger");
+const homeButton = document.querySelector("#homeButton");
+const hamburgerButton = document.querySelector("#hamburgerButton");
 const overlay = document.querySelector("#overlay");
 const overlayUl = document.querySelector("#overlayUl");
-const overlaylinks = document.querySelectorAll(".overlaylinks");
+const overlayLinks = document.querySelectorAll(".overlay-links");
 const contactCard = document.querySelector("#contactCard");
-const contactCardBox = document.querySelector(".contactCardBox");
-const contactMail = document.querySelector("#contactbutton");
-const mailOpen = document.querySelector("#Mailopen");
-const mailClose = document.querySelector("#Mailclose");
+const contactCardBox = document.querySelector("#contactCardBox");
+const contactMail = document.querySelector("#contactButton");
+const mailOpen = document.querySelector("#mailOpen");
+const mailClose = document.querySelector("#mailClose");
 
 function toggleHamburger() {
-  btnHamburger.classList.toggle("open");
+  hamburgerButton.classList.toggle("open");
 }
 
 function toggleOverlay() {
@@ -212,20 +213,20 @@ function ToggleAllMenus() {
 }
 
 function closeAll() {
-  if (btnHamburger.classList.contains("open")) toggleHamburger();
+  if (hamburgerButton.classList.contains("open")) toggleHamburger();
   if (overlay.classList.contains("fadein")) toggleOverlay();
   if (overlayUl.classList.contains("slidein")) toggleMenu();
   if (contactCard.classList.contains("slidein")) toggleContactCard();
 }
 
-btnHamburger.addEventListener("click", () => {
+hamburgerButton.addEventListener("click", () => {
   ToggleAllMenus();
   toggleOverlay();
   toggleHamburger();
 });
 
-overlaylinks.forEach((overlaylink, i) => {
-  if (i === overlaylinks.length - 1)
+overlayLinks.forEach((overlaylink, i) => {
+  if (i === overlayLinks.length - 1)
     return overlaylink.addEventListener("click", (e) => {
       e.stopPropagation();
       toggleContactCard();
@@ -259,7 +260,7 @@ homeButton.addEventListener("click", closeAll);
 // Triangle animation ////////////////////////////////////////////////////////////////////////////////
 let lastKnownScrollPosition = 0;
 let ticking = false;
-const coolshape = document.querySelector(".coolshape");
+const coolShape = document.querySelector("#coolShape");
 
 function scrollListener() {
   lastKnownScrollPosition = window.scrollY;
@@ -274,13 +275,13 @@ function scrollListener() {
 
 function scrollMove(scrollPos) {
   if (screen.width > 1073) {
-    coolshape.style.transform = `translateX(${-scrollPos - 100}px)`;
+    coolShape.style.transform = `translateX(${-scrollPos - 100}px)`;
   } else if (screen.width > 600) {
-    coolshape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
+    coolShape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
   } else if (screen.width >= 390) {
-    coolshape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
+    coolShape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
   } else {
-    coolshape.style.transform = `translateX(${-scrollPos * 2 - 100}px)`;
+    coolShape.style.transform = `translateX(${-scrollPos * 2 - 100}px)`;
   }
 }
 

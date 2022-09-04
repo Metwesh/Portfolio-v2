@@ -2,7 +2,7 @@
   padding-top: 2rem;
 }
 
-.contentbg {
+.content-background {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -21,19 +21,19 @@
   margin-top: 3rem;
 }
 
-.contentdiv {
+.content-wrapper {
   width: 100vw;
   background-color: $white;
   color: $darkergray;
-  &.br {
+  &.border-radius {
     border-radius: 10px;
   }
-  &.firstdiv {
+  &.first-div {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     padding-bottom: 1rem;
   }
-  &.middlediv {
+  &.middle-div {
     padding-top: 0rem;
     padding-bottom: 1rem;
   }
@@ -62,14 +62,14 @@
   margin-bottom: 3rem;
 }
 
-.pr {
+.padding-right {
   padding-right: 3rem;
   @include breakpoint-down(small) {
     padding-right: 0;
   }
 }
 
-.pl {
+padding-left {
   padding-left: 3rem;
   @include breakpoint-down(small) {
     padding-right: 0;
@@ -119,14 +119,14 @@
   }
 }
 
-.imgcontainer {
+.img-container {
   display: inline;
   @include breakpoint-down(medium) {
     display: flex;
     justify-content: center;
   }
 }
-.wideimgcontainer {
+.wide-img-container {
   display: inline;
   @include breakpoint-down(large) {
     display: flex;

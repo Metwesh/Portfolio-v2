@@ -14,7 +14,7 @@
     grid-template-columns: 1fr;
   }
 }
-.gridcell {
+.grid-cell {
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
 
 .dorito {
   display: block;
-  fill: url(#Solid4);
+  fill: url(#solid-dark);
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -51,7 +51,7 @@
   }
 }
 
-.projecttext {
+.project-text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,7 +67,7 @@
   }
 }
 
-.buttoncontainer {
+.button-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
