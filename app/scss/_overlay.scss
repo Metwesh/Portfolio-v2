@@ -5,11 +5,7 @@
   height: 100vh;
   width: 100vw;
   opacity: 0;
-  background-image: linear-gradient(
-    to bottom,
-    var(--bg-color-accent),
-    transparent
-  );
+  background-image: linear-gradient(to bottom, $dark-gray, transparent);
 
   @supports (backdrop-filter: initial) {
     -webkit-backdrop-filter: blur(2px);
@@ -37,7 +33,7 @@
   margin: 45px 45px;
   list-style: none;
   border-radius: 20px;
-  background-color: var(--more-transparent);
+  background-color: var(--semi-transparent);
   visibility: inherit;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);

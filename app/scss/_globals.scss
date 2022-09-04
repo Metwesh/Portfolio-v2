@@ -1,28 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
 
-:root {
-  --font-color: #{$darker-gray};
-  --font-color-invert: #{$light-gray};
+@media (prefers-color-scheme: light) {
+  :root {
+    --font-color: #{$darker-gray};
+    --font-color-invert: #{$light-gray};
 
-  --bg-color-box: #{$white};
-  --bg-color-main: #{$light-gray};
-  --bg-color-sub: #{$whitish};
-  --bg-color-accent: #{$dark-gray};
-  --bg-color-footer: #{$dark-gray};
+    --bg-color-box: #{$white};
+    --bg-color-main: #{$light-gray};
+    --bg-color-sub: #{$whitish};
+    --bg-color-accent: #{$dark-gray};
+    --bg-color-footer: #{$dark-gray};
 
-  --bg-color-accent-2: #{$darker-gray};
-  --shadow-color: #{$gray};
-  --semi-transparent: #{$semi-transparent};
-  --more-transparent: #{$more-transparent};
-  --cyan: #{$dark-cyan};
-  --url-1: url(#solid);
-  --url-2: url(#solid2);
-  --url-3: url(#solid3);
-  --url-4: url(#solid4);
-  --url-5: url(#solid-dark);
-  --url-6: url(#solid-light6);
-  --url-7: url(#solid-light7);
+    --bg-color-accent-2: #{$darker-gray};
+    --shadow-color: #{$gray};
+    --semi-transparent: #{$semi-transparent};
+    --more-transparent: #{$more-transparent};
+    --cyan: #{$dark-cyan};
+    --url-1: url(#solid);
+    --url-2: url(#solid2);
+    --url-3: url(#solid3);
+    --url-4: url(#solid4);
+    --url-5: url(#solid-dark);
+    --url-6: url(#solid-light6);
+    --url-7: url(#solid-light7);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: #{$white};
+    --font-color-invert: #{$darker-gray};
+
+    --bg-color-box: #{$darker-gray};
+    --bg-color-main: #{$dark-gray};
+    --bg-color-sub: #{$gray};
+    --bg-color-accent: #{$whitish};
+    --bg-color-footer: #{$grayish};
+    --shadow-color: #{$gray};
+    --semi-transparent: #{$darker-semi-transparent};
+    --more-transparent: #{$dark-more-transparent};
+    --cyan: #{$cyan};
+    --url-1: url(#solid-light);
+    --url-2: url(#solid-light2);
+    --url-3: url(#solid-light3);
+    --url-4: url(#solid-light4);
+    --url-5: url(#solid-light5);
+    --url-6: url(#solid5);
+    --url-7: url(#solid6);
+  }
 }
 
 html {
@@ -49,7 +74,7 @@ body {
   padding-top: 80px;
   letter-spacing: 1px;
   background-color: var(--bg-color-main);
-
+  transition: all 450ms ease-in-out;
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
@@ -70,6 +95,29 @@ body {
     --url-5: url(#solid-light5);
     --url-6: url(#solid5);
     --url-7: url(#solid6);
+  }
+  &.light-mode {
+    --font-color: #{$darker-gray};
+    --font-color-invert: #{$light-gray};
+
+    --bg-color-box: #{$white};
+    --bg-color-main: #{$light-gray};
+    --bg-color-sub: #{$whitish};
+    --bg-color-accent: #{$dark-gray};
+    --bg-color-footer: #{$dark-gray};
+
+    --bg-color-accent-2: #{$darker-gray};
+    --shadow-color: #{$gray};
+    --semi-transparent: #{$semi-transparent};
+    --more-transparent: #{$more-transparent};
+    --cyan: #{$dark-cyan};
+    --url-1: url(#solid);
+    --url-2: url(#solid2);
+    --url-3: url(#solid3);
+    --url-4: url(#solid4);
+    --url-5: url(#solid-dark);
+    --url-6: url(#solid-light6);
+    --url-7: url(#solid-light7);
   }
 }
 

@@ -130,7 +130,6 @@ skillsObserver.observe(skills);
 const portfolioObserver = new IntersectionObserver(
   (entries, _portfolioObserver) => {
     entries.forEach((entry) => {
-      console.log(entry);
       if (entry.isIntersecting) portfolioLinkOn();
       else return;
     });
@@ -196,8 +195,10 @@ function toggleMailButton() {
   mailClose.classList.toggle("show");
   if (mailOpen.classList.contains("show")) {
     mailOpen.parentNode.style.transform = "translateY(-5px)";
+    mailOpen.parentNode.style.paddingTop = "10px";
   } else if (mailClose.classList.contains("show")) {
     mailClose.parentNode.style.transform = "translateY(0)";
+    mailClose.parentNode.style.paddingTop = "5px";
   }
 }
 
@@ -296,14 +297,22 @@ darkButton.forEach((button) => {
 
 //Dark mode button /////////////////////////////////////////////////////////////////////////////
 const viewMode = document.querySelector(".view-mode");
-const darkMode = document.querySelector(".dark-mode");
+const viewModeDisc = document.querySelector(".view-mode-disc");
 const sun = document.querySelector("#sun");
 const moon = document.querySelector("#moon");
 
 let rotation = 180;
 
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+  sun.classList.toggle("show");
+  moon.classList.toggle("show");
+}
+
 function rotateButton() {
-  darkMode.style.transform = `rotate(${rotation}deg)`;
+  viewModeDisc.style.transform = `rotate(${rotation}deg)`;
   rotation += 180;
   sun.classList.toggle("show");
   moon.classList.toggle("show");
@@ -311,6 +320,7 @@ function rotateButton() {
 
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("light-mode");
 }
 
 viewMode.addEventListener("click", () => {

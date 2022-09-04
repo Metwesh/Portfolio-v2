@@ -40,6 +40,7 @@ figure {
   animation: headerfadein 1250ms forwards;
   -webkit-animation-delay: 500ms;
   animation-delay: 500ms;
+
   @include breakpoint-down(small) {
     padding-top: 16rem;
     padding-right: 1rem;

@@ -19,17 +19,17 @@
   justify-content: center;
 }
 
-.view-mode-button {
+.view-mode-disc {
   fill: var(--url-4);
   width: 2.2rem;
   height: 2.2rem;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  -o-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  -o-transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
   @include breakpoint-down(small) {
     width: 30px;
     height: 30px;
