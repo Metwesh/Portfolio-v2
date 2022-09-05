@@ -48,6 +48,12 @@
   }
 }
 
+.marked {
+  &.invert {
+    filter: invert(1);
+  }
+}
+
 .button-signature-wrapper {
   display: flex;
   justify-content: space-around;

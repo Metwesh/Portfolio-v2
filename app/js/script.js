@@ -300,6 +300,7 @@ const viewMode = document.querySelector(".view-mode");
 const viewModeDisc = document.querySelector(".view-mode-disc");
 const sun = document.querySelector("#sun");
 const moon = document.querySelector("#moon");
+const markedItems = document.querySelectorAll(".marked");
 
 let rotation = 180;
 
@@ -309,6 +310,9 @@ if (
 ) {
   sun.classList.toggle("show");
   moon.classList.toggle("show");
+  for (let markedItem of markedItems) {
+    markedItem.classList.toggle("invert");
+  }
 }
 
 function rotateButton() {
@@ -321,6 +325,9 @@ function rotateButton() {
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
   document.body.classList.toggle("light-mode");
+  for (let markedItem of markedItems) {
+    markedItem.classList.toggle("invert");
+  }
 }
 
 viewMode.addEventListener("click", () => {
