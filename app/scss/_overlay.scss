@@ -25,6 +25,7 @@
 }
 
 .overlay-ul {
+  visibility: inherit;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,8 +34,8 @@
   margin: 45px 45px;
   list-style: none;
   border-radius: 20px;
+  box-shadow: 0 0 5px 1px var(--shadow-color);
   background-color: var(--semi-transparent);
-  visibility: inherit;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);
   transform: translateX(-130%);
@@ -109,6 +110,7 @@
 }
 // Card ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .contact-card {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +119,6 @@
   margin-top: -86.2vh;
   height: 89.2vh;
   width: 100vw;
-  visibility: hidden;
   -webkit-transform: translateX(-130%);
   -ms-transform: translateX(-130%);
   transform: translateX(-130%);
@@ -161,6 +162,7 @@
   height: 75%;
   width: 80%;
   border-radius: 20px;
+  box-shadow: 0 0 5px 1px var(--shadow-color);
 }
 
 .contact-header {
@@ -168,14 +170,13 @@
   font-size: $font-lrgmed;
   color: var(--font-color);
   font-weight: 400;
-  padding-right: 1rem;
-  padding-bottom: 4rem;
-  padding-left: 1rem;
+  padding: 0 1rem 4rem 1rem;
   @include breakpoint-down(medium) {
     font-size: $font-medlrg;
   }
   @include breakpoint-down(small) {
     font-size: $font-medlrg;
+    margin-top: 0;
   }
   @include height-breakpoint-down(mdsmall) {
     padding-bottom: 2rem;
