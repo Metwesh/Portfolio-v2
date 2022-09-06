@@ -43,6 +43,12 @@
   border-radius: 5px;
   height: 5rem;
   width: auto;
+  &.semi-wide-skill {
+    scale: 0.9;
+  }
+  &.wide-skill {
+    scale: 0.7;
+  }
   @include breakpoint-down(xsmall) {
     height: 4rem;
   }

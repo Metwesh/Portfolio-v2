@@ -22,7 +22,7 @@
 }
 
 .content-wrapper {
-  width: 100vw;
+  width: 100%;
   background-color: var(--bg-color-box);
   color: var(--font-color);
   &.border-radius {
@@ -103,6 +103,10 @@ padding-left {
     font-size: $font-med;
     padding: 10px;
   }
+}
+
+span.sub-content {
+  padding: 0;
 }
 
 .header-text {

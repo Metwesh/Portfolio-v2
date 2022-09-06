@@ -7,13 +7,13 @@
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
-  gap: 40px 40px;
+  gap: 2rem 2rem;
   margin-bottom: 1.6rem;
-  overflow: visible;
   @include breakpoint-down(small) {
     grid-template-columns: 1fr;
   }
 }
+
 .grid-cell {
   border-radius: 5px;
   display: flex;
@@ -42,28 +42,30 @@
   display: block;
 }
 
+.project-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  max-width: 55.5rem;
+  width: 100%;
+  height: auto;
+  font-size: $font-med;
+  margin: 0px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px var(--bg-color-sub);
+  @include breakpoint-up(large) {
+    height: 100%;
+  }
+}
+
 .heading-text {
   font-size: $font-lrgmed;
   font-weight: 600;
   color: var(--font-color);
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
-  }
-}
-
-.project-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 55.5rem;
-  font-size: $font-med;
-  margin: 0px;
-  margin-bottom: auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px var(--bg-color-sub);
-  @include breakpoint-up(large) {
-    height: 100%;
   }
 }
 

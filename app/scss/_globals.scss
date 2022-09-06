@@ -10,9 +10,10 @@
     --bg-color-main: #{$light-gray};
     --bg-color-sub: #{$whitish};
     --bg-color-accent: #{$dark-gray};
+    --bg-color-accent-2: #{$dark-gray};
+    --bg-color-accent-invert: #{$whitish};
     --bg-color-footer: #{$dark-gray};
 
-    --bg-color-accent-2: #{$darker-gray};
     --shadow-color: #{$gray};
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
@@ -35,6 +36,8 @@
     --bg-color-main: #{$dark-gray};
     --bg-color-sub: #{$gray};
     --bg-color-accent: #{$whitish};
+    --bg-color-accent-2: #{$white};
+    --bg-color-accent-invert: #{$dark-gray};
     --bg-color-footer: #{$grayish};
     --shadow-color: #{$gray};
     --semi-transparent: #{$darker-semi-transparent};
@@ -83,6 +86,8 @@ body {
     --bg-color-main: #{$dark-gray};
     --bg-color-sub: #{$gray};
     --bg-color-accent: #{$whitish};
+    --bg-color-accent-2: #{$white};
+    --bg-color-accent-invert: #{$dark-gray};
     --bg-color-footer: #{$grayish};
     --shadow-color: #{$gray};
     --semi-transparent: #{$darker-semi-transparent};
@@ -104,9 +109,10 @@ body {
     --bg-color-main: #{$light-gray};
     --bg-color-sub: #{$whitish};
     --bg-color-accent: #{$dark-gray};
+    --bg-color-accent-2: #{$dark-gray};
+    --bg-color-accent-invert: #{$whitish};
     --bg-color-footer: #{$dark-gray};
 
-    --bg-color-accent-2: #{$darker-gray};
     --shadow-color: #{$gray};
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
@@ -130,10 +136,10 @@ a {
   color: var(--font-color);
 }
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 0;
-}
+// ::-webkit-scrollbar {
+//   -webkit-appearance: none;
+//   width: 0;
+// }
 
 @include breakpoint-up(medium) {
   ::-webkit-scrollbar {
