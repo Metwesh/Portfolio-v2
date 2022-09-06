@@ -49,27 +49,26 @@
   &.wide-skill {
     scale: 0.65;
   }
+  &.saturate {
+    filter: saturate(2);
+  }
+  &.marked {
+    &.invert {
+      filter: invert(1);
+    }
+  }
+
+  &.aws {
+    &.top {
+      margin-bottom: -80px;
+      clip-path: inset(0 0 35px 0);
+    }
+    &.bottom {
+      clip-path: inset(45px 0 10px 0);
+    }
+  }
   @include breakpoint-down(xsmall) {
     height: 4rem;
-  }
-}
-
-.marked {
-  &.invert {
-    filter: invert(1);
-  }
-}
-
-.aws {
-  &.top {
-    position: relative;
-    filter: invert(1);
-    clip-path: inset(0 0 35px 0);
-  }
-  &.bottom {
-    position: absolute;
-    top: 0;
-    clip-path: inset(45px 0 10px 0);
   }
 }
 
