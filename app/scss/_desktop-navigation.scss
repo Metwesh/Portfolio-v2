@@ -1,11 +1,17 @@
 .main-nav {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--semi-transparent);
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   top: 0;
   z-index: 1000000;
   box-shadow: 0 0 5px 1px var(--shadow-color);
+  @include height-breakpoint-down(xsmall) {
+    height: 3.5rem;
+  }
   @supports (backdrop-filter: initial) {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -71,7 +77,8 @@ ul {
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out,
       width 0.3s ease-in-out;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     color: $cyan;
   }
 }
@@ -90,7 +97,9 @@ ul {
 }
 
 .main-links.extended:hover::after,
-.main-links.shortened:hover::after {
+.main-links.shortened:hover::after,
+.main-links.extended:focus::after,
+.main-links.shortened:focus::after {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
@@ -98,10 +107,16 @@ ul {
 }
 
 .mail-link {
-  margin-right: 80px;
+  margin-right: 60px;
   margin-left: auto;
   justify-self: end;
   padding-inline: 20px;
+  &:hover,
+  &:focus {
+    .mail {
+      fill: url(#radial-gradient2);
+    }
+  }
   @include breakpoint-down(large) {
     margin-right: 40px;
   }
@@ -113,9 +128,6 @@ ul {
   width: 50px;
   height: 45px;
   transition: all 100ms ease-in-out;
-  &:hover {
-    fill: url(#radial-gradient2);
-  }
 }
 
 #mailClose {

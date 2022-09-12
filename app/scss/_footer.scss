@@ -56,7 +56,6 @@
   fill: var(--url-6);
   width: 100%;
   height: 100%;
-  transition: fill 150ms ease-in-out;
 }
 
 .empty-space {
@@ -75,16 +74,16 @@
   height: 100%;
   transition: fill 150ms ease-in-out;
 }
-.socials:hover {
-  -o-box-shadow: $box-shadow;
-  -moz-box-shadow: $box-shadow;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
-  .smalliconsquare {
-    fill: url(#radial-gradient4);
-  }
-  .smalliconcircle {
-    fill: url(#radial-gradient5);
+.socials {
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+    .smalliconsquare {
+      fill: url(#radial-gradient4);
+    }
+    .smalliconcircle {
+      fill: url(#radial-gradient5);
+    }
   }
 }
 
@@ -93,9 +92,6 @@
   align-items: center;
   position: relative;
 
-  -webkit-transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
   @include breakpoint-up(medium) {
     padding: 30px 30px;
@@ -109,7 +105,8 @@
     padding: 0px 20px;
     margin: 40px 0px;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     .arrow,
     .arrow:before {
       border-right: 4px $cyan solid;
@@ -157,7 +154,6 @@
   border-bottom: 2px var(--bg-color-accent-invert) solid;
   border-bottom-left-radius: 4px;
   border-top-right-radius: 4px;
-  -webkit-animation: arrow 1s infinite;
   animation: arrow 1s infinite;
   @include breakpoint-down(mdsmall) {
     width: 15px;

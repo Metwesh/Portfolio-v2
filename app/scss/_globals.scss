@@ -39,10 +39,13 @@
     --bg-color-accent-2: #{$white};
     --bg-color-accent-invert: #{$dark-gray};
     --bg-color-footer: #{$grayish};
+
     --shadow-color: #{$gray};
+
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
     --cyan: #{$cyan};
+
     --url-1: url(#solid-light);
     --url-2: url(#solid-light2);
     --url-3: url(#solid-light3);
@@ -74,10 +77,13 @@ body {
   font-family: "Spline Sans", sans-serif;
   font-weight: 300;
   font-size: 16px;
-  padding-top: 80px;
+  padding-top: 5rem;
   letter-spacing: 1px;
   background-color: var(--bg-color-main);
   transition: all 450ms ease-in-out;
+  @include height-breakpoint-down(xsmall) {
+    padding-top: 3.5rem;
+  }
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
@@ -89,10 +95,14 @@ body {
     --bg-color-accent-2: #{$white};
     --bg-color-accent-invert: #{$dark-gray};
     --bg-color-footer: #{$grayish};
+
     --shadow-color: #{$gray};
+
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
+
     --cyan: #{$cyan};
+
     --url-1: url(#solid-light);
     --url-2: url(#solid-light2);
     --url-3: url(#solid-light3);
@@ -114,9 +124,12 @@ body {
     --bg-color-footer: #{$dark-gray};
 
     --shadow-color: #{$gray};
+
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
+
     --cyan: #{$dark-cyan};
+
     --url-1: url(#solid);
     --url-2: url(#solid2);
     --url-3: url(#solid3);
@@ -136,10 +149,9 @@ a {
   color: var(--font-color);
 }
 
-// ::-webkit-scrollbar {
-//   -webkit-appearance: none;
-//   width: 0;
-// }
+figure {
+  margin: 0;
+}
 
 @include breakpoint-up(medium) {
   ::-webkit-scrollbar {

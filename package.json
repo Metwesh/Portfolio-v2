@@ -2,9 +2,11 @@
   "name": "portfolio-v2",
   "version": "2.0.0",
   "description": "This is V2 of my portfolio.",
-  "browserslist": "> 0.5%, last 4 versions, not dead",
+  "browserslist": "> 1%, last 6 versions, not dead",
   "scripts": {
-    "build": "minify ./app/js/script.js > ./dist/script.min.js && minify ./dev.html > ./index.html"
+    "prebuild": "cd ./app/js && cat navigation.js intersection-observer.js overlay.js triangle-animation.js button-switch.js dark-mode.js > script.js && cd ../..",
+    "build": "minify ./app/js/script.js > ./dist/script.min.js && minify ./dev.html > ./index.html",
+    "postbuild": "rm -rf ./app/js/script.js"
   },
   "repository": {
     "type": "git",

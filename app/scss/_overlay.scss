@@ -5,22 +5,23 @@
   height: 100vh;
   width: 100vw;
   opacity: 0;
-  background-image: linear-gradient(to bottom, $dark-gray, transparent);
-
+  background-image: linear-gradient(
+    to bottom,
+    var(--shadow-color),
+    transparent
+  );
+  will-change: transform;
   @supports (backdrop-filter: initial) {
-    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
   }
 
   &.fadeout {
-    -webkit-animation: simplefadeout 0.5s forwards;
-    animation: simplefadeout 0.5s forwards;
+    animation: simple-fade-out 0.5s forwards;
   }
 
   &.fadein {
     height: 100vh;
-    -webkit-animation: simplefadein 1s forwards;
-    animation: simplefadein 1s forwards;
+    animation: simple-fade-in 1s forwards;
   }
 }
 
@@ -31,14 +32,13 @@
   justify-content: center;
   align-items: center;
   height: 82vh;
-  margin: 45px 45px;
+  margin: 2.8125rem 2.4rem;
   list-style: none;
   border-radius: 20px;
   box-shadow: 0 0 5px 1px var(--shadow-color);
   background-color: var(--semi-transparent);
-  -webkit-transform: translateX(-130%);
-  -ms-transform: translateX(-130%);
   transform: translateX(-130%);
+  will-change: transform;
   @include height-breakpoint-down(medium) {
     height: 69vh;
   }
@@ -56,32 +56,26 @@
     border-bottom-right-radius: 20px;
   }
   @media (prefers-reduced-motion: no-preference) {
-    &.slideout {
-      -webkit-animation: slideout 0.5s forwards;
-      animation: slideout 0.5s forwards;
+    &.slide-out {
+      animation: slide-out 0.5s forwards;
     }
 
-    &.slidein {
-      -webkit-animation: slidein 1s forwards;
-      animation: slidein 1s forwards;
+    &.slide-in {
+      animation: slide-in 1s forwards;
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    &.slideout {
-      -webkit-animation: simplefadeout 0.5s forwards;
-      animation: simplefadeout 0.5s forwards;
+    &.slide-out {
+      animation: simple-fade-out 0.5s forwards;
     }
-    &.slidein {
-      -webkit-animation: simplefadein 1s forwards;
-      animation: simplefadein 1s forwards;
+    &.slide-in {
+      animation: simple-fade-in 1s forwards;
     }
   }
 }
 
 .overlay-li {
   visibility: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   height: 100%;
   width: 100%;
@@ -92,8 +86,6 @@
 
 .overlay-links {
   visibility: inherit;
-  -webkit-transform: inherit;
-  -ms-transform: inherit;
   transform: inherit;
   display: flex;
   justify-content: center;
@@ -116,14 +108,13 @@
   align-items: center;
   position: relative;
   z-index: 1000;
-  margin-top: -86.2vh;
+  margin-top: -86vh;
   height: 89.2vh;
   width: 100vw;
-  -webkit-transform: translateX(-130%);
-  -ms-transform: translateX(-130%);
   transform: translateX(-130%);
+  will-change: transform;
   @include height-breakpoint-down(small) {
-    margin-top: -72.2vh;
+    margin-top: -71.2vh;
     height: 77.2vh;
   }
   @include height-breakpoint-down(xsmall) {
@@ -131,24 +122,26 @@
   }
 
   @media (prefers-reduced-motion: no-preference) {
-    &.slideout {
-      -webkit-animation: slideout 0.5s forwards;
-      animation: slideout 0.5s forwards;
+    &.slide-out {
+      animation: slide-out 0.5s forwards;
+      @include breakpoint-up(medium) {
+        animation: slide-out-top 0.5s forwards;
+      }
     }
 
-    &.slidein {
-      -webkit-animation: slidein 1s forwards;
-      animation: slidein 1s forwards;
+    &.slide-in {
+      animation: slide-in 1s forwards;
+      @include breakpoint-up(medium) {
+        animation: slide-in-top 0.5s forwards;
+      }
     }
   }
   @media (prefers-reduced-motion: reduce) {
-    &.slideout {
-      -webkit-animation: simplefadeout 0.5s forwards;
-      animation: simplefadeout 0.5s forwards;
+    &.slide-out {
+      animation: simple-fade-out 0.5s forwards;
     }
-    &.slidein {
-      -webkit-animation: simplefadein 1s forwards;
-      animation: simplefadein 1s forwards;
+    &.slide-in {
+      animation: simple-fade-in 1s forwards;
     }
   }
 }
@@ -193,6 +186,7 @@
 .horizontal-flex {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 25rem;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -206,15 +200,23 @@
   }
 }
 
-.card {
+.card-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover,
+  &:focus {
+    .card-icon {
+      fill: url(#radial-gradient);
+    }
+  }
+}
+
+.card-icon {
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.5rem;
   fill: var(--url-1);
-  transition: fill 150ms ease-in-out;
-  &:hover {
-    fill: url(#radial-gradient);
-  }
   &.mail {
     padding-top: 5px;
   }

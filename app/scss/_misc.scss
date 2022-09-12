@@ -17,6 +17,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover,
+  &:focus {
+    .view-mode-disc {
+      fill: url(#radial-gradient4);
+    }
+  }
 }
 
 .view-mode-disc {
@@ -33,9 +39,6 @@
   @include breakpoint-down(small) {
     width: 30px;
     height: 30px;
-  }
-  &:hover {
-    fill: url(#radial-gradient4);
   }
 }
 
@@ -66,16 +69,26 @@
   margin-left: auto;
   background-image: $gradient-to-top;
   text-shadow: -1px 1px 2px var(--shadow-color);
+  border-top: 2px solid rgb(118, 118, 118);
+  border-right: 2px solid rgb(33, 33, 33);
+  border-bottom: 2px solid rgb(33, 33, 33);
+  border-left: 2px solid rgb(118, 118, 118);
   -webkit-transition: text-shadow 0.3s ease-in-out;
   -o-transition: text-shadow 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-  &:hover {
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  &:hover,
+  &:focus {
     -webkit-box-shadow: $box-shadow;
-    box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
-      0 0 20px $light-cyan;
+    box-shadow: $box-shadow;
     text-shadow: 0px 0px 2px $dark-gray, 0px 0px 4px $cyan;
+  }
+  &.pressed {
+    border-top: 2px solid rgb(33, 33, 33);
+    border-right: 2px solid rgb(118, 118, 118);
+    border-bottom: 2px solid rgb(118, 118, 118);
+    border-left: 2px solid rgb(33, 33, 33);
   }
   @include breakpoint-down(large) {
     margin-right: 40px;
@@ -112,7 +125,9 @@
       border-right: 2px solid rgb(33, 33, 33);
       border-bottom: 2px solid rgb(33, 33, 33);
       border-left: 2px solid rgb(118, 118, 118);
-      &:hover {
+      transition: none;
+      &:hover,
+      &:focus {
         cursor: no-drop;
         box-shadow: none;
         text-shadow: none;
@@ -120,17 +135,17 @@
           content: attr(data-tooltip);
           width: 200%;
           font-size: $font-med;
-          background: var(--bg-color-accent);
+          color: var(--font-color-invert);
+          background: var(--bg-color-accent-2);
           padding: 1rem;
           border-radius: 5px;
           display: inline-block;
           position: absolute;
           transform: translate(-50%, -100%);
           margin: 0 auto;
-          color: $white;
           min-width: 100px;
           min-width: 150px;
-          top: -5px;
+          top: -10px;
           left: 50%;
           text-align: center;
           @include breakpoint-down(small) {
@@ -139,15 +154,15 @@
         }
         &::before {
           content: " ";
-          top: -5px;
-          left: 50%;
-          border: solid transparent;
-          height: 0;
-          width: 0;
           position: absolute;
           pointer-events: none;
+          top: -8px;
+          left: 50%;
+          height: 0;
+          width: 0;
+          border: solid transparent;
           border-color: rgba(0, 0, 0, 0);
-          border-top-color: var(--bg-color-accent);
+          border-top-color: var(--bg-color-accent-2);
           border-width: 5px;
           margin-left: -5px;
           transform: translate(0, 0);

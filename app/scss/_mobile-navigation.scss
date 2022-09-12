@@ -7,6 +7,9 @@
   height: 80px;
   top: 0;
   z-index: 2;
+  @include height-breakpoint-down(xsmall) {
+    height: 3.5rem;
+  }
 }
 
 .logo-container {
@@ -23,6 +26,10 @@
   @include breakpoint-up(small) {
     margin-left: 60px;
   }
+  @include height-breakpoint-down(xsmall) {
+    margin-left: 0;
+    padding: 0.75rem 1.25rem;
+  }
 }
 
 .homelogo {
@@ -34,7 +41,8 @@
     width: 45px;
     height: 45px;
   }
-  &:hover {
+  &:hover,
+  &:focus {
     fill: url(#radial-gradient3);
   }
 }
@@ -45,15 +53,15 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin-right: 80px;
+  margin-right: 5rem;
   &:focus {
     outline: none;
   }
   @include breakpoint-down(small) {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
   @include breakpoint-up(small) {
-    margin-right: 60px;
+    margin-right: 3.75rem;
   }
   > span {
     display: block;

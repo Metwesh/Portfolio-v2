@@ -7,6 +7,7 @@
   justify-content: center;
   flex-wrap: wrap;
   max-width: 90rem;
+  margin-inline: auto;
   @include breakpoint-down(small) {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -132,10 +133,10 @@ span.sub-content {
   }
 }
 .wide-img-container {
-  display: inline;
-  @include breakpoint-down(large) {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  @include breakpoint-up(large) {
+    display: inline;
   }
 }
 

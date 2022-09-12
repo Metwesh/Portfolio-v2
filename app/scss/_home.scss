@@ -1,15 +1,3 @@
-@include breakpoint-up(xlarge) {
-  section:not(.home) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-figure {
-  margin: 0;
-}
-
 .home {
   height: 140vh;
   background: -webkit-gradient(
@@ -36,21 +24,16 @@ figure {
   margin: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-animation: headerfadein 1250ms forwards;
-  animation: headerfadein 1250ms forwards;
-  -webkit-animation-delay: 500ms;
+  animation: header-fade-in 1250ms forwards;
   animation-delay: 500ms;
 
   @include breakpoint-down(small) {
-    padding-top: 16rem;
-    padding-right: 1rem;
-    padding-bottom: 0;
-    padding-left: 2.5rem;
+    padding: 16rem 1rem 0 3rem;
     font-size: $font-lrgmed;
   }
   @include breakpoint-down(xsmall) {
     font-size: $font-lrgr;
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
   @include height-breakpoint-down(mdsmall) {
     padding-top: 6.5rem;
@@ -70,25 +53,20 @@ figure {
   color: var(--font-color);
   margin: 0px;
   font-weight: 300;
-  padding: 0 10px 0 60px;
+  padding: 0 0.625rem 0 3.75rem;
   visibility: hidden;
   opacity: 0;
   position: relative;
   z-index: -1;
-  -webkit-animation: subheaderfadein 2000ms forwards;
-  animation: subheaderfadein 2000ms forwards;
-  -webkit-animation-delay: 1250ms;
+  animation: subheader-fade-in 2000ms forwards;
   animation-delay: 1250ms;
-  @include breakpoint-down(large) {
-    padding: 0 10px 0 60px;
-  }
   @include breakpoint-down(small) {
     font-size: $font-lrg;
-    padding-left: 40px;
+    padding-left: 3rem;
   }
   @include breakpoint-down(xsmall) {
     font-size: $font-medlrg;
-    padding-left: 30px;
+    padding-left: 1.875rem;
   }
 }
 .svg-container {
