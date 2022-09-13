@@ -1,16 +1,16 @@
 const homeButton = document.querySelector("#homeButton");
-const hamburgerButton = document.querySelector("#hamburgerButton");
+const hamburgerMenu = document.querySelector("#hamburgerMenu");
 const overlay = document.querySelector("#overlay");
 const overlayUl = document.querySelector("#overlayUl");
 const overlayLinks = document.querySelectorAll(".overlay-links");
 const contactCard = document.querySelector("#contactCard");
 const contactCardBox = document.querySelector("#contactCardBox");
-const contactMail = document.querySelector("#contactButton");
+const contactMail = document.querySelector("#mail-trigger");
 const mailOpen = document.querySelector("#mailOpen");
 const mailClose = document.querySelector("#mailClose");
 
 function toggleHamburger() {
-  hamburgerButton.classList.toggle("open");
+  hamburgerMenu.classList.toggle("open");
 }
 
 function toggleOverlay() {
@@ -73,19 +73,21 @@ function ToggleAllMenus() {
 }
 
 function closeAll() {
-  if (hamburgerButton.classList.contains("open")) toggleHamburger();
+  if (hamburgerMenu.classList.contains("open")) toggleHamburger();
   if (overlay.classList.contains("fadein")) toggleOverlay();
   if (overlayUl.classList.contains("slide-in")) toggleMenu();
   if (contactCard.classList.contains("slide-in")) toggleContactCard();
 }
 
-hamburgerButton.addEventListener("click", () => {
+hamburgerMenu.addEventListener("click", (e) => {
+  e.preventDefault();
   ToggleAllMenus();
   toggleOverlay();
   toggleHamburger();
 });
 
 function toggleContactMenuFromOverlayMenu(e) {
+  e.preventDefault();
   e.stopPropagation();
   toggleContactCard();
   toggleMenu();
@@ -106,10 +108,17 @@ for (let [i, overlayLink] of overlayLinks.entries()) {
   overlayLink.addEventListener("click", closeOverlayMenuAfterLinkClick);
 }
 
-contactMail.addEventListener("click", () => {
+contactMail.addEventListener("click", (e) => {
+  e.preventDefault();
   toggleOverlay();
   toggleContactCard();
   toggleMailButton();
+});
+
+contactMail.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    contactMail.click();
+  }
 });
 
 overlay.addEventListener("click", () => {

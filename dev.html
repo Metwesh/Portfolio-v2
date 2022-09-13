@@ -10,8 +10,6 @@
     <meta name="Content-Type-Script" content="text/javascript" />
     <meta name="Content-Type-Style" content="text/css" />
     <title>My portfolio</title>
-    <!-- Declare all CACHE controll -->
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
     <meta name="revisit-after" content="7 days" />
     <!-- language specific keywords -->
     <meta name="keywords" lang="en-us" content="Portfolio" />
@@ -58,9 +56,9 @@
                 </a>
             </li>
             <li class="overlay-li">
-                <a href="javascript: void(0)" title="Contact details" class="overlay-links">
+                <span class="overlay-links pointer" title="Contact details" tabindex="0">
                     Contact me
-                </a>
+                </span>
             </li>
         </ul>
         <!-- Card -->
@@ -135,8 +133,7 @@
                     <a href="#portfolio" title="Portfolio" class="main-links shortened" id="portfolioLink">Portfolio</a>
                 </li>
             </ul>
-            <a href="javascript: void(0)" title="Contact details" class="mail-link" id="contactButton"
-                aria-label="Mail-link">
+            <div title="Contact details" class="mail-contact-trigger pointer" id="mail-trigger" tabindex="0">
                 <svg class="mail hide-for-mobile" width="24" height="24" viewBox="0 0 24 24">
                     <path id="mailClose" class="show"
                         d="M0 4V21H24V4H0ZM8 11.5556L1 19.1111V5.88889L8 11.5556ZM12 4.94444H23L12 13.9167L1 4.94444H12ZM8.5 12.0278L12 14.8611L15.5 12.0278L23 20.0556H1L8.5 12.0278ZM16 11.5556L23 5.88889V19.1111L16 11.5556Z" />
@@ -160,7 +157,7 @@
                         </radialGradient>
                     </defs>
                 </svg>
-            </a>
+            </div>
         </div>
         <!-- Mobile nav -->
         <div class="mobile-container hide-for-desktop">
@@ -189,17 +186,17 @@
             </a>
 
             <!-- Hamburger menu  -->
-            <a id="hamburgerButton" title="Menu" class="hamburger hide-for-desktop" href="javascript: void(0)"
-                aria-label="Hamburger Menu">
+            <span id="hamburgerMenu" title="Menu" class="hamburger pointer hide-for-desktop" aria-label="Hamburger Menu"
+                tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
-            </a>
+            </span>
         </div>
     </nav>
 
     <div class="view-mode-wrapper">
-        <a href="javascript: void(0)" title="View-mode" class="view-mode">
+        <span title="View-mode" class="view-mode pointer" id="view-mode" tabindex="0">
             <svg width="24" height="24" viewBox="0 0 24 24" class="view-mode-disc">
                 <defs>
                     <radialGradient id="solid4">
@@ -224,15 +221,15 @@
                     d="M22.088 13.126L24 12L22.088 10.874C21.067 10.272 20.716 8.964 21.3 7.932L22.393 6L20.173 5.98C18.988 5.97 18.03 5.012 18.02 3.827L18 1.608L16.068 2.701C15.037 3.284 13.728 2.934 13.127 1.913L12 1.71655e-06L10.873 1.913C10.271 2.934 8.963 3.285 7.932 2.701L6 1.608L5.98 3.827C5.97 5.012 5.012 5.97 3.827 5.98L1.607 6L2.7 7.932C3.284 8.964 2.933 10.272 1.912 10.874L2.09815e-06 12L1.912 13.126C2.933 13.728 3.284 15.036 2.7 16.068L1.607 18L3.827 18.02C5.012 18.03 5.97 18.988 5.98 20.173L6 22.392L7.932 21.299C8.963 20.716 10.272 21.066 10.873 22.087L12 24L13.127 22.087C13.729 21.066 15.037 20.715 16.068 21.299L18 22.392L18.02 20.173C18.031 18.988 18.989 18.03 20.173 18.02L22.393 18L21.3 16.068C20.716 15.037 21.066 13.728 22.088 13.126ZM11.971 20C7.56 20 3.971 16.411 3.971 12C3.971 7.589 7.559 4 11.971 4C16.383 4 19.971 7.589 19.971 12C19.971 16.411 16.382 20 11.971 20ZM12 18C8.687 18 6 15.313 6 12C6 8.687 8.687 6 12 6L12 18Z" />
             </svg>
 
-        </a>
+        </span>
     </div>
 
 
     <!-- Home section -->
     <section class="home" id="home">
         <div class="heading-text">
-            <h3 class="main-text colored">Mohamed H. Aly</h3>
-            <h3 class="sub-text">Full stack web developer</h3>
+            <h1 class="main-text colored">Mohamed H. Aly</h1>
+            <h2 class="sub-text">Full stack web developer</h2>
         </div>
     </section>
     <div class="svg-container">
@@ -266,7 +263,7 @@
     <section class="about" id="about">
         <div class="content-background">
             <article class="content-wrapper border-radius">
-                <h1 class="header-text">Hello world!</h1>
+                <h3 class="header-text">Hello world!</h3>
                 <figure class="img-container">
                     <img class="img right" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
                 </figure>
@@ -288,7 +285,7 @@
         </div>
         <div class="content-background space">
             <article class="content-wrapper first-div">
-                <h1 class="header-text">About</h1>
+                <h3 class="header-text">About</h3>
                 <h3 class="main-content">College</h3>
                 <figure class="img-container">
                     <img class="img left" title="Certificate" src="./images/English certificate.webp"
@@ -408,7 +405,7 @@
     <section class="skills" id="skills">
         <div class="content-background space skills-box">
             <article class="content-wrapper border-radius">
-                <h1 class="header-text">Skills</h1>
+                <h3 class="header-text">Skills</h3>
                 <div class="skills-grid">
                     <figure class="skills-grid-cell">
                         <img class="skills-icon" src="./images/html5.webp" alt="HTML5" loading="eager">
@@ -549,7 +546,7 @@
         <form target="_blank">
             <div class="content-background space">
                 <div class="content-wrapper border-radius">
-                    <h1 class="header-text">Portfolio</h1>
+                    <h3 class="header-text">Portfolio</h3>
 
                     <div class="grid" id="grid">
 

@@ -1,15 +1,5 @@
 .home {
   height: 140vh;
-  background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      color-stop(70%, transparent),
-      to(var(--bg-color-main))
-    ),
-    url("../images/Architecture\ background.webp") no-repeat center center fixed;
-  background: -o-linear-gradient(top, transparent 70%, var(--bg-color-main)),
-    url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background: linear-gradient(to bottom, transparent 70%, var(--bg-color-main)),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;

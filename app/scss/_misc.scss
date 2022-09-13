@@ -21,14 +21,24 @@
   &:focus {
     .view-mode-disc {
       fill: url(#radial-gradient4);
-      filter: drop-shadow(0 0 0.1rem var(--bg-color-accent))
-      drop-shadow(0 0 0.1rem var(--bg-color-accent))
-      drop-shadow(0 0 0.1rem var(--bg-color-accent))
-      drop-shadow(0 0 0.15rem var(--bg-color-accent))
-      drop-shadow(0 0 0.15rem var(--bg-color-accent))
+      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.2rem $cyan) drop-shadow(0 0 0.2rem $cyan);
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
+      @include breakpoint-down(small) {
+        filter: drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
+      }
     }
   }
 }

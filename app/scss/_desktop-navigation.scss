@@ -111,7 +111,7 @@ ul {
   }
 }
 
-.mail-link {
+.mail-contact-trigger {
   margin-right: 60px;
   margin-left: auto;
   justify-self: end;
@@ -120,8 +120,6 @@ ul {
   &:focus {
     .mail {
       fill: url(#radial-gradient2);
-      filter: drop-shadow(0 0 0.1rem $dark-gray)
-        drop-shadow(0 0 0.2rem $dark-gray) drop-shadow(0 0 0.6rem $cyan);
     }
   }
   @include breakpoint-down(large) {

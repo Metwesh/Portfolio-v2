@@ -1,4 +1,4 @@
-const viewMode = document.querySelector(".view-mode");
+const viewMode = document.querySelector("#view-mode");
 const viewModeDisc = document.querySelector(".view-mode-disc");
 const sun = document.querySelector("#sun");
 const moon = document.querySelector("#moon");
@@ -40,7 +40,14 @@ function toggleDarkMode() {
   }
 }
 
-viewMode.addEventListener("click", () => {
+viewMode.addEventListener("click", (e) => {
+  e.preventDefault();
   rotateButton();
   toggleDarkMode();
+});
+
+viewMode.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    viewMode.click();
+  }
 });

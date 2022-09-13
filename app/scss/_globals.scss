@@ -5,9 +5,10 @@
   :root {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
+    --cyan: #{$darker-cyan};
 
     --bg-color-box: #{$white};
-    --bg-color-main: #{$light-gray};
+    --bg-color-main: #{$whitish};
     --bg-color-sub: #{$whitish};
     --bg-color-accent: #{$dark-gray};
     --bg-color-accent-2: #{$dark-gray};
@@ -15,9 +16,10 @@
     --bg-color-footer: #{$dark-gray};
 
     --shadow-color: #{$gray};
+
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
-    --cyan: #{$dark-cyan};
+
     --url-1: url(#solid);
     --url-2: url(#solid2);
     --url-3: url(#solid3);
@@ -31,6 +33,7 @@
   :root {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
+    --cyan: #{$cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -44,7 +47,6 @@
 
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
-    --cyan: #{$cyan};
 
     --url-1: url(#solid-light);
     --url-2: url(#solid-light2);
@@ -87,6 +89,7 @@ body {
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
+    --cyan: #{$cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -101,8 +104,6 @@ body {
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
 
-    --cyan: #{$cyan};
-
     --url-1: url(#solid-light);
     --url-2: url(#solid-light2);
     --url-3: url(#solid-light3);
@@ -114,9 +115,10 @@ body {
   &.light-mode {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
+    --cyan: #{$darker-cyan};
 
     --bg-color-box: #{$white};
-    --bg-color-main: #{$light-gray};
+    --bg-color-main: #{$whitish};
     --bg-color-sub: #{$whitish};
     --bg-color-accent: #{$dark-gray};
     --bg-color-accent-2: #{$dark-gray};
@@ -127,8 +129,6 @@ body {
 
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
-
-    --cyan: #{$dark-cyan};
 
     --url-1: url(#solid);
     --url-2: url(#solid2);
@@ -147,6 +147,10 @@ button {
 a {
   text-decoration: none;
   color: var(--font-color);
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 figure {
