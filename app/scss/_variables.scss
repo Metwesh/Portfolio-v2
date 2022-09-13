@@ -31,7 +31,7 @@ $font-xxxsm: 0.45rem; //6.4px
 
 $gradient-to-top: linear-gradient(to top, $dark-cyan, $cyan);
 $gradient-to-right: linear-gradient(to right, $dark-cyan, $cyan);
-$dark-gradient: linear-gradient(160deg, $gray 10%, $darker-gray 100%);
-$dark-gradient-invert: linear-gradient(320deg, $gray 0%, $darker-gray 100%);
+$dark-gradient: linear-gradient(160deg, $gray -30%, $darker-gray 100%);
+$dark-gradient-invert: linear-gradient(320deg, $gray -30%, $darker-gray 100%);
 $box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
   0 0 20px $light-cyan;

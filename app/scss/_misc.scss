@@ -84,30 +84,12 @@
     box-shadow: $box-shadow;
     text-shadow: 0px 0px 2px $dark-gray, 0px 0px 4px $cyan;
   }
-  &.pressed {
-    border-top: 2px solid rgb(33, 33, 33);
-    border-right: 2px solid rgb(118, 118, 118);
-    border-bottom: 2px solid rgb(118, 118, 118);
-    border-left: 2px solid rgb(33, 33, 33);
-  }
   @include breakpoint-down(large) {
     margin-right: 40px;
   }
   &.alt {
     margin: 0;
     padding: 10px 20px;
-  }
-  &.form {
-    visibility: inherit;
-    margin: 20px;
-    @include breakpoint-down(mdsmall) {
-      margin: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    @include height-breakpoint-down(small) {
-      font-size: $font-med;
-    }
   }
   &.grid-button {
     @include breakpoint-down(small) {
@@ -116,59 +98,65 @@
   }
   &.dark {
     background: $dark-gradient;
-    &.darkswitch {
-      background: $dark-gradient-invert;
-    }
-    &:disabled {
-      position: relative;
-      border-top: 2px solid rgb(118, 118, 118);
-      border-right: 2px solid rgb(33, 33, 33);
-      border-bottom: 2px solid rgb(33, 33, 33);
-      border-left: 2px solid rgb(118, 118, 118);
-      transition: none;
-      &:hover,
-      &:focus {
-        cursor: no-drop;
-        box-shadow: none;
-        text-shadow: none;
-        &::after {
-          content: attr(data-tooltip);
-          width: 200%;
-          font-size: $font-med;
-          color: var(--font-color-invert);
-          background: var(--bg-color-accent-2);
-          padding: 1rem;
-          border-radius: 5px;
-          display: inline-block;
-          position: absolute;
-          transform: translate(-50%, -100%);
-          margin: 0 auto;
-          min-width: 100px;
-          min-width: 150px;
-          top: -10px;
-          left: 50%;
-          text-align: center;
-          @include breakpoint-down(small) {
-            width: 150%;
-          }
-        }
-        &::before {
-          content: " ";
-          position: absolute;
-          pointer-events: none;
-          top: -8px;
-          left: 50%;
-          height: 0;
-          width: 0;
-          border: solid transparent;
-          border-color: rgba(0, 0, 0, 0);
-          border-top-color: var(--bg-color-accent-2);
-          border-width: 5px;
-          margin-left: -5px;
-          transform: translate(0, 0);
+  }
+  &.dark-switch {
+    background: $dark-gradient-invert;
+  }
+  &:disabled {
+    position: relative;
+    border-top: 2px solid rgb(118, 118, 118);
+    border-right: 2px solid rgb(33, 33, 33);
+    border-bottom: 2px solid rgb(33, 33, 33);
+    border-left: 2px solid rgb(118, 118, 118);
+    transition: none;
+    &:hover,
+    &:focus {
+      cursor: no-drop;
+      box-shadow: none;
+      text-shadow: none;
+      &::after {
+        content: attr(data-tooltip);
+        width: 200%;
+        font-size: $font-med;
+        color: var(--font-color-invert);
+        background: var(--bg-color-accent-2);
+        padding: 1rem;
+        border-radius: 5px;
+        display: inline-block;
+        position: absolute;
+        transform: translate(-50%, -100%);
+        margin: 0 auto;
+        min-width: 100px;
+        min-width: 150px;
+        top: -10px;
+        left: 50%;
+        text-align: center;
+        @include breakpoint-down(small) {
+          width: 150%;
         }
       }
+      &::before {
+        content: " ";
+        position: absolute;
+        pointer-events: none;
+        top: -8px;
+        left: 50%;
+        height: 0;
+        width: 0;
+        border: solid transparent;
+        border-color: rgba(0, 0, 0, 0);
+        border-top-color: var(--bg-color-accent-2);
+        border-width: 5px;
+        margin-left: -5px;
+        transform: translate(0, 0);
+      }
     }
+  }
+  &.pressed {
+    border-top: 2px solid rgb(33, 33, 33);
+    border-right: 2px solid rgb(118, 118, 118);
+    border-bottom: 2px solid rgb(118, 118, 118);
+    border-left: 2px solid rgb(33, 33, 33);
   }
 }
 

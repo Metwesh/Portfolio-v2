@@ -85,21 +85,25 @@ hamburgerButton.addEventListener("click", () => {
   toggleHamburger();
 });
 
+function toggleContactMenuFromOverlayMenu(e) {
+  e.stopPropagation();
+  toggleContactCard();
+  toggleMenu();
+}
+
+function closeOverlayMenuAfterLinkClick(e) {
+  e.stopPropagation();
+  toggleOverlay();
+  toggleMenu();
+  toggleHamburger();
+}
+
 for (let [i, overlayLink] of overlayLinks.entries()) {
   if (i === overlayLinks.length - 1) {
-    overlayLink.addEventListener("click", (e) => {
-      e.stopPropagation();
-      toggleContactCard();
-      toggleMenu();
-    });
+    overlayLink.addEventListener("click", toggleContactMenuFromOverlayMenu);
     break;
   }
-  overlayLink.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleOverlay();
-    toggleMenu();
-    toggleHamburger();
-  });
+  overlayLink.addEventListener("click", closeOverlayMenuAfterLinkClick);
 }
 
 contactMail.addEventListener("click", () => {
