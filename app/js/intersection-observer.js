@@ -43,6 +43,6 @@ const portfolioObserver = new IntersectionObserver(
       else return;
     }
   },
-  { rootMargin: "-45px 0px 0px 0px", threshold: "0.1" }
+  { rootMargin: "-45px 0px 0px 0px", threshold: "0.05" }
 );
 portfolioObserver.observe(portfolio);

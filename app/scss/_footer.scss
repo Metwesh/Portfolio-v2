@@ -28,19 +28,11 @@
   height: 60px;
   &:first-child {
     border-radius: 13px;
-    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
-    transition: -webkit-box-shadow 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
   }
   &:last-child {
     border-radius: 70px;
-    -webkit-transition: -webkit-box-shadow 150ms ease-in-out;
-    transition: -webkit-box-shadow 150ms ease-in-out;
-    -o-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out, -webkit-box-shadow 150ms ease-in-out;
   }
   @include breakpoint-down(small) {
     width: 50px;

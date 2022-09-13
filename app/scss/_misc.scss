@@ -21,6 +21,14 @@
   &:focus {
     .view-mode-disc {
       fill: url(#radial-gradient4);
+      filter: drop-shadow(0 0 0.1rem var(--bg-color-accent))
+      drop-shadow(0 0 0.1rem var(--bg-color-accent))
+      drop-shadow(0 0 0.1rem var(--bg-color-accent))
+      drop-shadow(0 0 0.15rem var(--bg-color-accent))
+      drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.2rem $cyan) drop-shadow(0 0 0.2rem $cyan);
     }
   }
 }
@@ -32,10 +40,7 @@
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  -o-transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, filter 300ms ease-in-out;
   @include breakpoint-down(small) {
     width: 30px;
     height: 30px;
@@ -69,14 +74,10 @@
   margin-left: auto;
   background-image: $gradient-to-top;
   text-shadow: -1px 1px 2px var(--shadow-color);
-  border-top: 2px solid rgb(118, 118, 118);
-  border-right: 2px solid rgb(33, 33, 33);
-  border-bottom: 2px solid rgb(33, 33, 33);
-  border-left: 2px solid rgb(118, 118, 118);
-  -webkit-transition: text-shadow 0.3s ease-in-out;
-  -o-transition: text-shadow 0.3s ease-in-out;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
+  border-top: 2.5px solid rgb(118, 118, 118);
+  border-right: 2.5px solid rgb(33, 33, 33);
+  border-bottom: 2.5px solid rgb(33, 33, 33);
+  border-left: 2.5px solid rgb(118, 118, 118);
   transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
   &:hover,
   &:focus {
@@ -104,10 +105,10 @@
   }
   &:disabled {
     position: relative;
-    border-top: 2px solid rgb(118, 118, 118);
-    border-right: 2px solid rgb(33, 33, 33);
-    border-bottom: 2px solid rgb(33, 33, 33);
-    border-left: 2px solid rgb(118, 118, 118);
+    border-top: 2.5px solid rgb(118, 118, 118);
+    border-right: 2.5px solid rgb(33, 33, 33);
+    border-bottom: 2.5px solid rgb(33, 33, 33);
+    border-left: 2.5px solid rgb(118, 118, 118);
     transition: none;
     &:hover,
     &:focus {
@@ -153,10 +154,10 @@
     }
   }
   &.pressed {
-    border-top: 2px solid rgb(33, 33, 33);
-    border-right: 2px solid rgb(118, 118, 118);
-    border-bottom: 2px solid rgb(118, 118, 118);
-    border-left: 2px solid rgb(33, 33, 33);
+    border-top: 2.5px solid rgb(33, 33, 33);
+    border-right: 2.5px solid rgb(118, 118, 118);
+    border-bottom: 2.5px solid rgb(118, 118, 118);
+    border-left: 2.5px solid rgb(33, 33, 33);
   }
 }
 

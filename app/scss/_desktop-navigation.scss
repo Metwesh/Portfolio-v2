@@ -96,14 +96,19 @@ ul {
   width: 100%;
 }
 
-.main-links.extended:hover::after,
-.main-links.shortened:hover::after,
-.main-links.extended:focus::after,
-.main-links.shortened:focus::after {
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  width: 100%;
+.main-links {
+  &.shortened,
+  &.extended {
+    &:hover,
+    &:focus {
+      &::after {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .mail-link {
@@ -115,6 +120,8 @@ ul {
   &:focus {
     .mail {
       fill: url(#radial-gradient2);
+      filter: drop-shadow(0 0 0.1rem $dark-gray)
+        drop-shadow(0 0 0.2rem $dark-gray) drop-shadow(0 0 0.6rem $cyan);
     }
   }
   @include breakpoint-down(large) {
@@ -127,7 +134,7 @@ ul {
   padding-top: 5px;
   width: 50px;
   height: 45px;
-  transition: all 100ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 
 #mailClose {

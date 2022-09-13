@@ -208,6 +208,22 @@
   &:focus {
     .card-icon {
       fill: url(#radial-gradient);
+      &.linkedin {
+        box-shadow: $box-shadow;
+      }
+      &.github {
+        box-shadow: $box-shadow;
+      }
+      &.phone {
+        filter: drop-shadow(0 0 0.1rem $dark-gray)
+          drop-shadow(0 0 0.2rem $dark-gray) drop-shadow(0 0 0.2rem $dark-gray)
+          drop-shadow(0 0 0.25rem $cyan) drop-shadow(0 0 0.25rem $light-cyan);
+      }
+      &.mail-card {
+        filter: drop-shadow(0 0 0.1rem $dark-gray)
+          drop-shadow(0 0 0.2rem $dark-gray) drop-shadow(0 0 0.2rem $dark-gray)
+          drop-shadow(0 0 0.25rem $cyan) drop-shadow(0 0 0.25rem $light-cyan);
+      }
     }
   }
 }
@@ -217,6 +233,13 @@
   width: 3.75rem;
   margin: 0.5rem;
   fill: var(--url-1);
+  transition: filter 150ms ease-in-out, box-shadow 150ms ease-in-out;
+  &.linkedin {
+    border-radius: 13px;
+  }
+  &.github {
+    border-radius: 70px;
+  }
   &.mail {
     padding-top: 5px;
   }
