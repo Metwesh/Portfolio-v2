@@ -5,7 +5,9 @@
   :root {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
+
     --cyan: #{$darker-cyan};
+    --cyan-invert: #{$cyan};
 
     --bg-color-box: #{$white};
     --bg-color-main: #{$whitish};
@@ -13,6 +15,7 @@
     --bg-color-accent: #{$dark-gray};
     --bg-color-accent-2: #{$dark-gray};
     --bg-color-accent-invert: #{$whitish};
+    --bg-color-accent-invert-2: #{$white};
     --bg-color-footer: #{$dark-gray};
 
     --shadow-color: #{$gray};
@@ -33,7 +36,9 @@
   :root {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
+
     --cyan: #{$cyan};
+    --cyan-invert: #{$dark-cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -41,6 +46,7 @@
     --bg-color-accent: #{$whitish};
     --bg-color-accent-2: #{$white};
     --bg-color-accent-invert: #{$dark-gray};
+    --bg-color-accent-invert-2: #{$dark-gray};
     --bg-color-footer: #{$grayish};
 
     --shadow-color: #{$gray};
@@ -83,13 +89,12 @@ body {
   letter-spacing: 1px;
   background-color: var(--bg-color-main);
   transition: all 450ms ease-in-out;
-  @include height-breakpoint-down(xsmall) {
-    padding-top: 3.5rem;
-  }
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
+
     --cyan: #{$cyan};
+    --cyan-invert: #{$dark-cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -97,6 +102,8 @@ body {
     --bg-color-accent: #{$whitish};
     --bg-color-accent-2: #{$white};
     --bg-color-accent-invert: #{$dark-gray};
+    --bg-color-accent-invert-2: #{$dark-gray};
+
     --bg-color-footer: #{$grayish};
 
     --shadow-color: #{$gray};
@@ -115,7 +122,9 @@ body {
   &.light-mode {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
+
     --cyan: #{$darker-cyan};
+    --cyan-invert: #{$cyan};
 
     --bg-color-box: #{$white};
     --bg-color-main: #{$whitish};
@@ -123,6 +132,7 @@ body {
     --bg-color-accent: #{$dark-gray};
     --bg-color-accent-2: #{$dark-gray};
     --bg-color-accent-invert: #{$whitish};
+    --bg-color-accent-invert-2: #{$white};
     --bg-color-footer: #{$dark-gray};
 
     --shadow-color: #{$gray};
@@ -140,17 +150,26 @@ body {
   }
 }
 
-button {
+::selection {
+  background: var(--cyan-invert);
+}
+
+img,
+svg {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+button,
+.pointer {
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: var(--font-color);
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 figure {

@@ -73,10 +73,11 @@ function ToggleAllMenus() {
 }
 
 function closeAll() {
-  if (hamburgerMenu.classList.contains("open")) toggleHamburger();
   if (overlay.classList.contains("fadein")) toggleOverlay();
   if (overlayUl.classList.contains("slide-in")) toggleMenu();
   if (contactCard.classList.contains("slide-in")) toggleContactCard();
+  if (hamburgerMenu.classList.contains("open")) toggleHamburger();
+  if (mailOpen.classList.contains("show")) toggleMailButton();
 }
 
 hamburgerMenu.addEventListener("click", (e) => {
@@ -121,13 +122,15 @@ contactMail.addEventListener("keypress", (e) => {
   }
 });
 
-overlay.addEventListener("click", () => {
-  toggleOverlay();
-  toggleHamburger();
-  closeAll();
-  if (mailOpen.classList.contains("show")) toggleMailButton();
-});
+overlay.addEventListener("click", closeAll);
 
 contactCardBox.addEventListener("click", (e) => e.stopPropagation());
 
 homeButton.addEventListener("click", closeAll);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeAll();
+    document.activeElement.blur();
+  }
+});

@@ -1,21 +1,13 @@
 const buttons = document.querySelectorAll(".button");
 
-function toggleButtonClassMouseDown(button, className) {
-  button.onmousedown = () => button.classList.toggle(className);
-}
-
-function toggleButtonClassMouseDownMultiple(button, className, className2) {
+function toggleButtonClassMouseDown(button, className, className2) {
   button.onmousedown = () => {
     button.classList.toggle(className);
     button.classList.toggle(className2);
   };
 }
 
-function toggleButtonClassMouseUp(button, className) {
-  button.onmouseup = () => button.classList.toggle(className);
-}
-
-function toggleButtonClassMouseUpMultiple(button, className, className2) {
+function toggleButtonClassMouseUp(button, className, className2) {
   button.onmouseup = () => {
     button.classList.toggle(className);
     button.classList.toggle(className2);
@@ -23,10 +15,10 @@ function toggleButtonClassMouseUpMultiple(button, className, className2) {
 }
 
 for (let button of buttons) {
-  toggleButtonClassMouseDown(button, "pressed");
-  toggleButtonClassMouseUp(button, "pressed");
-  if (button.classList.contains("dark")) {
-    toggleButtonClassMouseDownMultiple(button, "dark-switch", "pressed");
-    toggleButtonClassMouseUpMultiple(button, "dark-switch", "pressed");
+  toggleButtonClassMouseDown(button, "dark-switch", "pressed");
+  toggleButtonClassMouseUp(button, "dark-switch", "pressed");
+  if (!button.classList.contains("dark")) {
+    toggleButtonClassMouseDown(button, "cyan-switch", "pressed");
+    toggleButtonClassMouseUp(button, "cyan-switch", "pressed");
   }
 }

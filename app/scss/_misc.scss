@@ -17,6 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   &:hover,
   &:focus {
     .view-mode-disc {
@@ -82,12 +83,14 @@
   border-radius: 40px;
   margin-right: 80px;
   margin-left: auto;
-  background-image: $gradient-to-top;
-  text-shadow: -1px 1px 2px var(--shadow-color);
+  background-image: $cyan-gradient;
+  text-shadow: 1px 1px 2px var(--shadow-color);
+
   border-top: 2.5px solid rgb(118, 118, 118);
   border-right: 2.5px solid rgb(33, 33, 33);
   border-bottom: 2.5px solid rgb(33, 33, 33);
   border-left: 2.5px solid rgb(118, 118, 118);
+
   transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
   &:hover,
   &:focus {
@@ -112,6 +115,9 @@
   }
   &.dark-switch {
     background: $dark-gradient-invert;
+  }
+  &.cyan-switch {
+    background: $cyan-gradient-invert;
   }
   &:disabled {
     position: relative;

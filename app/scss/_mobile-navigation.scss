@@ -7,28 +7,20 @@
   height: 80px;
   top: 0;
   z-index: 2;
-  @include height-breakpoint-down(xsmall) {
-    height: 3.5rem;
-  }
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   margin-right: auto;
-  margin-left: 80px;
   padding: 1rem;
   padding-bottom: 1.25rem;
 
   @include breakpoint-down(small) {
-    margin-left: 20px;
+    margin-left: 0.7rem;
   }
   @include breakpoint-up(small) {
-    margin-left: 60px;
-  }
-  @include height-breakpoint-down(xsmall) {
-    margin-left: 0;
-    padding: 0.75rem 1.25rem;
+    margin-left: 2.5rem;
   }
 }
 
@@ -58,7 +50,7 @@
     outline: none;
   }
   @include breakpoint-down(small) {
-    margin-right: 1.25rem;
+    margin-right: 1.5rem;
   }
   @include breakpoint-up(small) {
     margin-right: 3.75rem;

@@ -9,11 +9,7 @@
   top: 0;
   z-index: 1000000;
   box-shadow: 0 0 5px 1px var(--shadow-color);
-  @include height-breakpoint-down(xsmall) {
-    height: 3.5rem;
-  }
-  @supports (backdrop-filter: initial) {
-    -webkit-backdrop-filter: blur(10px);
+  @supports (backdrop-filter: blur()) {
     backdrop-filter: blur(10px);
   }
 }
@@ -63,37 +59,22 @@ ul {
     background-image: $gradient-to-right;
 
     width: 0;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
     transform: scaleX(0);
 
-    -webkit-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-
-    -webkit-transition: -webkit-transform 0.3s ease-in-out;
-    transition: -webkit-transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out;
-    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out,
-      width 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+  &.extended::after {
+    transform: scaleX(0.4);
+    width: 100%;
+  }
+  &.shortened::after {
+    transform: scaleX(0);
+    width: 100%;
   }
   &:hover,
   &:focus {
     color: $cyan;
   }
-}
-
-.main-links.extended::after {
-  -webkit-transform: scaleX(0.4);
-  -ms-transform: scaleX(0.4);
-  transform: scaleX(0.4);
-  width: 100%;
-}
-.main-links.shortened::after {
-  -webkit-transform: scaleX(0);
-  -ms-transform: scaleX(0);
-  transform: scaleX(0);
-  width: 100%;
 }
 
 .main-links {
@@ -102,8 +83,6 @@ ul {
     &:hover,
     &:focus {
       &::after {
-        -webkit-transform: none;
-        -ms-transform: none;
         transform: none;
         width: 100%;
       }
@@ -114,7 +93,6 @@ ul {
 .mail-contact-trigger {
   margin-right: 60px;
   margin-left: auto;
-  justify-self: end;
   padding-inline: 20px;
   &:hover,
   &:focus {

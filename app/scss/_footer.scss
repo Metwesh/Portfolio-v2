@@ -1,14 +1,18 @@
-.content-foot {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.footer {
   padding: 40px 40px;
   margin-top: 3rem;
   background-color: var(--bg-color-footer);
-
   @include breakpoint-down(medium) {
     padding: 20px 0;
   }
+}
+
+.footer-wrapper {
+  max-width: 85rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .icons {
@@ -154,7 +158,7 @@
   }
 }
 
-.footer-wrapper {
+.footer-text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
