@@ -23,7 +23,7 @@
     margin-left: 2.5rem;
   }
 }
-
+// TODO: Fix the scaling of this on small-medium screens
 .homelogo {
   fill: var(--url-3);
   margin-right: auto;
@@ -38,7 +38,7 @@
     fill: url(#radial-gradient3);
   }
 }
-
+// TODO: Fix the scaling of this on small-medium screens
 .hamburger {
   display: flex;
   flex-direction: column;
