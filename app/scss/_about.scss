@@ -45,7 +45,7 @@
   }
 
   @include breakpoint-up(small) {
-    margin: 0px 40px;
+    margin: 0 40px;
     padding: 20px 40px;
   }
   @include breakpoint-down(small) {

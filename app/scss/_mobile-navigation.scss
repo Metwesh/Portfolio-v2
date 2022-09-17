@@ -15,7 +15,12 @@
   margin-right: auto;
   padding: 1rem;
   padding-bottom: 1.25rem;
-
+  &:hover,
+  &:focus {
+    .home-logo {
+      fill: url(#home-logo-cyan);
+    }
+  }
   @include breakpoint-down(small) {
     margin-left: 0.7rem;
   }
@@ -24,18 +29,14 @@
   }
 }
 // TODO: Fix the scaling of this on small-medium screens
-.homelogo {
-  fill: var(--url-3);
+.home-logo {
+  fill: var(--home-logo-color);
   margin-right: auto;
   width: 30px;
   height: 30px;
   @include breakpoint-up(small) {
     width: 45px;
     height: 45px;
-  }
-  &:hover,
-  &:focus {
-    fill: url(#radial-gradient3);
   }
 }
 // TODO: Fix the scaling of this on small-medium screens
@@ -60,9 +61,8 @@
     width: 42px;
     height: 4px;
     background-color: var(--bg-color-accent-2);
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    transition: transform 300ms ease-in-out, width 300ms ease-in-out,
+      opacity 300ms ease-in-out;
     &:not(:last-child) {
       margin-bottom: 5px;
     }
@@ -77,12 +77,8 @@
 }
 
 .open {
-  -webkit-transition: all 0.3s ease-in-out 0.6s;
-  -o-transition: all 0.3s ease-in-out 0.6s;
-  transition: all 0.3s ease-in-out 0.6s;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  transition: transform 300ms ease-in-out 600ms, width 300ms ease-in-out 600ms,
+    opacity 300ms ease-in-out 600ms;
   transform: rotate(45deg);
 
   :nth-child(2) {
@@ -92,35 +88,21 @@
 
   :first-child,
   :last-child {
-    -webkit-transition-delay: 0.3s;
-    -o-transition-delay: 0.3s;
-    transition-delay: 0.3s;
+    transition: transform 300ms ease-in-out 300ms;
   }
 
   :first-child {
-    -webkit-transform: translateY(16px);
-    -ms-transform: translateY(16px);
-    -o-transform: translateY(16px);
     transform: translateY(16px);
 
     @include breakpoint-down(small) {
-      -webkit-transform: translateY(9px);
-      -ms-transform: translateY(9px);
-      -o-transform: translateY(9px);
       transform: translateY(9px);
     }
   }
 
   :last-child {
-    -webkit-transform: translateY(-16px) rotate(90deg);
-    -ms-transform: translateY(-16px) rotate(90deg);
-    -o-transform: translateY(-16px) rotate(90deg);
     transform: translateY(-16px) rotate(90deg);
 
     @include breakpoint-down(small) {
-      -webkit-transform: translateY(-9px) rotate(90deg);
-      -ms-transform: translateY(-9px) rotate(90deg);
-      -o-transform: translateY(-9px) rotate(90deg);
       transform: translateY(-9px) rotate(90deg);
     }
   }

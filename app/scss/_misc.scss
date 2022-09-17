@@ -15,18 +15,23 @@
 
 .view-mode {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   &:hover,
   &:focus {
     .view-mode-disc {
-      fill: url(#radial-gradient4);
+      #sun {
+        fill: $dark-cyan;
+      }
+      #moon {
+        fill: $cyan;
+      }
       filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
         drop-shadow(0 0 0.05rem var(--bg-color-accent))
         drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
@@ -36,8 +41,8 @@
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem var(--bg-color-accent))
           drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
       }
     }
@@ -45,13 +50,12 @@
 }
 
 .view-mode-disc {
-  fill: var(--url-4);
+  fill: var(--icon-color);
   width: 2.2rem;
   height: 2.2rem;
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  transition: transform 300ms ease-in-out, filter 300ms ease-in-out;
+  transition: transform 250ms ease-in-out, filter 250ms ease-in-out,
+    opacity 250ms ease-in-out;
   @include breakpoint-down(small) {
     width: 30px;
     height: 30px;
@@ -60,14 +64,14 @@
 
 #moon {
   opacity: 0;
-  transition: opacity 200ms ease-in-out;
+  transform-origin: center;
+  scale: 1.01;
   &.show {
     opacity: 1;
   }
 }
 #sun {
   opacity: 0;
-  transition: opacity 200ms ease-in-out;
   &.show {
     opacity: 1;
   }
@@ -84,19 +88,18 @@
   margin-right: 80px;
   margin-left: auto;
   background-image: $cyan-gradient;
-  text-shadow: 1px 1px 2px var(--shadow-color);
+  text-shadow: 1px 1px 2px $dark-gray;
 
   border-top: 2.5px solid rgb(118, 118, 118);
   border-right: 2.5px solid rgb(33, 33, 33);
   border-bottom: 2.5px solid rgb(33, 33, 33);
   border-left: 2.5px solid rgb(118, 118, 118);
 
-  transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  transition: box-shadow 300ms ease-in-out, text-shadow 300ms ease-in-out;
   &:hover,
   &:focus {
-    -webkit-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
-    text-shadow: 0px 0px 2px $dark-gray, 0px 0px 4px $cyan;
+    text-shadow: 0 0 1px $white;
   }
   @include breakpoint-down(large) {
     margin-right: 40px;

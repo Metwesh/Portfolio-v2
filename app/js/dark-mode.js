@@ -10,13 +10,29 @@ if (
   window.matchMedia &&
   window.matchMedia("(prefers-color-scheme: dark)").matches
 ) {
+  document.body.classList.add("dark-mode");
   toggleSunAndMoon();
   invertImages();
+  changeButtonTitle();
+}
+
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: light)").matches
+) {
+  document.body.classList.add("light-mode");
+  changeButtonTitle();
 }
 
 function toggleSunAndMoon() {
   sun.classList.toggle("show");
   moon.classList.toggle("show");
+  changeButtonTitle();
+}
+
+function changeButtonTitle() {
+  if (sun.classList.contains("show")) viewMode.title = "Light mode";
+  if (moon.classList.contains("show")) viewMode.title = "Dark mode";
 }
 
 function invertImages() {

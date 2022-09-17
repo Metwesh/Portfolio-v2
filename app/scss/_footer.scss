@@ -15,28 +15,28 @@
   justify-content: space-between;
 }
 
-.icons {
+.social-links-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 40px;
+  padding: 0 40px;
   @include breakpoint-down(small) {
     padding: 10px 20px;
     justify-content: space-around;
   }
 }
 
-.socials {
+.social-links {
   width: 60px;
   height: 60px;
   &:first-child {
     border-radius: 13px;
-    transition: all 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out;
   }
   &:last-child {
     border-radius: 70px;
-    transition: all 150ms ease-in-out;
+    transition: box-shadow 150ms ease-in-out;
   }
   @include breakpoint-down(small) {
     width: 50px;
@@ -48,8 +48,8 @@
   }
 }
 
-.smalliconsquare {
-  fill: var(--url-6);
+.linkedin-footer-icon {
+  fill: var(--linkedin-footer-color);
   width: 100%;
   height: 100%;
 }
@@ -64,21 +64,21 @@
   }
 }
 
-.smalliconcircle {
-  fill: var(--url-7);
+.github-footer-icon {
+  fill: var(--github-footer-color);
   width: 100%;
   height: 100%;
   transition: fill 150ms ease-in-out;
 }
-.socials {
+.social-links {
   &:hover,
   &:focus {
     box-shadow: $box-shadow;
-    .smalliconsquare {
-      fill: url(#radial-gradient4);
+    .linkedin-footer-icon {
+      fill: url(#linkedin-footer-cyan);
     }
-    .smalliconcircle {
-      fill: url(#radial-gradient5);
+    .github-footer-icon {
+      fill: url(#github-footer-cyan);
     }
   }
 }
@@ -91,24 +91,24 @@
   transform: rotate(-135deg);
   @include breakpoint-up(medium) {
     padding: 30px 30px;
-    margin: 40px 0px;
+    margin: 40px 0;
   }
   @include breakpoint-down(medium) {
     padding: 20px 20px;
-    margin: 50px 0px;
+    margin: 50px 0;
   }
   @include breakpoint-down(small) {
-    padding: 0px 20px;
-    margin: 40px 0px;
+    padding: 0 20px;
+    margin: 40px 0;
   }
   &:hover,
   &:focus {
     .arrow,
     .arrow:before {
-      border-right: 4px $cyan solid;
-      border-bottom: 4px $cyan solid;
-      border-bottom-left-radius: 8px;
-      border-top-right-radius: 8px;
+      border-right: 0.25rem $cyan solid;
+      border-bottom: 0.25rem $cyan solid;
+      border-bottom-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
     }
   }
 }
@@ -130,7 +130,7 @@
   border-bottom-left-radius: 12px;
   border-top-right-radius: 12px;
   border-left: none;
-  transition: all 150ms ease-in-out;
+  transition: border 150ms ease-in-out, border-radius 150ms ease-in-out;
   @include breakpoint-down(mdsmall) {
     width: 30px;
     height: 30px;
@@ -163,12 +163,12 @@
   flex-direction: column;
   justify-content: space-around;
   flex-wrap: nowrap;
-  padding: 0px 40px;
+  padding: 0 40px;
   font-size: 1rem;
   font-weight: 400;
   color: var(--font-color-invert);
   @include breakpoint-down(small) {
-    padding: 0px;
+    padding: 0;
   }
 }
 

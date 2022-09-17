@@ -23,13 +23,12 @@
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
 
-    --url-1: url(#solid);
-    --url-2: url(#solid2);
-    --url-3: url(#solid3);
-    --url-4: url(#solid4);
-    --url-5: url(#solid-dark);
-    --url-6: url(#solid-light6);
-    --url-7: url(#solid-light7);
+    --icon-color: #{$dark-gray};
+    --home-logo-color: url(#home-logo-dark);
+    --card-color: url(#card-dark);
+    --dorito-color: url(#dorito-dark);
+    --linkedin-footer-color: url(#linkedin-footer-light);
+    --github-footer-color: url(#github-footer-light);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -54,13 +53,12 @@
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
 
-    --url-1: url(#solid-light);
-    --url-2: url(#solid-light2);
-    --url-3: url(#solid-light3);
-    --url-4: url(#solid-light4);
-    --url-5: url(#solid-light5);
-    --url-6: url(#solid5);
-    --url-7: url(#solid6);
+    --icon-color: #{$white};
+    --home-logo-color: url(#home-logo-light);
+    --card-color: url(#card-light);
+    --dorito-color: url(#dorito-light);
+    --linkedin-footer-color: url(#linkedin-footer-dark);
+    --github-footer-color: url(#github-footer-dark);
   }
 }
 
@@ -88,7 +86,6 @@ body {
   padding-top: 5rem;
   letter-spacing: 1px;
   background-color: var(--bg-color-main);
-  transition: all 450ms ease-in-out;
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
@@ -111,13 +108,12 @@ body {
     --semi-transparent: #{$darker-semi-transparent};
     --more-transparent: #{$dark-more-transparent};
 
-    --url-1: url(#solid-light);
-    --url-2: url(#solid-light2);
-    --url-3: url(#solid-light3);
-    --url-4: url(#solid-light4);
-    --url-5: url(#solid-light5);
-    --url-6: url(#solid5);
-    --url-7: url(#solid6);
+    --icon-color: #{$white};
+    --home-logo-color: url(#home-logo-light);
+    --card-color: url(#card-light);
+    --dorito-color: url(#dorito-light);
+    --linkedin-footer-color: url(#linkedin-footer-dark);
+    --github-footer-color: url(#github-footer-dark);
   }
   &.light-mode {
     --font-color: #{$darker-gray};
@@ -140,13 +136,12 @@ body {
     --semi-transparent: #{$semi-transparent};
     --more-transparent: #{$more-transparent};
 
-    --url-1: url(#solid);
-    --url-2: url(#solid2);
-    --url-3: url(#solid3);
-    --url-4: url(#solid4);
-    --url-5: url(#solid-dark);
-    --url-6: url(#solid-light6);
-    --url-7: url(#solid-light7);
+    --icon-color: #{$dark-gray};
+    --home-logo-color: url(#home-logo-dark);
+    --card-color: url(#card-dark);
+    --dorito-color: url(#dorito-dark);
+    --linkedin-footer-color: url(#linkedin-footer-light);
+    --github-footer-color: url(#github-footer-light);
   }
 }
 
@@ -156,10 +151,7 @@ body {
 
 img,
 svg {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  user-select: none;
 }
 
 button,

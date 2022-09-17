@@ -16,7 +16,7 @@
   }
 
   &.fadeout {
-    animation: simple-fade-out 0.5s forwards;
+    animation: simple-fade-out 500ms forwards;
   }
 
   &.fadein {
@@ -57,7 +57,7 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     &.slide-out {
-      animation: slide-out 0.5s forwards;
+      animation: slide-out 500ms forwards;
     }
 
     &.slide-in {
@@ -66,7 +66,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     &.slide-out {
-      animation: simple-fade-out 0.5s forwards;
+      animation: simple-fade-out 500ms forwards;
     }
     &.slide-in {
       animation: simple-fade-in 1s forwards;
@@ -123,22 +123,22 @@
 
   @media (prefers-reduced-motion: no-preference) {
     &.slide-out {
-      animation: slide-out 0.5s forwards;
+      animation: slide-out 500ms forwards;
       @include breakpoint-up(medium) {
-        animation: slide-out-top 0.5s forwards;
+        animation: slide-out-top 500ms forwards;
       }
     }
 
     &.slide-in {
       animation: slide-in 1s forwards;
       @include breakpoint-up(medium) {
-        animation: slide-in-top 0.5s forwards;
+        animation: slide-in-top 500ms forwards;
       }
     }
   }
   @media (prefers-reduced-motion: reduce) {
     &.slide-out {
-      animation: simple-fade-out 0.5s forwards;
+      animation: simple-fade-out 500ms forwards;
     }
     &.slide-in {
       animation: simple-fade-in 1s forwards;
@@ -207,7 +207,7 @@
   &:hover,
   &:focus {
     .card-icon {
-      fill: url(#radial-gradient);
+      fill: url(#card-cyan);
       &.linkedin {
         box-shadow: $box-shadow;
       }
@@ -232,7 +232,7 @@
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.5rem;
-  fill: var(--url-1);
+  fill: var(--card-color);
   transition: filter 150ms ease-in-out, box-shadow 150ms ease-in-out;
   &.linkedin {
     border-radius: 13px;

@@ -31,7 +31,7 @@
 
 .dorito {
   display: block;
-  fill: var(--url-5);
+  fill: var(--dorito-color);
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -51,7 +51,7 @@
   width: 100%;
   height: auto;
   font-size: $font-med;
-  margin: 0px;
+  margin: 0;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--bg-color-sub);

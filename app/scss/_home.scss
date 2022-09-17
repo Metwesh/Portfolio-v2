@@ -14,8 +14,7 @@
   margin: 0;
   visibility: hidden;
   opacity: 0;
-  animation: header-fade-in 1250ms forwards;
-  animation-delay: 500ms;
+  animation: header-fade-in 1250ms forwards 500ms;
 
   @include breakpoint-down(small) {
     padding: 16rem 1rem 0 3rem;
@@ -41,7 +40,7 @@
 .sub-text {
   font-size: $font-lrgmed;
   color: var(--font-color);
-  margin: 0px;
+  margin: 0;
   font-weight: 300;
   padding: 0 0.625rem 0 3.75rem;
   visibility: hidden;
