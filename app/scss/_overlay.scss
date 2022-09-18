@@ -10,7 +10,6 @@
     var(--shadow-color),
     transparent
   );
-  will-change: transform;
   @supports (backdrop-filter: initial) {
     backdrop-filter: blur(2px);
   }
@@ -38,7 +37,6 @@
   box-shadow: 0 0 5px 1px var(--shadow-color);
   background-color: var(--semi-transparent);
   transform: translateX(-130%);
-  will-change: transform;
   @include height-breakpoint-down(medium) {
     height: 69vh;
   }
@@ -112,7 +110,6 @@
   height: 89.2vh;
   width: 100vw;
   transform: translateX(-130%);
-  will-change: transform;
   @include height-breakpoint-down(small) {
     margin-top: -71.2vh;
     height: 77.2vh;
@@ -175,7 +172,7 @@
     padding-bottom: 2rem;
   }
   @include height-breakpoint-down(xsmall) {
-    padding-bottom: 0rem;
+    padding-bottom: 0;
   }
 }
 

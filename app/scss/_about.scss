@@ -24,6 +24,8 @@
 
 .content-wrapper {
   width: 100%;
+  margin: 0 2.5rem;
+  padding: 1.25rem 2.5rem;
   background-color: var(--bg-color-box);
   color: var(--font-color);
   &.border-radius {
@@ -35,21 +37,17 @@
     padding-bottom: 1rem;
   }
   &.middle-div {
-    padding-top: 0rem;
+    padding-top: 0;
     padding-bottom: 1rem;
   }
   &.lastdiv {
-    padding-top: 0rem;
+    padding-top: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
-
-  @include breakpoint-up(small) {
-    margin: 0 40px;
-    padding: 20px 40px;
-  }
   @include breakpoint-down(small) {
-    padding: 3rem 20px;
+    padding: 3rem 1.25rem;
+    margin: 0;
   }
   @include breakpoint-down(xsmall) {
     padding: 10px 10px;

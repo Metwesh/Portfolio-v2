@@ -1,91 +1,14 @@
-.view-mode-wrapper {
-  position: fixed;
-  z-index: 1000;
-  padding: 0.8rem;
-  margin-top: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: var(--semi-transparent);
-  box-shadow: 0 0 5px 1px var(--shadow-color);
-  @include breakpoint-down(small) {
-    padding: 0.5rem;
-    margin-top: 1rem;
-  }
-}
-
-.view-mode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  &:hover,
-  &:focus {
-    .view-mode-disc {
-      #sun {
-        fill: $dark-cyan;
-      }
-      #moon {
-        fill: $cyan;
-      }
-      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
-      @include breakpoint-down(small) {
-        filter: drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
-      }
-    }
-  }
-}
-
-.view-mode-disc {
-  fill: var(--icon-color);
-  width: 2.2rem;
-  height: 2.2rem;
-  transform: rotate(0deg);
-  transition: transform 250ms ease-in-out, filter 250ms ease-in-out,
-    opacity 250ms ease-in-out;
-  @include breakpoint-down(small) {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-#moon {
-  opacity: 0;
-  transform-origin: center;
-  scale: 1.01;
-  &.show {
-    opacity: 1;
-  }
-}
-#sun {
-  opacity: 0;
-  &.show {
-    opacity: 1;
-  }
-}
+// Buttons //////////////////////////////////////////////////////////////////////////////////////////////////
 
 .button {
-  padding: 10px 30px;
+  padding: 0.625rem 1.875rem;
   font-size: $font-lrg;
   font-family: "Spline Sans", sans-serif;
   font-weight: 400;
   text-decoration: none;
   color: $white;
-  border-radius: 40px;
-  margin-right: 80px;
+  border-radius: 2.5rem;
+  margin-right: 5rem;
   margin-left: auto;
   background-image: $cyan-gradient;
   text-shadow: 1px 1px 2px $dark-gray;
@@ -100,9 +23,6 @@
   &:focus {
     box-shadow: $box-shadow;
     text-shadow: 0 0 1px $white;
-  }
-  @include breakpoint-down(large) {
-    margin-right: 40px;
   }
   &.alt {
     margin: 0;
@@ -179,6 +99,147 @@
     border-left: 2.5px solid rgb(33, 33, 33);
   }
 }
+
+// Skip-link //////////////////////////////////////////////////////////////////////////////////////////////////
+
+.skip-link-wrapper {
+  position: fixed;
+  z-index: 10000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  height: 5rem;
+  width: 100%;
+  margin-top: -5rem;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  &:focus-within {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.skip-link {
+  display: block;
+  font-size: $font-med;
+  margin: 0;
+  box-shadow: $box-shadow;
+  text-shadow: 0 0 1px $white;
+  transform: translateY(-6rem);
+  transition: transform 150ms ease-in-out;
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+// Sun moon dial ///////////////////////////////////////////////////////////////////////////////////////////////
+
+@include breakpoint-up(xlarge) {
+  .view-mode-parent-container {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .view-mode-flex-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      max-width: 80.7rem;
+      width: 100%;
+      .view-mode-wrapper {
+        position: relative;
+        width: min-content;
+        margin-top: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+    }
+  }
+}
+
+.view-mode-wrapper {
+  position: fixed;
+  z-index: 1000;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--semi-transparent);
+  box-shadow: 0 0 5px 1px var(--shadow-color);
+  @include breakpoint-down(mdsmall) {
+    padding: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.view-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    .view-mode-disc {
+      #sun {
+        fill: $dark-cyan;
+      }
+      #moon {
+        fill: $cyan;
+      }
+      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
+      @include breakpoint-down(mdsmall) {
+        filter: drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
+      }
+    }
+  }
+}
+
+.view-mode-disc {
+  fill: var(--icon-color);
+  width: 2.2rem;
+  height: 2.2rem;
+  transform: rotate(0deg);
+  transition: transform 250ms ease-in-out, filter 250ms ease-in-out,
+    opacity 250ms ease-in-out;
+  @include breakpoint-down(mdsmall) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#moon {
+  opacity: 0;
+  transform-origin: center;
+  scale: 1.01;
+  &.show {
+    opacity: 1;
+  }
+}
+#sun {
+  opacity: 0;
+  &.show {
+    opacity: 1;
+  }
+}
+
+// Visibility helper classes ///////////////////////////////////////////////////////////////////////////////////
 
 .hide-for-desktop {
   @include breakpoint-up(medium) {

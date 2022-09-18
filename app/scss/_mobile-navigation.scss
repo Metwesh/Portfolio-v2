@@ -12,9 +12,10 @@
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 100%;
   margin-right: auto;
-  padding: 1rem;
-  padding-bottom: 1.25rem;
+  padding: 1rem 1rem 1.25rem 1rem;
   &:hover,
   &:focus {
     .home-logo {
@@ -24,6 +25,9 @@
   @include breakpoint-down(small) {
     margin-left: 0.7rem;
   }
+  @include breakpoint-up(mdsmall) {
+    margin-left: 1.5rem;
+  }
   @include breakpoint-up(small) {
     margin-left: 2.5rem;
   }
@@ -32,11 +36,11 @@
 .home-logo {
   fill: var(--home-logo-color);
   margin-right: auto;
-  width: 30px;
-  height: 30px;
-  @include breakpoint-up(small) {
-    width: 45px;
-    height: 45px;
+  width: 45px;
+  height: 45px;
+  @include breakpoint-down(mdsmall) {
+    width: 30px;
+    height: 30px;
   }
 }
 // TODO: Fix the scaling of this on small-medium screens
@@ -47,30 +51,34 @@
   align-items: center;
   height: 100%;
   margin-right: 5rem;
+  padding-inline: 1rem;
   &:focus {
     outline: none;
   }
   @include breakpoint-down(small) {
+    margin-right: 0.7rem;
+  }
+  @include breakpoint-up(mdsmall) {
     margin-right: 1.5rem;
   }
   @include breakpoint-up(small) {
-    margin-right: 3.75rem;
+    margin-right: 2.5rem;
   }
   > span {
     display: block;
-    width: 42px;
-    height: 4px;
+    width: 62px;
+    height: 6px;
     background-color: var(--bg-color-accent-2);
     transition: transform 300ms ease-in-out, width 300ms ease-in-out,
       opacity 300ms ease-in-out;
     &:not(:last-child) {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
-    @include breakpoint-up(small) {
-      width: 62px;
-      height: 6px;
+    @include breakpoint-down(mdsmall) {
+      width: 42px;
+      height: 4px;
       &:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
     }
   }
@@ -80,7 +88,6 @@
   transition: transform 300ms ease-in-out 600ms, width 300ms ease-in-out 600ms,
     opacity 300ms ease-in-out 600ms;
   transform: rotate(45deg);
-
   :nth-child(2) {
     width: 0%;
     opacity: 0;
@@ -94,7 +101,7 @@
   :first-child {
     transform: translateY(16px);
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(mdsmall) {
       transform: translateY(9px);
     }
   }
@@ -102,7 +109,7 @@
   :last-child {
     transform: translateY(-16px) rotate(90deg);
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(mdsmall) {
       transform: translateY(-9px) rotate(90deg);
     }
   }

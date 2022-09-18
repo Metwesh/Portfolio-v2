@@ -9,9 +9,7 @@
   top: 0;
   z-index: 1000000;
   box-shadow: 0 0 5px 1px var(--shadow-color);
-  @supports (backdrop-filter: blur()) {
-    backdrop-filter: blur(10px);
-  }
+  backdrop-filter: blur(10px);
 }
 
 .desktop-wrapper {
