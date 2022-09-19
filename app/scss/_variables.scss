@@ -40,5 +40,13 @@ $cyan-gradient-invert: linear-gradient(320deg, $cyan -10%, $darker-cyan 100%);
 $dark-gradient: linear-gradient(160deg, $gray -30%, $darker-gray 100%);
 $dark-gradient-invert: linear-gradient(320deg, $gray -30%, $darker-gray 100%);
 
+$footer-gradient: linear-gradient(
+  180deg,
+  $whitish -20%,
+  $grayish 17.5%,
+  $grayish 82.5%,
+  $dark-gray 140%
+);
+
 $box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
   0 0 20px $light-cyan;

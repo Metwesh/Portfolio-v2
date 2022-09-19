@@ -1,5 +1,6 @@
 .about {
   padding-top: 2rem;
+  scroll-margin-block-start: 1rem;
 }
 
 .content-background {
@@ -143,7 +144,7 @@ span.sub-content {
 }
 
 .img {
-  border-radius: 1.11111111rem;
+  border-radius: 15px;
   max-width: 100%;
   width: auto;
   max-height: 25.5rem;

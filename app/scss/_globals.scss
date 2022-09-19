@@ -65,9 +65,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  @supports (scroll-behavior: smooth) {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
 }
 
 *,
@@ -129,6 +127,7 @@ body {
     --bg-color-accent-2: #{$dark-gray};
     --bg-color-accent-invert: #{$whitish};
     --bg-color-accent-invert-2: #{$white};
+
     --bg-color-footer: #{$dark-gray};
 
     --shadow-color: #{$gray};
@@ -172,11 +171,9 @@ figure {
   ::-webkit-scrollbar {
     width: 0.5rem;
   }
-
   ::-webkit-scrollbar-track {
     background: $black;
   }
-
   ::-webkit-scrollbar-thumb {
     background-image: $gradient-to-top;
     border-radius: 5px;

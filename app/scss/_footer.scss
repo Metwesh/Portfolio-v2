@@ -1,7 +1,7 @@
 .footer {
   padding: 40px 40px;
   margin-top: 3rem;
-  background-color: var(--bg-color-footer);
+  background-image: $footer-gradient;
   @include breakpoint-down(medium) {
     padding: 20px 0;
   }
@@ -20,9 +20,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  gap: 20px;
+  margin: 0 40px;
+  @include breakpoint-down(medium) {
+    gap: 10px;
+  }
   @include breakpoint-down(small) {
-    padding: 10px 20px;
+    margin: 10px 20px;
+    justify-content: space-around;
+  }
+  @include breakpoint-down(xsmall) {
+    margin: 5px 10px;
     justify-content: space-around;
   }
 }
@@ -54,16 +62,6 @@
   height: 100%;
 }
 
-.empty-space {
-  height: 20px;
-  @include breakpoint-down(medium) {
-    height: 10px;
-  }
-  @include breakpoint-down(xsmall) {
-    display: none;
-  }
-}
-
 .github-footer-icon {
   fill: var(--github-footer-color);
   width: 100%;
@@ -87,14 +85,13 @@
   display: flex;
   align-items: center;
   position: relative;
-
-  transform: rotate(-135deg);
+  width: auto;
   @include breakpoint-up(medium) {
     padding: 30px 30px;
     margin: 40px 0;
   }
   @include breakpoint-down(medium) {
-    padding: 20px 20px;
+    padding: 20px 30px;
     margin: 50px 0;
   }
   @include breakpoint-down(small) {
@@ -127,9 +124,10 @@
   border-top: none;
   border-right: 6px var(--bg-color-accent-invert) solid;
   border-bottom: 6px var(--bg-color-accent-invert) solid;
+  border-left: none;
   border-bottom-left-radius: 12px;
   border-top-right-radius: 12px;
-  border-left: none;
+  transform: rotate(-135deg);
   transition: border 150ms ease-in-out, border-radius 150ms ease-in-out;
   @include breakpoint-down(mdsmall) {
     width: 30px;
@@ -173,11 +171,18 @@
 }
 
 .foot-text {
-  line-height: 2;
   text-align: center;
+  @include breakpoint-up(medium) {
+    line-height: 2;
+  }
   @include breakpoint-down(small) {
-    margin-left: 20px;
     font-size: $font-sm;
     margin-right: 20px;
+    margin-left: 20px;
+  }
+  @include breakpoint-down(xsmall) {
+    font-size: $font-xsm;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
