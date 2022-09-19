@@ -16,12 +16,12 @@
     --bg-color-accent-2: #{$dark-gray};
     --bg-color-accent-invert: #{$whitish};
     --bg-color-accent-invert-2: #{$white};
-    --bg-color-footer: #{$dark-gray};
+
+    --footer-gradient: #{$footer-gradient-invert};
 
     --shadow-color: #{$gray};
 
     --semi-transparent: #{$semi-transparent};
-    --more-transparent: #{$more-transparent};
 
     --icon-color: #{$dark-gray};
     --home-logo-color: url(#home-logo-dark);
@@ -46,12 +46,12 @@
     --bg-color-accent-2: #{$white};
     --bg-color-accent-invert: #{$dark-gray};
     --bg-color-accent-invert-2: #{$dark-gray};
-    --bg-color-footer: #{$grayish};
+
+    --footer-gradient: #{$footer-gradient};
 
     --shadow-color: #{$gray};
 
     --semi-transparent: #{$darker-semi-transparent};
-    --more-transparent: #{$dark-more-transparent};
 
     --icon-color: #{$white};
     --home-logo-color: url(#home-logo-light);
@@ -99,12 +99,11 @@ body {
     --bg-color-accent-invert: #{$dark-gray};
     --bg-color-accent-invert-2: #{$dark-gray};
 
-    --bg-color-footer: #{$grayish};
+    --footer-gradient: #{$footer-gradient};
 
     --shadow-color: #{$gray};
 
     --semi-transparent: #{$darker-semi-transparent};
-    --more-transparent: #{$dark-more-transparent};
 
     --icon-color: #{$white};
     --home-logo-color: url(#home-logo-light);
@@ -128,12 +127,11 @@ body {
     --bg-color-accent-invert: #{$whitish};
     --bg-color-accent-invert-2: #{$white};
 
-    --bg-color-footer: #{$dark-gray};
+    --footer-gradient: #{$footer-gradient-invert};
 
     --shadow-color: #{$gray};
 
     --semi-transparent: #{$semi-transparent};
-    --more-transparent: #{$more-transparent};
 
     --icon-color: #{$dark-gray};
     --home-logo-color: url(#home-logo-dark);

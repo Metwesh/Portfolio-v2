@@ -42,18 +42,20 @@
   &.cyan-switch {
     background: $cyan-gradient-invert;
   }
-  &:disabled {
+  &.disabled {
     position: relative;
     border-top: 2.5px solid rgb(118, 118, 118);
     border-right: 2.5px solid rgb(33, 33, 33);
     border-bottom: 2.5px solid rgb(33, 33, 33);
     border-left: 2.5px solid rgb(118, 118, 118);
-    transition: none;
+    text-shadow: none;
+    &:focus {
+      outline: 2px solid $dark-gray;
+    }
     &:hover,
     &:focus {
       cursor: no-drop;
-      box-shadow: none;
-      text-shadow: none;
+      box-shadow: $box-shadow-disabled;
       &::after {
         content: attr(data-tooltip);
         width: 200%;
