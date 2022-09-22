@@ -36,7 +36,7 @@ function changeButtonTitle() {
 }
 
 function invertImages() {
-  for (let markedItem of markedItems) {
+  for (const markedItem of markedItems) {
     if (markedItem.classList.contains("whiten")) {
       markedItem.classList.toggle("invert-whiten");
     } else {

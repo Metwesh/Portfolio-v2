@@ -121,6 +121,9 @@
     opacity: 1;
     pointer-events: auto;
   }
+  @include breakpoint-down(medium) {
+    display: none;
+  }
 }
 
 .skip-link {
@@ -133,6 +136,9 @@
   transition: transform 150ms ease-in-out;
   &:focus {
     transform: translateY(0);
+  }
+  @include breakpoint-down(medium) {
+    display: none;
   }
 }
 
@@ -218,8 +224,9 @@
   width: 2.2rem;
   height: 2.2rem;
   transform: rotate(0deg);
+  transform-origin: center;
   transition: transform 250ms ease-in-out, filter 250ms ease-in-out,
-    opacity 250ms ease-in-out;
+    opacity 350ms ease-in-out;
   @include breakpoint-down(mdsmall) {
     width: 30px;
     height: 30px;
@@ -228,7 +235,6 @@
 
 #moon {
   opacity: 0;
-  transform-origin: center;
   scale: 1.01;
   &.show {
     opacity: 1;

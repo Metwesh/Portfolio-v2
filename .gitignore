@@ -12,6 +12,9 @@
 # settings 
 .vscode
 
+# node modules
+node_modules
+
 # misc
 .DS_Store
 .env.local

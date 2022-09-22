@@ -101,7 +101,7 @@ function closeOverlayMenuAfterLinkClick(e) {
   toggleHamburger();
 }
 
-for (let [i, overlayLink] of overlayLinks.entries()) {
+for (const [i, overlayLink] of overlayLinks.entries()) {
   if (i === overlayLinks.length - 1) {
     overlayLink.addEventListener("click", toggleContactMenuFromOverlayMenu);
     break;
