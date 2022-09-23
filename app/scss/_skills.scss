@@ -1,5 +1,5 @@
 .skills {
-    scroll-margin-block-start: 3rem;
+  scroll-margin-block-start: 3rem;
 }
 
 .skills-box {
@@ -36,6 +36,7 @@
 .skills-text {
   font-size: $font-medlrg;
   font-weight: 300;
+  text-align: center;
   color: var(--font-color);
 }
 
@@ -66,11 +67,18 @@
 
   &.aws {
     &.top {
-      margin-bottom: -80px;
+      margin-bottom: -5rem;
       clip-path: inset(0 0 35px 0);
+      @include breakpoint-down(xsmall) {
+        margin-bottom: -3.85rem;
+        clip-path: inset(0 0 30px 0);
+      }
     }
     &.bottom {
       clip-path: inset(45px 0 10px 0);
+      @include breakpoint-down(xsmall) {
+        clip-path: inset(35px 0 10px 0);
+      }
     }
   }
   @include breakpoint-down(xsmall) {
