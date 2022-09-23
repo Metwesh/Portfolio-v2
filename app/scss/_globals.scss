@@ -8,6 +8,7 @@
 
     --cyan: #{$darker-cyan};
     --cyan-invert: #{$cyan};
+    --cyan-icons: #{$dark-cyan};
 
     --bg-color-box: #{$white};
     --bg-color-main: #{$whitish};
@@ -38,6 +39,7 @@
 
     --cyan: #{$cyan};
     --cyan-invert: #{$dark-cyan};
+    --cyan-icons: #{$cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -90,6 +92,7 @@ body {
 
     --cyan: #{$cyan};
     --cyan-invert: #{$dark-cyan};
+    --cyan-icons: #{$cyan};
 
     --bg-color-box: #{$darker-gray};
     --bg-color-main: #{$dark-gray};
@@ -118,6 +121,7 @@ body {
 
     --cyan: #{$darker-cyan};
     --cyan-invert: #{$cyan};
+    --cyan-icons: #{$dark-cyan};
 
     --bg-color-box: #{$white};
     --bg-color-main: #{$whitish};

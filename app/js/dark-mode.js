@@ -4,7 +4,7 @@ const sun = document.querySelector("#sun");
 const moon = document.querySelector("#moon");
 const markedItems = document.querySelectorAll(".marked");
 
-let rotation = 180;
+let rotation = 540;
 
 if (
   window.matchMedia &&
@@ -24,6 +24,16 @@ if (
   changeButtonTitle();
 }
 
+function invertImages() {
+  for (const markedItem of markedItems) {
+    if (markedItem.classList.contains("whiten")) {
+      markedItem.classList.toggle("invert-whiten");
+    } else {
+      markedItem.classList.toggle("invert");
+    }
+  }
+}
+
 function toggleSunAndMoon() {
   sun.classList.toggle("show");
   moon.classList.toggle("show");
@@ -35,19 +45,9 @@ function changeButtonTitle() {
   if (moon.classList.contains("show")) viewMode.title = "Dark mode";
 }
 
-function invertImages() {
-  for (const markedItem of markedItems) {
-    if (markedItem.classList.contains("whiten")) {
-      markedItem.classList.toggle("invert-whiten");
-    } else {
-      markedItem.classList.toggle("invert");
-    }
-  }
-}
-
 function rotateDisc() {
   viewModeDisc.style.transform = `rotate(${rotation}deg)`;
-  rotation += 180;
+  rotation += 540;
   toggleSunAndMoon();
 }
 

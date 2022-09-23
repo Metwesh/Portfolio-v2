@@ -71,7 +71,7 @@ ul {
   }
   &:hover,
   &:focus {
-    color: $cyan;
+    color: var(--cyan-icons);
   }
 }
 
@@ -95,7 +95,7 @@ ul {
   &:hover,
   &:focus {
     .mail {
-      fill: $cyan;
+      fill: var(--cyan-icons);
     }
   }
   @include breakpoint-down(large) {

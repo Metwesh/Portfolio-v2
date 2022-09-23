@@ -1,5 +1,4 @@
 // Buttons //////////////////////////////////////////////////////////////////////////////////////////////////
-
 .button {
   padding: 0.625rem 1.875rem;
   font-size: $font-lrg;
@@ -78,7 +77,7 @@
         }
       }
       &::before {
-        content: " ";
+        content: "";
         position: absolute;
         pointer-events: none;
         top: -8px;
@@ -184,9 +183,8 @@
 }
 
 .view-mode {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   border-radius: 50%;
   &:hover,
   &:focus {
@@ -206,14 +204,14 @@
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       @include breakpoint-down(mdsmall) {
-        filter: drop-shadow(0 0 0.075rem var(--bg-color-accent))
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem var(--bg-color-accent))
-          drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
+          drop-shadow(0 0 0.075rem $cyan) drop-shadow(0 0 0.075rem $cyan);
       }
     }
   }
@@ -225,30 +223,29 @@
   height: 2.2rem;
   transform: rotate(0deg);
   transform-origin: center;
-  transition: transform 250ms ease-in-out, filter 250ms ease-in-out,
-    opacity 350ms ease-in-out;
+  transition: transform 600ms cubic-bezier(0.62, 0.22, 0.46, 1.35),
+    filter 250ms ease-in-out;
   @include breakpoint-down(mdsmall) {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+}
+
+#moon,
+#sun {
+  transition: opacity 600ms ease-in-out, fill 250ms ease-in-out;
+  opacity: 0;
+  &.show {
+    opacity: 1;
   }
 }
 
 #moon {
-  opacity: 0;
+  transform-origin: center;
   scale: 1.01;
-  &.show {
-    opacity: 1;
-  }
-}
-#sun {
-  opacity: 0;
-  &.show {
-    opacity: 1;
-  }
 }
 
 // Visibility helper classes ///////////////////////////////////////////////////////////////////////////////////
-
 .hide-for-desktop {
   @include breakpoint-up(medium) {
     display: none;
