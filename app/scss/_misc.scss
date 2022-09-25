@@ -26,6 +26,9 @@
   &.alt {
     margin: 0;
     padding: 10px 20px;
+    @include breakpoint-down(mdsmall) {
+      margin-top: 1rem;
+    }
   }
   &.grid-button {
     @include breakpoint-down(small) {
@@ -204,14 +207,14 @@
         drop-shadow(0 0 0.15rem var(--bg-color-accent))
         drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       @include breakpoint-down(mdsmall) {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        filter: drop-shadow(0 0 0.075rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
           drop-shadow(0 0 0.075rem var(--bg-color-accent))
-          drop-shadow(0 0 0.075rem $cyan) drop-shadow(0 0 0.075rem $cyan);
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.075rem var(--bg-color-accent))
+          drop-shadow(0 0 0.1rem $cyan) drop-shadow(0 0 0.1rem $cyan);
       }
     }
   }
@@ -233,7 +236,7 @@
 
 #moon,
 #sun {
-  transition: opacity 600ms ease-in-out, fill 250ms ease-in-out;
+  transition: opacity 750ms ease-in-out, fill 250ms ease-in-out;
   opacity: 0;
   &.show {
     opacity: 1;

@@ -11,7 +11,7 @@ const sectionObserver = new IntersectionObserver(
   (entries, _sectionObserver) => {
     for (const entry of entries) {
       if (entry.isIntersecting && entry.target === home) {
-        options = { rootMargin: "300px 0px -45px 0px", threshold: "0.5" };
+        options = { rootMargin: "300px 0px -45px 0px", threshold: "0.1" };
         homeLinkOn();
       }
       if (entry.isIntersecting && entry.target === about) {

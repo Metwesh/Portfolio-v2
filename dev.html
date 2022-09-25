@@ -196,85 +196,86 @@
 
 
     <!-- Home section -->
-    <section class="home" id="home">
-        <div class="heading-text">
-            <h1 class="main-text colored">Mohamed H. Aly</h1>
-            <h2 class="sub-text">Full stack web developer</h2>
+    <section id="home">
+        <div class="home">
+            <div class="heading-text">
+                <h1 class="main-text colored">Mohamed H. Aly</h1>
+                <h2 class="sub-text">Full stack web developer</h2>
+            </div>
         </div>
-    </section>
 
-    <div class="svg-container">
-        <svg class="cool-shape" id="coolShape" width="2261" height="577" viewBox="0 0 2261 577" fill="none">
-            <g clip-path="url(#clip0_7_12)">
-                <path d="M57.4515 447.707L2003.83 87.8756L2181.28 446.917L57.4515 447.707Z"
-                    fill="url(#paint0_linear_7_12)" />
-                <path d="M2109.46 401.758L567.811 399.948L1978.39 136.569L2109.46 401.758Z"
-                    fill="url(#paint1_linear_7_12)" stroke="#018BB5" stroke-width="24" />
-            </g>
-            <defs>
-                <linearGradient id="paint0_linear_7_12" x1="57.4515" y1="447.707" x2="2333.72" y2="-677.305"
-                    gradientUnits="userSpaceOnUse">
-                    <stop />
-                    <stop offset="0.453125" stop-color="#0EC7FF" />
-                    <stop offset="0.882553" stop-color="#BCBCBC" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_7_12" x1="447.453" y1="410.611" x2="2246.48" y2="-478.532"
-                    gradientUnits="userSpaceOnUse">
-                    <stop offset="0.453125" stop-color="#0EC7FF" />
-                    <stop offset="1" stop-color="#018BB5" />
-                </linearGradient>
-                <clipPath id="clip0_7_12">
-                    <rect width="2261" height="577" fill="white" />
-                </clipPath>
-            </defs>
-        </svg>
-    </div>
+        <div class="svg-container">
+            <svg class="cool-shape" id="coolShape" width="2261" height="577" viewBox="0 0 2261 577" fill="none">
+                <g clip-path="url(#clip0_7_12)">
+                    <path d="M57.4515 447.707L2003.83 87.8756L2181.28 446.917L57.4515 447.707Z"
+                        fill="url(#paint0_linear_7_12)" />
+                    <path d="M2109.46 401.758L567.811 399.948L1978.39 136.569L2109.46 401.758Z"
+                        fill="url(#paint1_linear_7_12)" stroke="#018BB5" stroke-width="24" />
+                </g>
+                <defs>
+                    <linearGradient id="paint0_linear_7_12" x1="57.4515" y1="447.707" x2="2333.72" y2="-677.305"
+                        gradientUnits="userSpaceOnUse">
+                        <stop />
+                        <stop offset="0.453125" stop-color="#0EC7FF" />
+                        <stop offset="0.882553" stop-color="#BCBCBC" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_7_12" x1="447.453" y1="410.611" x2="2246.48" y2="-478.532"
+                        gradientUnits="userSpaceOnUse">
+                        <stop offset="0.453125" stop-color="#0EC7FF" />
+                        <stop offset="1" stop-color="#018BB5" />
+                    </linearGradient>
+                    <clipPath id="clip0_7_12">
+                        <rect width="2261" height="577" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
 
-    <!-- About section -->
-    <section class="about" id="about">
         <div class="content-background">
-            <article class="content-wrapper border-radius">
+            <article class="content-wrapper home-wrapper border-radius">
                 <h3 class="header-text">Hello world!</h3>
                 <figure class="img-container">
-                    <img class="img right" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
+                    <img class="img left circle" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
                 </figure>
                 <h3 class="main-content">Welcome to my website</h3>
                 <p class="sub-content">This website was created by me to showcase my web development capabilities,
                     to express my artistic vision, to act as my autobiography & professional portfolio.
                 </p>
-                <p class="padding-right sub-content">I'm an Egyptian-born, self-taught, aspiring software & web
+                <p class="sub-content">I'm an Egyptian-born, self-taught, aspiring software & web
                     developer. While I was studying Management Information Systems in university, I took a Computer
                     Science course; that course changed my life, I found myself understanding code & writing it much
                     faster than all my peers. Ever since I've devoted most of my free time to learn how to write clean &
                     efficient code.
                 </p>
-                <p class="padding-right sub-content">Feel free to browse the website as you please; I have a
+                <p class="sub-content">Feel free to browse the website as you please; I have a
                     downloadable & printable copy of my resume below. I also left links for my Linkedin profile & my
                     Github profile.
                 </p>
             </article>
         </div>
-        <div class="content-background space">
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about">
+        <main class="content-background space">
             <article class="content-wrapper first-div">
                 <h3 class="header-text">About</h3>
                 <h3 class="main-content">College</h3>
                 <figure class="img-container">
-                    <img class="img left" title="Certificate" src="./images/English certificate.webp"
+                    <img class="img left long" title="Certificate" src="./images/English certificate.webp"
                         alt="College certificate" />
                 </figure>
-                <p class="sub-content padding-left">I graduated with a bachelor's degree in Management Information
+                <p class="sub-content">I graduated with a bachelor's degree in Management Information
                     Systems on July 2021, with a cumulative GPA of "3.1".</p>
-                <p class="sub-content padding-left">As part of my graduation project, I created a fully functioning book
-                    rental website. I designed the frontend with HTML & CSS and added functionality with JavaScript;
-                    I also created the database & backend with PHPMyAdmin & PHP, respectively.
+                <p class="sub-content">As part of my graduation project, I created a fully functioning
+                    book rental website. I designed the frontend with HTML & CSS and added functionality with
+                    JavaScript; I also created the database & backend with PHPMyAdmin & PHP, respectively.
                 </p>
-                <p class="sub-content padding-left">I also designed multiple database schemas for a very intricate
+                <p class="sub-content">I also designed multiple database schemas for a very intricate
                     supply chain of data using diagramming tools like Lucidchart & Microsoft Visio. I also set up a
                     user, admin & suppliers database using PHPMyAdmin & MySQL.
                 </p>
             </article>
-        </div>
-        <div class="content-background">
             <article class="content-wrapper middle-div">
                 <h3 class="main-content">Courses</h3>
                 <figure class="wide-img-container">
@@ -282,15 +283,15 @@
                         src="./images/Complete web developer certification.webp"
                         alt="Fullstack web developer course certificate">
                 </figure>
-                <p class="sub-content padding-right">I participated & finished a fullstack web developer course from
+                <p class="sub-content">I participated & finished a fullstack web developer course from
                     ZeroToMastery Academy.
                 </p>
-                <p class="sub-content padding-right">In the course I was taught how to use scripting languages such
+                <p class="sub-content">In the course I was taught how to use scripting languages such
                     as HTML5 & CSS3; I also learned how to use SASS & CSS preprocessors. I practiced a lot of
                     JavaScript & was introduced to all the ECMAScript new features, like arrow functions, Async
                     await, promises & callbacks to name a few.
                 </p>
-                <p class="sub-content padding-right">I was taught how to use the bash-terminal, how to use
+                <p class="sub-content">I was taught how to use the bash-terminal, how to use
                     version-control systems like Git & Github, how to build single-page-apps with react, how to
                     build and interact with RESTful APIs. I also got to build a secure backend with NodeJS &
                     express, I learned how to use PostgreSQL, how to store sensitive user data using password
@@ -302,10 +303,10 @@
                         src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
                         alt="Senior web developer course certificate">
                 </figure>
-                <p class="sub-content padding-left">I also participated & finished an advanced senior web developer
+                <p class="sub-content">I also participated & finished an advanced senior web developer
                     course from Udemy.
                 </p>
-                <p class="sub-content padding-left">In the course I was taught how to use SSH to securely
+                <p class="sub-content">In the course I was taught how to use SSH to securely
                     communicate with other machines on the web, I learned how to optimize website performance
                     through the use of lazy-loading, minifying & reducing render-blocking resources. I was
                     introduced to bundling & testing with many different suites like Parcel & Jest respectively. I
@@ -326,44 +327,49 @@
                     <img class="img right wide" title="Certificate" src="./images/Udemy-certificate-C-programming.webp"
                         alt="Beginner C programming course certificate">
                 </figure>
-                <p class="sub-content padding-right">I participated & finished a beginner C programming course from
+                <p class="sub-content">I participated & finished a beginner C programming course from
                     Udemy.
                 </p>
-                <p class="sub-content padding-right">In the course I was taught the basic concept of C like how
+                <p class="sub-content">In the course I was taught the basic concept of C like how
                     arrays, multi-dimensional arrays, enums & structs, how to write functions, strings & how they
                     are treated like arrays. I also learned how to use the different header files offered by the C
                     standard libraries. I learned about enums & structs I learned about the different itterations of
                     C included in C89, C99, C11 & C17.
                 </p>
-                <p class="sub-content padding-right">I was taught somewhat advanced concepts like how to utilize
+                <p class="sub-content">I was taught somewhat advanced concepts like how to utilize
                     pointers, dynamic memory allocation, I/O streams, reading & writing to the file system, writing
                     programs to solve complex algorithms & many other useful tools.
                 </p>
             </article>
-        </div>
-        <div class="content-background">
+
             <article class="content-wrapper lastdiv">
                 <h3 class="main-content certification">Professional certification</h3>
-                <figure class="wide-img-container">
-                    <a target="_blank" rel="noopener noreferrer"
-                        href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
-                        aria-label="Javascript certificate">
-                        <img class="img right wide" title="Javascript Certification"
-                            src="./images/JS-Certification.webp" alt="Certificate">
-                    </a>
-                </figure>
-                <p class="sub-content padding-right">I was introduced to CodinGame as part of a screening process for a
-                    company & found out that they can provide me with their certification if I passed a timed test.
-                </p>
-                <p class="sub-content padding-right">Their test comprised mainly in JavaScript mathematical problems,
-                    logic tests, algorithms, data-structures, syntax knowledge & turning thought processing into actual
-                    functional & testable code.
-                </p>
-                <p class="sub-content padding-right">I ranked highly among worldwide professionals, the top 91% to be
-                    exact. Click the certificate to check out the online copy.
-                </p>
+                <div class="certificate-grid">
+                    <figure class="certificate-grid-cell">
+                        <a target="_blank" rel="noopener noreferrer" href="./app/assets/CISA.pdf"
+                            aria-label="Oracle CISA">
+                            <img class="img grid-img" title="Oracle CISA certificate" src="./images/CISA.webp"
+                                alt="CISA certificate">
+                        </a>
+                    </figure>
+                    <figure class="certificate-grid-cell">
+                        <a target="_blank" rel="noopener noreferrer" href="./app/assets/OSSA.pdf"
+                            aria-label="Javascript certificate">
+                            <img class="img grid-img" title="Oracle SSA certificate" src="./images/OSSA.webp"
+                                alt="OSSA certificate">
+                        </a>
+                    </figure>
+                    <figure class="certificate-grid-cell">
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
+                            aria-label="Javascript certificate">
+                            <img class="img grid-img" title="Javascript Certification"
+                                src="./images/JS-Certification.webp" alt="JavaScript certificate">
+                        </a>
+                    </figure>
+                </div>
             </article>
-        </div>
+        </main>
     </section>
 
     <!-- Skills section -->
@@ -517,15 +523,12 @@
             <div class="content-background space">
                 <div class="content-wrapper border-radius">
                     <h3 class="header-text">Portfolio</h3>
-
                     <div class="grid" id="grid">
-
                         <figure class="grid-cell">
-                            <img src="./images/Graduation Website.webp" alt="Project 1" class="project" />
+                            <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
+                                title="Online Bookstore" class="project" />
                         </figure>
-
                         <article class="project-text">
-
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <defs>
@@ -544,9 +547,10 @@
                                 </span>
                             </div>
                             <span class="sub-content">
-                                My first ever website was created as part of my graduation project. It was a functional
-                                online bookstore with a complete frontend/backend/database. I built the frontend with no
-                                dependencies, I built the backend with PHP & built the database using PHPMyAdmin.
+                                My first ever website was created as part of my graduation project. It was a
+                                functional online bookstore with a complete frontend/backend/database. I built the
+                                frontend with no dependencies, I built the backend with PHP & built the database using
+                                PHPMyAdmin.
                             </span>
                             <span class="button-container">
                                 <button type="button" class="button alt grid-button dark dark-switch disabled pressed"
@@ -561,7 +565,8 @@
                         </article>
 
                         <figure class="grid-cell">
-                            <img src="./images/Clinic website.webp" alt="Project 2" class="project" />
+                            <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
+                                class="project" />
                         </figure>
 
                         <article class="project-text">
@@ -577,9 +582,9 @@
                             </div>
                             <span class="sub-content">
                                 My second website was created to be an online portal for a clinic. It was purely
-                                frontend focused as I wanted to create a catchy design with a fluid & responsive UI. It
-                                was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
-                                of a bank website.
+                                frontend focused as I wanted to create a catchy design with a fluid & responsive UI.
+                                It was for a challenge I did on frontendMentor.com but I modified it to be a clinic
+                                instead of a banking website.
                             </span>
                             <span class="button-container">
                                 <button type="submit" title="Clinic website demo site"
@@ -591,13 +596,11 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-
                         <figure class="grid-cell">
-                            <img src="./images/Budget app.webp" alt="Project 3" class="project" />
+                            <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
+                                class="project" />
                         </figure>
-
                         <article class="project-text">
-
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
@@ -608,9 +611,10 @@
                                 </span>
                             </div>
                             <span class="sub-content">
-                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
-                                styling. Implemented the use of localstorage to not lose state data if user leaves the
-                                site. This app is fully capable of adding, viewing & deleting budgets and/or expenses.
+                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for
+                                the styling. Implemented the use of localstorage to not lose state data if user leaves
+                                the site. This app is fully capable of adding, viewing & deleting budgets and/or
+                                expenses.
                             </span>
                             <span class="button-container">
                                 <button type="submit" title="Budget app demo site"
@@ -621,13 +625,11 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-
                         <figure class="grid-cell">
-                            <img src="./images/Face-detect.webp" alt="Project 4" class="project" />
+                            <img src="./images/Face-detect.webp" alt="Face Detection App project"
+                                title="Face Detection App" class="project" />
                         </figure>
-
                         <article class="project-text">
-
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
@@ -641,8 +643,8 @@
                                 Created a face detection app with its respective backend & database. I used react to
                                 handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
                                 Express & implemented one-way password hashing through bcrypt. I used postgreSQL to
-                                handle the database & KnexJS to interact with it on the server. The app is powered with
-                                the Clarifai API.
+                                handle the database & KnexJS to interact with it on the server. The app is powered
+                                with the Clarifai API.
                             </span>
                             <span class="button-container">
                                 <button type="submit" title="Face detection app demo site"
@@ -653,20 +655,19 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-
                         <figure class="grid-cell">
-                            <img src="./images/Task-handler.webp" alt="Project 5" class="project" />
+                            <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
+                                class="project" />
                         </figure>
-
                         <article class="project-text">
-
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
                                 </svg>
                                 <span class="heading-text">
-                                    Task Handler</span>
+                                    Task Handler
+                                </span>
                             </div>
                             <span class="sub-content">
                                 I created this CRUD project where a user can organize their tasks. This project was
@@ -683,7 +684,6 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-
                     </div>
                 </div>
             </div>

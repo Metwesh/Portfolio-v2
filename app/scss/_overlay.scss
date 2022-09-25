@@ -206,10 +206,10 @@
     .card-icon {
       fill: url(#card-cyan);
       &.linkedin {
-        box-shadow: $box-shadow;
+        box-shadow: $socials-card-shadow;
       }
       &.github {
-        box-shadow: $box-shadow;
+        box-shadow: $socials-card-shadow;
       }
       &.phone {
         filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))

@@ -59,5 +59,9 @@ $footer-gradient-invert: linear-gradient(
 $box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
   0 0 20px $light-cyan;
 
+$socials-card-shadow: 0 0 3px var(--bg-color-accent-invert-2),
+  0 0 3px var(--bg-color-accent-invert-2), 0 0 10px $dark-cyan, 0 0 15px $cyan,
+  0 0 20px $light-cyan;
+
 $box-shadow-disabled: 0 0 5px $dark-gray, 0 0 10px $dark-gray, 0 0 15px $gray,
   0 0 20px $whitish;

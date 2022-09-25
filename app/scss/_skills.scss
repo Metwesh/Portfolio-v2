@@ -91,6 +91,9 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  @include breakpoint-down(mdsmall) {
+    flex-direction: column;
+  }
 }
 
 .signature {
@@ -100,8 +103,11 @@
   font-weight: 700;
   margin: 0;
   padding: 1rem 0;
-  @include breakpoint-down(small) {
-    font-size: $font-lrg;
+  @include breakpoint-down(medium) {
+    font-size: $font-lrgmed;
+  }
+  @include breakpoint-down(xsmall) {
+    font-size: $font-lrgr;
   }
 }
 
