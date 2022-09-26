@@ -27,23 +27,29 @@
     font-size: $font-xlg;
     padding: 16rem 1rem 0 3rem;
   }
+
   @include breakpoint-down(xsmall) {
     font-size: $font-lrgmed;
     padding-left: 1.875rem;
   }
+
   @include height-breakpoint-down(mdsmall) {
     padding-top: 6.5rem;
   }
+
   @include height-breakpoint-down(small) {
     padding-top: 10rem;
   }
+
   @include height-breakpoint-down(xsmall) {
     padding-top: 4rem;
   }
 }
+
 .colored {
   color: var(--cyan);
 }
+
 .sub-text {
   position: relative;
   z-index: -1;
@@ -56,20 +62,24 @@
   padding: 0 0.625rem 0 3.75rem;
   animation: subheader-fade-in 2000ms forwards;
   animation-delay: 1250ms;
+
   @include breakpoint-down(mdsmall) {
     font-size: $font-lrg;
     padding-left: 3rem;
   }
+
   @include breakpoint-down(xsmall) {
     font-size: $font-medlrg;
     padding-left: 1.875rem;
   }
 }
+
 .svg-container {
   overflow: hidden;
   padding-top: 14rem;
   margin-top: -14rem;
 }
+
 .cool-shape {
   margin-top: -15rem;
   transform: translateX(-40rem);

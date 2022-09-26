@@ -32,6 +32,7 @@
     --github-footer-color: url(#github-footer-light);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --font-color: #{$white};
@@ -86,6 +87,7 @@ body {
   padding-top: 5rem;
   letter-spacing: 1px;
   background-color: var(--bg-color-main);
+
   &.dark-mode {
     --font-color: #{$white};
     --font-color-invert: #{$darker-gray};
@@ -115,6 +117,7 @@ body {
     --linkedin-footer-color: url(#linkedin-footer-dark);
     --github-footer-color: url(#github-footer-dark);
   }
+
   &.light-mode {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
@@ -173,9 +176,11 @@ figure {
   ::-webkit-scrollbar {
     width: 0.5rem;
   }
+
   ::-webkit-scrollbar-track {
     background: $black;
   }
+
   ::-webkit-scrollbar-thumb {
     background-image: $gradient-to-top;
     border-radius: 5px;

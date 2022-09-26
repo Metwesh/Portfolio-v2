@@ -4,10 +4,12 @@
     visibility: hidden;
     transform: translateX(-130%);
   }
+
   1% {
     visibility: visible;
     transform: translateX(-130%);
   }
+
   100% {
     visibility: visible;
     transform: translateX(0);
@@ -19,10 +21,12 @@
     transform: translateX(0);
     visibility: visible;
   }
+
   99% {
     transform: translateX(-130%);
     visibility: visible;
   }
+
   100% {
     transform: translateX(-130%);
     visibility: hidden;
@@ -34,10 +38,12 @@
     visibility: hidden;
     transform: translateY(-130%);
   }
+
   1% {
     visibility: visible;
     transform: translateY(-130%);
   }
+
   100% {
     visibility: visible;
     transform: translateY(0);
@@ -49,10 +55,12 @@
     transform: translateY(0);
     visibility: visible;
   }
+
   99% {
     transform: translateY(-130%);
     visibility: visible;
   }
+
   100% {
     transform: translateY(-130%);
     visibility: hidden;
@@ -64,10 +72,12 @@
     visibility: hidden;
     opacity: 0;
   }
+
   1% {
     visibility: visible;
     opacity: 0;
   }
+
   100% {
     visibility: visible;
     opacity: 1;
@@ -79,10 +89,12 @@
     visibility: visible;
     opacity: 1;
   }
+
   99% {
     visibility: visible;
     opacity: 0;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -96,11 +108,13 @@
     opacity: 0;
     transform: translateX(-30rem);
   }
+
   1% {
     visibility: visible;
     opacity: 0;
     transform: translateX(-30rem);
   }
+
   100% {
     visibility: visible;
     opacity: 1;
@@ -114,11 +128,13 @@
     opacity: 0;
     transform: translateY(20rem);
   }
+
   1% {
     visibility: visible;
     opacity: 0;
     transform: translateY(20rem);
   }
+
   100% {
     visibility: visible;
     opacity: 1;
@@ -132,6 +148,7 @@
     opacity: 1;
     transform: translate(0, 0);
   }
+
   100% {
     opacity: 0;
     transform: translate(-10px, -10px);

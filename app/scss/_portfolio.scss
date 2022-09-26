@@ -8,6 +8,7 @@
   grid-template-columns: repeat(auto-fit, minmax(433px, 1fr));
   gap: 2rem 2rem;
   margin-bottom: 1.6rem;
+
   @include breakpoint-down(small) {
     grid-template-columns: 1fr;
   }
@@ -31,6 +32,7 @@
 .dorito {
   display: block;
   fill: var(--dorito-color);
+
   @include breakpoint-up(large) {
     display: inline;
     transform: rotate(-90deg);
@@ -54,6 +56,7 @@
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 5px var(--bg-color-sub);
+
   @include breakpoint-up(large) {
     height: 100%;
   }
@@ -63,6 +66,7 @@
   font-size: $font-lrgmed;
   font-weight: 600;
   color: var(--font-color);
+
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
   }
@@ -72,13 +76,16 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
+
   @include breakpoint-up(small) {
     margin: 2rem 3rem 0 3rem;
   }
+
   @include breakpoint-down(small) {
     margin: 1rem 0.75rem 0 0.75rem;
     justify-content: space-evenly;
   }
+
   @include breakpoint-down(xsmall) {
     margin: 0.5rem 0.15rem 0 0.15rem;
   }

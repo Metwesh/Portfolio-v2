@@ -5,21 +5,16 @@
   height: 100vh;
   width: 100vw;
   opacity: 0;
-  background-image: linear-gradient(
-    to bottom,
-    var(--shadow-color),
-    transparent
-  );
-  @supports (backdrop-filter: initial) {
-    backdrop-filter: blur(2px);
-  }
+  backdrop-filter: blur(2px);
+  background-image: linear-gradient(to bottom,
+      var(--shadow-color),
+      transparent);
 
   &.fadeout {
     animation: simple-fade-out 500ms forwards;
   }
 
   &.fadein {
-    height: 100vh;
     animation: simple-fade-in 1s forwards;
   }
 }
@@ -30,20 +25,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 82vh;
+  height: 60vh;
+  width: auto;
   margin: 2.8125rem 2.4rem;
   list-style: none;
   border-radius: 20px;
   box-shadow: 0 0 5px 1px var(--shadow-color);
   background-color: var(--semi-transparent);
   transform: translateX(-130%);
-  @include height-breakpoint-down(medium) {
-    height: 69vh;
-  }
+
   @include height-breakpoint-down(small) {
     height: 55vh;
     margin-top: 30px;
   }
+
   :first-child {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -53,6 +48,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
   @media (prefers-reduced-motion: no-preference) {
     &.slide-out {
       animation: slide-out 500ms forwards;
@@ -62,10 +58,12 @@
       animation: slide-in 1s forwards;
     }
   }
+
   @media (prefers-reduced-motion: reduce) {
     &.slide-out {
       animation: simple-fade-out 500ms forwards;
     }
+
     &.slide-in {
       animation: simple-fade-in 1s forwards;
     }
@@ -77,6 +75,7 @@
   transform: inherit;
   height: 100%;
   width: 100%;
+
   &:not(:last-child) {
     border-bottom: 1px solid var(--shadow-color);
   }
@@ -91,29 +90,38 @@
   height: 100%;
   color: var(--font-color);
   font-size: $font-lrgmed;
+
   @include breakpoint-down(small) {
     font-size: $font-lrg;
   }
+
   @include height-breakpoint-down(xsmall) {
     font-size: $font-medlrg;
   }
 }
+
 // Card ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .contact-card {
   visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   z-index: 1000;
   margin-top: -86vh;
   height: 89.2vh;
   width: 100vw;
   transform: translateX(-130%);
-  @include height-breakpoint-down(small) {
-    margin-top: -71.2vh;
+
+  @include breakpoint-down (small) {
+    margin-top: -74vh;
     height: 77.2vh;
   }
+
+  @include height-breakpoint-down(small) {
+    margin-top: -68.2vh;
+    height: 77.2vh;
+  }
+
   @include height-breakpoint-down(xsmall) {
     height: 67.2vh;
   }
@@ -121,6 +129,7 @@
   @media (prefers-reduced-motion: no-preference) {
     &.slide-out {
       animation: slide-out 500ms forwards;
+
       @include breakpoint-up(medium) {
         animation: slide-out-top 500ms forwards;
       }
@@ -128,15 +137,18 @@
 
     &.slide-in {
       animation: slide-in 1s forwards;
+
       @include breakpoint-up(medium) {
         animation: slide-in-top 500ms forwards;
       }
     }
   }
+
   @media (prefers-reduced-motion: reduce) {
     &.slide-out {
       animation: simple-fade-out 500ms forwards;
     }
+
     &.slide-in {
       animation: simple-fade-in 1s forwards;
     }
@@ -161,16 +173,20 @@
   color: var(--font-color);
   font-weight: 400;
   padding: 0 1rem 4rem 1rem;
+
   @include breakpoint-down(medium) {
     font-size: $font-medlrg;
   }
+
   @include breakpoint-down(small) {
     font-size: $font-medlrg;
     margin-top: 0;
   }
+
   @include height-breakpoint-down(mdsmall) {
     padding-bottom: 2rem;
   }
+
   @include height-breakpoint-down(xsmall) {
     padding-bottom: 0;
   }
@@ -187,11 +203,13 @@
   width: 25rem;
   padding-right: 1rem;
   padding-left: 1rem;
+
   @include breakpoint-down(medium) {
     width: 15rem;
     padding-right: 0;
     padding-left: 0;
   }
+
   @include height-breakpoint-down(mdsmall) {
     width: 15rem;
   }
@@ -201,25 +219,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &:hover,
   &:focus {
     .card-icon {
       fill: url(#card-cyan);
+
       &.linkedin {
         box-shadow: $socials-card-shadow;
       }
+
       &.github {
         box-shadow: $socials-card-shadow;
       }
+
       &.phone {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
+
       &.mail-card {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
     }
   }
@@ -231,19 +250,24 @@
   margin: 0.5rem;
   fill: var(--card-color);
   transition: filter 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
   &.linkedin {
     border-radius: 13px;
   }
+
   &.github {
     border-radius: 70px;
   }
+
   @include breakpoint-down(medium) {
     height: 3rem;
     width: 3rem;
   }
+
   @include breakpoint-down(xsmall) {
     margin: 0.3rem;
   }
+
   @include height-breakpoint-down(mdsmall) {
     height: 3rem;
     width: 3rem;

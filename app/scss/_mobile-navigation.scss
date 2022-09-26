@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: row;
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   top: 0;
   z-index: 2;
 }
@@ -16,18 +16,22 @@
   height: 100%;
   margin-right: auto;
   padding: 1rem 1rem 1.25rem 1rem;
+
   &:hover,
   &:focus {
     .home-logo {
       fill: url(#home-logo-cyan);
     }
   }
+
   @include breakpoint-down(small) {
     margin-left: 0.7rem;
   }
+
   @include breakpoint-up(mdsmall) {
     margin-left: 1.5rem;
   }
+
   @include breakpoint-up(small) {
     margin-left: 2.5rem;
   }
@@ -38,6 +42,7 @@
   margin-right: auto;
   width: 45px;
   height: 45px;
+
   @include breakpoint-down(mdsmall) {
     width: 30px;
     height: 30px;
@@ -52,31 +57,39 @@
   height: 100%;
   margin-right: 5rem;
   padding-inline: 1rem;
+
   &:focus {
     outline: none;
   }
+
   @include breakpoint-down(small) {
     margin-right: 0.7rem;
   }
+
   @include breakpoint-up(mdsmall) {
     margin-right: 1.5rem;
   }
+
   @include breakpoint-up(small) {
     margin-right: 2.5rem;
   }
-  > span {
+
+  >span {
     display: block;
     width: 62px;
     height: 6px;
     background-color: var(--bg-color-accent-2);
     transition: transform 300ms ease-in-out, width 300ms ease-in-out,
-      opacity 300ms ease-in-out;
+      opacity 300ms ease-in-out, background-color 300ms ease-in-out;
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
     @include breakpoint-down(mdsmall) {
       width: 42px;
       height: 4px;
+
       &:not(:last-child) {
         margin-bottom: 5px;
       }
@@ -88,6 +101,11 @@
   transition: transform 300ms ease-in-out 600ms, width 300ms ease-in-out 600ms,
     opacity 300ms ease-in-out 600ms;
   transform: rotate(45deg);
+
+  &>span {
+    background-color: $cyan;
+  }
+
   :nth-child(2) {
     width: 0%;
     opacity: 0;

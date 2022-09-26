@@ -13,6 +13,7 @@
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(10rem, 1fr));
+
   @include breakpoint-down(small) {
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(8rem, 1fr));
@@ -24,8 +25,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   @include breakpoint-up(medium) {
     transition: transform 150ms ease-in-out;
+
     &:hover,
     &:focus {
       transform: scale(1.2);
@@ -44,22 +47,28 @@
   border-radius: 5px;
   height: 5rem;
   width: auto;
+
   &.semi-wide-skill {
     scale: 0.9;
   }
+
   &.wide-skill {
     scale: 0.7;
   }
+
   &.saturate {
     filter: saturate(2);
   }
+
   &.whiten {
     filter: saturate(2);
   }
+
   &.marked {
     &.invert {
       filter: invert(1);
     }
+
     &.invert-whiten {
       filter: invert(1) saturate(2) brightness(300%);
     }
@@ -69,18 +78,22 @@
     &.top {
       margin-bottom: -5rem;
       clip-path: inset(0 0 35px 0);
+
       @include breakpoint-down(xsmall) {
         margin-bottom: -3.85rem;
         clip-path: inset(0 0 30px 0);
       }
     }
+
     &.bottom {
       clip-path: inset(45px 0 10px 0);
+
       @include breakpoint-down(xsmall) {
         clip-path: inset(35px 0 10px 0);
       }
     }
   }
+
   @include breakpoint-down(xsmall) {
     height: 4rem;
   }
@@ -91,6 +104,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+
   @include breakpoint-down(mdsmall) {
     flex-direction: column;
   }
@@ -103,9 +117,11 @@
   font-weight: 700;
   margin: 0;
   padding: 1rem 0;
+
   @include breakpoint-down(medium) {
     font-size: $font-lrgmed;
   }
+
   @include breakpoint-down(xsmall) {
     font-size: $font-lrgr;
   }

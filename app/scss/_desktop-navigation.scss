@@ -37,6 +37,7 @@ ul {
   padding: 20px 20px;
   margin-left: 60px;
   list-style: none;
+
   @include breakpoint-down(large) {
     margin-left: 30px;
   }
@@ -47,6 +48,7 @@ ul {
   padding: 10px 25px;
   margin: -7px -25px;
   transition: color 150ms ease-in-out;
+
   &::after {
     content: "";
     position: absolute;
@@ -61,14 +63,17 @@ ul {
 
     transition: transform 300ms ease-in-out, width 300ms ease-in-out;
   }
+
   &.extended::after {
     transform: scaleX(0.4);
     width: 100%;
   }
+
   &.shortened::after {
     transform: scaleX(0);
     width: 100%;
   }
+
   &:hover,
   &:focus {
     color: var(--cyan-icons);
@@ -76,8 +81,10 @@ ul {
 }
 
 .main-links {
+
   &.shortened,
   &.extended {
+
     &:hover,
     &:focus {
       &::after {
@@ -92,12 +99,14 @@ ul {
   margin-right: 60px;
   margin-left: auto;
   padding-inline: 20px;
+
   &:hover,
   &:focus {
     .mail {
       fill: var(--cyan-icons);
     }
   }
+
   @include breakpoint-down(large) {
     margin-right: 40px;
   }
@@ -115,13 +124,16 @@ ul {
 
 #mailClose {
   visibility: hidden;
+
   &.show {
     visibility: visible;
   }
 }
+
 #mailOpen {
   margin-top: 10px;
   visibility: hidden;
+
   &.show {
     visibility: visible;
   }
