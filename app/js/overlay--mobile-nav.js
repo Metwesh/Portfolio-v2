@@ -11,6 +11,27 @@ const mailClose = document.querySelector("#mailClose");
 
 function toggleHamburger() {
   hamburgerMenu.classList.toggle("open");
+  if (!hamburgerMenu.classList.contains("open")) {
+    for (let i = 0; i < hamburgerMenu.children.length; i++) {
+      if (i === 1) {
+        hamburgerMenu.children[i].style.transition =
+          "transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out";
+      } else {
+        hamburgerMenu.children[i].style.transition =
+          "transform 300ms ease-in-out, opacity 300ms ease-in-out, background-color 300ms ease-in-out";
+      }
+    }
+  } else {
+    for (let i = 0; i < hamburgerMenu.children.length; i++) {
+      if (i === 1) {
+        hamburgerMenu.children[1].style.transition =
+          "transform 300ms ease-in-out 600ms, width 300ms ease-in-out 0s, opacity 300ms ease-in-out 600ms";
+      } else {
+        hamburgerMenu.children[i].style.transition =
+          "transform 300ms ease-in-out 300ms, background-color 300ms ease-in-out";
+      }
+    }
+  }
 }
 
 function toggleOverlay() {
@@ -80,13 +101,6 @@ function closeAll() {
   if (mailOpen.classList.contains("show")) toggleMailButton();
 }
 
-hamburgerMenu.addEventListener("click", (e) => {
-  e.preventDefault();
-  ToggleAllMenus();
-  toggleOverlay();
-  toggleHamburger();
-});
-
 function toggleContactMenuFromOverlayMenu(e) {
   e.preventDefault();
   e.stopPropagation();
@@ -100,6 +114,13 @@ function closeOverlayMenuAfterLinkClick(e) {
   toggleMenu();
   toggleHamburger();
 }
+
+hamburgerMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  ToggleAllMenus();
+  toggleOverlay();
+  toggleHamburger();
+});
 
 for (const [i, overlayLink] of overlayLinks.entries()) {
   if (i === overlayLinks.length - 1) {

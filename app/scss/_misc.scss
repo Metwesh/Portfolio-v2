@@ -230,7 +230,14 @@
         }
       }
 
-      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
+      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.05rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
 
       @include breakpoint-down(mdsmall) {
         filter: none;
@@ -256,11 +263,12 @@
 
 #moon,
 #sun {
-  transition: opacity 750ms ease-in-out, fill 250ms ease-in-out;
+  transform-origin: center;
+  transition: opacity 350ms ease-in-out 400ms, fill 250ms ease-in-out;
   opacity: 0;
 
   @include breakpoint-down(mdsmall) {
-    transition: opacity 750ms ease-in-out;
+    transition: opacity 350ms ease-in-out;
   }
 
   &.show {
@@ -271,8 +279,11 @@
 #moon {
   width: 2.2rem;
   height: 2.2rem;
-  transform-origin: center;
-  scale: 1.01;
+  scale: 1.05;
+  @include breakpoint-down(mdsmall) {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
 }
 
 // Visibility helper classes ///////////////////////////////////////////////////////////////////////////////////

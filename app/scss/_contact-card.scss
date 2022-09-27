@@ -1,0 +1,179 @@
+.contact-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  visibility: hidden;
+  height: 100vh;
+  width: 100vw;
+  transform: translateX(-130%);
+
+  // @include breakpoint-down(small) {
+  //   // margin-top: -74vh;
+  //   height: 77.2vh;
+  // }
+
+  @include height-breakpoint-down(small) {
+    height: 77.2vh;
+  }
+
+  @include height-breakpoint-down(xsmall) {
+    height: 67.2vh;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &.slide-out {
+      animation: slide-out 500ms forwards;
+
+      @include breakpoint-up(medium) {
+        animation: slide-out-top 500ms forwards;
+      }
+    }
+
+    &.slide-in {
+      animation: slide-in 1s forwards;
+
+      @include breakpoint-up(medium) {
+        animation: slide-in-top 500ms forwards;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &.slide-out {
+      animation: simple-fade-out 500ms forwards;
+    }
+
+    &.slide-in {
+      animation: simple-fade-in 1s forwards;
+    }
+  }
+}
+
+.contact-card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--semi-transparent);
+  max-height: 55vh;
+  height: 71%;
+  margin: 0 4rem;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 1px var(--shadow-color);
+  @include breakpoint-down(mdsmall) {
+    margin: 0 2rem;
+    max-height: 50vh;
+  }
+}
+
+.contact-header {
+  text-align: center;
+  font-size: $font-lrgmed;
+  color: var(--font-color);
+  font-weight: 400;
+  padding: 0 1rem 4rem 1rem;
+
+  @include breakpoint-down(medium) {
+    font-size: $font-medlrg;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: $font-medlrg;
+    margin-top: 0;
+  }
+
+  @include height-breakpoint-down(mdsmall) {
+    padding-bottom: 2rem;
+  }
+
+  @include height-breakpoint-down(xsmall) {
+    padding-bottom: 0;
+  }
+}
+
+.signature-card {
+  padding: 0;
+}
+
+.horizontal-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  @include breakpoint-down(medium) {
+    width: 15rem;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include height-breakpoint-down(mdsmall) {
+    width: 15rem;
+  }
+}
+
+.card-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    .card-icon {
+      fill: url(#card-cyan);
+
+      &.linkedin {
+        box-shadow: $socials-card-shadow;
+      }
+
+      &.github {
+        box-shadow: $socials-card-shadow;
+      }
+
+      &.phone {
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
+          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+      }
+
+      &.mail-card {
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
+          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+      }
+    }
+  }
+}
+
+.card-icon {
+  height: 3.75rem;
+  width: 3.75rem;
+  margin: 0.5rem;
+  fill: var(--card-color);
+  transition: filter 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+  &.linkedin {
+    border-radius: 13px;
+  }
+
+  &.github {
+    border-radius: 70px;
+  }
+
+  @include breakpoint-down(medium) {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @include breakpoint-down(xsmall) {
+    margin: 0.3rem;
+  }
+
+  @include height-breakpoint-down(mdsmall) {
+    height: 3rem;
+    width: 3rem;
+  }
+}

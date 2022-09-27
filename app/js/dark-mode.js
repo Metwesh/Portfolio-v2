@@ -57,10 +57,23 @@ function toggleDarkMode() {
   invertImages();
 }
 
+function removeHamburgerTransition() {
+  for (let i = 0; i < hamburgerMenu.children.length; i++) {
+    if (i === 1) {
+      hamburgerMenu.children[1].style.transition =
+        "transform 300ms ease-in-out, width 300ms ease-in-out, opacity 300ms ease-in-out";
+      continue;
+    }
+    hamburgerMenu.children[i].style.transition =
+      "transform 300ms ease-in-out 300ms";
+  }
+}
+
 viewMode.addEventListener("click", (e) => {
   e.preventDefault();
   rotateDisc();
   toggleDarkMode();
+  removeHamburgerTransition();
 });
 
 viewMode.addEventListener("keypress", (e) => {

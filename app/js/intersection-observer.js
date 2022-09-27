@@ -19,7 +19,7 @@ const sectionObserver = new IntersectionObserver(
         aboutLinkOn();
       }
       if (entry.isIntersecting && entry.target === skills) {
-        options = { rootMargin: "-45px 0px 0px 0px", threshold: "0.175" };
+        options = { rootMargin: "-45px 0px 0px 0px", threshold: "0.1" };
         skillsLinkOn();
       }
       if (entry.isIntersecting && entry.target === portfolio) {

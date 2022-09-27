@@ -161,6 +161,7 @@ span.sub-content {
   width: auto;
   max-height: 25.5rem;
   height: auto;
+  box-shadow: 0 0 5px var(--bg-color-sub);
 
   &.right {
     margin-left: 1.25rem;
@@ -184,6 +185,7 @@ span.sub-content {
   }
 
   &.circle {
+    box-shadow: none;
     shape-outside: circle(50% at 50% 50%);
   }
 
@@ -210,19 +212,23 @@ span.sub-content {
   gap: 2rem;
   place-items: center;
   margin-bottom: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
 
   @include breakpoint-down(small) {
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1rem;
   }
-}
 
-.certificate-grid-cell {
-  max-width: 33rem;
+  @include breakpoint-down(mdsmall) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
 }
 
 .grid-img {
   box-shadow: 0 0 5px var(--bg-color-sub);
   border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
