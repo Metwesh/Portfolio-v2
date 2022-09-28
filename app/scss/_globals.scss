@@ -172,7 +172,7 @@ figure {
   margin: 0;
 }
 
-@include breakpoint-up(medium) {
+@media (hover: hover) and (pointer: fine) {
   ::-webkit-scrollbar {
     width: 0.5rem;
   }

@@ -35,6 +35,7 @@
   visibility: hidden;
   max-height: 55vh;
   height: 70%;
+  max-width: 90rem;
   width: auto;
   margin: 4rem 4rem;
   list-style: none;
@@ -46,6 +47,9 @@
   @include breakpoint-down(mdsmall) {
     margin: 4rem 2rem;
     max-height: 50vh;
+  }
+  @include breakpoint-up(large) {
+    margin-inline: auto;
   }
 
   :first-child {

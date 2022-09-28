@@ -58,12 +58,16 @@
   background-color: var(--semi-transparent);
   max-height: 55vh;
   height: 71%;
+  max-width: 58rem;
   margin: 0 4rem;
   border-radius: 20px;
   box-shadow: 0 0 5px 1px var(--shadow-color);
   @include breakpoint-down(mdsmall) {
     margin: 0 2rem;
     max-height: 50vh;
+  }
+  @include breakpoint-up(large) {
+    margin-inline: auto;
   }
 }
 
