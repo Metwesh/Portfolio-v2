@@ -214,6 +214,7 @@
   &:hover,
   &:focus {
     .view-mode-disc {
+      filter: none;
       #sun {
         fill: $dark-cyan;
 
@@ -230,17 +231,15 @@
         }
       }
 
-      filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.05rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem var(--bg-color-accent))
-        drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
-
-      @include breakpoint-down(mdsmall) {
-        filter: none;
+      @media (hover: hover) and (pointer: fine) {
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       }
     }
   }
@@ -253,7 +252,7 @@
   transform: rotate(0deg);
   transform-origin: center;
   transition: transform 600ms cubic-bezier(0.62, 0.22, 0.46, 1.35),
-    filter 250ms ease-in-out;
+    filter 250ms ease-in-out, scale 600ms ease-in-out;
 
   @include breakpoint-down(mdsmall) {
     width: 1.875rem;
@@ -264,11 +263,11 @@
 #moon,
 #sun {
   transform-origin: center;
-  transition: opacity 350ms ease-in-out 400ms, fill 250ms ease-in-out;
+  transition: opacity 350ms ease-in-out;
   opacity: 0;
 
-  @include breakpoint-down(mdsmall) {
-    transition: opacity 350ms ease-in-out;
+  @media (hover: hover) and (pointer: fine) {
+    transition: opacity 350ms ease-in-out 250ms, fill 250ms ease-in-out;
   }
 
   &.show {
