@@ -36,7 +36,7 @@
 
 <body>
     <div class="skip-link-wrapper">
-        <a href="#about" class="skip-link button">Skip to main-content</a>
+        <a href="#start" class="skip-link button">Skip to main-content</a>
     </div>
     <!-- Nav -->
     <nav class="main-nav">
@@ -124,7 +124,7 @@
     </div>
 
     <!-- Overlay -->
-    <div id="overlay" class="overlay" title="Close menus">
+    <div id="overlay" class="overlay pointer" title="Close overlay">
         <div class="overlay-menus-container">
             <!-- Overlay Menu -->
             <ul class="overlay-ul" id="overlayUl">
@@ -151,7 +151,7 @@
             </ul>
             <!-- Card -->
             <div class="contact-card" id="contactCard">
-                <div class="contact-card-box" id="contactCardBox">
+                <div class="contact-card-box" id="contactCardBox" title="">
                     <h1 class="contact-header">Contact me through any of the following</h1>
                     <p class="signature signature-card">Mohamed H. Aly</p>
                     <div class="horizontal-flex">
@@ -242,11 +242,12 @@
             </svg>
         </div>
 
-        <div class="content-background">
+        <div class="content-background" id="start">
             <article class="content-wrapper home-wrapper border-radius">
                 <h3 class="header-text">Hello world!</h3>
-                <figure class="img-container">
-                    <img class="img left circle" title="Mohamed H. Aly" src="./images/Me.webp" alt="Personal image" />
+                <figure class="img-container circle">
+                    <img class="img circle pointer" title="Contact details" id="selfPortrait" src="./images/Me.webp"
+                        alt="Personal image" tabindex="0" />
                 </figure>
                 <h3 class="main-content">Welcome to my website</h3>
                 <p class="sub-content">This website was created by me to showcase my web development capabilities,
@@ -255,8 +256,8 @@
                 <p class="sub-content">I'm an Egyptian-born, self-taught, aspiring software & web
                     developer. While I was studying Management Information Systems in university, I took a Computer
                     Science course; that course changed my life, I found myself understanding code & writing it much
-                    faster than all my peers. Ever since I've devoted most of my free time to learn how to write clean &
-                    efficient code.
+                    faster than all my peers. Ever since then, I've devoted most of my free time to learn how to write
+                    clean & efficient code.
                 </p>
                 <p class="sub-content">Feel free to browse the website as you please; I have a
                     downloadable & printable copy of my resume below. I also left links for my Linkedin profile & my
@@ -273,26 +274,34 @@
                 <h3 class="header-text">About</h3>
                 <h3 class="main-content">College</h3>
                 <figure class="img-container">
-                    <img class="img left long" title="Certificate" src="./images/English certificate.webp"
-                        alt="College certificate" />
+                    <a class="certificate-link left long" target="_blank" rel="noopener noreferrer"
+                        href="./app/assets/English certificate.pdf" aria-label="College certificate">
+                        <img class="img" title="College certificate" src="./images/English certificate.webp"
+                            alt="College certificate" />
+                    </a>
                 </figure>
                 <p class="sub-content">I graduated with a bachelor's degree in Management Information
-                    Systems on July 2021, with a cumulative GPA of "3.1".</p>
+                    Systems on July 2021, with a cumulative GPA of "3.1".
+                </p>
                 <p class="sub-content">As part of my graduation project, I created a fully functioning
                     book rental website. I designed the frontend with HTML & CSS and added functionality with
                     JavaScript; I also created the database & backend with PHPMyAdmin & PHP, respectively.
                 </p>
                 <p class="sub-content">I also designed multiple database schemas for a very intricate
-                    supply chain of data using diagramming tools like Lucidchart & Microsoft Visio. I also set up a
-                    user, admin & suppliers database using PHPMyAdmin & MySQL.
+                    supply chain of data using diagramming tools like Lucidchart & Microsoft Visio. I also set
+                    up a user, admin & suppliers database using PHPMyAdmin & MySQL.
                 </p>
             </article>
             <article class="content-wrapper middle-div">
                 <h3 class="main-content">Courses</h3>
-                <figure class="wide-img-container">
-                    <img class="img right wide" title="Certificate"
-                        src="./images/Complete web developer certification.webp"
-                        alt="Fullstack web developer course certificate">
+                <figure class="img-container wide">
+                    <!-- TODO: add link -->
+                    <a class="certificate-link right wide" target="_blank" rel="noopener noreferrer" href=""
+                        aria-label="Fullstack web developer course certificate">
+                        <img class="img" title="Fullstack web developer course certificate"
+                            src="./images/Complete web developer certification.webp"
+                            alt="Fullstack web developer course certificate">
+                    </a>
                 </figure>
                 <p class="sub-content">I participated & finished a fullstack web developer course from
                     ZeroToMastery Academy.
@@ -306,13 +315,18 @@
                     version-control systems like Git & Github, how to build single-page-apps with react, how to
                     build and interact with RESTful APIs. I also got to build a secure backend with NodeJS &
                     express, I learned how to use PostgreSQL, how to store sensitive user data using password
-                    hashing & one-way encryption and finally how to deploy websites on Heroku using the Heroku CLI.
+                    hashing & one-way encryption and finally how to deploy websites on Heroku using the Heroku
+                    CLI.
                 </p>
                 <hr class="line">
-                <figure class="wide-img-container">
-                    <img class="img left wide" title="Certificate"
-                        src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
-                        alt="Senior web developer course certificate">
+                <figure class="img-container wide">
+                    <a class="certificate-link left wide" target="_blank" rel="noopener noreferrer"
+                        href="https://www.udemy.com/certificate/UC-ebbe19f2-8c53-4d44-9098-b7662a4954b3/"
+                        aria-label="Senior web developer course certificate">
+                        <img class="img" title="Senior web developer course certificate"
+                            src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
+                            alt="Senior web developer course certificate">
+                    </a>
                 </figure>
                 <p class="sub-content">I also participated & finished an advanced senior web developer
                     course from Udemy.
@@ -320,8 +334,8 @@
                 <p class="sub-content">In the course I was taught how to use SSH to securely
                     communicate with other machines on the web, I learned how to optimize website performance
                     through the use of lazy-loading, minifying & reducing render-blocking resources. I was
-                    introduced to bundling & testing with many different suites like Parcel & Jest respectively. I
-                    also learned Typescript & the benefits of having strongly typed projects.
+                    introduced to bundling & testing with many different suites like Parcel & Jest respectively.
+                    I also learned Typescript & the benefits of having strongly typed projects.
                 </p>
                 <p class="sub-content">I learned about security, securing headers, securing from Injections,
                     securing from cross-site scripting & cross-site request forgery securing with authentication
@@ -334,9 +348,14 @@
                     workflow in order to increase team cohesiveness.
                 </p>
                 <hr class="line">
-                <figure class="wide-img-container">
-                    <img class="img right wide" title="Certificate" src="./images/Udemy-certificate-C-programming.webp"
-                        alt="Beginner C programming course certificate">
+                <figure class="img-container wide">
+                    <a class="certificate-link right wide" target="_blank" rel="noopener noreferrer"
+                        href="https://www.udemy.com/certificate/UC-e3bbec7e-1d48-42f4-99ec-9cc0357d5575/"
+                        aria-label="Beginner C programming course certificate">
+                        <img class="img" title="Beginner C programming course certificate"
+                            src="./images/Udemy-certificate-C-programming.webp"
+                            alt="Beginner C programming course certificate">
+                    </a>
                 </figure>
                 <p class="sub-content">I participated & finished a beginner C programming course from
                     Udemy.
@@ -357,21 +376,21 @@
                 <h3 class="main-content certification">Professional certification</h3>
                 <div class="certificate-grid">
                     <figure class="certificate-grid-cell">
-                        <a target="_blank" rel="noopener noreferrer" href="./app/assets/CISA.pdf"
-                            aria-label="Oracle CISA">
+                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
+                            href="./app/assets/CISA.pdf" aria-label="Oracle CISA">
                             <img class="img grid-img" title="Oracle CISA certificate" src="./images/CISA.webp"
                                 alt="CISA certificate">
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
-                        <a target="_blank" rel="noopener noreferrer" href="./app/assets/OSSA.pdf"
-                            aria-label="Javascript certificate">
+                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
+                            href="./app/assets/OSSA.pdf" aria-label="Javascript certificate">
                             <img class="img grid-img" title="Oracle SSA certificate" src="./images/OSSA.webp"
                                 alt="OSSA certificate">
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
-                        <a target="_blank" rel="noopener noreferrer"
+                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
                             aria-label="Javascript certificate">
                             <img class="img grid-img" title="Javascript Certification"

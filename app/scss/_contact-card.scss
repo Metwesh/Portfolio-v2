@@ -8,11 +8,6 @@
   width: 100vw;
   transform: translateX(-130%);
 
-  // @include breakpoint-down(small) {
-  //   // margin-top: -74vh;
-  //   height: 77.2vh;
-  // }
-
   @include height-breakpoint-down(small) {
     height: 77.2vh;
   }
@@ -51,24 +46,41 @@
 }
 
 .contact-card-box {
+  cursor: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--semi-transparent);
   max-height: 55vh;
-  height: 71%;
+  height: 80%;
   max-width: 58rem;
   margin: 0 4rem;
   border-radius: 20px;
   box-shadow: 0 0 5px 1px var(--shadow-color);
+  border: 3rem solid transparent;
+  border-image: url(../images/border.svg) 100;
+
+  @include breakpoint-up(large) {
+    margin-inline: auto;
+    border: 5rem solid transparent;
+    border-image: url(../images/border.svg) 100;
+  }
+
   @include breakpoint-down(mdsmall) {
     margin: 0 2rem;
     max-height: 50vh;
   }
-  @include breakpoint-up(large) {
-    margin-inline: auto;
+
+  @include breakpoint-down(xsmall) {
+    border: 2rem solid transparent;
+    border-image: url(../images/border.svg) 100;
   }
+
+  @include height-breakpoint-down(mdsmall) {
+    margin: 0 4rem;
+  }
+
 }
 
 .contact-header {
@@ -76,28 +88,39 @@
   font-size: $font-lrgmed;
   color: var(--font-color);
   font-weight: 400;
-  padding: 0 1rem 4rem 1rem;
+  padding: 0 1rem 2rem 1rem;
 
   @include breakpoint-down(medium) {
     font-size: $font-medlrg;
   }
 
   @include breakpoint-down(small) {
-    font-size: $font-medlrg;
     margin-top: 0;
   }
 
-  @include height-breakpoint-down(mdsmall) {
-    padding-bottom: 2rem;
-  }
-
-  @include height-breakpoint-down(xsmall) {
+  @include breakpoint-down(xsmall) {
     padding-bottom: 0;
   }
+
+  @include height-breakpoint-down(mdsmall) {
+    font-size: $font-med;
+    padding-bottom: 0;
+    margin-block: 0;
+  }
+
+
 }
 
 .signature-card {
   padding: 0;
+
+  @include height-breakpoint-down(mdsmall) {
+    font-size: $font-lrgmed;
+  }
+
+  @include height-breakpoint-down(xsmall) {
+    font-size: $font-lrg;
+  }
 }
 
 .horizontal-flex {
@@ -138,15 +161,11 @@
       }
 
       &.phone {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
 
       &.mail-card {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2))
-          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
     }
   }
@@ -172,12 +191,14 @@
     width: 3rem;
   }
 
-  @include breakpoint-down(xsmall) {
-    margin: 0.3rem;
-  }
-
   @include height-breakpoint-down(mdsmall) {
     height: 3rem;
     width: 3rem;
+    margin: 0;
+  }
+
+  @include breakpoint-down(xsmall) {
+    height: 2.75rem;
+    width: 2.75rem;
   }
 }

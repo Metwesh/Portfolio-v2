@@ -2,6 +2,10 @@
   scroll-margin-block-start: 3rem;
 }
 
+#start {
+  scroll-margin-block-start: 3rem;
+}
+
 .content-background {
   display: flex;
   justify-content: center;
@@ -104,6 +108,10 @@
   margin: 1em 0;
 }
 
+span.sub-content {
+  padding: 0;
+}
+
 .sub-content {
   font-size: $font-medlrg;
   text-indent: 4rem;
@@ -116,10 +124,6 @@
     font-size: $font-med;
     padding: 0.3rem;
   }
-}
-
-span.sub-content {
-  padding: 0;
 }
 
 .header-text {
@@ -137,36 +141,33 @@ span.sub-content {
   }
 }
 
-.img-container {
-  display: inline;
-
-  @include breakpoint-down(medium) {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.wide-img-container {
+.flex-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 2rem;
 
-  @include breakpoint-up(large) {
-    display: inline;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
   }
 }
 
-.img {
-  border-radius: 15px;
-  max-width: 100%;
-  width: auto;
-  max-height: 25.5rem;
-  height: auto;
-  box-shadow: 0 0 5px var(--bg-color-sub);
+.certificate-link {
+  display: block;
+  width: max-content;
+  height: max-content;
+  border-radius: 1rem;
+  transition: box-shadow 150ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
 
   &.right {
-    margin-left: 1.25rem;
-    margin-bottom: 2rem;
     float: right;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
 
     @include breakpoint-down(medium) {
       float: none;
@@ -175,8 +176,9 @@ span.sub-content {
   }
 
   &.left {
-    margin-right: 2rem;
     float: left;
+    margin-right: 1.25rem;
+    margin-bottom: 2rem;
 
     @include breakpoint-down(medium) {
       float: none;
@@ -184,16 +186,7 @@ span.sub-content {
     }
   }
 
-  &.circle {
-    box-shadow: none;
-    shape-outside: circle(50% at 50% 50%);
-  }
-
   &.wide {
-    max-width: 100%;
-    max-height: 25rem;
-    height: auto;
-    width: auto;
     margin-top: 0;
     margin-bottom: 1.25rem;
 
@@ -202,8 +195,59 @@ span.sub-content {
     }
   }
 
-  &.long {
-    margin-bottom: 1.25rem;
+  &.grid-img {
+    display: inline-block;
+  }
+}
+
+.img-container {
+  display: inline;
+  width: max-content;
+  height: max-content;
+
+  @include breakpoint-down(medium) {
+    display: flex;
+    justify-content: center;
+    width: auto;
+  }
+
+  &.wide {
+    display: flex;
+    justify-content: center;
+    width: auto;
+
+    @include breakpoint-up(large) {
+      display: inline;
+    }
+  }
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  max-height: 25.5rem;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px var(--bg-color-sub);
+
+  &.circle {
+    float: left;
+    box-shadow: none;
+    margin-right: 2rem;
+    border-radius: 50%;
+    shape-outside: circle(50% at 50% 50%);
+    transition: box-shadow 150ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow;
+    }
+
+    @include breakpoint-down(medium) {
+      float: none;
+      margin-right: 0;
+    }
   }
 }
 
@@ -211,7 +255,6 @@ span.sub-content {
   display: grid;
   gap: 2rem;
   place-items: center;
-  margin-bottom: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
 
   @include breakpoint-down(small) {

@@ -6,11 +6,9 @@
   opacity: 0;
   visibility: hidden;
   backdrop-filter: blur(2px);
-  background-image: linear-gradient(
-    to bottom,
-    var(--shadow-color),
-    transparent
-  );
+  background-image: linear-gradient(to bottom,
+      var(--shadow-color),
+      transparent);
 
   &.fadeout {
     animation: simple-fade-out 500ms forwards;
@@ -28,6 +26,7 @@
 }
 
 .overlay-ul {
+  cursor: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,8 +47,13 @@
     margin: 4rem 2rem;
     max-height: 50vh;
   }
+
   @include breakpoint-up(large) {
     margin-inline: auto;
+  }
+
+  @include height-breakpoint-down(mdsmall) {
+    margin: 2rem 4rem;
   }
 
   :first-child {

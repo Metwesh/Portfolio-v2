@@ -173,6 +173,11 @@ figure {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  html {
+    scrollbar-color: $cyan $black;
+    scrollbar-width: thin;
+  }
+
   ::-webkit-scrollbar {
     width: 0.5rem;
   }
@@ -184,10 +189,15 @@ figure {
   ::-webkit-scrollbar-thumb {
     background-image: $gradient-to-top;
     border-radius: 5px;
+
+    &:hover {
+      background-image: $gradient-to-bottom;
+    }
   }
 }
 
 :focus {
+  border-radius: inherit;
   outline: 2px solid $dark-cyan;
 }
 

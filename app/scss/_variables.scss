@@ -32,6 +32,7 @@ $dark-more-transparent: rgba(56, 61, 70, 0.91);
 $darker-semi-transparent: rgba(30, 33, 37, 0.88);
 
 $gradient-to-top: linear-gradient(to top, $dark-cyan, $cyan);
+$gradient-to-bottom: linear-gradient(to bottom, $dark-cyan, $cyan);
 $gradient-to-right: linear-gradient(to right, $dark-cyan, $cyan);
 
 $cyan-gradient: linear-gradient(160deg, $cyan -10%, $darker-cyan 100%);

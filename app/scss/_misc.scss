@@ -6,6 +6,7 @@
   font-weight: 400;
   text-decoration: none;
   color: $white;
+  -webkit-border-radius: 12px;
   border-radius: 2.5rem;
   margin-right: 5rem;
   margin-left: auto;
@@ -17,12 +18,12 @@
   border-bottom: 2.5px solid rgb(33, 33, 33);
   border-left: 2.5px solid rgb(118, 118, 118);
 
-  transition: box-shadow 300ms ease-in-out, text-shadow 300ms ease-in-out;
+  transition: box-shadow 150ms ease-in-out, text-shadow 300ms ease-in-out;
 
   &:hover,
   &:focus {
     box-shadow: $box-shadow;
-    text-shadow: 0 0 1px $white;
+    text-shadow: none;
   }
 
   &.alt {
@@ -130,6 +131,7 @@
   height: 5rem;
   width: 100%;
   margin-top: -5rem;
+  background-color: var(--semi-transparent);
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
@@ -215,6 +217,7 @@
   &:focus {
     .view-mode-disc {
       filter: none;
+
       #sun {
         fill: $dark-cyan;
 
@@ -232,14 +235,7 @@
       }
 
       @media (hover: hover) and (pointer: fine) {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.15rem var(--bg-color-accent))
-          drop-shadow(0 0 0.15rem var(--bg-color-accent))
-          drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       }
     }
   }
@@ -278,7 +274,8 @@
 #moon {
   width: 2.2rem;
   height: 2.2rem;
-  scale: 1.05;
+  scale: 1.01;
+
   @include breakpoint-down(mdsmall) {
     width: 1.875rem;
     height: 1.875rem;

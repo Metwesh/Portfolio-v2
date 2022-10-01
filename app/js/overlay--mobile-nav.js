@@ -8,6 +8,7 @@ const contactCardBox = document.querySelector("#contactCardBox");
 const contactMail = document.querySelector("#mail-trigger");
 const mailOpen = document.querySelector("#mailOpen");
 const mailClose = document.querySelector("#mailClose");
+const selfPortrait = document.querySelector("#selfPortrait");
 
 function toggleHamburger() {
   hamburgerMenu.classList.toggle("open");
@@ -82,10 +83,10 @@ function toggleMailButton() {
   }
 }
 
-function ToggleAllMenus() {
+function toggleAllMenus() {
   if (
     overlayUl.classList.contains("slide-out") &&
-    contactCard.classList.contains("slide-in")
+    contactCard.classList.contains("slide-in") 
   ) {
     toggleContactCard();
   } else {
@@ -117,7 +118,11 @@ function closeOverlayMenuAfterLinkClick(e) {
 
 hamburgerMenu.addEventListener("click", (e) => {
   e.preventDefault();
-  ToggleAllMenus();
+  if (hamburgerMenu.classList.contains("open")) {
+    closeAll();
+    return;
+  }
+  toggleAllMenus();
   toggleOverlay();
   toggleHamburger();
 });
@@ -148,6 +153,21 @@ overlay.addEventListener("click", closeAll);
 contactCardBox.addEventListener("click", (e) => e.stopPropagation());
 
 homeButton.addEventListener("click", closeAll);
+
+selfPortrait.addEventListener("click", (e) =>{
+  e.preventDefault();
+  toggleOverlay();
+  toggleContactCard();
+  toggleMailButton();
+  toggleHamburger();
+  contactMail.focus();
+});
+
+selfPortrait.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    selfPortrait.click();
+  }
+});
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
