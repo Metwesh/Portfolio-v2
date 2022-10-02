@@ -100,7 +100,7 @@
 
   &.construction {
     position: relative;
-    margin-top: -5rem;
+    margin-top: -5.5rem;
     border-radius: 100% 70%;
 
     @include breakpoint-down(xsmall) {
