@@ -102,6 +102,10 @@
     padding-bottom: 0;
   }
 
+  @include breakpoint-down(xxsmall) {
+    font-size: $font-med;
+  }
+
   @include height-breakpoint-down(mdsmall) {
     font-size: $font-med;
     padding-bottom: 0;
@@ -112,7 +116,25 @@
 }
 
 .signature-card {
+  font-size: $font-xxlg;
+  margin: 0;
   padding: 0;
+
+  @include breakpoint-down(medium) {
+    font-size: $font-xlg;
+  }
+
+  @include breakpoint-down(mdsmall) {
+    font-size: $font-lrgmed;
+  }
+
+  @include breakpoint-down(xsmall) {
+    font-size: $font-lrgr;
+  }
+
+  @include breakpoint-down(xxsmall) {
+    font-size: $font-medlrg;
+  }
 
   @include height-breakpoint-down(mdsmall) {
     font-size: $font-lrgmed;
@@ -132,14 +154,19 @@
   padding-left: 1rem;
 
   @include breakpoint-down(medium) {
-    width: 15rem;
+    width: auto;
     padding-right: 0;
     padding-left: 0;
+  }
+
+  @include breakpoint-down(xxsmall) {
+    flex-wrap: wrap;
   }
 
   @include height-breakpoint-down(mdsmall) {
     width: 15rem;
   }
+
 }
 
 .card-links {
