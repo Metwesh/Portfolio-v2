@@ -76,6 +76,16 @@
   border-radius: 5px;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
+
+  &.extra-padding {
+    margin-top: 4.5rem;
+    margin-bottom: 5rem;
+
+    @include breakpoint-down(large) {
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 .padding-right {
@@ -177,7 +187,7 @@ span.sub-content {
 
   &.left {
     float: left;
-    margin-right: 1.25rem;
+    margin-right: 2rem;
     margin-bottom: 2rem;
 
     @include breakpoint-down(medium) {

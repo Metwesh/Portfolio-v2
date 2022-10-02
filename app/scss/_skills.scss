@@ -21,7 +21,6 @@
 }
 
 .skills-grid-cell {
-  cursor: zoom-in;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +91,20 @@
       @include breakpoint-down(xsmall) {
         clip-path: inset(35px 0 10px 0);
       }
+    }
+  }
+
+  &.under-construction {
+    filter: grayscale(1);
+  }
+
+  &.construction {
+    position: relative;
+    margin-top: -5rem;
+    border-radius: 100% 70%;
+
+    @include breakpoint-down(xsmall) {
+      margin-bottom: -3.85rem;
     }
   }
 

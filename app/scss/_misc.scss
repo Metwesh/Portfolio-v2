@@ -135,13 +135,15 @@
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
+  visibility: hidden;
 
   &:focus-within {
+    visibility: visible;
     opacity: 1;
     pointer-events: auto;
   }
 
-  @include breakpoint-down(medium) {
+  @media (hover: none) and (pointer: coarse) {
     display: none;
   }
 }
@@ -154,18 +156,18 @@
   text-shadow: 0 0 1px $white;
   transform: translateY(-6rem);
   transition: transform 150ms ease-in-out;
+  visibility: inherit;
 
   &:focus {
     transform: translateY(0);
   }
 
-  @include breakpoint-down(medium) {
+  @media (hover: none) and (pointer: coarse) {
     display: none;
   }
 }
 
 // Sun moon dial ///////////////////////////////////////////////////////////////////////////////////////////////
-
 @include breakpoint-up(xlarge) {
   .view-mode-parent-container {
     position: fixed;
@@ -260,10 +262,10 @@
 #moon,
 #sun {
   position: absolute;
-  transform-origin: center;
-  opacity: 0;
   top: 0;
   left: 0;
+  transform-origin: center;
+  opacity: 0;
   scale: 1.01;
   transition: opacity 350ms ease-in-out;
 
@@ -279,7 +281,6 @@
 #moon {
   width: 2.2rem;
   height: 2.2rem;
-
 
   @include breakpoint-down(mdsmall) {
     width: 1.875rem;
