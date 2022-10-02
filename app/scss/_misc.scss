@@ -242,6 +242,7 @@
 }
 
 .view-mode-disc {
+  position: relative;
   fill: var(--icon-color);
   width: 2.2rem;
   height: 2.2rem;
@@ -258,9 +259,13 @@
 
 #moon,
 #sun {
+  position: absolute;
   transform-origin: center;
-  transition: opacity 350ms ease-in-out;
   opacity: 0;
+  top: 0;
+  left: 0;
+  scale: 1.01;
+  transition: opacity 350ms ease-in-out;
 
   @media (hover: hover) and (pointer: fine) {
     transition: opacity 350ms ease-in-out 250ms, fill 250ms ease-in-out;
@@ -274,7 +279,7 @@
 #moon {
   width: 2.2rem;
   height: 2.2rem;
-  scale: 1.01;
+
 
   @include breakpoint-down(mdsmall) {
     width: 1.875rem;
