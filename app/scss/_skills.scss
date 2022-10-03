@@ -96,12 +96,13 @@
 
   &.under-construction {
     filter: grayscale(1);
+    margin-top: 0.5rem;
   }
 
   &.construction {
     position: relative;
     margin-top: -5.5rem;
-    border-radius: 100% 70%;
+    clip-path: circle(45% at 50% 50%);
 
     @include breakpoint-down(xsmall) {
       margin-bottom: -3.85rem;
