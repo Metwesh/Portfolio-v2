@@ -80,7 +80,7 @@
     height: 6px;
     border-radius: 1.25px;
     background-color: var(--bg-color-accent-2);
-    transition: transform 350ms ease-in-out, width 300ms ease-in-out 350ms,
+    transition: transform 350ms ease-in-out, width 300ms ease-in-out 300ms,
       opacity 300ms ease-in-out;
 
     &:not(:last-child) {

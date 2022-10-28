@@ -16,7 +16,7 @@ function toggleHamburger() {
     for (let i = 0; i < hamburgerMenu.children.length; i++) {
       if (i === 1) {
         hamburgerMenu.children[i].style.transition =
-          "transform 300ms ease-in-out, width 300ms ease-in-out 350ms";
+          "transform 300ms ease-in-out, width 300ms ease-in-out 300ms";
       } else {
         hamburgerMenu.children[i].style.transition =
           "transform 350ms ease-in-out, background-color 300ms ease-in-out";
