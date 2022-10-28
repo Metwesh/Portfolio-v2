@@ -1,11 +1,19 @@
-.home {
+#home {
   scroll-margin-block-start: 10rem;
+}
+
+.home {
   height: 140vh;
   background: linear-gradient(to bottom, transparent 70%, var(--bg-color-main)),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
+  //TODO: make this work
+  // @media (hover: hover) and (pointer: fine) {
+  //   background-attachment: fixed
+  // }
 }
+
 
 .heading-text {
   max-width: 90rem;
