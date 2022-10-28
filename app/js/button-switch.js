@@ -15,6 +15,7 @@ function toggleButtonClassMouseUp(button, className, className2) {
 }
 
 for (const button of buttons) {
+  if (button.classList.contains("disabled")) continue;
   toggleButtonClassMouseDown(button, "dark-switch", "pressed");
   toggleButtonClassMouseUp(button, "dark-switch", "pressed");
   if (!button.classList.contains("dark")) {
