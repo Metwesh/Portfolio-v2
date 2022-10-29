@@ -10,24 +10,59 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Mohamed H. Aly">
-    <title>My portfolio</title>
     <meta name="theme-color" content="#0ec7ff">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Main background -->
+    <title>My portfolio</title>
     <link rel="preload" as="image" href="./images/Architecture background.webp">
 
+
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.webp">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.webp">
+    <link rel="icon" href="./icons/favicon.ico" />
     <link rel="manifest" href="./site.webmanifest">
+
+    <!-- Apple splash screen -->
+    <link href="./splashscreens/iphone5_splash.webp"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/iphone6_splash.webp"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/iphoneplus_splash.webp"
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/iphonex_splash.webp"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/iphonexr_splash.webp"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/iphonexsmax_splash.webp"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/ipad_splash.webp"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/ipadpro1_splash.webp"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/ipadpro3_splash.webp"
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
+    <link href="./splashscreens/ipadpro2_splash.webp"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+        rel="apple-touch-startup-image" />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/style.min.css">
 
-    <script>
+    <!-- Register service worker -->
+    <script defer>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("./service-worker.js");
+            navigator.serviceWorker.register("./dist/service-worker.min.js");
         }
     </script>
 
