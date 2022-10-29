@@ -4,8 +4,8 @@
   "description": "This is V2 of my portfolio.",
   "browserslist": "> 1%, last 6 versions, not dead",
   "scripts": {
-    "prebuild": "cd ./app/js && cat desktop-nav.js intersection-observer.js overlay--mobile-nav.js scroll-animation.js button-switch.js dark-mode.js > temp.js && cd ../.. && rm -rf ./index.html",
-    "build": "minify ./service-worker.js > ./dist/service-worker.min.js && minify ./app/js/temp.js > ./dist/script.min.js && minify ./dev.html > ./index.html",
+    "prebuild": "cd ./app/js && cat desktop-nav.js intersection-observer.js overlay--mobile-nav.js scroll-animation.js button-switch.js dark-mode.js > temp.js && cd ../..",
+    "build": "minify ./app/js/temp.js > ./dist/script.min.js && minify ./dev.html > ./index.html",
     "postbuild": "rm -rf ./app/js/temp.js"
   },
   "repository": {
