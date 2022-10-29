@@ -4,40 +4,29 @@
 
 .home {
   height: 140vh;
-  background: linear-gradient(to bottom, transparent 70%, var(--bg-color-main)),
+  background: linear-gradient(to bottom, transparent 80%, var(--bg-color-main)),
     url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
-  //TODO: make this work
-  // @media (hover: hover) and (pointer: fine) {
-  //   background-attachment: fixed
-  // }
+
+  @media (hover: hover) and (pointer: fine) {
+    background-size: cover;
+    background-attachment: fixed
+  }
 }
 
 
-.heading-text {
+.heading-container {
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
-}
-
-.main-text {
-  visibility: hidden;
-  opacity: 0;
-  font-size: $font-xxlg;
-  color: var(--font-color);
-  font-weight: 400;
-  margin: 0;
-  padding: 17.5rem 1rem 0 3.75rem;
-  animation: header-fade-in 1250ms forwards 500ms;
+  padding: 17rem 1rem 0 3.75rem;
 
   @include breakpoint-down(mdsmall) {
-    font-size: $font-xlg;
     padding: 16rem 1rem 0 2.85rem;
   }
 
   @include breakpoint-down(xsmall) {
-    font-size: $font-lrgmed;
     padding-left: 1.875rem;
   }
 
@@ -54,31 +43,56 @@
   }
 }
 
+.main-text {
+  visibility: hidden;
+  opacity: 0;
+  font-size: $font-xxlg;
+  color: var(--font-color);
+  font-weight: 400;
+  margin: 0;
+  animation: header-fade-in 1250ms forwards 500ms;
+
+  @media (hover: hover) and (pointer: fine) {
+    text-shadow: $dark-gray 1px 1px 1px, $dark-gray 2px 2px 2px;
+    backdrop-filter: blur(2px);
+    border-radius: 60px;
+    max-width: max-content;
+  }
+
+  @include breakpoint-down(mdsmall) {
+    font-size: $font-xlg;
+  }
+
+  @include breakpoint-down(xsmall) {
+    font-size: $font-lrgmed;
+  }
+}
+
 .colored {
-  color: var(--cyan);
+  color: $cyan;
 }
 
 .sub-text {
   position: relative;
   z-index: -1;
-  visibility: hidden;
-  opacity: 0;
   font-size: $font-lrgmed;
   color: var(--font-color);
   font-weight: 300;
-  margin: 0;
-  padding: 0 0.625rem 0 3.75rem;
-  animation: subheader-fade-in 2000ms forwards;
-  animation-delay: 1250ms;
+  margin-left: 2px;
+
+  @media (hover: none) and (pointer: coarse) {
+    visibility: hidden;
+    opacity: 0;
+    animation: subheader-fade-in 2000ms forwards;
+    animation-delay: 1250ms;
+  }
 
   @include breakpoint-down(mdsmall) {
     font-size: $font-lrg;
-    padding-left: 2.85rem;
   }
 
   @include breakpoint-down(xsmall) {
     font-size: $font-medlrg;
-    padding-left: 1.875rem;
   }
 }
 
@@ -86,6 +100,10 @@
   overflow: hidden;
   padding-top: 14rem;
   margin-top: -14rem;
+
+  @media (hover: hover) and (pointer: fine) {
+    background: linear-gradient(to bottom, transparent 1%, var(--bg-color-main) 30%);
+  }
 }
 
 .cool-shape {

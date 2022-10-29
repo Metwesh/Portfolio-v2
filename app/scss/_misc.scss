@@ -135,10 +135,8 @@
   backdrop-filter: blur(10px);
   opacity: 0;
   transition: opacity 150ms ease-in-out;
-  visibility: hidden;
 
   &:focus-within {
-    visibility: visible;
     opacity: 1;
     pointer-events: auto;
   }

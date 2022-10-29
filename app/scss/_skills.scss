@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
 
-  @include breakpoint-up(medium) {
+  @media (hover: hover) and (pointer: fine) {
     transition: transform 150ms ease-in-out;
 
     &:hover,
@@ -102,7 +102,7 @@
   &.construction {
     position: relative;
     margin-top: -5.5rem;
-    clip-path: circle(45% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
 
     @include breakpoint-down(xsmall) {
       margin-bottom: -3.85rem;
