@@ -1,9 +1,8 @@
 // install service worker
-self.addEventListener('install', (e) => {
-    console.log("Service worker has been installed", e)
-})
+self.addEventListener("install", () => {});
 
 // activate service worker
-self.addEventListener('activate', (e) => {
-    console.log("Service worker has been activated", e)
-})
+self.addEventListener("activate", () => {});
+
+// allow for offline viewing
+self.addEventListener("fetch", () => {});

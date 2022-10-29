@@ -1,5 +1,5 @@
 {
-  "name": "Portfolio-V2",
+  "name": "MH Portfolio - V2",
   "short_name": "V2",
   "icons": [
     {
@@ -22,7 +22,9 @@
     }
   ],
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "scope": "/",
+  "id": "/",
+  "theme_color": "#0ec7ff",
   "background_color": "#ffffff",
   "display": "standalone"
 }
