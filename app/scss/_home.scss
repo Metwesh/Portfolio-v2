@@ -11,10 +11,9 @@
 
   @media (hover: hover) and (pointer: fine) {
     background-size: cover;
-    background-attachment: fixed
+    background-attachment: fixed;
   }
 }
-
 
 .heading-container {
   max-width: 90rem;
@@ -100,10 +99,7 @@
   overflow: hidden;
   padding-top: 14rem;
   margin-top: -14rem;
-
-  @media (hover: hover) and (pointer: fine) {
-    background: linear-gradient(to bottom, transparent 1%, var(--bg-color-main) 30%);
-  }
+  background: linear-gradient(to bottom, transparent, var(--bg-color-main) 30%);
 }
 
 .cool-shape {
