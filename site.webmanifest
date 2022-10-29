@@ -1,6 +1,6 @@
 {
-  "name": "MH Portfolio - V2",
-  "short_name": "V2",
+  "name": "M.H. Portfolio V2",
+  "short_name": "Portfolio V2",
   "icons": [
     {
       "src": "./android-chrome-192x192.webp",
@@ -21,8 +21,8 @@
       "purpose": "maskable"
     }
   ],
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "https://metwesh.github.io/Portfolio-v2/",
+  "scope": "https://metwesh.github.io/Portfolio-v2/",
   "id": "/",
   "theme_color": "#0ec7ff",
   "background_color": "#ffffff",
