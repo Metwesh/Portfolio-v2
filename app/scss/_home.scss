@@ -68,7 +68,10 @@
 }
 
 .colored {
-  color: $cyan;
+  color: var(--cyan);
+  @media (hover: hover) and (pointer: fine) {
+    color: $cyan;
+  }
 }
 
 .sub-text {
