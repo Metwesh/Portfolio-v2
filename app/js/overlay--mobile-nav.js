@@ -86,7 +86,7 @@ function toggleMailButton() {
 function toggleAllMenus() {
   if (
     overlayUl.classList.contains("slide-out") &&
-    contactCard.classList.contains("slide-in") 
+    contactCard.classList.contains("slide-in")
   ) {
     toggleContactCard();
   } else {
@@ -154,7 +154,7 @@ contactCardBox.addEventListener("click", (e) => e.stopPropagation());
 
 homeButton.addEventListener("click", closeAll);
 
-selfPortrait.addEventListener("click", (e) =>{
+selfPortrait.addEventListener("click", (e) => {
   e.preventDefault();
   toggleOverlay();
   toggleContactCard();

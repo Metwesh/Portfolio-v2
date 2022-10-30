@@ -15,12 +15,12 @@
   justify-content: center;
   height: 100%;
   margin-right: auto;
-  padding: 1rem 1rem 1.25rem 1rem;
+  padding: 1.4rem 1rem 1.25rem 1rem;
 
   &:hover,
   &:focus {
-    .home-logo {
-      fill: url(#home-logo-cyan);
+    .m-logo {
+      fill: url(#m-logo-cyan);
     }
   }
 
@@ -30,6 +30,7 @@
 
   @include breakpoint-up(mdsmall) {
     margin-left: 1.5rem;
+    padding: 1.5rem 1rem 1.25rem 1rem;
   }
 
   @include breakpoint-up(small) {
@@ -37,15 +38,14 @@
   }
 }
 
-.home-logo {
-  fill: var(--home-logo-color);
-  margin-right: auto;
+.m-logo {
+  fill: var(--m-logo-color);
   width: 45px;
   height: 45px;
 
   @include breakpoint-down(mdsmall) {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -74,9 +74,9 @@
     margin-right: 2.5rem;
   }
 
-  >span {
+  > span {
     display: block;
-    width: 62px;
+    width: 55px;
     height: 6px;
     border-radius: 1.25px;
     background-color: var(--bg-color-accent-2);
@@ -94,10 +94,10 @@
 
     @include breakpoint-down(mdsmall) {
       width: 42px;
-      height: 4px;
+      height: 5px;
 
       &:not(:last-child) {
-        margin-bottom: 5px;
+        margin-bottom: 6px;
       }
     }
   }
@@ -108,7 +108,7 @@
     opacity 300ms ease-in-out 600ms;
   transform: rotate(45deg);
 
-  &>span:not(:nth-child(2)) {
+  & > span:not(:nth-child(2)) {
     background-color: $cyan;
   }
 
@@ -127,7 +127,7 @@
     transform: translateY(16px);
 
     @include breakpoint-down(mdsmall) {
-      transform: translateY(9px);
+      transform: translateY(13px);
     }
   }
 

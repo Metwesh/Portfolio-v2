@@ -4,12 +4,20 @@
 
 .home {
   height: 140vh;
-  background: linear-gradient(to bottom, transparent 80%, var(--bg-color-main)),
-    url("../images/Architecture\ background.webp") no-repeat center center fixed;
+  background: url("../images/Architecture\ background.webp") no-repeat center
+    center fixed;
   background-size: cover;
   background-attachment: scroll;
 
   @media (hover: hover) and (pointer: fine) {
+    background: linear-gradient(
+        to bottom,
+        transparent 80%,
+        var(--bg-color-main)
+      ),
+      url("../images/Architecture\ background.webp") no-repeat center center
+        fixed;
+    background-position: 50% 30%;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -19,7 +27,7 @@
   max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 17rem 1rem 0 3.75rem;
+  padding: 21rem 1rem 0 3.75rem;
 
   @include breakpoint-down(mdsmall) {
     padding: 16rem 1rem 0 2.85rem;
@@ -34,7 +42,7 @@
   }
 
   @include height-breakpoint-down(small) {
-    padding-top: 10rem;
+    padding-top: 16rem;
   }
 
   @include height-breakpoint-down(xsmall) {
@@ -81,13 +89,10 @@
   color: var(--font-color);
   font-weight: 300;
   margin-left: 2px;
-
-  @media (hover: none) and (pointer: coarse) {
-    visibility: hidden;
-    opacity: 0;
-    animation: subheader-fade-in 2000ms forwards;
-    animation-delay: 1250ms;
-  }
+  visibility: hidden;
+  opacity: 0;
+  animation: subheader-fade-in 2000ms forwards;
+  animation-delay: 1250ms;
 
   @include breakpoint-down(mdsmall) {
     font-size: $font-lrg;
