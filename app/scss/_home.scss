@@ -26,22 +26,6 @@
   background-position: center center, center center;
   background-size: cover, cover;
   background-attachment: scroll, scroll;
-
-  @media (hover: hover) and (pointer: fine) {
-    background-image: url("../fallback_images/Architecture.png");
-    @supports (
-      background-image: -webkit-image-set(url("../images/Architecture\ background.webp")
-            1x)
-    ) {
-      background-image: -webkit-image-set(
-        url("../images/Architecture\ background.webp") 1x
-      );
-    }
-    background-repeat: no-repeat, no-repeat;
-    background-position: 50% 30%, 50% 30%;
-    background-size: cover, cover;
-    background-attachment: fixed, fixed;
-  }
 }
 
 .heading-container {
@@ -110,12 +94,11 @@
   color: var(--font-color);
   font-weight: 300;
   margin-left: 2px;
-  @media (hover: none) and (pointer: coarse) {
-    visibility: hidden;
-    opacity: 0;
-    animation: subheader-fade-in 2000ms forwards;
-    animation-delay: 1250ms;
-  }
+  visibility: hidden;
+  opacity: 0;
+  animation: subheader-fade-in 2000ms forwards;
+  animation-delay: 1250ms;
+
   @include breakpoint-down(mdsmall) {
     font-size: $font-lrg;
   }
@@ -127,8 +110,9 @@
 
 .svg-container {
   overflow: hidden;
-  padding-top: 14rem;
   margin-top: -14rem;
+  padding-top: 14rem;
+  padding-bottom: 2.5rem;
   background: linear-gradient(to bottom, transparent, var(--bg-color-main) 30%);
 }
 

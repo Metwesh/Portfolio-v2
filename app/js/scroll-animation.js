@@ -26,3 +26,15 @@ function scrollMove(scrollPos) {
 }
 
 document.addEventListener("scroll", scrollListener);
+
+const svgObserver = new IntersectionObserver((entries, _sectionObserver) => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) {
+      document.removeEventListener("scroll", scrollListener);
+    } else {
+      document.addEventListener("scroll", scrollListener);
+    }
+  }
+});
+
+svgObserver.observe(coolShape);

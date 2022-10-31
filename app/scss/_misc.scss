@@ -235,7 +235,14 @@
       }
 
       @media (hover: hover) and (pointer: fine) {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.05rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem var(--bg-color-accent)) drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
+        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.05rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem var(--bg-color-accent))
+          drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       }
     }
   }

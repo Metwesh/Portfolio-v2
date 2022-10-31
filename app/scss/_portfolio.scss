@@ -67,6 +67,10 @@
   font-weight: 600;
   color: var(--font-color);
 
+  &.inline {
+    display: inline;
+  }
+
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
   }

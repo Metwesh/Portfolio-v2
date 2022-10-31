@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const viewMode = document.querySelector("#view-mode");
 const viewModeDisc = document.querySelector(".view-mode-disc");
 const sun = document.querySelector("#sun");
