@@ -15,10 +15,10 @@ function scrollListener() {
 
 function scrollMove(scrollPos) {
   if (screen.width > 1073) {
-    coolShape.style.transform = `translateX(${-scrollPos - 100}px)`;
-  } else if (screen.width > 600) {
+    coolShape.style.transform = `translateX(${-scrollPos * 0.9 - 100}px)`;
+  } else if (screen.width > 600 && screen.width <= 1073) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
-  } else if (screen.width >= 390) {
+  } else if (screen.width >= 390 && screen.width <= 600) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.8 - 100}px)`;
   } else {
     coolShape.style.transform = `translateX(${-scrollPos * 2 - 100}px)`;
