@@ -4,19 +4,43 @@
 
 .home {
   height: 140vh;
-  background: linear-gradient(to bottom, transparent 80%, var(--bg-color-main)),
-    url("../images/Architecture\ background.webp") no-repeat center center fixed,
-    url("../fallback_images/Architecture.png") no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: scroll;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 80%,
+      var(--bg-color-main)
+    ),
+    url("../fallback_images/Architecture.png");
+
+  @supports (
+    background-image: -webkit-image-set(url("../images/Architecture\ background.webp")
+          1x)
+  ) {
+    background-image: linear-gradient(
+        to bottom,
+        transparent 80%,
+        var(--bg-color-main)
+      ),
+      -webkit-image-set(url("../images/Architecture\ background.webp") 1x);
+  }
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  background-attachment: scroll, scroll;
 
   @media (hover: hover) and (pointer: fine) {
-    background: url("../images/Architecture\ background.webp") no-repeat center
-        center fixed,
-      url("../fallback_images/Architecture.png") no-repeat center center fixed;
-    background-position: 50% 30%;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url("../fallback_images/Architecture.png");
+    @supports (
+      background-image: -webkit-image-set(url("../images/Architecture\ background.webp")
+            1x)
+    ) {
+      background-image: -webkit-image-set(
+        url("../images/Architecture\ background.webp") 1x
+      );
+    }
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 30%, 50% 30%;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed;
   }
 }
 
