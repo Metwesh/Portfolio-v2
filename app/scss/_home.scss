@@ -5,13 +5,15 @@
 .home {
   height: 140vh;
   background: linear-gradient(to bottom, transparent 80%, var(--bg-color-main)),
-    url("../images/Architecture\ background.webp") no-repeat center center fixed;
+    url("../images/Architecture\ background.webp") no-repeat center center fixed,
+    url("../fallback_images/Architecture.png") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
 
   @media (hover: hover) and (pointer: fine) {
     background: url("../images/Architecture\ background.webp") no-repeat center
-      center fixed;
+        center fixed,
+      url("../fallback_images/Architecture.png") no-repeat center center fixed;
     background-position: 50% 30%;
     background-size: cover;
     background-attachment: fixed;
