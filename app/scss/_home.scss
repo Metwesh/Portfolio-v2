@@ -4,19 +4,14 @@
 
 .home {
   height: 140vh;
-  background: url("../images/Architecture\ background.webp") no-repeat center
-    center fixed;
+  background: linear-gradient(to bottom, transparent 80%, var(--bg-color-main)),
+    url("../images/Architecture\ background.webp") no-repeat center center fixed;
   background-size: cover;
   background-attachment: scroll;
 
   @media (hover: hover) and (pointer: fine) {
-    background: linear-gradient(
-        to bottom,
-        transparent 80%,
-        var(--bg-color-main)
-      ),
-      url("../images/Architecture\ background.webp") no-repeat center center
-        fixed;
+    background: url("../images/Architecture\ background.webp") no-repeat center
+      center fixed;
     background-position: 50% 30%;
     background-size: cover;
     background-attachment: fixed;

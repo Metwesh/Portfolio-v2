@@ -6,7 +6,7 @@
     <meta name="description" content="Portfolio website created by Mohamed H. Aly">
     <meta name="keywords" content="Portfolio, professional Portfolio, Mohamed H. Aly, metwesh">
     <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="author" content="Mohamed H. Aly">
@@ -14,7 +14,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Main background -->
     <title>My portfolio</title>
-    <link rel="preload" as="image" href="./images/Architecture background.webp">
+    <link rel="preload" as="image" href="./images/Architecture background.webp"
+        onerror="this.onerror=null;this.href='./fallback_images/Architecture.png'">
 
 
     <!-- Manifest & Favicon -->
@@ -124,6 +125,7 @@
     <link rel="apple-touch-startup-image"
         media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
         href="./splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dist/style.min.css">
 
@@ -354,20 +356,22 @@
                 <h3 class="header-text">Hello world!</h3>
                 <figure class="img-container circle">
                     <img class="img circle pointer" title="Contact details" id="selfPortrait" src="./images/Me.webp"
-                        alt="Personal image" tabindex="0" />
+                        onerror="this.onerror=null;this.src='./fallback_images/Me(fixed).png'" alt="Personal image"
+                        tabindex="0" />
                 </figure>
                 <h3 class="main-content">Welcome to my website</h3>
+                <p class="sub-content">I'm an Egyptian-born, self-taught & aspiring fullstack developer.</p>
                 <p class="sub-content">I created this website to showcase my web development capabilities, express my
-                    artistic vision, and act as my autobiography & professional portfolio.
+                    artistic vision, and act as my professional portfolio.
                 </p>
-                <p class="sub-content">I'm an Egyptian-born, self-taught, aspiring software & web developer. While I was
-                    studying Management Information Systems at university, I took a Computer Science course that
-                    cultivated my passion for web & software development. Ever since then, I've devoted most of my free
-                    time to learning how to write clean & efficient code.
+                <p class="sub-content"> While I was studying Management Information Systems at university, I took a
+                    Computer Science course that cultivated my passion for web & software development. Ever since then,
+                    I've devoted most of my free time to learning how to write clean & efficient code.
                 </p>
-                <p class="sub-content">Feel free to browse the website as you please; I have a downloadable & printable
-                    copy of my resume below. I've also left links for my Linkedin profile & my Github profile.
+                <p class="sub-content">I have a downloadable & printable copy of my resume below. I've also left links
+                    for my Linkedin profile & my Github profile.
                 </p>
+                <p class="sub-content">This website is fully implementing Progressive Web App technology.</p>
             </article>
         </div>
     </section>
@@ -382,6 +386,7 @@
                     <a class="certificate-link left long" target="_blank" rel="noopener noreferrer"
                         href="./app/assets/English certificate.pdf" aria-label="College certificate">
                         <img class="img" title="College certificate" src="./images/English certificate.webp"
+                            onerror="this.onerror=null;this.src='./fallback_images/English certificate.jpg'"
                             alt="College certificate" />
                     </a>
                 </figure>
@@ -405,7 +410,8 @@
                         aria-label="Fullstack web developer course certificate">
                         <img class="img" title="Fullstack web developer course certificate"
                             src="./images/Complete web developer certification.webp"
-                            alt="Fullstack web developer course certificate">
+                            alt="Fullstack web developer course certificate"
+                            onerror="this.onerror=null;this.src='./fallback_images/certificate-of-completion-for-complete-web-developer-in-2020-zero-to-mastery.jpg'">
                     </a>
                 </figure>
                 <p class="sub-content">I participated in & finished a full-stack web developer course from ZeroToMastery
@@ -429,7 +435,8 @@
                         aria-label="Senior web developer course certificate">
                         <img class="img" title="Senior web developer course certificate"
                             src="./images/Udemy-certificate-ZTM-senior-web-developer.webp"
-                            alt="Senior web developer course certificate">
+                            alt="Senior web developer course certificate"
+                            onerror="this.onerror=null;this.src='./fallback_images/Udemy-certificate-ZTM-senior-web-developer.jpeg'">
                     </a>
                 </figure>
                 <p class="sub-content">I also participated in & finished an advanced senior web developer course from
@@ -460,7 +467,8 @@
                         aria-label="Beginner C programming course certificate">
                         <img class="img" title="Beginner C programming course certificate"
                             src="./images/Udemy-certificate-C-programming.webp"
-                            alt="Beginner C programming course certificate">
+                            alt="Beginner C programming course certificate"
+                            onerror="this.onerror=null;this.src='./fallback_images/Udemy-certificate-C-programming.jpeg'">
                     </a>
                 </figure>
                 <p class="sub-content">I participated in & finished a beginner C programming course from Udemy.
@@ -482,7 +490,8 @@
                         aria-label="Data structures & algorithms certificate">
                         <img class="img" title="Data structures & algorithms certificate"
                             src="./images/Udemy-certificate-Algorithms+Data-structures.webp"
-                            alt="Data structures & algorithms certificate">
+                            alt="Data structures & algorithms certificate"
+                            onerror="this.onerror=null;this.src='./fallback_images/Udemy-certificate-Algorithms+Data-structures.jpeg'">
                     </a>
                 </figure>
                 <p class="sub-content">I participated in & finished a data structures & algorithms course from
@@ -506,21 +515,23 @@
                 </p>
             </article>
 
-            <article class="content-wrapper lastdiv">
+            <article class="content-wrapper last-div">
                 <h3 class="main-content certification">Professional certification</h3>
                 <div class="certificate-grid">
                     <figure class="certificate-grid-cell">
                         <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="./app/assets/CISA.pdf" aria-label="Oracle CISA">
                             <img class="img grid-img" title="Oracle CISA certificate" src="./images/CISA.webp"
-                                alt="CISA certificate">
+                                alt="CISA certificate"
+                                onerror="this.onerror=null;this.src='./fallback_images/CISA.jpg'">
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
                         <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="./app/assets/OSSA.pdf" aria-label="Javascript certificate">
                             <img class="img grid-img" title="Oracle SSA certificate" src="./images/OSSA.webp"
-                                alt="OSSA certificate">
+                                alt="OSSA certificate"
+                                onerror="this.onerror=null;this.src='./fallback_images/OSSA.jpg'">
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
@@ -528,7 +539,8 @@
                             href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
                             aria-label="Javascript certificate">
                             <img class="img grid-img" title="Javascript Certification"
-                                src="./images/JS-Certification.webp" alt="JavaScript certificate">
+                                src="./images/JS-Certification.webp" alt="JavaScript certificate"
+                                onerror="this.onerror=null;this.src='./fallback_images/JS-Certification 1.png'">
                         </a>
                     </figure>
                 </div>
@@ -543,137 +555,165 @@
                 <h3 class="header-text">Skills</h3>
                 <div class="skills-grid">
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/html5.webp" alt="HTML5" loading="eager">
+                        <img class="skills-icon" src="./images/html5.webp" alt="HTML5" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/html.png'">
                         <p class="skills-text">HTML5</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/css3.webp" alt="CSS3" loading="eager">
+                        <img class="skills-icon" src="./images/css3.webp" alt="CSS3" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/css.png'">
                         <p class="skills-text">CSS3</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/javascript.webp" alt="JavaScript" loading="eager">
+                        <img class="skills-icon" src="./images/javascript.webp" alt="JavaScript" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/javascript.png'">
                         <p class="skills-text">JavaScript</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/typescript.webp" alt="TypeScript" loading="eager">
+                        <img class="skills-icon" src="./images/typescript.webp" alt="TypeScript" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/typescript.png'">
                         <p class="skills-text">TypeScript</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/sass.webp" alt="SASS" loading="eager">
+                        <img class="skills-icon" src="./images/sass.webp" alt="SASS" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/sass.png'">
                         <p class="skills-text">SASS</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/bootstrap.webp" alt="BootStrap" loading="eager">
+                        <img class="skills-icon" src="./images/bootstrap.webp" alt="BootStrap" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/bootstrap.png'">
                         <p class="skills-text">BootStrap</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/react.webp" alt="React" loading="eager">
+                        <img class="skills-icon" src="./images/react.webp" alt="React" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/react.png'">
                         <p class="skills-text">React</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/nodejs.webp" alt="NodeJS" loading="eager">
+                        <img class="skills-icon" src="./images/nodejs.webp" alt="NodeJS" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/nodejs.png'">
                         <p class="skills-text">NodeJS</p>
                     </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon wide-skill marked" src="./images/express.webp" alt="Express"
-                            loading="eager">
+                            loading="eager" onerror="this.onerror=null;this.src='./fallback_images/Express.png'">
                         <p class="skills-text">Express</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon semi-wide-skill" src="./images/php.webp" alt="PHP" loading="eager">
+                        <img class="skills-icon semi-wide-skill" src="./images/php.webp" alt="PHP" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/php.png'">
                         <p class="skills-text">PHP</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/C.webp" alt="C" loading="eager">
+                        <img class="skills-icon" src="./images/C.webp" alt="C" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/C.png'">
                         <p class="skills-text">C</p>
                     </figure>
                     <!-- TODO: when course is finished remove bands-->
                     <figure class="skills-grid-cell">
                         <img class="skills-icon under-construction" src="./images/python.webp" alt="Python"
-                            loading="eager">
+                            loading="eager" onerror="this.onerror=null;this.src='./fallback_images/python.png'">
                         <img class="skills-icon construction" src="./images/under-construction.webp"
-                            alt="Under construction" loading="eager">
+                            alt="Under construction" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/under-construction.png'">
                         <p class="skills-text">Coming soon</p>
                     </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon semi-wide-skill" src="./images/serverless.webp" alt="Serverless"
-                            loading="eager">
+                            loading="eager" onerror="this.onerror=null;this.src='./fallback_images/serverless.png'">
                         <p class="skills-text">Serverless</p>
                     </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon wide-skill marked" src="./images/rest-api.webp" alt="RESTful APIs"
-                            loading="eager">
+                            loading="eager" onerror="this.onerror=null;this.src='./fallback_images/rest-api.png'">
                         <p class="skills-text">RESTful APIs</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/unit-testing.webp" alt="Unit testing" loading="eager">
+                        <img class="skills-icon" src="./images/unit-testing.webp" alt="Unit testing" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/unit-testing.png'">
                         <p class="skills-text">Unit testing</p>
                     </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon marked" src="./images/data-structures.webp" alt="Data structures"
-                            loading="eager">
+                            loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/data-structures.png'">
                         <p class="skills-text">Data structures</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon marked" src="./images/algorithms.webp" alt="Algorithms" loading="eager">
+                        <img class="skills-icon marked" src="./images/algorithms.webp" alt="Algorithms" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/algorithms.png'">
                         <p class="skills-text">Algorithms</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon saturate" src="./images/mysql.webp" alt="MySQL" loading="eager">
+                        <img class="skills-icon saturate" src="./images/mysql.webp" alt="MySQL" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/mysql.png'">
                         <p class="skills-text">MySQL</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/postgresql.webp" alt="PostgreSQL" loading="eager">
+                        <img class="skills-icon" src="./images/postgresql.webp" alt="PostgreSQL" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/postgresql.png'">
                         <p class="skills-text">PostgreSQL</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/mongodb.webp" alt="MongoDB" loading="eager">
+                        <img class="skills-icon" src="./images/mongodb.webp" alt="MongoDB" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/mongodb.png'">
                         <p class="skills-text">MongoDB</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/redis.webp" alt="Redis" loading="eager">
+                        <img class="skills-icon" src="./images/redis.webp" alt="Redis" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/redis.png'">
                         <p class="skills-text">Redis</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/docker.webp" alt="Docker" loading="eager">
+                        <img class="skills-icon" src="./images/docker.webp" alt="Docker" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/docker.png'">
                         <p class="skills-text">Docker</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/git.webp" alt="Git" loading="eager">
+                        <img class="skills-icon" src="./images/git.webp" alt="Git" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/git.png'">
                         <p class="skills-text">Git</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon marked" src="./images/github.webp" alt="Github" loading="eager">
+                        <img class="skills-icon marked" src="./images/github.webp" alt="Github" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/github.png'">
                         <p class="skills-text">Github</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon aws top marked whiten" src="./images/aws.webp" alt="AWS"
-                            loading="eager">
-                        <img class="skills-icon aws bottom" src="./images/aws.webp" alt="AWS" loading="eager">
+                        <img class="skills-icon aws top marked whiten" src="./images/aws.webp" alt="AWS" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/aws.png'">
+                        <img class="skills-icon aws bottom" src="./images/aws.webp" alt="AWS" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/aws.png'">
                         <p class="skills-text">AWS</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/azure.webp" alt="Azure" loading="eager">
+                        <img class="skills-icon" src="./images/azure.webp" alt="Azure" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/azure.png'">
                         <p class="skills-text">Azure</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/google-cloud.webp" alt="Google Cloud" loading="eager">
+                        <img class="skills-icon" src="./images/google-cloud.webp" alt="Google Cloud" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/google-cloud.png'">
                         <p class="skills-text">Google Cloud</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/heroku.webp" alt="Heroku" loading="eager">
+                        <img class="skills-icon" src="./images/heroku.webp" alt="Heroku" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/heroku.png'">
                         <p class="skills-text">Heroku</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon" src="./images/bash.webp" alt="Bash" loading="eager">
+                        <img class="skills-icon" src="./images/bash.webp" alt="Bash" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/bash.png'">
                         <p class="skills-text">Bash</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon marked" src="./images/ci-cd.webp" alt="CI/CD" loading="eager">
+                        <img class="skills-icon marked" src="./images/ci-cd.webp" alt="CI/CD" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/ci-cd.png'">
                         <p class="skills-text">CI/CD</p>
                     </figure>
                     <figure class="skills-grid-cell">
-                        <img class="skills-icon marked" src="./images/ampersand.webp" alt="&" loading="eager">
+                        <img class="skills-icon marked" src="./images/ampersand.webp" alt="&" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/ampersand.png'">
                         <p class="skills-text">More everyday</p>
                     </figure>
                 </div>
@@ -698,7 +738,8 @@
                     <div class="grid" id="grid">
                         <figure class="grid-cell">
                             <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
-                                title="Online Bookstore" class="project" />
+                                title="Online Bookstore" class="project"
+                                onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
                         </figure>
                         <article class="project-text">
                             <div class="heading">
@@ -737,7 +778,8 @@
 
                         <figure class="grid-cell">
                             <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
-                                class="project" />
+                                class="project"
+                                onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
                         </figure>
 
                         <article class="project-text">
@@ -769,7 +811,8 @@
                         </article>
                         <figure class="grid-cell">
                             <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
-                                class="project" />
+                                class="project"
+                                onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
                         </figure>
                         <article class="project-text">
                             <div class="heading">
@@ -798,7 +841,8 @@
                         </article>
                         <figure class="grid-cell">
                             <img src="./images/Face-detect.webp" alt="Face Detection App project"
-                                title="Face Detection App" class="project" />
+                                title="Face Detection App" class="project"
+                                onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
                         </figure>
                         <article class="project-text">
                             <div class="heading">
@@ -828,7 +872,8 @@
                         </article>
                         <figure class="grid-cell">
                             <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
-                                class="project" />
+                                class="project"
+                                onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
                         </figure>
                         <article class="project-text">
                             <div class="heading">

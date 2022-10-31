@@ -1,12 +1,12 @@
 {
+  "name": "Mohamed H. Aly's Portfolio",
+  "short_name": "MH Portfolio",
+  "description": "Mohamed H. Aly's portfolio",
   "theme_color": "#0ec7ff",
   "background_color": "#383d46",
   "display": "standalone",
   "start_url": "https://metwesh.github.io/Portfolio-v2/",
   "scope": "https://metwesh.github.io/Portfolio-v2/",
-  "name": "MH Portfolio V2",
-  "short_name": "Portfolio V2",
-  "description": "Mohamed H. Aly's portfolio",
   "icons": [
     {
       "src": "icons/android-chrome-36x36.png",
