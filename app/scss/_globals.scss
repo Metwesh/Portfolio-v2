@@ -26,6 +26,7 @@
 
     --icon-color: #{$dark-gray};
     --m-logo-color: url(#m-logo-dark);
+    --watermark-color: rgb(56, 61, 70, 0.3);
     --card-color: url(#card-dark);
     --dorito-color: url(#dorito-dark);
     --linkedin-footer-color: url(#linkedin-footer-light);
@@ -58,6 +59,7 @@
 
     --icon-color: #{$white};
     --m-logo-color: url(#m-logo-light);
+    --watermark-color: rgb(255, 255, 255, 0.2);
     --card-color: url(#card-light);
     --dorito-color: url(#dorito-light);
     --linkedin-footer-color: url(#linkedin-footer-dark);
@@ -112,6 +114,7 @@ body {
 
     --icon-color: #{$white};
     --m-logo-color: url(#m-logo-light);
+    --watermark-color: rgb(255, 255, 255, 0.2);
     --card-color: url(#card-light);
     --dorito-color: url(#dorito-light);
     --linkedin-footer-color: url(#linkedin-footer-dark);
@@ -142,6 +145,7 @@ body {
 
     --icon-color: #{$dark-gray};
     --m-logo-color: url(#m-logo-dark);
+    --watermark-color: rgb(56, 61, 70, 0.3);
     --card-color: url(#card-dark);
     --dorito-color: url(#dorito-dark);
     --linkedin-footer-color: url(#linkedin-footer-light);

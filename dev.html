@@ -352,7 +352,9 @@
     </section>
 
     <!-- About section -->
-    <section class="about" id="about">
+    <section class="about p-relative" id="about">
+        <img src="./images/cool-shape.svg" class="tiny-shape" id="tinyShape1" alt="Triangle">
+        <img src="./images/cool-shape.svg" class="tiny-shape" id="tinyShape2" alt="Triangle">
         <main class="content-background space">
             <article class="content-wrapper first-div">
                 <h3 class="header-text">About</h3>
@@ -431,8 +433,7 @@
                 <p class="sub-content">I learned about session management & JSON Web Tokens and the drawbacks that came
                     with using session storage vs local storage. I got to interact with Redis & AWS serverless
                     functions. Additionally, I built my first Docker container, coupled with docker-compose to
-                    streamline
-                    development. Finally, I learned how to implement CI/CD into my workflow to increase team
+                    streamline development. Finally, I learned how to implement CI/CD into my workflow to increase team
                     cohesiveness.
                 </p>
                 <hr class="line">
@@ -701,13 +702,17 @@
                     </div>
                 </form>
             </article>
+            <svg class="watermark" width="24" height="24" viewBox="0 0 400 400">
+                <path
+                    d="M-1.74846e-05 1.52588e-05C30 70 30 280 -1.74846e-06 360C40.6667 358 125.5 360 80 400C98 400 120 367 120 320C120 240 111.5 236 60 236C70 216 70 180 60 160C80 170 120 170 140 160L200 380L260 160C280 170 320 170 340 160C330 180 330 216 340 236C288.5 236 280 240 280 320C280 367 302 400 320 400C274.5 360 359.333 358 400 360C370 280 370 70 400 -2.22577e-06C379.5 13.5 272.4 32.4 240 4.76806e-06L200 160L160 8.26497e-06C127.6 32.4 20.5 13.5 -1.74846e-05 1.52588e-05Z" />
+            </svg>
         </div>
     </section>
 
     <!-- Portfolio section -->
     <section class="portfolio" id="portfolio">
         <form target="_blank">
-            <div class="content-background space">
+            <div class="content-background">
                 <div class="content-wrapper border-radius">
                     <h3 class="header-text">Portfolio</h3>
                     <div class="grid" id="grid">
@@ -718,6 +723,7 @@
                         </figure>
                         <article class="project-text">
                             <div class="heading">
+                                <!-- TODO: Remove unnecessary radial gradients -->
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <defs>
                                         <radialGradient id="dorito-dark">
