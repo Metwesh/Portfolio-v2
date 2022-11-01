@@ -160,7 +160,7 @@ selfPortrait.addEventListener("click", (e) => {
   toggleContactCard();
   toggleMailButton();
   toggleHamburger();
-  contactMail.focus();
+  if (screen.width > 885) contactMail.focus();
 });
 
 selfPortrait.addEventListener("keypress", (e) => {
