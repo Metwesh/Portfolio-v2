@@ -4,28 +4,20 @@
 
 .home {
   height: 140vh;
-  background-image: linear-gradient(
-      to bottom,
-      transparent 80%,
-      var(--bg-color-main)
-    ),
-    url("../fallback_images/Architecture.png");
+  background-image: url("../fallback_images/Architecture.png");
 
   @supports (
     background-image: -webkit-image-set(url("../images/Architecture\ background.webp")
           1x)
   ) {
-    background-image: linear-gradient(
-        to bottom,
-        transparent 80%,
-        var(--bg-color-main)
-      ),
-      -webkit-image-set(url("../images/Architecture\ background.webp") 1x);
+    background-image: -webkit-image-set(
+      url("../images/Architecture\ background.webp") 1x
+    );
   }
-  background-repeat: no-repeat, no-repeat;
-  background-position: center center, center center;
-  background-size: cover, cover;
-  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
 }
 
 .heading-container {
@@ -113,7 +105,7 @@
   margin-top: -14rem;
   padding-top: 14rem;
   padding-bottom: 2.5rem;
-  background: linear-gradient(to bottom, transparent, var(--bg-color-main) 30%);
+  background: linear-gradient(to bottom, transparent, var(--color-main) 30%);
 }
 
 .cool-shape {

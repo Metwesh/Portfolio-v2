@@ -2,10 +2,6 @@
   scroll-margin-block-start: 3rem;
 }
 
-.p-relative {
-  position: relative;
-}
-
 #start {
   scroll-margin-block-start: 3rem;
 }
@@ -36,7 +32,7 @@
   width: 100%;
   margin: 0 2.5rem;
   padding: 1.25rem 2.5rem;
-  background-color: var(--bg-color-box);
+  background-color: var(--color-box);
   color: var(--font-color);
 
   &.border-radius {
@@ -80,8 +76,8 @@
 }
 
 .line {
-  border: 1px solid var(--bg-color-main);
-  background-color: var(--bg-color-main);
+  border: 1px solid var(--color-main);
+  background-color: var(--color-main);
   border-radius: 5px;
   margin-top: 2.5rem;
   margin-bottom: 3rem;
@@ -248,7 +244,10 @@ span.sub-content {
   max-height: 25.5rem;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 0 5px var(--bg-color-sub);
+  box-shadow: 0 0 5px var(--color-sub);
+  @include breakpoint-down(medium) {
+    max-height: 23.5rem;
+  }
 
   &.circle {
     float: left;
@@ -272,13 +271,8 @@ span.sub-content {
 
 .watermark {
   fill: var(--watermark-color);
-  margin-block: 0.333rem;
-  width: 45px;
-  height: 45px;
-  @include breakpoint-down(mdsmall) {
-    width: 35px;
-    height: 35px;
-  }
+  width: 3rem;
+  height: 3rem;
 }
 
 .certificate-grid {
@@ -298,7 +292,7 @@ span.sub-content {
 }
 
 .grid-img {
-  box-shadow: 0 0 5px var(--bg-color-sub);
+  box-shadow: 0 0 5px var(--color-sub);
   border-radius: 1rem;
   max-height: 100%;
   max-width: 100%;
@@ -312,15 +306,15 @@ span.sub-content {
   height: 1rem;
   width: auto;
   &:first-of-type {
+    rotate: 90deg;
     left: -1rem;
-    rotate: -90deg;
     @include breakpoint-down(xsmall) {
       left: -1.5rem;
     }
   }
   &:last-of-type {
     right: -1rem;
-    rotate: 90deg;
+    rotate: -90deg;
     @include breakpoint-down(xsmall) {
       right: -1.5rem;
     }

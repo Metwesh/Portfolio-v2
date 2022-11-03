@@ -1,3 +1,7 @@
+/* 
+I'm dividing these JS files for readability only.
+The files are being concatenated together & minified with the build script in the package.json file.
+*/
 const buttons = document.querySelectorAll(".button");
 
 function toggleButtonClassMouseDown(button, className, className2) {

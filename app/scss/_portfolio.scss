@@ -26,7 +26,7 @@
   width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 0 5px var(--bg-color-sub);
+  box-shadow: 0 0 5px var(--color-sub);
 }
 
 .dorito {
@@ -55,7 +55,7 @@
   margin: 0;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 5px var(--bg-color-sub);
+  box-shadow: 0 0 5px var(--color-sub);
 
   @include breakpoint-up(large) {
     height: 100%;

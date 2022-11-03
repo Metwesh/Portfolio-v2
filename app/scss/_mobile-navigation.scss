@@ -39,7 +39,7 @@
 }
 
 .m-logo {
-  fill: var(--m-logo-color);
+  fill: var(--icon-color);
   width: 45px;
   height: 45px;
 
@@ -79,7 +79,7 @@
     width: 55px;
     height: 6px;
     border-radius: 1.25px;
-    background-color: var(--bg-color-accent-2);
+    background-color: var(--color-accent-2);
     transition: transform 350ms ease-in-out, width 300ms ease-in-out 300ms,
       opacity 300ms ease-in-out;
 

@@ -1,3 +1,7 @@
+/* 
+I'm dividing these JS files for readability only.
+The files are being concatenated together & minified with the build script in the package.json file.
+*/
 const homeButton = document.querySelector("#homeButton");
 const hamburgerMenu = document.querySelector("#hamburgerMenu");
 const overlay = document.querySelector("#overlay");

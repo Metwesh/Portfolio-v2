@@ -1,3 +1,7 @@
+/* 
+I'm dividing these JS files for readability only.
+The files are being concatenated together & minified with the build script in the package.json file.
+*/
 let lastKnownScrollPosition = 0;
 let ticking = false;
 const coolShape = document.querySelector("#coolShape");
@@ -7,7 +11,7 @@ const tinyShape2 = document.querySelector("#tinyShape2");
 function scrollListener() {
   lastKnownScrollPosition = window.scrollY;
   if (!ticking) {
-    window.requestAnimationFrame(function () {
+    window.requestAnimationFrame(() => {
       scrollMoveBigShape(lastKnownScrollPosition);
       scrollMoveSmallShapes(lastKnownScrollPosition);
       ticking = false;
@@ -29,7 +33,8 @@ function scrollMoveBigShape(scrollPos) {
 }
 
 function scrollMoveSmallShapes(scrollPos) {
-  tinyShape1.style.transform = `translateX(${scrollPos * -0.5 - 500}px)`;
-  tinyShape2.style.transform = `translateX(${-scrollPos * -0.5 - 500}px)`;
+  tinyShape1.style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
+  tinyShape2.style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
 }
+
 document.addEventListener("scroll", scrollListener);

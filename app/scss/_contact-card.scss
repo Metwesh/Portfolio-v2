@@ -80,7 +80,6 @@
   @include height-breakpoint-down(mdsmall) {
     margin: 0 4rem;
   }
-
 }
 
 .contact-header {
@@ -111,8 +110,6 @@
     padding-bottom: 0;
     margin-block: 0;
   }
-
-
 }
 
 .signature-card {
@@ -166,7 +163,6 @@
   @include height-breakpoint-down(mdsmall) {
     width: 15rem;
   }
-
 }
 
 .card-links {
@@ -188,11 +184,15 @@
       }
 
       &.phone {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--color-accent-invert))
+          drop-shadow(0 0 0.05rem var(--color-accent-invert))
+          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
 
       &.mail-card {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.05rem var(--bg-color-accent-invert-2)) drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
+        filter: drop-shadow(0 0 0.05rem var(--color-accent-invert))
+          drop-shadow(0 0 0.05rem var(--color-accent-invert))
+          drop-shadow(0 0 0.4rem $cyan) drop-shadow(0 0 0.5rem $light-cyan);
       }
     }
   }
@@ -202,7 +202,7 @@
   height: 3.75rem;
   width: 3.75rem;
   margin: 0.5rem;
-  fill: var(--card-color);
+  fill: var(--icon-card-color);
   transition: filter 150ms ease-in-out, box-shadow 150ms ease-in-out;
 
   &.linkedin {
@@ -221,12 +221,11 @@
     height: 3rem;
     width: 3rem;
   }
-  
+
   @include breakpoint-down(xsmall) {
     height: 2.75rem;
     width: 2.75rem;
     margin: 0.375rem;
-
   }
 
   @include height-breakpoint-down(mdsmall) {
@@ -234,5 +233,4 @@
     width: 3rem;
     margin: 0;
   }
-
 }

@@ -10,13 +10,12 @@
     --cyan-invert: #{$cyan};
     --cyan-icons: #{$dark-cyan};
 
-    --bg-color-box: #{$white};
-    --bg-color-main: #{$whitish};
-    --bg-color-sub: #{$whitish};
-    --bg-color-accent: #{$dark-gray};
-    --bg-color-accent-2: #{$dark-gray};
-    --bg-color-accent-invert: #{$whitish};
-    --bg-color-accent-invert-2: #{$white};
+    --color-box: #{$white};
+    --color-main: #{$whitish};
+    --color-sub: #{$whitish};
+    --color-accent: #{$dark-gray};
+    --color-accent-2: #{$dark-gray};
+    --color-accent-invert: #{$white};
 
     --footer-gradient: #{$footer-gradient-invert};
 
@@ -25,12 +24,10 @@
     --semi-transparent: #{$semi-transparent};
 
     --icon-color: #{$dark-gray};
-    --m-logo-color: url(#m-logo-dark);
+    --icon-card-color: #{$darker-gray};
+    --icon-footer-color: #{$whitish};
     --watermark-color: rgb(56, 61, 70, 0.3);
-    --card-color: url(#card-dark);
-    --dorito-color: url(#dorito-dark);
-    --linkedin-footer-color: url(#linkedin-footer-light);
-    --github-footer-color: url(#github-footer-light);
+    --dorito-color: #{$darker-gray};
   }
 }
 
@@ -43,13 +40,12 @@
     --cyan-invert: #{$dark-cyan};
     --cyan-icons: #{$cyan};
 
-    --bg-color-box: #{$darker-gray};
-    --bg-color-main: #{$dark-gray};
-    --bg-color-sub: #{$gray};
-    --bg-color-accent: #{$whitish};
-    --bg-color-accent-2: #{$white};
-    --bg-color-accent-invert: #{$dark-gray};
-    --bg-color-accent-invert-2: #{$dark-gray};
+    --color-box: #{$darker-gray};
+    --color-main: #{$dark-gray};
+    --color-sub: #{$gray};
+    --color-accent: #{$whitish};
+    --color-accent-2: #{$white};
+    --color-accent-invert: #{$dark-gray};
 
     --footer-gradient: #{$footer-gradient};
 
@@ -58,12 +54,10 @@
     --semi-transparent: #{$darker-semi-transparent};
 
     --icon-color: #{$white};
-    --m-logo-color: url(#m-logo-light);
+    --icon-card-color: #{$whitish};
+    --icon-footer-color: #{$dark-gray};
     --watermark-color: rgb(255, 255, 255, 0.2);
-    --card-color: url(#card-light);
-    --dorito-color: url(#dorito-light);
-    --linkedin-footer-color: url(#linkedin-footer-dark);
-    --github-footer-color: url(#github-footer-dark);
+    --dorito-color: #{$white};
   }
 }
 
@@ -88,7 +82,7 @@ body {
   font-size: 16px;
   padding-top: 5rem;
   letter-spacing: 1px;
-  background-color: var(--bg-color-main);
+  background-color: var(--color-main);
 
   &.dark-mode {
     --font-color: #{$white};
@@ -98,13 +92,12 @@ body {
     --cyan-invert: #{$dark-cyan};
     --cyan-icons: #{$cyan};
 
-    --bg-color-box: #{$darker-gray};
-    --bg-color-main: #{$dark-gray};
-    --bg-color-sub: #{$gray};
-    --bg-color-accent: #{$whitish};
-    --bg-color-accent-2: #{$white};
-    --bg-color-accent-invert: #{$dark-gray};
-    --bg-color-accent-invert-2: #{$dark-gray};
+    --color-box: #{$darker-gray};
+    --color-main: #{$dark-gray};
+    --color-sub: #{$gray};
+    --color-accent: #{$whitish};
+    --color-accent-2: #{$white};
+    --color-accent-invert: #{$dark-gray};
 
     --footer-gradient: #{$footer-gradient};
 
@@ -113,12 +106,10 @@ body {
     --semi-transparent: #{$darker-semi-transparent};
 
     --icon-color: #{$white};
-    --m-logo-color: url(#m-logo-light);
+    --icon-card-color: #{$whitish};
+    --icon-footer-color: #{$dark-gray};
     --watermark-color: rgb(255, 255, 255, 0.2);
-    --card-color: url(#card-light);
-    --dorito-color: url(#dorito-light);
-    --linkedin-footer-color: url(#linkedin-footer-dark);
-    --github-footer-color: url(#github-footer-dark);
+    --dorito-color: #{$white};
   }
 
   &.light-mode {
@@ -129,13 +120,12 @@ body {
     --cyan-invert: #{$cyan};
     --cyan-icons: #{$dark-cyan};
 
-    --bg-color-box: #{$white};
-    --bg-color-main: #{$whitish};
-    --bg-color-sub: #{$whitish};
-    --bg-color-accent: #{$dark-gray};
-    --bg-color-accent-2: #{$dark-gray};
-    --bg-color-accent-invert: #{$whitish};
-    --bg-color-accent-invert-2: #{$white};
+    --color-box: #{$white};
+    --color-main: #{$whitish};
+    --color-sub: #{$whitish};
+    --color-accent: #{$dark-gray};
+    --color-accent-2: #{$dark-gray};
+    --color-accent-invert: #{$white};
 
     --footer-gradient: #{$footer-gradient-invert};
 
@@ -144,12 +134,10 @@ body {
     --semi-transparent: #{$semi-transparent};
 
     --icon-color: #{$dark-gray};
-    --m-logo-color: url(#m-logo-dark);
+    --icon-card-color: #{$dark-gray};
+    --icon-footer-color: #{$whitish};
     --watermark-color: rgb(56, 61, 70, 0.3);
-    --card-color: url(#card-dark);
-    --dorito-color: url(#dorito-dark);
-    --linkedin-footer-color: url(#linkedin-footer-light);
-    --github-footer-color: url(#github-footer-light);
+    --dorito-color: #{$darker-gray};
   }
 }
 

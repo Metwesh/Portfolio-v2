@@ -75,7 +75,7 @@
         width: 200%;
         font-size: $font-med;
         color: var(--font-color-invert);
-        background: var(--bg-color-accent-2);
+        background: var(--color-accent-2);
         padding: 1rem;
         border-radius: 5px;
         display: inline-block;
@@ -103,7 +103,7 @@
         width: 0;
         border: solid transparent;
         border-color: rgba(0, 0, 0, 0);
-        border-top-color: var(--bg-color-accent-2);
+        border-top-color: var(--color-accent-2);
         border-width: 5px;
         margin-left: -5px;
         transform: translate(0, 0);
@@ -235,13 +235,13 @@
       }
 
       @media (hover: hover) and (pointer: fine) {
-        filter: drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.05rem var(--bg-color-accent))
-          drop-shadow(0 0 0.15rem var(--bg-color-accent))
-          drop-shadow(0 0 0.15rem var(--bg-color-accent))
+        filter: drop-shadow(0 0 0.05rem var(--color-accent))
+          drop-shadow(0 0 0.05rem var(--color-accent))
+          drop-shadow(0 0 0.05rem var(--color-accent))
+          drop-shadow(0 0 0.05rem var(--color-accent))
+          drop-shadow(0 0 0.05rem var(--color-accent))
+          drop-shadow(0 0 0.15rem var(--color-accent))
+          drop-shadow(0 0 0.15rem var(--color-accent))
           drop-shadow(0 0 0.15rem $cyan) drop-shadow(0 0 0.15rem $cyan);
       }
     }
