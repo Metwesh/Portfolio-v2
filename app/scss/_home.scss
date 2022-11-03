@@ -55,13 +55,7 @@
   font-weight: 400;
   margin: 0;
   animation: header-fade-in 1250ms forwards 500ms;
-
-  @media (hover: hover) and (pointer: fine) {
-    text-shadow: $dark-gray 1px 1px 1px, $dark-gray 2px 2px 2px;
-    backdrop-filter: blur(2px);
-    border-radius: 60px;
-    max-width: max-content;
-  }
+  text-shadow: $dark-gray 1px 1px 1px, $dark-gray 2px 2px 2px;
 
   @include breakpoint-down(mdsmall) {
     font-size: $font-xlg;
@@ -74,9 +68,6 @@
 
 .colored {
   color: var(--cyan);
-  @media (hover: hover) and (pointer: fine) {
-    color: $cyan;
-  }
 }
 
 .sub-text {
