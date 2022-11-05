@@ -109,13 +109,45 @@
   }
 }
 
-.main-content {
+.main-header {
   font-size: $font-lrgmed;
   font-weight: 300;
 
   @include breakpoint-down(small) {
     font-size: $font-lrg;
     text-align: center;
+  }
+}
+
+.sub-header {
+  font-weight: 200;
+  font-size: $font-lrg;
+
+  @include breakpoint-down(large) {
+    text-align: center;
+  }
+  @include breakpoint-down(small) {
+    font-size: $font-medlrg;
+  }
+}
+
+.job-title {
+  color: var(--cyan);
+}
+
+.join-date {
+  text-transform: uppercase;
+}
+
+@include breakpoint-down(large) {
+  .hide-for-small-screen {
+    display: none;
+  }
+}
+
+@include breakpoint-up(large) {
+  .hide-for-large-screen {
+    display: none;
   }
 }
 
@@ -131,17 +163,46 @@ span.sub-content {
   font-size: $font-medlrg;
   text-indent: 4rem;
 
+  &.no-indent {
+    text-indent: 0;
+  }
+
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint-down(small) {
+    font-size: $font-med;
+  }
+
+  @include breakpoint-down(xsmall) {
+    padding: 0.3rem;
+  }
+}
+
+.job-description {
+  list-style-type: disc;
+  padding-inline: 2rem;
+  font-size: $font-medlrg;
+
+  &.small-margin-top {
+    margin-top: 0.5rem;
+  }
+
+  & > li {
+    margin-block: 0.3rem;
+  }
+
   @include breakpoint-down(small) {
     font-size: $font-med;
   }
 
   @include breakpoint-down(xsmall) {
     font-size: $font-med;
-    padding: 0.3rem;
   }
 }
 
-.header-text {
+.title-text {
   display: flex;
   justify-content: center;
   font-size: $font-xxlg;
@@ -167,7 +228,7 @@ span.sub-content {
   }
 }
 
-.certificate-link {
+.img-link {
   display: block;
   width: max-content;
   height: max-content;
@@ -208,6 +269,10 @@ span.sub-content {
     @include breakpoint-down(large) {
       margin: 0;
     }
+  }
+
+  &.wider {
+    max-width: 34rem;
   }
 
   &.grid-img {

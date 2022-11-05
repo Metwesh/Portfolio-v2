@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -11,6 +11,7 @@
     --cyan-icons: #{$dark-cyan};
 
     --color-box: #{$white};
+    --color-card: #{$true-white};
     --color-main: #{$whitish};
     --color-sub: #{$whitish};
     --color-accent: #{$dark-gray};
@@ -37,10 +38,11 @@
     --font-color-invert: #{$darker-gray};
 
     --cyan: #{$cyan};
-    --cyan-invert: #{$dark-cyan};
+    --cyan-invert: #{$darker-cyan};
     --cyan-icons: #{$cyan};
 
     --color-box: #{$darker-gray};
+    --color-card: #{$even-darker-gray};
     --color-main: #{$dark-gray};
     --color-sub: #{$gray};
     --color-accent: #{$whitish};
@@ -84,34 +86,6 @@ body {
   letter-spacing: 1px;
   background-color: var(--color-main);
 
-  &.dark-mode {
-    --font-color: #{$white};
-    --font-color-invert: #{$darker-gray};
-
-    --cyan: #{$cyan};
-    --cyan-invert: #{$dark-cyan};
-    --cyan-icons: #{$cyan};
-
-    --color-box: #{$darker-gray};
-    --color-main: #{$dark-gray};
-    --color-sub: #{$gray};
-    --color-accent: #{$whitish};
-    --color-accent-2: #{$white};
-    --color-accent-invert: #{$dark-gray};
-
-    --footer-gradient: #{$footer-gradient};
-
-    --shadow-color: #{$gray};
-
-    --semi-transparent: #{$darker-semi-transparent};
-
-    --icon-color: #{$white};
-    --icon-card-color: #{$whitish};
-    --icon-footer-color: #{$dark-gray};
-    --watermark-color: rgb(255, 255, 255, 0.2);
-    --dorito-color: #{$white};
-  }
-
   &.light-mode {
     --font-color: #{$darker-gray};
     --font-color-invert: #{$light-gray};
@@ -121,6 +95,7 @@ body {
     --cyan-icons: #{$dark-cyan};
 
     --color-box: #{$white};
+    --color-card: #{$true-white};
     --color-main: #{$whitish};
     --color-sub: #{$whitish};
     --color-accent: #{$dark-gray};
@@ -138,6 +113,34 @@ body {
     --icon-footer-color: #{$whitish};
     --watermark-color: rgb(56, 61, 70, 0.3);
     --dorito-color: #{$darker-gray};
+  }
+  &.dark-mode {
+    --font-color: #{$white};
+    --font-color-invert: #{$darker-gray};
+
+    --cyan: #{$cyan};
+    --cyan-invert: #{$darker-cyan};
+    --cyan-icons: #{$cyan};
+
+    --color-box: #{$darker-gray};
+    --color-card: #{$even-darker-gray};
+    --color-main: #{$dark-gray};
+    --color-sub: #{$gray};
+    --color-accent: #{$whitish};
+    --color-accent-2: #{$white};
+    --color-accent-invert: #{$dark-gray};
+
+    --footer-gradient: #{$footer-gradient};
+
+    --shadow-color: #{$gray};
+
+    --semi-transparent: #{$darker-semi-transparent};
+
+    --icon-color: #{$white};
+    --icon-card-color: #{$whitish};
+    --icon-footer-color: #{$dark-gray};
+    --watermark-color: rgb(255, 255, 255, 0.2);
+    --dorito-color: #{$white};
   }
 }
 

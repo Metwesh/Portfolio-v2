@@ -55,7 +55,6 @@
   font-weight: 400;
   margin: 0;
   animation: header-fade-in 1250ms forwards 500ms;
-  text-shadow: $dark-gray 1px 1px 1px, $dark-gray 2px 2px 2px;
 
   @include breakpoint-down(mdsmall) {
     font-size: $font-xlg;
@@ -67,7 +66,7 @@
 }
 
 .colored {
-  color: $cyan;
+  color: var(--cyan);
 }
 
 .sub-text {

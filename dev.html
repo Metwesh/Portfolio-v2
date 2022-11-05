@@ -141,13 +141,13 @@
 
 <body>
     <div class="skip-link-wrapper">
-        <a href="#start" class="skip-link button">Skip to main-content</a>
+        <a href="#start" class="skip-link button">Skip to main-header</a>
     </div>
     <!-- Nav -->
     <nav class="main-nav">
         <!-- Desktop nav -->
         <div class="desktop-wrapper">
-            <ul class="hide-for-mobile">
+            <ul class="desktop-nav hide-for-mobile">
                 <li class="nav-links">
                     <a href="#home" title="Home" class="main-links shortened" id="homeLink">Home</a>
                 </li>
@@ -303,18 +303,18 @@
         </div>
 
         <div class="svg-container">
-            <img src="./images/cool-shape.svg" class="cool-shape" id="coolShape" alt="Triangle">
+            <img src="./images/cool-shape.svg" class="cool-shape" id="coolShape" alt="Triangle" loading="eager">
         </div>
 
         <div class="content-background" id="start">
             <article class="content-wrapper home-wrapper border-radius">
-                <h3 class="header-text">Hello world!</h3>
+                <h3 class="title-text">Hello world!</h3>
                 <figure class="img-container circle">
                     <img class="img circle pointer" title="Contact details" id="selfPortrait" src="./images/Me.webp"
                         onerror="this.onerror=null;this.src='./fallback_images/Me(fixed).png'" alt="Personal image"
                         tabindex="0" />
                 </figure>
-                <h3 class="main-content">Welcome to my website</h3>
+                <h3 class="main-header">Welcome to my website</h3>
                 <p class="sub-content">I'm an Egyptian-born, self-taught & aspiring fullstack developer.</p>
                 <p class="sub-content">I created this website to showcase my web development capabilities, express my
                     artistic vision, and act as my professional portfolio.
@@ -337,10 +337,10 @@
         <img src="./images/cool-shape.svg" class="tiny-shape" id="tinyShape2" alt="Triangle">
         <main class="content-background space">
             <article class="content-wrapper first-div">
-                <h3 class="header-text">About</h3>
-                <h3 class="main-content">College</h3>
+                <h3 class="title-text">About</h3>
+                <h3 class="main-header">College</h3>
                 <figure class="img-container">
-                    <a class="certificate-link left long" target="_blank" rel="noopener noreferrer"
+                    <a class="img-link left long" target="_blank" rel="noopener noreferrer"
                         href="./app/assets/English certificate.pdf" aria-label="College certificate">
                         <img class="img" title="College certificate" src="./images/English certificate.webp"
                             onerror="this.onerror=null;this.src='./fallback_images/English certificate.jpg'"
@@ -349,6 +349,10 @@
                 </figure>
                 <p class="sub-content">I graduated with a bachelor's degree in Management Information Systems on July
                     2021, with a cumulative GPA of "3.1".
+                </p>
+                <p class="sub-content">My chosen major wasn't very focused on coding and programming as I only took two
+                    programming courses with PHP & HTML; It was focused more on systems & the managerial side of things.
+                    It taught me the basic concepts of programming logic & markup languages.
                 </p>
                 <p class="sub-content">As part of my graduation project, I created a fully functioning book rental
                     website. I designed the frontend with HTML & CSS and added functionality with JavaScript & finally
@@ -360,9 +364,60 @@
                 </p>
             </article>
             <article class="content-wrapper middle-div">
-                <h3 class="main-content">Courses</h3>
+                <h3 class="main-header">Professional experience</h3>
                 <figure class="img-container wide">
-                    <a class="certificate-link right wide" target="_blank" rel="noopener noreferrer"
+                    <a class="img-link right wide wider" target="_blank" rel="noopener noreferrer"
+                        href="https://act.eg/" aria-label="Advanced Computer Technology">
+                        <img class="img" title="Advanced Computer Technology HQ" src="./images/ACT.webp"
+                            alt="Advanced Computer Technology HQ"
+                            onerror="this.onerror=null;this.src='./fallback_images/ACT.jpeg'">
+                    </a>
+                </figure>
+                <h4 class="sub-header">
+                    <span class="company-name">Advanced Computer Technology</span>
+                    <br>
+                    <span class="job-title hide-for-small-screen">&emsp;Interface Specialist</span>
+                    <span class="job-title hide-for-large-screen">Interface Specialist</span>
+                    <br>
+                    <span class="join-date hide-for-small-screen">&emsp;&emsp;Feb 2021 - Present</span>
+                    <span class="join-date hide-for-large-screen">Feb 2022 - Present</span>
+                </h4>
+                <!-- TODO: Fill this out -->
+                <p class="sub-content">Advanced Computer Technology (ACT) specializes in hospitality system integration
+                    with many other local, international & governmental business ventures. The sector I joined was the
+                    international sector, so naturally I was acquainted to working with foreigners & working
+                    international times.
+                </p>
+                <p class="sub-content no-indent no-margin-bottom">During my time there I accomplished the following:</p>
+                <ul class="job-description small-margin-top">
+                    <li>
+                        Worked as a system integrator for many established hotel chains including but not limited to
+                        IHG, Marriott & Wyndham.
+                    </li>
+                    <li>
+                        Worked in a very agile environment with a tightly packed costumer-facing team.
+                    </li>
+                    <li>
+                        Installed many 3rd party subsystems that the hotel uses on a daily basis, including but not
+                        limited to Door Lock Systems, Internet Protocol Television Systems & Point Of Sale Systems.
+                    </li>
+                    <li>
+                        Integrated said subsystems and interfaced with the main hotel Property Management System.
+                    </li>
+                    <li>
+                        Installed said interfaces in hotels all around the world, interacting with customers remotely &
+                        troubleshooting issues on the spot.
+                    </li>
+                </ul>
+                <p class="sub-content">While my work didn't involve much coding, I did get my hands on some Oracle
+                    databases, worked a little on PSQL and got to understand basic networking & gain server related
+                    knowledge.
+                </p>
+            </article>
+            <article class="content-wrapper middle-div">
+                <h3 class="main-header">Courses</h3>
+                <figure class="img-container wide">
+                    <a class="img-link left wide" target="_blank" rel="noopener noreferrer"
                         href="./app/assets/Certificate-of-completion-for-complete-web-developer-in-2020-zero-to-mastery.pdf"
                         aria-label="Fullstack web developer course certificate">
                         <img class="img" title="Fullstack web developer course certificate"
@@ -387,7 +442,7 @@
                 </p>
                 <hr class="line">
                 <figure class="img-container wide">
-                    <a class="certificate-link left wide" target="_blank" rel="noopener noreferrer"
+                    <a class="img-link right wide" target="_blank" rel="noopener noreferrer"
                         href="https://www.udemy.com/certificate/UC-ebbe19f2-8c53-4d44-9098-b7662a4954b3/"
                         aria-label="Senior web developer course certificate">
                         <img class="img" title="Senior web developer course certificate"
@@ -418,7 +473,7 @@
                 </p>
                 <hr class="line">
                 <figure class="img-container wide">
-                    <a class="certificate-link right wide" target="_blank" rel="noopener noreferrer"
+                    <a class="img-link left wide" target="_blank" rel="noopener noreferrer"
                         href="https://www.udemy.com/certificate/UC-e3bbec7e-1d48-42f4-99ec-9cc0357d5575/"
                         aria-label="Beginner C programming course certificate">
                         <img class="img" title="Beginner C programming course certificate"
@@ -441,7 +496,7 @@
                 </p>
                 <hr class="line extra-padding">
                 <figure class="img-container wide">
-                    <a class="certificate-link left wide" target="_blank" rel="noopener noreferrer"
+                    <a class="img-link right wide" target="_blank" rel="noopener noreferrer"
                         href="https://www.udemy.com/certificate/UC-1ecabe2a-7108-4462-8ae5-09085e501c2d/"
                         aria-label="Data structures & algorithms certificate">
                         <img class="img" title="Data structures & algorithms certificate"
@@ -472,10 +527,10 @@
             </article>
 
             <article class="content-wrapper last-div">
-                <h3 class="main-content certification">Professional certification</h3>
+                <h3 class="main-header certification">Professional certification</h3>
                 <div class="certificate-grid">
                     <figure class="certificate-grid-cell">
-                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
+                        <a class="img-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="./app/assets/CISA.pdf" aria-label="Oracle CISA">
                             <img class="img grid-img" title="Oracle CISA certificate" src="./images/CISA.webp"
                                 alt="CISA certificate"
@@ -483,7 +538,7 @@
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
-                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
+                        <a class="img-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="./app/assets/OSSA.pdf" aria-label="Javascript certificate">
                             <img class="img grid-img" title="Oracle SSA certificate" src="./images/OSSA.webp"
                                 alt="OSSA certificate"
@@ -491,7 +546,7 @@
                         </a>
                     </figure>
                     <figure class="certificate-grid-cell">
-                        <a class="certificate-link grid-img" target="_blank" rel="noopener noreferrer"
+                        <a class="img-link grid-img" target="_blank" rel="noopener noreferrer"
                             href="https://www.codingame.com/certification/_qSkPD6K1GYUn4FIDBnGFg"
                             aria-label="Javascript certificate">
                             <img class="img grid-img" title="Javascript Certification"
@@ -508,7 +563,7 @@
     <section class="skills" id="skills">
         <div class="content-background space skills-box">
             <article class="content-wrapper border-radius">
-                <h3 class="header-text">Skills</h3>
+                <h3 class="title-text">Skills</h3>
                 <div class="skills-grid">
                     <figure class="skills-grid-cell">
                         <img class="skills-icon" src="./images/html5.webp" alt="HTML5" loading="eager"
@@ -693,14 +748,14 @@
         <form target="_blank">
             <div class="content-background">
                 <div class="content-wrapper border-radius">
-                    <h3 class="header-text">Portfolio</h3>
+                    <h3 class="title-text">Portfolio</h3>
                     <div class="grid" id="grid">
-                        <figure class="grid-cell">
+                        <figure class="project-img-container">
                             <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
                                 title="Online Bookstore" class="project"
                                 onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
                         </figure>
-                        <article class="project-text">
+                        <article class="project-text-container">
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
@@ -727,13 +782,13 @@
                             </span>
                         </article>
 
-                        <figure class="grid-cell">
+                        <figure class="project-img-container">
                             <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
                                 class="project"
                                 onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
                         </figure>
 
-                        <article class="project-text">
+                        <article class="project-text-container">
 
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
@@ -760,12 +815,12 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-                        <figure class="grid-cell">
+                        <figure class="project-img-container">
                             <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
                                 class="project"
                                 onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
                         </figure>
-                        <article class="project-text">
+                        <article class="project-text-container">
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
@@ -790,12 +845,12 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-                        <figure class="grid-cell">
+                        <figure class="project-img-container">
                             <img src="./images/Face-detect.webp" alt="Face Detection App project"
                                 title="Face Detection App" class="project"
                                 onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
                         </figure>
-                        <article class="project-text">
+                        <article class="project-text-container">
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path
@@ -821,12 +876,12 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-                        <figure class="grid-cell">
+                        <figure class="project-img-container">
                             <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
                                 class="project"
                                 onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
                         </figure>
-                        <article class="project-text">
+                        <article class="project-text-container">
                             <div class="heading">
                                 <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
                                     <path

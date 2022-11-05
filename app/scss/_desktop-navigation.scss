@@ -21,7 +21,7 @@
   max-width: 1440px;
 }
 
-ul {
+.desktop-nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -81,10 +81,8 @@ ul {
 }
 
 .main-links {
-
   &.shortened,
   &.extended {
-
     &:hover,
     &:focus {
       &::after {
