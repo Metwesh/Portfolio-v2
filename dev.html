@@ -749,7 +749,37 @@
             <div class="content-background">
                 <div class="content-wrapper border-radius">
                     <h3 class="title-text">Portfolio</h3>
-                    <div class="grid" id="grid">
+                    <figure class="display-project">
+                        <img class="display-img" id="displayImg" />
+                    </figure>
+                    <div class="carousel-container" id="carouselContainer">
+                        <figure class="carousel-item" data-key="0" data-active="true">
+                            <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
+                                title="Online Bookstore" class="carousel-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
+                        </figure>
+                        <figure class="carousel-item" data-key="1" data-active="false">
+                            <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
+                                class="carousel-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
+                        </figure>
+                        <figure class="carousel-item" data-key="2" data-active="false">
+                            <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
+                                class="carousel-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
+                        </figure>
+                        <figure class="carousel-item" data-key="3" data-active="false">
+                            <img src="./images/Face-detect.webp" alt="Face Detection App project"
+                                title="Face Detection App" class="carousel-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
+                        </figure>
+                        <figure class="carousel-item" data-key="4" data-active="false">
+                            <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
+                                class="carousel-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
+                        </figure>
+                    </div>
+                    <!-- <div class="grid" id="grid">
                         <figure class="project-img-container">
                             <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
                                 title="Online Bookstore" class="project-img"
@@ -906,7 +936,7 @@
                                     class="button alt grid-button dark">Visit repo</button>
                             </span>
                         </article>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </form>
