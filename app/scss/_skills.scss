@@ -26,6 +26,13 @@
   justify-content: center;
   align-items: center;
 
+  &.sub-grid {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
   @media (hover: hover) and (pointer: fine) {
     transition: transform 150ms ease-in-out;
 
@@ -76,16 +83,18 @@
 
   &.aws {
     &.top {
-      margin-bottom: -5rem;
+      grid-column-start: 1;
+      grid-row-start: 1;
       clip-path: inset(0 0 35px 0);
 
       @include breakpoint-down(xsmall) {
-        margin-bottom: -3.85rem;
         clip-path: inset(0 0 30px 0);
       }
     }
 
     &.bottom {
+      grid-column-start: 1;
+      grid-row-start: 1;
       clip-path: inset(45px 0 10px 0);
 
       @include breakpoint-down(xsmall) {
@@ -95,18 +104,15 @@
   }
 
   &.under-construction {
+    grid-column-start: 1;
+    grid-row-start: 1;
     filter: grayscale(1);
-    margin-top: 0.5rem;
   }
 
   &.construction {
-    position: relative;
-    margin-top: -5.5rem;
+    grid-column-start: 1;
+    grid-row-start: 1;
     clip-path: circle(50% at 50% 50%);
-
-    @include breakpoint-down(xsmall) {
-      margin-bottom: -3.85rem;
-    }
   }
 
   @include breakpoint-down(xsmall) {

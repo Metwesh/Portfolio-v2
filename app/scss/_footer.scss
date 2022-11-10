@@ -6,6 +6,12 @@
   @include breakpoint-down(medium) {
     padding: 20px 0;
   }
+  @include breakpoint-down(small) {
+    margin-top: 2rem;
+  }
+    @include breakpoint-down(xsmall) {
+    margin-top: 1rem;
+  }
 }
 
 .footer-wrapper {

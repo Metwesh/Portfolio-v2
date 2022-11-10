@@ -167,6 +167,15 @@ span.sub-content {
   &.no-margin-bottom {
     margin-bottom: 0;
   }
+  &.no-margin-top {
+    margin-top: 0;
+  }
+  &.margin-bottom-auto {
+    margin-bottom: auto;
+  }
+  &.no-padding {
+    padding: 0;
+  }
 
   @include breakpoint-down(small) {
     font-size: $font-med;
@@ -368,14 +377,14 @@ span.sub-content {
     rotate: 90deg;
     left: -1rem;
     @include breakpoint-down(xsmall) {
-      left: -1.5rem;
+      left: -1rem;
     }
   }
   &:last-of-type {
     right: -1rem;
     rotate: -90deg;
     @include breakpoint-down(xsmall) {
-      right: -1.5rem;
+      right: -1rem;
     }
   }
 }

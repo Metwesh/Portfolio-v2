@@ -54,7 +54,7 @@
   color: var(--font-color);
   font-weight: 400;
   margin: 0;
-  animation: header-fade-in 1250ms forwards 500ms;
+  animation: header-fade-in 1250ms forwards 1000ms;
 
   @include breakpoint-down(mdsmall) {
     font-size: $font-xlg;
