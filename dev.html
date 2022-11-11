@@ -749,36 +749,34 @@
                 <div class="content-wrapper border-radius">
                     <h3 class="title-text">Portfolio</h3>
                     <article class="display-project-wrapper" id="displayProject">
+                        <div class="display-img-container" id="displayImgContainer" data-title="Online bookstore">
+                            <img src="./images/Graduation Website.webp" alt="Online bookstore project"
+                                title="Online Bookstore" class="display-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
 
-                        <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
-                            title="Online Bookstore" class="display-img"
-                            onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
+                            <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic website"
+                                class="display-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
 
-                        <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
-                            class="display-img"
-                            onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
+                            <img src="./images/Budget app.webp" alt="Budget calculator project"
+                                title="Budget calculator" class="display-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
 
-                        <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
-                            class="display-img"
-                            onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
+                            <img src="./images/Face-detect.webp" alt="Face detector app project"
+                                title="Face detector app" class="display-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
 
-                        <img src="./images/Face-detect.webp" alt="Face Detection App project" title="Face Detection App"
-                            class="display-img"
-                            onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
-
-                        <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
-                            class="display-img"
-                            onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
-
+                            <img src="./images/Task-handler.webp" alt="Task handler project" title="Task handler"
+                                class="display-img"
+                                onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
+                        </div>
                         <label class="switch" title="Auto play">
                             <input type="checkbox" class="auto-play-slideshow" id="autoPlaySlideShow" checked>
-                            <span class="slider round">
-                                <!-- Pause  -->
+                            <span class="slider">
                                 <svg class="media-control pause" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17h-3v-10h3v10zm5-10h-3v10h3v-10z" />
                                 </svg>
-                                <!-- Play -->
                                 <svg class="media-control play" width="24" height="24" viewBox="0 0 24 24">
                                     <path
                                         d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
@@ -786,7 +784,7 @@
 
                             </span>
                         </label>
-
+                        <!-- TODO: Make close & buttons un-focusable when invisible -->
                         <article class="display-text-container" id="displayTextContainer">
                             <div class="display-text">
                                 <div class="heading">
@@ -925,7 +923,7 @@
                                 </div>
                             </div>
                         </article>
-
+                        <!-- TODO: Fix tab index -->
                         <div class="slideshow-container" id="slideshowContainer">
                             <figure class="slideshow-item" tab-index="0" data-active="true">
                                 <img src="./images/Graduation Website.webp" alt="Online Bookstore project"

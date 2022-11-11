@@ -34,7 +34,7 @@
   padding: 1.25rem 2.5rem;
   background-color: var(--color-box);
   color: var(--font-color);
-
+  overflow-y: hidden;
   &.border-radius {
     border-radius: 10px;
   }

@@ -15,7 +15,32 @@
     gap: 0.625rem;
   }
 }
-
+.display-img-container {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  display: grid;
+  place-items: center;
+  &::before,
+  &::after {
+    content: attr(data-title);
+    position: absolute;
+    font-size: $font-lrg;
+    font-weight: 400;
+    white-space: pre;
+    color: var(--font-color);
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+  &::before {
+    left: 100%;
+  }
+  &::after {
+    right: 100%;
+  }
+}
 .display-img {
   cursor: pointer;
   max-width: 60%;
@@ -47,9 +72,16 @@
   @include breakpoint-down(small) {
     grid-row-start: 2;
   }
+  @include breakpoint-down(xsmall) {
+    gap: 0.25rem;
+  }
 }
 
 .slideshow-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: filter 300ms ease-in-out, transform 300ms ease-in-out;
   @media (hover: hover) and (pointer: fine) {
     &:hover,
@@ -91,10 +123,10 @@
   justify-content: space-between;
   max-width: 60%;
   width: 100%;
-  height: auto;
+  height: 100%;
   font-size: $font-med;
   margin: 0;
-  padding: 20px;
+  padding: 1.5rem;
   background-color: var(--color-card);
   border-radius: 5px;
   grid-row-start: 1;
@@ -106,15 +138,14 @@
     opacity: 1;
     transform: rotateY(0deg);
   }
-
-  @include breakpoint-down(small) {
+  @include breakpoint-down(large) {
     max-width: 100%;
+    padding: 1rem;
+  }
+  @include breakpoint-down(small) {
     grid-row-start: 4;
     padding: 0;
     background-color: transparent;
-  }
-  @include breakpoint-up(large) {
-    height: 100%;
   }
 }
 
@@ -192,6 +223,10 @@
     height: 6px;
     border-radius: 1.25px;
     background-color: $cyan;
+    @include breakpoint-down(mdsmall) {
+      width: 2rem;
+      height: 4px;
+    }
     @media (hover: hover) and (pointer: fine) {
       transition: background-color 300ms ease-in-out;
       background-color: var(--color-accent-2);
@@ -220,8 +255,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3.75rem;
+  height: 2.125rem;
   grid-row-start: 3;
   grid-column-start: 1;
   @include breakpoint-up(small) {
@@ -241,30 +276,28 @@
   inset: 0 0;
   background-color: var(--color-accent-2);
   transition: background-color 400ms ease-in-out, box-shadow 400ms ease-in-out;
-  &.round {
-    border-radius: 34px;
-    &::before {
-      border-radius: 50%;
-    }
+  border-radius: 4rem;
+  &::before {
+    border-radius: 50%;
   }
 }
 
 .slider::before {
-  position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  position: absolute;
+  height: 1.625rem;
+  width: 1.625rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
   background-color: var(--color-box);
   transition: transform 400ms ease-in-out;
 }
 
 .media-control {
-  position: absolute;
   content: "";
-  height: 24px;
-  width: 24px;
+  position: absolute;
+  width: 1.625rem;
+  height: 1.625rem;
   left: 5px;
   bottom: 5px;
   transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
@@ -275,6 +308,7 @@
   }
   &.play {
     opacity: 1;
+    fill: $cyan;
   }
 }
 

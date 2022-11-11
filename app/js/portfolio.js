@@ -2,8 +2,6 @@
 I'm dividing these JS files for readability only.
 The files are being concatenated together & minified with the build script in the package.json file.
 */
-const ANIMATION_INTERVAL = 250;
-const PAUSE_TIME = 7000;
 
 class IntervalClass {
   constructor() {
@@ -27,6 +25,18 @@ const displayTextFields = displayTextContainer.children;
 const slideshowItems = document.getElementById("slideshowContainer").children;
 const closeContainer = document.getElementsByClassName("close-container");
 const autoPlaySlideShow = document.getElementById("autoPlaySlideShow");
+const displayImgContainer = document.getElementById("displayImgContainer");
+
+const TITLES = [
+  "Online Bookstore",
+  "Clinic website",
+  "Budget calculator",
+  "Face detector",
+  "Task handler",
+];
+
+const ANIMATION_INTERVAL = 250;
+const PAUSE_TIME = 7000;
 
 function changeDisplayImg(curr, prev) {
   displayImages[curr].classList.add("show");
@@ -66,6 +76,41 @@ function animateIn(element) {
   );
 }
 
+function animatePseudoElement(element, pseudoElement, start, end) {
+  if (screen.size < 669) return;
+  element.animate(
+    {
+      transform: [`translateY(${start}rem)`, `translateY(${end}rem)`],
+    },
+    {
+      duration: ANIMATION_INTERVAL,
+      iterations: 1,
+      pseudoElement: pseudoElement,
+    }
+  );
+}
+
+function flipCardToBack(index) {
+  animateOut(displayImages[index]);
+  setTimeout(() => {
+    displayImages[index].classList.remove("show");
+    animateIn(displayTextContainer);
+    displayTextContainer.classList.add("show");
+    displayTextFields[index].classList.add("show");
+  }, ANIMATION_INTERVAL);
+}
+
+function flipCardToFront(index) {
+  animateOut(displayTextContainer);
+  setTimeout(() => {
+    displayTextContainer.classList.remove("show");
+    displayTextFields[index].classList.remove("show");
+    animateIn(displayImages[index]);
+    displayImages[index].classList.add("show");
+  }, ANIMATION_INTERVAL);
+}
+
+// TODO: Refactor this function
 function renderNewCard() {
   curr++;
   if (curr === 5) curr = 0;
@@ -74,6 +119,8 @@ function renderNewCard() {
   if (screen.width < 669) {
     animateOut(displayTextFields[prev]);
   }
+  animatePseudoElement(displayImgContainer, "::before", 0, -20);
+  animatePseudoElement(displayImgContainer, "::after", 0, 20);
   if (screen.width > 669) displayTextFields[prev].classList.remove("show");
   if (curr > 0) slideshowItems[prev].dataset.active = false;
   setTimeout(() => {
@@ -85,6 +132,9 @@ function renderNewCard() {
     displayTextFields[curr].classList.add("show");
     changeDisplayImg(curr, prev);
     animateIn(displayImages[curr]);
+    displayImgContainer.dataset.title = TITLES[curr];
+    animatePseudoElement(displayImgContainer, "::before", -20, 0);
+    animatePseudoElement(displayImgContainer, "::after", 20, 0);
     slideshowItems[curr].dataset.active = true;
     prev++;
   }, ANIMATION_INTERVAL);
@@ -102,11 +152,12 @@ changedisplayText(0, 4);
 
 IntervalClass.start(renderNewCard, PAUSE_TIME);
 
+// TODO: Refactor this behemoth
 for (let i = 0; i < slideshowItems.length; i++) {
   slideshowItems[i].addEventListener("click", () => {
     IntervalClass.stop();
     autoPlaySlideShow.checked = false;
-    if (displayImages[curr].classList.contains("show"))
+    if (displayImages[curr].classList.contains("show") && curr !== i)
       animateOut(displayImages[curr]);
     else if (
       displayTextContainer.classList.contains("show") &&
@@ -114,23 +165,32 @@ for (let i = 0; i < slideshowItems.length; i++) {
     ) {
       animateOut(displayTextContainer);
       displayTextContainer.classList.remove("show");
+      setTimeout(() => {
+        animateIn(displayImages[i]);
+      }, ANIMATION_INTERVAL);
     }
-    if (screen.width < 669) {
-      animateOut(displayTextFields[curr]);
-    }
+    screen.width < 669 && curr !== i && animateOut(displayTextFields[curr]);
+    curr !== i && animatePseudoElement(displayImgContainer, "::before", 0, -20);
+    curr !== i && animatePseudoElement(displayImgContainer, "::after", 0, 20);
 
     setTimeout(() => {
-      if (screen.width < 669) {
+      if (screen.width < 669 && curr !== i) {
         animateIn(displayTextFields[i]);
       }
       displayTextFields[curr].classList.remove("show");
       displayImages[curr].classList.remove("show");
-      animateIn(displayImages[i]);
+      curr !== i && animateIn(displayImages[i]);
       displayImages[i].classList.add("show");
       displayTextFields[i].classList.add("show");
-      slideshowItems[curr].dataset.active = false;
-      slideshowItems[i].dataset.active = true;
-      prev = curr = i;
+
+      if (curr !== i) {
+        displayImgContainer.dataset.title = TITLES[i];
+        animatePseudoElement(displayImgContainer, "::before", -20, 0);
+        animatePseudoElement(displayImgContainer, "::after", 20, 0);
+        slideshowItems[curr].dataset.active = false;
+        slideshowItems[i].dataset.active = true;
+        prev = curr = i;
+      }
     }, ANIMATION_INTERVAL);
   });
 }
@@ -140,25 +200,13 @@ if (screen.width > 669) {
     displayImages[i].addEventListener("click", () => {
       IntervalClass.stop();
       autoPlaySlideShow.checked = false;
-      animateOut(displayImages[i]);
-      setTimeout(() => {
-        displayImages[i].classList.remove("show");
-        animateIn(displayTextContainer);
-        displayTextContainer.classList.add("show");
-        displayTextFields[i].classList.add("show");
-      }, ANIMATION_INTERVAL);
+      flipCardToBack(i);
     });
   }
 
   for (let i = 0; i < closeContainer.length; i++) {
     closeContainer[i].addEventListener("click", () => {
-      animateOut(displayTextContainer);
-      setTimeout(() => {
-        displayTextContainer.classList.remove("show");
-        displayTextFields[i].classList.remove("show");
-        animateIn(displayImages[i]);
-        displayImages[i].classList.add("show");
-      }, ANIMATION_INTERVAL);
+      flipCardToFront(i);
       autoPlaySlideShow.checked = true;
       IntervalClass.start(renderNewCard, PAUSE_TIME);
     });
@@ -167,8 +215,17 @@ if (screen.width > 669) {
 
 autoPlaySlideShow.addEventListener("click", () => {
   if (autoPlaySlideShow.checked) {
-    IntervalClass.start(renderNewCard, PAUSE_TIME);
-  } else {
-    IntervalClass.stop();
+    setTimeout(() => {
+      renderNewCard();
+      IntervalClass.start(renderNewCard, PAUSE_TIME);
+    }, ANIMATION_INTERVAL * 8);
+  } else IntervalClass.stop();
+  if (screen.width < 669) return;
+  for (let i = 0; i < displayTextFields.length; i++) {
+    if (
+      displayTextFields[i].classList.contains("show") &&
+      displayTextContainer.classList.contains("show")
+    )
+      flipCardToFront(i);
   }
 });
