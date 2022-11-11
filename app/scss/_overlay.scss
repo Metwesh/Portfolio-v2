@@ -6,9 +6,11 @@
   opacity: 0;
   visibility: hidden;
   backdrop-filter: blur(2px);
-  background-image: linear-gradient(to bottom,
-      var(--shadow-color),
-      transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--shadow-color),
+    transparent
+  );
 
   &.fadeout {
     animation: simple-fade-out 500ms forwards;
@@ -37,6 +39,7 @@
   max-width: 90rem;
   width: auto;
   margin: 4rem 4rem;
+  padding: 0;
   list-style: none;
   border-radius: 1rem;
   box-shadow: 0 0 5px 1px var(--shadow-color);
