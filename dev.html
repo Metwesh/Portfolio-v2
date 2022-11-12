@@ -770,20 +770,7 @@
                                 class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
                         </div>
-                        <label class="switch" title="Auto play">
-                            <input type="checkbox" class="auto-play-slideshow" id="autoPlaySlideShow" checked>
-                            <span class="slider">
-                                <svg class="media-control pause" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17h-3v-10h3v10zm5-10h-3v10h3v-10z" />
-                                </svg>
-                                <svg class="media-control play" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
-                                </svg>
 
-                            </span>
-                        </label>
                         <!-- TODO: Make close & buttons un-focusable when invisible -->
                         <article class="display-text-container" id="displayTextContainer">
                             <div class="display-text">
@@ -791,7 +778,7 @@
                                     <h4 class="heading-text no-margin small-padding-bottom">
                                         Online Bookstore
                                     </h4>
-                                    <div class="close-container pointer" title="Flip card">
+                                    <div class="close-container pointer" title="Flip card" tabindex="0">
                                         <span></span>
                                         <span></span>
                                     </div>
@@ -846,7 +833,7 @@
                             <div class="display-text">
                                 <div class="heading">
                                     <h4 class="heading-text no-margin small-padding-bottom">
-                                        Budget app
+                                        Budget calculator
                                     </h4>
                                     <div class="close-container pointer" title="Flip card">
                                         <span></span>
@@ -872,7 +859,7 @@
                             <div class="display-text">
                                 <div class="heading">
                                     <h4 class="heading-text no-margin small-padding-bottom">
-                                        Face detection app
+                                        Face detector
                                     </h4>
                                     <div class="close-container pointer" title="Flip card">
                                         <span></span>
@@ -923,29 +910,45 @@
                                 </div>
                             </div>
                         </article>
+
+                        <label class="switch" title="Auto play">
+                            <input type="checkbox" class="auto-play-slideshow" id="autoPlaySlideShow" checked>
+                            <span class="slider">
+                                <svg class="media-control pause" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17h-3v-10h3v10zm5-10h-3v10h3v-10z" />
+                                </svg>
+                                <svg class="media-control play" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
+                                </svg>
+
+                            </span>
+                        </label>
+
                         <!-- TODO: Fix tab index -->
                         <div class="slideshow-container" id="slideshowContainer">
-                            <figure class="slideshow-item" tab-index="0" data-active="true">
+                            <figure class="slideshow-item" tabindex="0" data-active="true">
                                 <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
                                     title="Online Bookstore" class="slideshow-img"
                                     onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
                             </figure>
-                            <figure class="slideshow-item" tab-index="0" data-active="false">
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
                                 <img src="./images/Clinic website.webp" alt="Clinic website project"
                                     title="Clinic Website" class="slideshow-img"
                                     onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
                             </figure>
-                            <figure class="slideshow-item" tab-index="0" data-active="false">
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
                                 <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
                                     class="slideshow-img"
                                     onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
                             </figure>
-                            <figure class="slideshow-item" tab-index="0" data-active="false">
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
                                 <img src="./images/Face-detect.webp" alt="Face Detection App project"
                                     title="Face Detection App" class="slideshow-img"
                                     onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
                             </figure>
-                            <figure class="slideshow-item" tab-index="0" data-active="false">
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
                                 <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
                                     class="slideshow-img"
                                     onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />

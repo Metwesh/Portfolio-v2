@@ -19,13 +19,13 @@ class IntervalClass {
   }
 }
 
-const displayImages = document.getElementsByClassName("display-img");
-const displayTextContainer = document.getElementById("displayTextContainer");
+const displayImages = document.querySelectorAll(".display-img");
+const displayTextContainer = document.querySelector("#displayTextContainer");
 const displayTextFields = displayTextContainer.children;
-const slideshowItems = document.getElementById("slideshowContainer").children;
-const closeContainer = document.getElementsByClassName("close-container");
-const autoPlaySlideShow = document.getElementById("autoPlaySlideShow");
-const displayImgContainer = document.getElementById("displayImgContainer");
+const slideshowItems = document.querySelectorAll(".slideshow-item");
+const closeContainers = document.querySelectorAll(".close-container");
+const autoPlaySlideShow = document.querySelector("#autoPlaySlideShow");
+const displayImgContainer = document.querySelector("#displayImgContainer");
 
 const TITLES = [
   "Online Bookstore",
@@ -37,16 +37,6 @@ const TITLES = [
 
 const ANIMATION_INTERVAL = 250;
 const PAUSE_TIME = 7000;
-
-function changeDisplayImg(curr, prev) {
-  displayImages[curr].classList.add("show");
-  displayImages[prev].classList.remove("show");
-}
-
-function changedisplayText(curr, prev) {
-  displayTextFields[curr].classList.add("show");
-  displayTextFields[prev].classList.remove("show");
-}
 
 function animateOut(element) {
   element.animate(
@@ -90,6 +80,16 @@ function animatePseudoElement(element, pseudoElement, start, end) {
   );
 }
 
+function changeDisplayImg(curr, prev) {
+  displayImages[curr].classList.add("show");
+  displayImages[prev].classList.remove("show");
+}
+
+function changedisplayText(curr, prev) {
+  displayTextFields[curr].classList.add("show");
+  displayTextFields[prev].classList.remove("show");
+}
+
 function flipCardToBack(index) {
   animateOut(displayImages[index]);
   setTimeout(() => {
@@ -116,12 +116,10 @@ function renderNewCard() {
   if (curr === 5) curr = 0;
   if (prev === 5) prev = 0;
   animateOut(displayImages[prev]);
-  if (screen.width < 669) {
-    animateOut(displayTextFields[prev]);
-  }
+  if (screen.width < 669) animateOut(displayTextFields[prev]);
+  else displayTextFields[prev].classList.remove("show");
   animatePseudoElement(displayImgContainer, "::before", 0, -20);
   animatePseudoElement(displayImgContainer, "::after", 0, 20);
-  if (screen.width > 669) displayTextFields[prev].classList.remove("show");
   if (curr > 0) slideshowItems[prev].dataset.active = false;
   setTimeout(() => {
     if (screen.width < 669) {
@@ -195,6 +193,14 @@ for (let i = 0; i < slideshowItems.length; i++) {
   });
 }
 
+for (let i = 0; i < slideshowItems.length; i++) {
+  slideshowItems[i].addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      slideshowItems[i].click();
+    }
+  });
+}
+
 if (screen.width > 669) {
   for (let i = 0; i < displayImages.length; i++) {
     displayImages[i].addEventListener("click", () => {
@@ -204,8 +210,8 @@ if (screen.width > 669) {
     });
   }
 
-  for (let i = 0; i < closeContainer.length; i++) {
-    closeContainer[i].addEventListener("click", () => {
+  for (let i = 0; i < closeContainers.length; i++) {
+    closeContainers[i].addEventListener("click", () => {
       flipCardToFront(i);
       autoPlaySlideShow.checked = true;
       IntervalClass.start(renderNewCard, PAUSE_TIME);
@@ -218,7 +224,7 @@ autoPlaySlideShow.addEventListener("click", () => {
     setTimeout(() => {
       renderNewCard();
       IntervalClass.start(renderNewCard, PAUSE_TIME);
-    }, ANIMATION_INTERVAL * 8);
+    }, ANIMATION_INTERVAL * 14);
   } else IntervalClass.stop();
   if (screen.width < 669) return;
   for (let i = 0; i < displayTextFields.length; i++) {

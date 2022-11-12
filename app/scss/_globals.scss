@@ -28,7 +28,7 @@
     --icon-card-color: #{$darker-gray};
     --icon-footer-color: #{$whitish};
     --watermark-color: rgb(56, 61, 70, 0.3);
-    --dorito-color: #{$darker-gray};
+    --portfolio-gradient-color: rgb(20, 20, 23, 0.3);
   }
 }
 
@@ -59,7 +59,7 @@
     --icon-card-color: #{$whitish};
     --icon-footer-color: #{$dark-gray};
     --watermark-color: rgb(255, 255, 255, 0.2);
-    --dorito-color: #{$white};
+    --portfolio-gradient-color: rgb(255, 255, 255, 0.2);
   }
 }
 
@@ -112,7 +112,7 @@ body {
     --icon-card-color: #{$dark-gray};
     --icon-footer-color: #{$whitish};
     --watermark-color: rgb(56, 61, 70, 0.3);
-    --dorito-color: #{$darker-gray};
+    --portfolio-gradient-color: rgb(20, 20, 23, 0.3);
   }
   &.dark-mode {
     --font-color: #{$white};
@@ -140,7 +140,7 @@ body {
     --icon-card-color: #{$whitish};
     --icon-footer-color: #{$dark-gray};
     --watermark-color: rgb(255, 255, 255, 0.2);
-    --dorito-color: #{$white};
+    --portfolio-gradient-color: rgb(255, 255, 255, 0.2);
   }
 }
 
