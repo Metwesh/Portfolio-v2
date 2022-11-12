@@ -321,6 +321,7 @@ span.sub-content {
     float: left;
     box-shadow: none;
     margin-right: 2rem;
+    margin-bottom: 1rem;
     border-radius: 50%;
     shape-outside: circle(50% at 50% 50%);
     transition: box-shadow 150ms ease-in-out;
@@ -333,6 +334,7 @@ span.sub-content {
     @include breakpoint-down(medium) {
       float: none;
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }

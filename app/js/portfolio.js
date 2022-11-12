@@ -26,6 +26,7 @@ const slideshowItems = document.querySelectorAll(".slideshow-item");
 const closeContainers = document.querySelectorAll(".close-container");
 const autoPlaySlideShow = document.querySelector("#autoPlaySlideShow");
 const displayImgContainer = document.querySelector("#displayImgContainer");
+const flipCardButtons = document.querySelectorAll(".button-container");
 
 const TITLES = [
   "Online Bookstore",
@@ -93,6 +94,9 @@ function changedisplayText(curr, prev) {
 function flipCardToBack(index) {
   animateOut(displayImages[index]);
   setTimeout(() => {
+    closeContainers[index].setAttribute("tabindex", 0);
+    flipCardButtons[index].children[0].style.visibility = "visible";
+    flipCardButtons[index].children[1].style.visibility = "visible";
     displayImages[index].classList.remove("show");
     animateIn(displayTextContainer);
     displayTextContainer.classList.add("show");
@@ -103,6 +107,9 @@ function flipCardToBack(index) {
 function flipCardToFront(index) {
   animateOut(displayTextContainer);
   setTimeout(() => {
+    closeContainers[index].removeAttribute("tabindex");
+    flipCardButtons[index].children[0].style.visibility = "hidden";
+    flipCardButtons[index].children[1].style.visibility = "hidden";
     displayTextContainer.classList.remove("show");
     displayTextFields[index].classList.remove("show");
     animateIn(displayImages[index]);
@@ -122,7 +129,11 @@ function renderNewCard() {
   animatePseudoElement(displayImgContainer, "::after", 0, 20);
   if (curr > 0) slideshowItems[prev].dataset.active = false;
   setTimeout(() => {
-    if (screen.width < 669) {
+    if (screen.width > 669) {
+      closeContainers[curr].removeAttribute("tabindex");
+      flipCardButtons[curr].children[0].style.visibility = "hidden";
+      flipCardButtons[curr].children[1].style.visibility = "hidden";
+    } else {
       animateIn(displayTextFields[curr]);
       displayTextFields[prev].classList.remove("show");
     }
@@ -138,11 +149,17 @@ function renderNewCard() {
   }, ANIMATION_INTERVAL);
 }
 
+// window.addEventListener("resize", () => {});
 let curr = 0;
 let prev = 0;
 
-if (screen.width < 669 && !displayTextContainer.classList.contains("show")) {
-  displayTextContainer.classList.add("show");
+if (screen.width < 669) {
+  if (!displayTextContainer.classList.contains("show"))
+    displayTextContainer.classList.add("show");
+} else {
+  closeContainers[0].removeAttribute("tabindex");
+  flipCardButtons[0].children[0].style.visibility = "hidden";
+  flipCardButtons[0].children[1].style.visibility = "hidden";
 }
 
 changeDisplayImg(0, 4);
@@ -191,9 +208,6 @@ for (let i = 0; i < slideshowItems.length; i++) {
       }
     }, ANIMATION_INTERVAL);
   });
-}
-
-for (let i = 0; i < slideshowItems.length; i++) {
   slideshowItems[i].addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       slideshowItems[i].click();

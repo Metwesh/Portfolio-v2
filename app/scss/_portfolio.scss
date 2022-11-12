@@ -21,14 +21,18 @@
   grid-column-start: 1;
   display: grid;
   place-items: center;
-  background-image: radial-gradient(
-    circle,
-    var(--portfolio-gradient-color) 40%,
-    transparent 80%
-  );
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  @include breakpoint-up(large) {
+    background-image: radial-gradient(
+      circle,
+      transparent 0%,
+      transparent 20%,
+      var(--portfolio-gradient-color) 40%,
+      transparent 80%
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 
   &::before,
   &::after {
@@ -152,7 +156,10 @@
   }
   @include breakpoint-down(large) {
     max-width: 100%;
-    padding: 1rem;
+    padding: 4rem;
+  }
+  @include breakpoint-down(medium) {
+    padding: 2rem;
   }
   @include breakpoint-down(small) {
     grid-row-start: 4;
@@ -194,15 +201,13 @@
   &.no-margin {
     margin: 0;
   }
-  &.small-padding-bottom {
-    padding-bottom: 0.5rem;
-  }
-  @include breakpoint-down(small) {
-    font-size: $font-lrg;
-    text-align: center;
-  }
   @include breakpoint-down(large) {
     margin-bottom: 1rem;
+  }
+  @include breakpoint-down(small) {
+    text-align: center;
+    font-weight: 400;
+    font-size: $font-lrgmed;
   }
 }
 
@@ -234,14 +239,10 @@
     display: none;
   }
   > span {
-    width: 55px;
+    width: 45px;
     height: 6px;
     border-radius: 1.25px;
     background-color: $cyan;
-    @include breakpoint-down(mdsmall) {
-      width: 2rem;
-      height: 4px;
-    }
     @media (hover: hover) and (pointer: fine) {
       transition: background-color 300ms ease-in-out;
       background-color: var(--color-accent-2);
@@ -291,8 +292,6 @@
   inset: 0 0;
   border-radius: 4rem;
   background-color: var(--color-accent-2);
-  outline: 1px solid var(--color-accent);
-  outline-offset: -1px;
   transition: background-color 400ms ease-in-out;
   &::before {
     border-radius: 50%;
