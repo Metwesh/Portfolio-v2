@@ -10,11 +10,11 @@
       var(--shadow-color),
       transparent);
 
-  &.fadeout {
+  &.fade-out {
     animation: simple-fade-out 500ms forwards;
   }
 
-  &.fadein {
+  &.fade-in {
     animation: simple-fade-in 1s forwards;
   }
 }

@@ -5,8 +5,7 @@ The files are being concatenated together & minified with the build script in th
 let lastKnownScrollPosition = 0;
 let ticking = false;
 const coolShape = document.querySelector("#coolShape");
-const tinyShape1 = document.querySelector("#tinyShape1");
-const tinyShape2 = document.querySelector("#tinyShape2");
+const tinyShapes = document.querySelectorAll(".tiny-shape");
 
 function scrollListener() {
   lastKnownScrollPosition = window.scrollY;
@@ -33,8 +32,8 @@ function scrollMoveBigShape(scrollPos) {
 }
 
 function scrollMoveSmallShapes(scrollPos) {
-  tinyShape1.style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
-  tinyShape2.style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
+  tinyShapes[0].style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
+  tinyShapes[1].style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
 }
 
 document.addEventListener("scroll", scrollListener);

@@ -172,7 +172,7 @@
   }
 }
 
-.display-text {
+.display-text-wrapper {
   display: none;
   &.show {
     display: flex;
@@ -186,8 +186,15 @@
     min-height: 24rem;
   }
   @include breakpoint-down(xsmall) {
-    min-height: 25.5rem;
+    min-height: 27.875rem;
   }
+}
+
+.display-text-area {
+  text-indent: 0;
+  margin-top: 0;
+  margin-bottom: auto;
+  padding: 0.25rem;
 }
 
 .heading {
@@ -195,13 +202,14 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  overflow: hidden;
   margin-bottom: auto;
 }
 .heading-text {
   font-size: $font-lrgmed;
   font-weight: 600;
   color: var(--font-color);
-
+  padding-inline: 0.25rem;
   &.no-margin {
     margin: 0;
   }
@@ -268,7 +276,7 @@
   }
 
   @include breakpoint-down(xsmall) {
-    margin: 0.5rem 0;
+    margin: 1rem 0 0;
   }
 }
 

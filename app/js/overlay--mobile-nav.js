@@ -56,7 +56,7 @@ function toggleHamburger() {
 }
 
 function toggleOverlay() {
-  classListMultipleStateChecker(overlay, "fadeout", "fadein");
+  classListMultipleStateChecker(overlay, "fade-out", "fade-in");
 }
 
 function toggleMenu() {
@@ -91,7 +91,7 @@ function toggleAllMenus() {
 }
 
 function closeAll() {
-  if (overlay.classList.contains("fadein")) toggleOverlay();
+  if (overlay.classList.contains("fade-in")) toggleOverlay();
   if (overlayUl.classList.contains("slide-in")) toggleMenu();
   if (contactCard.classList.contains("slide-in")) toggleContactCard();
   if (hamburgerMenu.classList.contains("open")) toggleHamburger();
