@@ -17,7 +17,7 @@ $darker-gray: #1e2125;
 $dark-gray: #383d46;
 $gray: #616875;
 $darker-cyan: #004257;
-$dark-cyan: #00799E;
+$dark-cyan: #00799e;
 $cyan: #0ec7ff;
 $light-cyan: #5fcbf6;
 $lighter-cyan: #86dcf9;
@@ -28,9 +28,6 @@ $white: #ececec;
 $true-white: #ffff;
 
 $semi-transparent: rgba(255, 255, 255, 0.88);
-$more-transparent: rgba(255, 255, 255, 0.91);
-$dark-semi-transparent: rgba(56, 61, 70, 0.88);
-$dark-more-transparent: rgba(56, 61, 70, 0.91);
 $darker-semi-transparent: rgba(30, 33, 37, 0.88);
 
 $gradient-to-top: linear-gradient(to top, $dark-cyan, $cyan);
@@ -58,6 +55,8 @@ $footer-gradient-invert: linear-gradient(
   $dark-gray 82.5%,
   $darker-gray 100%
 );
+$small-box-shadow: 0 0 5px $dark-gray, 0 0 7.5px $dark-cyan, 0 0 10px $cyan,
+  0 0 15px $light-cyan;
 
 $box-shadow: 0 0 5px $dark-gray, 0 0 10px $dark-cyan, 0 0 15px $cyan,
   0 0 20px $light-cyan;

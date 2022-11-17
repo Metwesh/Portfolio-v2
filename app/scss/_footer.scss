@@ -6,6 +6,12 @@
   @include breakpoint-down(medium) {
     padding: 20px 0;
   }
+  @include breakpoint-down(small) {
+    margin-top: 2rem;
+  }
+  @include breakpoint-down(xsmall) {
+    margin-top: 1rem;
+  }
 }
 
 .footer-wrapper {
@@ -136,8 +142,8 @@
   border-left: none;
   border-bottom-left-radius: 12px;
   border-top-right-radius: 12px;
-  transform: rotate(-135deg);
   transition: border 150ms ease-in-out, border-radius 150ms ease-in-out;
+  transform: rotate(-135deg);
 
   @include breakpoint-down(mdsmall) {
     width: 30px;

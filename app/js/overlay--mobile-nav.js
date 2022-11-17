@@ -14,6 +14,22 @@ const mailOpen = document.querySelector("#mailOpen");
 const mailClose = document.querySelector("#mailClose");
 const selfPortrait = document.querySelector("#selfPortrait");
 
+function classListMultipleStateChecker(
+  element,
+  animateoutClass,
+  animateinClass
+) {
+  if (element.classList.contains(animateoutClass)) {
+    element.classList.add(animateinClass);
+    element.classList.remove(animateoutClass);
+  } else if (element.classList.contains(animateinClass)) {
+    element.classList.add(animateoutClass);
+    element.classList.remove(animateinClass);
+  } else {
+    element.classList.add(animateinClass);
+  }
+}
+
 function toggleHamburger() {
   hamburgerMenu.classList.toggle("open");
   if (!hamburgerMenu.classList.contains("open")) {
@@ -40,39 +56,15 @@ function toggleHamburger() {
 }
 
 function toggleOverlay() {
-  if (overlay.classList.contains("fadeout")) {
-    overlay.classList.add("fadein");
-    overlay.classList.remove("fadeout");
-  } else if (overlay.classList.contains("fadein")) {
-    overlay.classList.add("fadeout");
-    overlay.classList.remove("fadein");
-  } else {
-    overlay.classList.add("fadein");
-  }
+  classListMultipleStateChecker(overlay, "fade-out", "fade-in");
 }
 
 function toggleMenu() {
-  if (overlayUl.classList.contains("slide-out")) {
-    overlayUl.classList.add("slide-in");
-    overlayUl.classList.remove("slide-out");
-  } else if (overlayUl.classList.contains("slide-in")) {
-    overlayUl.classList.add("slide-out");
-    overlayUl.classList.remove("slide-in");
-  } else {
-    overlayUl.classList.add("slide-in");
-  }
+  classListMultipleStateChecker(overlayUl, "slide-out", "slide-in");
 }
 
 function toggleContactCard() {
-  if (contactCard.classList.contains("slide-out")) {
-    contactCard.classList.add("slide-in");
-    contactCard.classList.remove("slide-out");
-  } else if (contactCard.classList.contains("slide-in")) {
-    contactCard.classList.add("slide-out");
-    contactCard.classList.remove("slide-in");
-  } else {
-    contactCard.classList.add("slide-in");
-  }
+  classListMultipleStateChecker(contactCard, "slide-out", "slide-in");
 }
 
 function toggleMailButton() {
@@ -99,7 +91,7 @@ function toggleAllMenus() {
 }
 
 function closeAll() {
-  if (overlay.classList.contains("fadein")) toggleOverlay();
+  if (overlay.classList.contains("fade-in")) toggleOverlay();
   if (overlayUl.classList.contains("slide-in")) toggleMenu();
   if (contactCard.classList.contains("slide-in")) toggleContactCard();
   if (hamburgerMenu.classList.contains("open")) toggleHamburger();
@@ -164,7 +156,7 @@ selfPortrait.addEventListener("click", (e) => {
   toggleContactCard();
   toggleMailButton();
   toggleHamburger();
-  if (screen.width > 885) contactMail.focus();
+  if (window.innerWidth > 885) contactMail.focus();
 });
 
 selfPortrait.addEventListener("keypress", (e) => {

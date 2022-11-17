@@ -37,6 +37,7 @@
 
   &.grid-button {
     @include breakpoint-down(small) {
+      margin-top: 0;
       font-size: $font-smmed;
     }
   }

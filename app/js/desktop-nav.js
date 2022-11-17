@@ -7,80 +7,59 @@ const aboutLink = document.querySelector("#aboutLink");
 const skillsLink = document.querySelector("#skillsLink");
 const portfolioLink = document.querySelector("#portfolioLink");
 
+function classListSingleStateChecker(element, contains, add, remove) {
+  if (element.classList.contains(contains)) {
+    element.classList.add(add);
+    element.classList.remove(remove);
+  }
+}
+
 function homeLinkOn() {
-  if (homeLink.classList.contains("shortened")) {
-    homeLink.classList.add("extended");
-    homeLink.classList.remove("shortened");
-  }
-  if (aboutLink.classList.contains("extended")) {
-    aboutLink.classList.add("shortened");
-    aboutLink.classList.remove("extended");
-  }
-  if (skillsLink.classList.contains("extended")) {
-    skillsLink.classList.add("shortened");
-    skillsLink.classList.remove("extended");
-  }
-  if (portfolioLink.classList.contains("extended")) {
-    portfolioLink.classList.add("shortened");
-    portfolioLink.classList.remove("extended");
-  }
+  classListSingleStateChecker(homeLink, "shortened", "extended", "shortened");
+  classListSingleStateChecker(aboutLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(skillsLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(
+    portfolioLink,
+    "extended",
+    "shortened",
+    "extended"
+  );
 }
 
 function aboutLinkOn() {
-  if (aboutLink.classList.contains("shortened")) {
-    aboutLink.classList.add("extended");
-    aboutLink.classList.remove("shortened");
-  }
-  if (homeLink.classList.contains("extended")) {
-    homeLink.classList.add("shortened");
-    homeLink.classList.remove("extended");
-  }
-  if (skillsLink.classList.contains("extended")) {
-    skillsLink.classList.add("shortened");
-    skillsLink.classList.remove("extended");
-  }
-  if (portfolioLink.classList.contains("extended")) {
-    portfolioLink.classList.add("shortened");
-    portfolioLink.classList.remove("extended");
-  }
+  classListSingleStateChecker(aboutLink, "shortened", "extended", "shortened");
+  classListSingleStateChecker(homeLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(skillsLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(
+    portfolioLink,
+    "extended",
+    "shortened",
+    "extended"
+  );
 }
 
 function skillsLinkOn() {
-  if (skillsLink.classList.contains("shortened")) {
-    skillsLink.classList.add("extended");
-    skillsLink.classList.remove("shortened");
-  }
-  if (homeLink.classList.contains("extended")) {
-    homeLink.classList.add("shortened");
-    homeLink.classList.remove("extended");
-  }
-  if (aboutLink.classList.contains("extended")) {
-    aboutLink.classList.add("shortened");
-    aboutLink.classList.remove("extended");
-  }
-  if (portfolioLink.classList.contains("extended")) {
-    portfolioLink.classList.add("shortened");
-    portfolioLink.classList.remove("extended");
-  }
+  classListSingleStateChecker(skillsLink, "shortened", "extended", "shortened");
+  classListSingleStateChecker(homeLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(aboutLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(
+    portfolioLink,
+    "extended",
+    "shortened",
+    "extended"
+  );
 }
 
 function portfolioLinkOn() {
-  if (portfolioLink.classList.contains("shortened")) {
-    portfolioLink.classList.add("extended");
-    portfolioLink.classList.remove("shortened");
-  }
-  if (homeLink.classList.contains("extended")) {
-    homeLink.classList.add("shortened");
-    homeLink.classList.remove("extended");
-  }
-  if (aboutLink.classList.contains("extended")) {
-    aboutLink.classList.add("shortened");
-    aboutLink.classList.remove("extended");
-  }
-  if (skillsLink.classList.contains("extended")) {
-    skillsLink.classList.add("shortened");
-    skillsLink.classList.remove("extended");
-  }
+  classListSingleStateChecker(
+    portfolioLink,
+    "shortened",
+    "extended",
+    "shortened"
+  );
+  classListSingleStateChecker(homeLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(aboutLink, "extended", "shortened", "extended");
+  classListSingleStateChecker(skillsLink, "extended", "shortened", "extended");
 }
 
 homeLink.addEventListener("click", homeLinkOn);

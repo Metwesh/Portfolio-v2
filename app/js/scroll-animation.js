@@ -5,8 +5,7 @@ The files are being concatenated together & minified with the build script in th
 let lastKnownScrollPosition = 0;
 let ticking = false;
 const coolShape = document.querySelector("#coolShape");
-const tinyShape1 = document.querySelector("#tinyShape1");
-const tinyShape2 = document.querySelector("#tinyShape2");
+const tinyShapes = document.querySelectorAll(".tiny-shape");
 
 function scrollListener() {
   lastKnownScrollPosition = window.scrollY;
@@ -21,11 +20,11 @@ function scrollListener() {
 }
 
 function scrollMoveBigShape(scrollPos) {
-  if (screen.width > 1073) {
+  if (window.innerWidth > 1073) {
     coolShape.style.transform = `translateX(${-scrollPos * 0.9 - 100}px)`;
-  } else if (screen.width > 600 && screen.width <= 1073) {
+  } else if (window.innerWidth > 600 && window.innerWidth <= 1073) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.1 - 100}px)`;
-  } else if (screen.width >= 390 && screen.width <= 600) {
+  } else if (window.innerWidth >= 390 && window.innerWidth <= 600) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.3 - 100}px)`;
   } else {
     coolShape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
@@ -33,8 +32,8 @@ function scrollMoveBigShape(scrollPos) {
 }
 
 function scrollMoveSmallShapes(scrollPos) {
-  tinyShape1.style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
-  tinyShape2.style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
+  tinyShapes[0].style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
+  tinyShapes[1].style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
 }
 
 document.addEventListener("scroll", scrollListener);

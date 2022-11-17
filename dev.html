@@ -141,7 +141,7 @@
 
 <body>
     <div class="skip-link-wrapper">
-        <a href="#start" class="skip-link button">Skip to main-header</a>
+        <a href="#start" class="skip-link button">Skip to main content</a>
     </div>
     <!-- Nav -->
     <nav class="main-nav">
@@ -188,7 +188,7 @@
 
             <!-- Hamburger menu  -->
 
-            <div id="hamburgerMenu" title="Menu" class="hamburger pointer hide-for-desktop" tabindex="0">
+            <div id="hamburgerMenu" title="Menu" class="hamburger pointer hide-for-desktop">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -298,7 +298,7 @@
         <div class="home">
             <div class="heading-container">
                 <h1 class="main-text colored">Mohamed H. Aly</h1>
-                <h2 class="sub-text">Full stack web developer</h2>
+                <h2 class="sub-text">//Full stack web developer</h2>
             </div>
         </div>
 
@@ -315,7 +315,7 @@
                         tabindex="0" />
                 </figure>
                 <h3 class="main-header">Welcome to my website</h3>
-                <p class="sub-content">I'm an Egyptian-born, self-taught & aspiring fullstack developer.</p>
+                <p class="sub-content">I'm Mohamed H. Aly, an Egyptian-born, self-taught, fullstack developer.</p>
                 <p class="sub-content">I created this website to showcase my web development capabilities, express my
                     artistic vision, and act as my professional portfolio.
                 </p>
@@ -324,17 +324,17 @@
                     I've devoted most of my free time to learning how to write clean & efficient code.
                 </p>
                 <p class="sub-content">I have a downloadable & printable copy of my resume below. I've also left links
-                    for my Linkedin profile & my Github profile.
+                    for my Linkedin profile & my Github profile. Also, this website is implementing Progressive Web App
+                    technology.
                 </p>
-                <p class="sub-content">This website is implementing Progressive Web App technology.</p>
             </article>
         </div>
     </section>
 
     <!-- About section -->
     <section class="about" id="about">
-        <img src="./images/cool-shape.svg" class="tiny-shape" id="tinyShape1" alt="Triangle">
-        <img src="./images/cool-shape.svg" class="tiny-shape" id="tinyShape2" alt="Triangle">
+        <img src="./images/cool-shape.svg" class="tiny-shape" alt="Triangle">
+        <img src="./images/cool-shape.svg" class="tiny-shape" alt="Triangle">
         <main class="content-background space">
             <article class="content-wrapper first-div">
                 <h3 class="title-text">About</h3>
@@ -368,7 +368,7 @@
                 <figure class="img-container wide">
                     <a class="img-link right wide wider" target="_blank" rel="noopener noreferrer"
                         href="https://act.eg/" aria-label="Advanced Computer Technology">
-                        <img class="img" title="Advanced Computer Technology HQ" src="./images/ACT.webp"
+                        <img class="img" title="Advanced Computer Technology website" src="./images/ACT.webp"
                             alt="Advanced Computer Technology HQ"
                             onerror="this.onerror=null;this.src='./fallback_images/ACT.jpeg'">
                     </a>
@@ -382,7 +382,6 @@
                     <span class="join-date hide-for-small-screen">&emsp;&emsp;Feb 2021 - Present</span>
                     <span class="join-date hide-for-large-screen">Feb 2022 - Present</span>
                 </h4>
-                <!-- TODO: Fill this out -->
                 <p class="sub-content">Advanced Computer Technology (ACT) specializes in hospitality system integration
                     with many other local, international & governmental business ventures. The sector I joined was the
                     international sector, so naturally I was acquainted to working with foreigners & working
@@ -620,7 +619,7 @@
                             onerror="this.onerror=null;this.src='./fallback_images/C.png'">
                         <p class="skills-text">C</p>
                     </figure>
-                    <figure class="skills-grid-cell">
+                    <figure class="skills-grid-cell sub-grid">
                         <img class="skills-icon under-construction" src="./images/python.webp" alt="Python"
                             loading="eager" onerror="this.onerror=null;this.src='./fallback_images/python.png'">
                         <img class="skills-icon construction" src="./images/under-construction.webp"
@@ -689,7 +688,7 @@
                             onerror="this.onerror=null;this.src='./fallback_images/github.png'">
                         <p class="skills-text">Github</p>
                     </figure>
-                    <figure class="skills-grid-cell">
+                    <figure class="skills-grid-cell sub-grid">
                         <img class="skills-icon aws top marked whiten" src="./images/aws.webp" alt="AWS" loading="eager"
                             onerror="this.onerror=null;this.src='./fallback_images/aws.png'">
                         <img class="skills-icon aws bottom" src="./images/aws.webp" alt="AWS" loading="eager"
@@ -749,164 +748,213 @@
             <div class="content-background">
                 <div class="content-wrapper border-radius">
                     <h3 class="title-text">Portfolio</h3>
-                    <div class="grid" id="grid">
-                        <figure class="project-img-container">
-                            <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
-                                title="Online Bookstore" class="project-img"
+                    <article class="display-project-wrapper" id="displayProject">
+                        <div class="display-img-container" id="displayImgContainer" data-title="Online bookstore">
+
+                            <img src="./images/Graduation Website.webp" alt="Online bookstore project"
+                                title="Online Bookstore" class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
-                        </figure>
-                        <article class="project-text-container">
-                            <div class="heading">
-                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                                </svg>
-                                <h4 class="heading-text inline">
-                                    Online Bookstore
-                                </h4>
-                            </div>
-                            <p class="sub-content">
-                                My first-ever website was created as part of my graduation project. It was a functional
-                                online bookstore with a complete frontend/backend/database. I built the frontend with no
-                                dependencies, built the backend with PHP & built the database using PHPMyAdmin.
-                            </p>
-                            <span class="button-container">
-                                <button type="button" class="button alt grid-button dark dark-switch disabled pressed"
-                                    title="Disabled site"
-                                    data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
-                                    aria-disabled="true">Demo site</button>
-                                <button type="button" class="button alt grid-button dark dark-switch disabled pressed"
-                                    title="Disabled repository"
-                                    data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
-                                    aria-disabled="true">Visit repo</button>
-                            </span>
-                        </article>
 
-                        <figure class="project-img-container">
-                            <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic Website"
-                                class="project-img"
+                            <img src="./images/Clinic website.webp" alt="Clinic website project" title="Clinic website"
+                                class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
-                        </figure>
 
-                        <article class="project-text-container">
-
-                            <div class="heading">
-                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                                </svg>
-                                <h4 class="heading-text inline">
-                                    Clinic website
-                                </h4>
-                            </div>
-                            <p class="sub-content">
-                                My second website I created was an online portal for a clinic. It was purely
-                                frontend focused as I wanted to create a catchy design with fluid & responsive UI. It
-                                was for a challenge I did on frontendMentor.com but I modified it to be a clinic instead
-                                of a banking website.
-                            </p>
-                            <span class="button-container">
-                                <button type="submit" title="Clinic website demo site"
-                                    formaction="https://metwesh.github.io/health-clinics/"
-                                    class="button alt grid-button dark">Demo site</button>
-
-                                <button type="submit" title="Clinic website repository"
-                                    formaction="https://github.com/Metwesh/health-clinics"
-                                    class="button alt grid-button dark">Visit repo</button>
-                            </span>
-                        </article>
-                        <figure class="project-img-container">
-                            <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
-                                class="project-img"
+                            <img src="./images/Budget app.webp" alt="Budget calculator project"
+                                title="Budget calculator" class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
-                        </figure>
-                        <article class="project-text-container">
-                            <div class="heading">
-                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                                </svg>
-                                <h4 class="heading-text inline">
-                                    Budget app
-                                </h4>
-                            </div>
-                            <p class="sub-content">
-                                Created a compact CRUD budget tracking app using React. I used react-bootstrap for the
-                                styling. Implemented the use of local storage to not lose state data if the user leaves
-                                the site. This app is fully capable of adding, viewing & deleting budgets and/or
-                                expenses.
-                            </p>
-                            <span class="button-container">
-                                <button type="submit" title="Budget app demo site"
-                                    formaction="https://metwesh.github.io/budget-app/"
-                                    class="button alt grid-button dark">Demo site</button>
-                                <button type="submit" title="Budget app repository"
-                                    formaction="https://github.com/Metwesh/budget-app/"
-                                    class="button alt grid-button dark">Visit repo</button>
-                            </span>
-                        </article>
-                        <figure class="project-img-container">
-                            <img src="./images/Face-detect.webp" alt="Face Detection App project"
-                                title="Face Detection App" class="project-img"
+
+                            <img src="./images/Face-detect.webp" alt="Face detector app project"
+                                title="Face detector app" class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
-                        </figure>
-                        <article class="project-text-container">
-                            <div class="heading">
-                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                                </svg>
-                                <h4 class="heading-text inline">
-                                    Face detection app
-                                </h4>
-                            </div>
-                            <p class="sub-content">
-                                Created a face detection app with its respective backend & database. I used React to
-                                handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
-                                Express & implemented one-way password hashing through "bcrypt". I used PostgreSQL to
-                                handle the database & KnexJS to interact with it on the server. The app is powered with
-                                the Clarifai API.
-                            </p>
-                            <span class="button-container">
-                                <button type="submit" title="Face detection app demo site"
-                                    formaction="https://face-detect-m.herokuapp.com/"
-                                    class="button alt grid-button dark">Demo site</button>
-                                <button type="submit" title="Face detection app repository"
-                                    formaction="https://github.com/Metwesh/face-recognition"
-                                    class="button alt grid-button dark">Visit repo</button>
-                            </span>
-                        </article>
-                        <figure class="project-img-container">
-                            <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
-                                class="project-img"
+
+                            <img src="./images/Task-handler.webp" alt="Task handler project" title="Task handler"
+                                class="display-img"
                                 onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
-                        </figure>
-                        <article class="project-text-container">
-                            <div class="heading">
-                                <svg class="dorito" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.677 18.52c.914 1.523-.183 3.472-1.967 3.472h-19.414c-1.784 0-2.881-1.949-1.967-3.472l9.709-16.18c.891-1.483 3.041-1.48 3.93 0l9.709 16.18z" />
-                                </svg>
-                                <h4 class="heading-text inline">
-                                    Task Handler
-                                </h4>
+
+                        </div>
+
+                        <article class="display-text-container" id="displayTextContainer">
+                            <div class="display-text-wrapper">
+                                <div class="heading">
+                                    <h4 class="heading-text no-margin">
+                                        Online Bookstore
+                                    </h4>
+                                    <div class="close-container pointer" title="Flip card">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <p class="sub-content display-text-area">
+                                    I created my first-ever website as part of my graduation project. It was a
+                                    functional online bookstore with a complete frontend/backend/database. I built the
+                                    frontend with no dependencies, built the backend with PHP & built the database using
+                                    PHPMyAdmin.
+                                </p>
+                                <div class="button-container">
+                                    <button type="button"
+                                        class="button alt grid-button dark dark-switch disabled pressed flip-card-button"
+                                        title="Disabled site"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        aria-disabled="true">Demo site</button>
+                                    <button type="button"
+                                        class="button alt grid-button dark dark-switch disabled pressed flip-card-button"
+                                        title="Disabled repository"
+                                        data-tooltip="Due to hard-drive corruption this project & its files are unavailable"
+                                        aria-disabled="true">Visit repo</button>
+                                </div>
                             </div>
-                            <p class="sub-content">
-                                I created this CRUD project where a user can organize their tasks. This project was
-                                built with React, Typescript & MongoDB. I enforced user authentication with "bcrypt"
-                                password hashing & authorization with JSON web tokens. On the backend, I integrated
-                                Helmet for securing headers & CORS for improved security.
-                            </p>
-                            <span class="button-container">
-                                <button type="submit" title="Task handler demo site"
-                                    formaction="https://task-handler-v2.herokuapp.com/"
-                                    class="button alt grid-button dark">Demo site</button>
-                                <button type="submit" title="Task handler repository"
-                                    formaction="https://github.com/Metwesh/task-handler"
-                                    class="button alt grid-button dark">Visit repo</button>
-                            </span>
+
+                            <div class="display-text-wrapper">
+                                <div class="heading">
+                                    <h4 class="heading-text no-margin">
+                                        Clinic website
+                                    </h4>
+                                    <div class="close-container pointer" title="Flip card">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <p class="sub-content display-text-area">
+                                    The second website I created was an online portal for a clinic. It was purely
+                                    frontend focused as I wanted to create a catchy design with fluid & responsive UI.
+                                    I built it for a challenge I did on frontendMentor.com but I modified it to be a
+                                    clinic instead of a banking website.
+                                </p>
+                                <div class="button-container">
+                                    <button type="submit" title="Clinic website demo site"
+                                        formaction="https://metwesh.github.io/health-clinics/"
+                                        class="button alt grid-button dark flip-card-button">Demo site</button>
+
+                                    <button type="submit" title="Clinic website repository"
+                                        formaction="https://github.com/Metwesh/health-clinics/"
+                                        class="button alt grid-button dark flip-card-button">Visit repo</button>
+                                </div>
+
+                            </div>
+                            <div class="display-text-wrapper">
+                                <div class="heading">
+                                    <h4 class="heading-text no-margin">
+                                        Budget calculator
+                                    </h4>
+                                    <div class="close-container pointer" title="Flip card">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <p class="sub-content display-text-area">
+                                    Created a compact CRUD budget tracking app using React. I used react-bootstrap for
+                                    the styling. Implemented the use of local storage to not lose state data if the user
+                                    leaves the site. This app is fully capable of adding, viewing & deleting budgets
+                                    and/or expenses.
+                                </p>
+                                <div class="button-container">
+                                    <button type="submit" title="Budget app demo site"
+                                        formaction="https://metwesh.github.io/budget-app/"
+                                        class="button alt grid-button dark flip-card-button">Demo
+                                        site</button>
+                                    <button type="submit" title="Budget app repository"
+                                        formaction="https://github.com/Metwesh/budget-app/"
+                                        class="button alt grid-button dark flip-card-button">Visit repo</button>
+                                </div>
+                            </div>
+                            <div class="display-text-wrapper">
+                                <div class="heading">
+                                    <h4 class="heading-text no-margin">
+                                        Face detector
+                                    </h4>
+                                    <div class="close-container pointer" title="Flip card">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <p class="sub-content display-text-area">
+                                    Created a face detection app with its respective backend & database. I used React to
+                                    handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
+                                    Express & implemented one-way password hashing through "bcrypt". I used PostgreSQL
+                                    to handle the database & KnexJS to interact with it on the server. The app is
+                                    powered with the Clarifai machine learning API.
+                                </p>
+                                <div class="button-container">
+                                    <button type="submit" title="Face detection app demo site"
+                                        formaction="https://face-detect-m.herokuapp.com/"
+                                        class="button alt grid-button dark flip-card-button">Demo
+                                        site</button>
+                                    <button type="submit" title="Face detection app repository"
+                                        formaction="https://github.com/Metwesh/face-recognition/"
+                                        class="button alt grid-button dark flip-card-button">Visit repo</button>
+                                </div>
+                            </div>
+                            <div class="display-text-wrapper">
+                                <div class="heading">
+                                    <h4 class="heading-text no-margin">
+                                        Task Handler
+                                    </h4>
+                                    <div class="close-container pointer" title="Flip card">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <p class="sub-content display-text-area">
+                                    I created this CRUD project where a user can organize their tasks. This project was
+                                    built with React, Typescript & MongoDB. I enforced user authentication with "bcrypt"
+                                    password hashing & authorization with JSON web tokens. On the backend, I integrated
+                                    Helmet for securing headers & CORS for improved security.
+                                </p>
+                                <div class="button-container">
+                                    <button type="submit" title="Task handler demo site"
+                                        formaction="https://task-handler-v2.herokuapp.com/"
+                                        class="button alt grid-button dark flip-card-button">Demo
+                                        site</button>
+                                    <button type="submit" title="Task handler repository"
+                                        formaction="https://github.com/Metwesh/task-handler/"
+                                        class="button alt grid-button dark flip-card-button">Visit repo</button>
+                                </div>
+                            </div>
                         </article>
-                    </div>
+
+                        <label class="switch" title="Auto play">
+                            <input type="checkbox" class="auto-play-slideshow" id="autoPlaySlideShow" checked>
+                            <span class="slider">
+                                <svg class="media-control pause" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17h-3v-10h3v10zm5-10h-3v10h3v-10z" />
+                                </svg>
+                                <svg class="media-control play" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-3 17v-10l9 5.146-9 4.854z" />
+                                </svg>
+
+                            </span>
+                        </label>
+
+                        <div class="slideshow-container" id="slideshowContainer">
+                            <figure class="slideshow-item" tabindex="0" data-active="true">
+                                <img src="./images/Graduation Website.webp" alt="Online Bookstore project"
+                                    title="Online Bookstore" class="slideshow-img"
+                                    onerror="this.onerror=null;this.src='./fallback_images/Graduation Website.png'" />
+                            </figure>
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
+                                <img src="./images/Clinic website.webp" alt="Clinic website project"
+                                    title="Clinic Website" class="slideshow-img"
+                                    onerror="this.onerror=null;this.src='./fallback_images/Clinic website.png'" />
+                            </figure>
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
+                                <img src="./images/Budget app.webp" alt="Budget App project" title="Budget App"
+                                    class="slideshow-img"
+                                    onerror="this.onerror=null;this.src='./fallback_images/Budget app.png'" />
+                            </figure>
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
+                                <img src="./images/Face-detect.webp" alt="Face Detection App project"
+                                    title="Face Detection App" class="slideshow-img"
+                                    onerror="this.onerror=null;this.src='./fallback_images/Face-detect.png'" />
+                            </figure>
+                            <figure class="slideshow-item" tabindex="0" data-active="false">
+                                <img src="./images/Task-handler.webp" alt="Task Handler project" title="Task Handler"
+                                    class="slideshow-img"
+                                    onerror="this.onerror=null;this.src='./fallback_images/Task-handler.png'" />
+                            </figure>
+                        </div>
+                    </article>
                 </div>
             </div>
         </form>
@@ -951,7 +999,7 @@
             </a>
             <div class="footer-text-wrapper">
                 <p class="foot-text">
-                    This website was built with a lot of passion & is fully responsive.
+                    This website was built with a lot of passion from scratch.
                     <br>
                     No dependencies or templates, just pure coding.
                     <br>

@@ -34,7 +34,7 @@
   padding: 1.25rem 2.5rem;
   background-color: var(--color-box);
   color: var(--font-color);
-
+  overflow-y: hidden;
   &.border-radius {
     border-radius: 10px;
   }
@@ -166,6 +166,15 @@ span.sub-content {
 
   &.no-margin-bottom {
     margin-bottom: 0;
+  }
+  &.no-margin-top {
+    margin-top: 0;
+  }
+  &.margin-bottom-auto {
+    margin-bottom: auto;
+  }
+  &.no-padding {
+    padding: 0;
   }
 
   @include breakpoint-down(small) {
@@ -312,6 +321,7 @@ span.sub-content {
     float: left;
     box-shadow: none;
     margin-right: 2rem;
+    margin-bottom: 1rem;
     border-radius: 50%;
     shape-outside: circle(50% at 50% 50%);
     transition: box-shadow 150ms ease-in-out;
@@ -324,6 +334,7 @@ span.sub-content {
     @include breakpoint-down(medium) {
       float: none;
       margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -368,14 +379,14 @@ span.sub-content {
     rotate: 90deg;
     left: -1rem;
     @include breakpoint-down(xsmall) {
-      left: -1.5rem;
+      left: -1rem;
     }
   }
   &:last-of-type {
     right: -1rem;
     rotate: -90deg;
     @include breakpoint-down(xsmall) {
-      right: -1.5rem;
+      right: -1rem;
     }
   }
 }
