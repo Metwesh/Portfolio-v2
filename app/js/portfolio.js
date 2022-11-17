@@ -19,13 +19,15 @@ class IntervalClass {
   }
 }
 
+const displayImgContainer = document.querySelector("#displayImgContainer");
 const displayImages = document.querySelectorAll(".display-img");
 const displayTextContainer = document.querySelector("#displayTextContainer");
-const displayTextFields = displayTextContainer.children;
+const displayTextWrapper = document.querySelectorAll(".display-text-wrapper");
+const displayTextArea = document.querySelectorAll(".display-text-area");
+const headingText = document.querySelectorAll(".heading-text");
 const slideshowItems = document.querySelectorAll(".slideshow-item");
 const closeContainers = document.querySelectorAll(".close-container");
 const autoPlaySlideShow = document.querySelector("#autoPlaySlideShow");
-const displayImgContainer = document.querySelector("#displayImgContainer");
 const flipCardButtonContainers = document.querySelectorAll(".button-container");
 const disabledButtons = document.querySelectorAll(".disabled");
 
@@ -116,8 +118,8 @@ function changeDisplayImg(curr, prev) {
 }
 
 function changeDisplayText(curr, prev) {
-  displayTextFields[curr].classList.add("show");
-  displayTextFields[prev].classList.remove("show");
+  displayTextWrapper[curr].classList.add("show");
+  displayTextWrapper[prev].classList.remove("show");
 }
 
 function flipCardToBack(index) {
@@ -129,7 +131,7 @@ function flipCardToBack(index) {
     displayImages[index].classList.remove("show");
     animateIn(displayTextContainer);
     displayTextContainer.classList.add("show");
-    displayTextFields[index].classList.add("show");
+    displayTextWrapper[index].classList.add("show");
   }, ANIMATION_INTERVAL);
 }
 
@@ -140,7 +142,7 @@ function flipCardToFront(index) {
     flipCardButtonContainers[index].children[0].style.visibility = "hidden";
     flipCardButtonContainers[index].children[1].style.visibility = "hidden";
     displayTextContainer.classList.remove("show");
-    displayTextFields[index].classList.remove("show");
+    displayTextWrapper[index].classList.remove("show");
     animateIn(displayImages[index]);
     displayImages[index].classList.add("show");
   }, ANIMATION_INTERVAL);
@@ -152,25 +154,25 @@ function renderNewCard() {
   if (curr === 5) curr = 0;
   if (prev === 5) prev = 0;
   animateOut(displayImages[prev]);
-  if (screen.width < 669) {
-    slideOut(displayTextFields[prev].children[0].children[0]);
-    animateOut(displayTextFields[prev].children[1]);
-  } else displayTextFields[prev].classList.remove("show");
+  if (window.innerWidth < 669) {
+    slideOut(headingText[prev]);
+    animateOut(displayTextArea[prev]);
+  } else displayTextWrapper[prev].classList.remove("show");
   animatePseudoElement(displayImgContainer, "::before", 0, -20);
   animatePseudoElement(displayImgContainer, "::after", 0, 20);
   if (curr > 0) slideshowItems[prev].dataset.active = false;
   setTimeout(() => {
-    if (screen.width > 669) {
+    if (window.innerWidth > 669) {
       closeContainers[curr].removeAttribute("tabindex");
       flipCardButtonContainers[curr].children[0].style.visibility = "hidden";
       flipCardButtonContainers[curr].children[1].style.visibility = "hidden";
     } else {
-      slideIn(displayTextFields[curr].children[0].children[0]);
-      animateIn(displayTextFields[curr].children[1]);
-      displayTextFields[prev].classList.remove("show");
+      slideIn(headingText[curr]);
+      animateIn(displayTextArea[curr]);
+      displayTextWrapper[prev].classList.remove("show");
     }
     if (curr === 0) slideshowItems[4].dataset.active = false;
-    displayTextFields[curr].classList.add("show");
+    displayTextWrapper[curr].classList.add("show");
     changeDisplayImg(curr, prev);
     animateIn(displayImages[curr]);
     displayImgContainer.dataset.title = TITLES[curr];
@@ -184,7 +186,7 @@ function renderNewCard() {
 let curr = 0;
 let prev = 0;
 
-if (screen.width < 669) {
+if (window.innerWidth < 669) {
   if (!displayTextContainer.classList.contains("show"))
     displayTextContainer.classList.add("show");
 } else {
@@ -207,7 +209,7 @@ for (let i = 0; i < slideshowItems.length; i++) {
       animateOut(displayImages[curr]);
     else if (
       displayTextContainer.classList.contains("show") &&
-      screen.width > 669
+      window.innerWidth > 669
     ) {
       animateOut(displayTextContainer);
       displayTextContainer.classList.remove("show");
@@ -215,23 +217,23 @@ for (let i = 0; i < slideshowItems.length; i++) {
         animateIn(displayImages[i]);
       }, ANIMATION_INTERVAL);
     }
-    if (screen.width < 669 && curr !== i) {
-      slideOut(displayTextFields[curr].children[0].children[0]);
-      animateOut(displayTextFields[curr].children[1]);
+    if (window.innerWidth < 669 && curr !== i) {
+      slideOut(headingText[curr]);
+      animateOut(displayTextArea[curr]);
     }
     curr !== i && animatePseudoElement(displayImgContainer, "::before", 0, -20);
     curr !== i && animatePseudoElement(displayImgContainer, "::after", 0, 20);
 
     setTimeout(() => {
-      if (screen.width < 669 && curr !== i) {
-        slideIn(displayTextFields[prev].children[0].children[0]);
-        animateIn(displayTextFields[i].children[1]);
+      if (window.innerWidth < 669 && curr !== i) {
+        slideIn(headingText[i]);
+        animateIn(displayTextArea[i]);
       }
-      displayTextFields[curr].classList.remove("show");
+      displayTextWrapper[curr].classList.remove("show");
       displayImages[curr].classList.remove("show");
       curr !== i && animateIn(displayImages[i]);
       displayImages[i].classList.add("show");
-      displayTextFields[i].classList.add("show");
+      displayTextWrapper[i].classList.add("show");
 
       if (curr !== i) {
         displayImgContainer.dataset.title = TITLES[i];
@@ -257,17 +259,17 @@ autoPlaySlideShow.addEventListener("click", () => {
       IntervalClass.start(renderNewCard, PAUSE_TIME);
     }, ANIMATION_INTERVAL * 14);
   } else IntervalClass.stop();
-  if (screen.width < 669) return;
-  for (let i = 0; i < displayTextFields.length; i++) {
+  if (window.innerWidth < 669) return;
+  for (let i = 0; i < displayTextWrapper.length; i++) {
     if (
-      displayTextFields[i].classList.contains("show") &&
+      displayTextWrapper[i].classList.contains("show") &&
       displayTextContainer.classList.contains("show")
     )
       flipCardToFront(i);
   }
 });
 
-if (screen.width > 669) {
+if (window.innerWidth > 669) {
   for (let i = 0; i < displayImages.length; i++) {
     displayImages[i].addEventListener("click", () => {
       IntervalClass.stop();

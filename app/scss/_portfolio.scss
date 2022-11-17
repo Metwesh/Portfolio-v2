@@ -69,9 +69,6 @@
     opacity: 1;
     transform: rotateY(0);
   }
-  &:hover + .flip-card-arrow {
-    opacity: 1;
-  }
 
   @include breakpoint-down(large) {
     max-width: 100%;
@@ -202,9 +199,12 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  overflow: hidden;
   margin-bottom: auto;
+  @include breakpoint-down(small) {
+    overflow: hidden;
+  }
 }
+
 .heading-text {
   font-size: $font-lrgmed;
   font-weight: 600;
@@ -228,7 +228,6 @@
   place-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  transform-origin: center center;
   :first-child {
     grid-column-start: 1;
     grid-row-start: 1;

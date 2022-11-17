@@ -20,11 +20,11 @@ function scrollListener() {
 }
 
 function scrollMoveBigShape(scrollPos) {
-  if (screen.width > 1073) {
+  if (window.innerWidth > 1073) {
     coolShape.style.transform = `translateX(${-scrollPos * 0.9 - 100}px)`;
-  } else if (screen.width > 600 && screen.width <= 1073) {
+  } else if (window.innerWidth > 600 && window.innerWidth <= 1073) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.1 - 100}px)`;
-  } else if (screen.width >= 390 && screen.width <= 600) {
+  } else if (window.innerWidth >= 390 && window.innerWidth <= 600) {
     coolShape.style.transform = `translateX(${-scrollPos * 1.3 - 100}px)`;
   } else {
     coolShape.style.transform = `translateX(${-scrollPos * 1.5 - 100}px)`;
