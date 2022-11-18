@@ -1,8 +1,7 @@
 /* 
 I'm dividing these JS files for readability only.
-The files are being concatenated together & minified with the build script in the package.json file.
+The files are being bundled & minified with the build script in the package.json file.
 */
-
 class IntervalClass {
   constructor() {
     this.handle = 0;
@@ -38,7 +37,6 @@ const TITLES = [
   "Face detector",
   "Task handler",
 ];
-
 const ANIMATION_INTERVAL = 250;
 const PAUSE_TIME = 7000;
 
@@ -148,7 +146,6 @@ function flipCardToFront(index) {
   }, ANIMATION_INTERVAL);
 }
 
-// TODO: Refactor this function
 function renderNewCard() {
   curr++;
   if (curr === 5) curr = 0;
@@ -198,9 +195,6 @@ if (window.innerWidth < 669) {
 changeDisplayImg(0, 4);
 changeDisplayText(0, 4);
 
-IntervalClass.start(renderNewCard, PAUSE_TIME);
-
-// TODO: Refactor this behemoth
 for (let i = 0; i < slideshowItems.length; i++) {
   slideshowItems[i].addEventListener("click", () => {
     IntervalClass.stop();

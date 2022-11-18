@@ -1,6 +1,6 @@
 /* 
 I'm dividing these JS files for readability only.
-The files are being concatenated together & minified with the build script in the package.json file.
+The files are being bundled & minified with the build script in the package.json file.
 */
 /* eslint-disable no-undef */
 const viewMode = document.querySelector("#view-mode");

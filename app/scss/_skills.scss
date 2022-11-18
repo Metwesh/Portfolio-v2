@@ -29,6 +29,7 @@
   &.sub-grid {
     display: grid;
     place-items: center;
+    padding-top: 0.75rem;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }

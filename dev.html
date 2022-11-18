@@ -134,7 +134,6 @@
         }
     </script>
 
-    <!-- <script defer src="./app/js/temp.js"></script> -->
     <script defer src="./dist/script.min.js"></script>
 
 </head>
@@ -328,6 +327,10 @@
                     technology.
                 </p>
             </article>
+            <svg class="watermark" width="24" height="24" viewBox="0 0 400 400">
+                <path
+                    d="M-1.74846e-05 1.52588e-05C30 70 30 280 -1.74846e-06 360C40.6667 358 125.5 360 80 400C98 400 120 367 120 320C120 240 111.5 236 60 236C70 216 70 180 60 160C80 170 120 170 140 160L200 380L260 160C280 170 320 170 340 160C330 180 330 216 340 236C288.5 236 280 240 280 320C280 367 302 400 320 400C274.5 360 359.333 358 400 360C370 280 370 70 400 -2.22577e-06C379.5 13.5 272.4 32.4 240 4.76806e-06L200 160L160 8.26497e-06C127.6 32.4 20.5 13.5 -1.74846e-05 1.52588e-05Z" />
+            </svg>
         </div>
     </section>
 
@@ -335,7 +338,7 @@
     <section class="about" id="about">
         <img src="./images/cool-shape.svg" class="tiny-shape" alt="Triangle">
         <img src="./images/cool-shape.svg" class="tiny-shape" alt="Triangle">
-        <main class="content-background space">
+        <main class="content-background">
             <article class="content-wrapper first-div">
                 <h3 class="title-text">About</h3>
                 <h3 class="main-header">College</h3>
@@ -389,24 +392,18 @@
                 </p>
                 <p class="sub-content no-indent no-margin-bottom">During my time there I accomplished the following:</p>
                 <ul class="job-description small-margin-top">
-                    <li>
-                        Worked as a system integrator for many established hotel chains including but not limited to
-                        IHG, Marriott & Wyndham.
+                    <li>Worked as a system integrator for many established hotel chains including but not limited to
+                        InterContinental Hotels Group (IHG), Marriott hotels group and Wyndham Hotels & Resorts.</li>
+                    <li>Worked in an agile environment, with a costumer-facing team.</li>
+                    <li>Installed many digital 3rd party subsystems that the hotel uses on a daily basis, including but
+                        not limited to Door Lock Systems, Internet Protocol Television Systems & Point Of Sale Systems.
                     </li>
-                    <li>
-                        Worked in an agile environment with a tightly packed costumer-facing team.
+                    <li>Integrated said subsystems and interfaced them with the main hotel Property Management System.
                     </li>
-                    <li>
-                        Installed many 3rd party subsystems that the hotel uses on a daily basis, including but not
-                        limited to Door Lock Systems, Internet Protocol Television Systems & Point Of Sale Systems.
-                    </li>
-                    <li>
-                        Integrated said subsystems and interfaced with the main hotel Property Management System.
-                    </li>
-                    <li>
-                        Installed said interfaces in hotels all around the world, interacting with customers remotely &
-                        troubleshooting issues on the spot.
-                    </li>
+                    <li>Installed said interfaces in hotels all around the world, interacting with customers remotely
+                        and troubleshooting issues on the spot by sifting through logs & handling error codes.</li>
+                    <li>Integrated Oracle's Opera Web Services for over 480 IHG hotels worldwide over the span of 4
+                        months.</li>
                 </ul>
                 <p class="sub-content">While my work didn't involve much coding, I did get my hands on some Oracle
                     databases, worked a little on PSQL, got to use command prompt scripting & batching and got to
@@ -555,12 +552,16 @@
                     </figure>
                 </div>
             </article>
+            <svg class="watermark" width="24" height="24" viewBox="0 0 400 400">
+                <path
+                    d="M-1.74846e-05 1.52588e-05C30 70 30 280 -1.74846e-06 360C40.6667 358 125.5 360 80 400C98 400 120 367 120 320C120 240 111.5 236 60 236C70 216 70 180 60 160C80 170 120 170 140 160L200 380L260 160C280 170 320 170 340 160C330 180 330 216 340 236C288.5 236 280 240 280 320C280 367 302 400 320 400C274.5 360 359.333 358 400 360C370 280 370 70 400 -2.22577e-06C379.5 13.5 272.4 32.4 240 4.76806e-06L200 160L160 8.26497e-06C127.6 32.4 20.5 13.5 -1.74846e-05 1.52588e-05Z" />
+            </svg>
         </main>
     </section>
 
     <!-- Skills section -->
     <section class="skills" id="skills">
-        <div class="content-background space skills-box">
+        <div class="content-background skills-box">
             <article class="content-wrapper border-radius">
                 <h3 class="title-text">Skills</h3>
                 <div class="skills-grid">
@@ -599,6 +600,14 @@
                             onerror="this.onerror=null;this.src='./fallback_images/react.png'">
                         <p class="skills-text">React</p>
                     </figure>
+                    <figure class="skills-grid-cell sub-grid">
+                        <img class="skills-icon under-construction" src="./images/angular.webp" alt="Angular"
+                            loading="eager" onerror="this.onerror=null;this.src='./fallback_images/angular.png'">
+                        <img class="skills-icon construction" src="./images/under-construction.webp"
+                            alt="Under construction" loading="eager"
+                            onerror="this.onerror=null;this.src='./fallback_images/under-construction.png'">
+                        <p class="skills-text">Work in progress</p>
+                    </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon" src="./images/nodejs.webp" alt="NodeJS" loading="eager"
                             onerror="this.onerror=null;this.src='./fallback_images/nodejs.png'">
@@ -625,7 +634,7 @@
                         <img class="skills-icon construction" src="./images/under-construction.webp"
                             alt="Under construction" loading="eager"
                             onerror="this.onerror=null;this.src='./fallback_images/under-construction.png'">
-                        <p class="skills-text">Coming soon</p>
+                        <p class="skills-text">Work in progress</p>
                     </figure>
                     <figure class="skills-grid-cell">
                         <img class="skills-icon semi-wide-skill" src="./images/serverless.webp" alt="Serverless"
@@ -786,9 +795,10 @@
                                 </div>
                                 <p class="sub-content display-text-area">
                                     I created my first-ever website as part of my graduation project. It was a
-                                    functional online bookstore with a complete frontend/backend/database. I built the
-                                    frontend with no dependencies, built the backend with PHP & built the database using
-                                    PHPMyAdmin.
+                                    functional online bookstore with a complete frontend, backend & database. I built
+                                    the frontend with HTML, CSS & vanilla JavaScript, the backend with PHP & the
+                                    database using PHPMyAdmin. When I experienced hard drive failures all the project
+                                    files were lost as it wasn't uploaded to any repositories.
                                 </p>
                                 <div class="button-container">
                                     <button type="button"
@@ -815,10 +825,12 @@
                                     </div>
                                 </div>
                                 <p class="sub-content display-text-area">
-                                    The second website I created was an online portal for a clinic. It was purely
-                                    frontend focused as I wanted to create a catchy design with fluid & responsive UI.
-                                    I built it for a challenge I did on frontendMentor.com but I modified it to be a
-                                    clinic instead of a banking website.
+                                    The second website I created was a clinic landing page. It was purely frontend
+                                    focused as I wanted to create a catchy design with fluid & responsive User
+                                    Interface (UI). I built it for a challenge I did on frontendMentor.com but I
+                                    modified it to be a clinic instead of a banking website. This project introduced me
+                                    to SASS, User Experience (UX) & responsive design, which I haven't known or
+                                    implemented before.
                                 </p>
                                 <div class="button-container">
                                     <button type="submit" title="Clinic website demo site"
@@ -842,10 +854,11 @@
                                     </div>
                                 </div>
                                 <p class="sub-content display-text-area">
-                                    Created a compact CRUD budget tracking app using React. I used react-bootstrap for
-                                    the styling. Implemented the use of local storage to not lose state data if the user
-                                    leaves the site. This app is fully capable of adding, viewing & deleting budgets
-                                    and/or expenses.
+                                    My third website was a Create, Read, Update & Delete (CRUD) app. It was a budget
+                                    tracking calculator I built using React. I used react-bootstrap for styling the
+                                    components. I implemented the use of local storage to not lose perviously entered
+                                    data if the user ever leaves the site. This app is fully capable of viewing, adding,
+                                    editing & deleting budgets and/or expenses.
                                 </p>
                                 <div class="button-container">
                                     <button type="submit" title="Budget app demo site"
@@ -868,11 +881,11 @@
                                     </div>
                                 </div>
                                 <p class="sub-content display-text-area">
-                                    Created a face detection app with its respective backend & database. I used React to
-                                    handle states & react-bootstrap to handle styling. I built the backend with NodeJS &
-                                    Express & implemented one-way password hashing through "bcrypt". I used PostgreSQL
-                                    to handle the database & KnexJS to interact with it on the server. The app is
-                                    powered with the Clarifai machine learning API.
+                                    My fourth website was a face detection app with its respective backend & database. I
+                                    used React to handle states & react-bootstrap to handle styling. I built the backend
+                                    with NodeJS & Express & implemented one-way password hashing through "bcrypt". I
+                                    used PostgreSQL to handle the database & KnexJS to interact with it on the server.
+                                    The app is powered with the Clarifai machine learning API.
                                 </p>
                                 <div class="button-container">
                                     <button type="submit" title="Face detection app demo site"
@@ -895,10 +908,12 @@
                                     </div>
                                 </div>
                                 <p class="sub-content display-text-area">
-                                    I created this CRUD project where a user can organize their tasks. This project was
-                                    built with React, Typescript & MongoDB. I enforced user authentication with "bcrypt"
-                                    password hashing & authorization with JSON web tokens. On the backend, I integrated
-                                    Helmet for securing headers & CORS for improved security.
+                                    My fifth website was also a CRUD project. It was a task handler web app. This
+                                    project was built with React, ReactBootstrap, Typescript & MongoDB. I enforced user
+                                    authentication with "bcrypt" password hashing & authorization with JSON web tokens
+                                    (JWT). On the backend, I integrated Helmet for securing headers & enforced a strict
+                                    Cross-Origin Resource Sharing (CORS) policy to prevent Cross Site Scripting attacks
+                                    (XSS).
                                 </p>
                                 <div class="button-container">
                                     <button type="submit" title="Task handler demo site"

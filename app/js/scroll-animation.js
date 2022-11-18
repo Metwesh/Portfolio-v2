@@ -1,6 +1,6 @@
 /* 
 I'm dividing these JS files for readability only.
-The files are being concatenated together & minified with the build script in the package.json file.
+The files are being bundled & minified with the build script in the package.json file.
 */
 let lastKnownScrollPosition = 0;
 let ticking = false;
@@ -33,7 +33,7 @@ function scrollMoveBigShape(scrollPos) {
 
 function scrollMoveSmallShapes(scrollPos) {
   tinyShapes[0].style.transform = `translateX(${scrollPos * 0.5 + 2500}px)`;
-  tinyShapes[1].style.transform = `translateX(${scrollPos * 0.5 - 3500}px)`;
+  tinyShapes[1].style.transform = `translateX(${-scrollPos * 0.5 - 1000}px)`;
 }
 
 document.addEventListener("scroll", scrollListener);

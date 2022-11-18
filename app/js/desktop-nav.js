@@ -1,6 +1,6 @@
 /* 
 I'm dividing these JS files for readability only.
-The files are being concatenated together & minified with the build script in the package.json file.
+The files are being bundled & minified with the build script in the package.json file.
 */
 const homeLink = document.querySelector("#homeLink");
 const aboutLink = document.querySelector("#aboutLink");
