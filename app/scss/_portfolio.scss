@@ -181,11 +181,11 @@
     height: 100%;
     transform: rotateY(360deg);
   }
-  @include breakpoint-down(mdsmall) {
-    min-height: 27.825rem;
-  }
   @include breakpoint-down(small) {
     min-height: 21.3125rem;
+  }
+  @include breakpoint-down(mdsmall) {
+    min-height: 27.825rem;
   }
 }
 
