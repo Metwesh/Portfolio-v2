@@ -110,6 +110,10 @@
   font-size: $font-xlg;
   font-weight: 300;
 
+  &.center {
+    text-align: center;
+  }
+
   @include breakpoint-down(small) {
     font-size: $font-lrgmed;
     text-align: center;

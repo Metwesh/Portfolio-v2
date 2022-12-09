@@ -7,6 +7,7 @@ const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const skills = document.querySelector("#skills");
 const portfolio = document.querySelector("#portfolio");
+const hoursCounter = document.querySelector("#hoursCounter");
 
 const sections = document.getElementsByTagName("section");
 
@@ -40,3 +41,14 @@ const sectionObserver = new IntersectionObserver(
 for (const section of sections) {
   sectionObserver.observe(section);
 }
+
+const counterObserver = new IntersectionObserver(
+  (entries, _sectionObserver) => {
+    if (entries[0].isIntersecting && entries[0].target === hoursCounter) {
+      hoursCounter.style.animationPlayState = "running";
+    } else return;
+  },
+  { threshold: "1" }
+);
+
+counterObserver.observe(hoursCounter);
