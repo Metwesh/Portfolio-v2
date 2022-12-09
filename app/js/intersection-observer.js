@@ -42,11 +42,37 @@ for (const section of sections) {
   sectionObserver.observe(section);
 }
 
+// Counter observer & hours animation
+
+function animateValue(elem, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    elem.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
 const counterObserver = new IntersectionObserver(
-  (entries, _sectionObserver) => {
-    if (entries[0].isIntersecting && entries[0].target === hoursCounter) {
-      hoursCounter.style.animationPlayState = "running";
-    } else return;
+  (entries, counterObserver) => {
+    if (entries[0].isIntersecting) {
+      animateValue(hoursCounter, 0, 133, 4000);
+      setTimeout(() => {
+        hoursCounter.animate(
+          [{ color: "var(--font-color)" }, { color: "var(--cyan)" }],
+          {
+            duration: 1000,
+            iterations: 1,
+          }
+        );
+        setTimeout(() => (hoursCounter.style.color = "var(--cyan)"), 999);
+      }, 4000);
+      counterObserver.unobserve(entries[0].target);
+    }
   },
   { threshold: "1" }
 );
