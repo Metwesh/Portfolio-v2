@@ -292,6 +292,47 @@
     grid-row-start: 2;
   }
 }
+.auto-play-label {
+  pointer-events: none;
+  position: absolute;
+  width: max-content;
+  bottom: 25px;
+  text-shadow: 0 0 10px var(--font-color);
+  @include breakpoint-down(xsmall) {
+    font-size: $font-smmed;
+    bottom: 23px;
+  }
+}
+
+.auto-play-label::before {
+  content: "Auto-play off";
+  position: absolute;
+  width: max-content;
+  right: 10px;
+  opacity: 0;
+}
+.auto-play-label::after {
+  content: "Auto-play on";
+  position: absolute;
+  width: max-content;
+  left: 70px;
+  opacity: 0;
+}
+
+@keyframes show-shimmer-disappear {
+  from {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 
 .switch input {
   opacity: 0;
@@ -349,20 +390,28 @@
   }
 }
 
-input:checked {
-  + .slider {
-    background-color: $cyan;
-    &::before {
-      transform: translateX(28px);
-    }
-    > .media-control {
-      transform: translateX(28px) rotate(180deg);
-    }
-    > .play {
-      opacity: 0;
-    }
-    > .pause {
-      opacity: 1;
+input {
+  &:not(input:checked) + * + .auto-play-label::before {
+    animation: show-shimmer-disappear 5s forwards ease-in-out;
+  }
+  &:checked {
+    + .slider {
+      background-color: $cyan;
+      &::before {
+        transform: translateX(28px);
+      }
+      > .media-control {
+        transform: translateX(28px) rotate(180deg);
+      }
+      > .play {
+        opacity: 0;
+      }
+      > .pause {
+        opacity: 1;
+      }
+      + .auto-play-label::after {
+        animation: show-shimmer-disappear 5s forwards ease-in-out;
+      }
     }
   }
 }

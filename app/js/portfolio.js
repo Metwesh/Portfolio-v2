@@ -195,6 +195,7 @@ if (window.innerWidth < 669) {
 changeDisplayImg(0, 4);
 changeDisplayText(0, 4);
 
+// Slideshow Item buttons
 for (let i = 0; i < slideshowItems.length; i++) {
   slideshowItems[i].addEventListener("click", () => {
     IntervalClass.stop();
@@ -248,11 +249,14 @@ for (let i = 0; i < slideshowItems.length; i++) {
 
 autoPlaySlideShow.addEventListener("click", () => {
   if (autoPlaySlideShow.checked) {
+    
     setTimeout(() => {
       renderNewCard();
       IntervalClass.start(renderNewCard, PAUSE_TIME);
     }, ANIMATION_INTERVAL * 14);
-  } else IntervalClass.stop();
+  } else {
+    IntervalClass.stop();
+  }
   if (window.innerWidth < 669) return;
   for (let i = 0; i < displayTextWrapper.length; i++) {
     if (
