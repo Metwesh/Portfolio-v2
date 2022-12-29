@@ -23,15 +23,15 @@
 .skills-grid-cell {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   &.sub-grid {
     display: grid;
     place-items: center;
-    padding-top: 0.75rem;
+    // padding-top: 0.75rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    // grid-template-rows: 1fr 1fr; 
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -48,6 +48,7 @@
   font-size: $font-medlrg;
   font-weight: 300;
   text-align: center;
+  // margin: 0;
   color: var(--font-color);
 }
 
@@ -159,7 +160,6 @@
 .hours-counter {
   display: inline-block;
   width: 56.438px;
-  // color: var(--cyan);
   @include breakpoint-down(small) {
     width: 44.56px;
   }
